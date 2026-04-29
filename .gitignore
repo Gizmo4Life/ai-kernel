@@ -1,0 +1,12 @@
+# OS Junk
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Local/Scratch
+scratch/
+tmp/
+*.log

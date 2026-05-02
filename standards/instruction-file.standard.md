@@ -2,32 +2,33 @@
 id: instruction-file.standard
 title: Instruction File Standard
 type: standard
-version: 2
+version: 3
 created: 2026-04-28
-updated: 2026-04-28
-tags: [workflow, quality]
+updated: 2026-05-02
+tags: [workflow, quality, orchestration]
 summary: Standards for defining multi-step instructions, emphasizing orchestration and quality gates.
 scope: instructions/
-applies_to: [instruction.glossary]
-glossary_refs: [ instruction.glossary, orchestration.glossary, quality-gate.glossary ]
+parent_standard: kernel.standard
+glossary_refs: [instruction.glossary, orchestration.glossary, quality-gate.glossary]
 ---
 
 # Instruction File Standard
 
-Governs the structure of all files in the `instructions/` directory.
+## Abstract
+This standard governs the creation of multi-step instructions. Unlike atomic skills, instructions are responsible for the [Orchestration](glossary/orchestration.glossary.md) of multiple components to achieve a high-level goal. It mandates the inclusion of quality gates to ensure that workflows maintain repository standards at every stage.
+
+## Related Standards
+- [Kernel Standard](kernel.standard.md): The architectural parent setting orchestration expectations.
+- [Skill File](skill-file.standard.md): The standard for the atomic units being orchestrated.
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Exception |
 |---|---|---|---|
-| Use [Orchestration](glossary/orchestration.glossary.md) | **P** | Instructions should coordinate skills, not implement tools. | None |
-| Include a [Quality Gate](glossary/quality-gate.glossary.md) | **P** | Ensures work meets standard before proceeding or finishing. | Simple informational flows. |
-| Define `preconditions` | **P** | Prevents execution in an unstable or invalid state. | None |
-| List all `skills` required | **P** | Provides a clear manifest for the agent's toolbox. | None |
-| Hardcoding specific paths | **D** | Reduces reusability across projects. | Root repo maintenance. |
-| Manual validation steps | **A** | Necessary when automated audit is impossible. | None |
-| Skipping quality gates | **U** | Allows sub-standard content to be committed. | None |
+| Coordinate via Orchestration | **P** | Instructions must link skills, not implement tools. | None |
+| Include a [Quality Gate](glossary/quality-gate.glossary.md) | **P** | Ensures adherence to standards before completion. | Informational flows. |
+| Define `preconditions` | **P** | Prevents execution in unstable or invalid environments. | None |
+| Skipping quality gates | **U** | Risk of committing sub-standard or corrupt knowledge. | None |
 
 ## Rationale
-
-Instructions are the "programs" of the AI Kernel. They provide the safety and consistency needed for complex multi-agent workflows.
+Instructions provide the "safety layer" for the AI Kernel. They codify the human's preferred workflows and ensure that agents follow the same rigorous process every time they perform a complex task.

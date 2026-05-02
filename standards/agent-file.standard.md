@@ -4,29 +4,33 @@ title: Agent File Standard
 type: standard
 version: 2
 created: 2026-04-28
-updated: 2026-04-28
-tags: [autonomy, persona, quality]
-summary: Standards for defining autonomous agents in the `agents/` directory, including authority and delegation.
+updated: 2026-05-02
+tags: [governance, agent]
+summary: Standards for defining autonomous agents, their roles, and authority.
 scope: agents/
-applies_to: [agent.glossary]
-glossary_refs: [ agent.glossary, padu-scale.glossary ]
+parent_standard: kernel.standard
+glossary_refs: [ agent.glossary, authority.glossary, delegation.glossary ]
 ---
 
 # Agent File Standard
 
-Governs the structure of all files in the `agents/` directory.
+## Abstract
+This standard defines the requirements for defining autonomous agents within the AI Kernel. It ensures that every agent has a clear objective, defined boundaries of authority, and a PADU-governed behavioral policy. This consistency allows agents to reliably delegate tasks to one another without violating repository safety or quality rules.
+
+## Related Standards
+- [Kernel Standard](kernel.standard.md): The root standard governing all kernel components.
+- [Skill File](skill-file.standard.md): Governs the atomic actions agents use.
+- [Instruction File](instruction-file.standard.md): Governs the complex workflows agents execute.
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Exception |
 |---|---|---|---|
-| Define `authority` in frontmatter | **P** | Explicitly states if the agent can `propose` or `suggest`. | None |
-| Include a PADU table in the body | **P** | Constrains the agent's approach to problem solving. | None |
-| Define `delegates` in frontmatter | **P** | Defines which other agents this agent can task. | None |
-| Define `context` in frontmatter | **P** | Lists glossary, standards, and instructions relevant to the agent. | None |
-| Define `role` in frontmatter | **A** | Broad purpose of the agent. | None |
-| Granting 'execute' authority | **D** | High risk; prefer 'propose' for most agents. | Low-risk audit agents. |
+| Define `authority` level | **P** | Explicitly states if an agent can propose or just suggest. | None |
+| Include an Agent PADU table | **P** | Defines the behavioral constraints and preferences. | None |
+| List `delegates` | **P** | Establishes the agent's "chain of command" or peer network. | None |
+| Define `context` requirements | **P** | States which standards/skills the agent must load to function. | None |
+| Circular Delegation | **U** | Risk of infinite logic loops between agents. | None |
 
 ## Rationale
-
-Agents must have well-defined boundaries and toolkits. The inclusion of an internal PADU table ensures the agent evaluates its own proposed solutions against project-specific values before presenting them.
+Agents are the "active" nodes of the kernel. Standardizing their definition ensures that the human user can trust the boundaries of an agent's autonomy and understand how it interacts with other system components.

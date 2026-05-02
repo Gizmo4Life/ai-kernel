@@ -2,30 +2,35 @@
 id: kernel.standard
 title: Kernel Standard
 type: standard
-version: 1
+version: 2
 created: 2026-04-28
-updated: 2026-04-28
-tags: [core, architecture, quality]
-summary: The master standard for the AI Kernel's architecture and organization.
+updated: 2026-05-02
+tags: [core, architecture, quality, root]
+summary: The supreme architectural standard for the AI Kernel repository.
 scope: /
-glossary_refs: [ atomicity.glossary, orchestration.glossary, quality-gate.glossary, bootstrap.glossary, knowledge-graph.glossary ]
+glossary_refs: [atomicity.glossary, orchestration.glossary, quality-gate.glossary, bootstrap.glossary, knowledge-graph.glossary]
 ---
 
 # Kernel Standard
 
-This is the supreme standard governing the entire AI Kernel repository.
+## Abstract
+The **Kernel Standard** is the foundational governance document for the AI Kernel. It establishes the core architectural principles—Atomicity, Orchestration, and Single Source of Truth—that all other standards, skills, and instructions must inherit. As the root of the standard hierarchy, it defines the global expectations for repo organization and machine-readability.
+
+## Related Standards
+- [Standard File](standard-file.standard.md): Governs the meta-structure of this and all other standards.
+- [Glossary Entry](glossary-entry.standard.md): Governs the atomic units of knowledge.
+- [Skill File](skill-file.standard.md): Governs atomic actions.
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Exception |
 |---|---|---|---|
-| Use `.{filetype}.md` naming convention | **P** | Enables clear file-system discovery and type-based filtering. | README.md |
-| Link to Glossary for every concept | **P** | Ensures Single Source of Truth. | Common English terms. |
-| Use Atomic Skills and Orchestrated Instructions | **P** | Core architectural principle for scalability. | Trivial helpers. |
-| Include Frontmatter on all content files | **P** | Essential for machine discovery and Knowledge Graph integrity. | README.md |
-| Multi-tool Skills | **U** | Violates atomicity. | None |
-| Instructions without Quality Gates | **U** | Risk of sub-standard commits. | None |
+| Use `.{filetype}.md` naming | **P** | Enables deterministic file-system discovery. | README.md |
+| Hierarchical Standards | **P** | Organizes rules from broad to specific. | None |
+| Link to Glossary for all terms | **P** | Eliminates definition drift and redundancy. | Common language. |
+| Atomic Skills / Orchestrated Instructions | **P** | Ensures modularity and reusability. | Trivial helpers. |
+| Missing Frontmatter | **U** | Breaks the machine-readable Knowledge Graph. | None |
+| Inline Definitions | **U** | Violates Single Source of Truth (SSoT). | None |
 
 ## Rationale
-
-The AI Kernel is a machine-readable knowledge base. Strict adherence to naming, modularity, and linking is required for agents to navigate the system without hallucination or redundancy.
+The Kernel Standard acts as the "Constitution" of the repository. By enforcing strict modularity and naming conventions at the root, we ensure that as the kernel grows, it remains navigable by autonomous agents without constant human intervention.

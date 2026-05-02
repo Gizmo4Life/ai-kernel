@@ -1,24 +1,24 @@
 # AI Kernel
 
-A personal workflow framework for codifying development standards, skills, and agent behaviors.
+A personal workflow framework for autonomous agents. This repository acts as a machine-readable engineering brain, codifying standards, skills, instructions, and agents to ensure high-integrity development across various AI-assisted environments.
 
-## Overview
+## Directory Structure
 
-AI Kernel is a repository of machine-readable knowledge designed to be used as a companion workspace alongside active projects. It provides a structured way to define: - [Glossary](glossary/glossary-entry.glossary.glossary.md): Single source of truth for project-agnostic engineering and general concepts.
-- [Standards](glossary/standard.glossary.glossary.md): Quality guidelines using the [PADU scale](glossary/padu-scale.glossary.glossary.md).
-- [Skills](glossary/skill.glossary.glossary.md): Atomic, tool-centric actions that AI agents can perform.
-- [Instructions](glossary/instruction.glossary.glossary.md): High-level workflows that sequence multiple skills.
-- [Agents](glossary/agent.glossary.glossary.md): Autonomous actor definitions with specific roles and constraints.
+- [agents/](agents/README.md): Definitions for autonomous actors and their authority levels.
+- [context/](context/README.md): Persistent conversation and project state for long-term memory.
+- [glossary/](glossary/README.md): Single source of truth for all concepts and technical terms.
+- [instructions/](instructions/README.md): Orchestrated, multi-step workflows with mandatory quality gates.
+- [prompts/](prompts/README.md): Reusable, template-driven AI instructions and logic.
+- [skills/](skills/README.md): Atomic, tool-centric actions adhering to the single-responsibility principle.
+- [standards/](standards/README.md): Hierarchical quality governance (PADU scale) for all repository components.
 
-## Getting Started
+## Core Principles
 
-Agents like Claude Code, GitHub Copilot, and Antigravity are configured to read [AGENTS.glossary.md](AGENTS.glossary.md) as their primary instruction set.
+- **Single Source of Truth**: All concepts must be defined in the [Glossary](glossary/README.md).
+- **Atomicity**: Skills must perform a single action using a single tool.
+- **Orchestration**: Complex tasks are handled by Instructions that coordinate atomic skills.
+- **Hierarchical Governance**: Standards are tiered from global (Kernel Standard) to domain-specific implementations.
 
-To integrate this kernel into your workflow:
-1. Open this repository in your AI-assisted development environment.
-2. Refer to the [glossary/](glossary/) and [standards/](standards/) folders.
-3. Use the defined [skills/](skills/) and [instructions/](instructions/) to automate repetitive tasks.
+## For AI Agents
 
-## License
-
-Personal/Private use.
+Agents should start with [AGENTS.md](AGENTS.md) for canonical instructions and framework usage.

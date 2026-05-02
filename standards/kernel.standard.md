@@ -2,7 +2,7 @@
 id: kernel.standard
 title: Kernel Standard
 type: standard
-version: 3
+version: 4
 created: 2026-04-28
 updated: 2026-05-02
 tags: [core, architecture, quality, root]
@@ -29,3 +29,15 @@ The **Kernel Standard** is the foundational governance document for the AI Kerne
 
 ## Rationale
 The Kernel Standard acts as the "Constitution" of the repository. By linking every rule to a specific enforcement skill or audit process, we ensure that architectural integrity is a measurable metric, not just a guideline.
+
+## Enforcement
+The Kernel posture is **Hybrid-Automated**. Structural integrity (naming, frontmatter, links) is enforced by specialized skills, but conceptual alignment (e.g., whether an instruction is truly "orchestrated" or just a complex script) requires an audit by **Flynn**.
+
+### Gaps
+#### Conceptual Orchestration Detection
+**Risk**: An agent might create an instruction that simply runs a long shell script instead of coordinating atomic skills. This technically "passes" structural audit but violates the architectural spirit.
+**Be Wary Of**: Instructions that do not list external skills but have many "internal" sub-steps.
+
+#### Glossary Coverage
+**Risk**: New concepts may be introduced in markdown bodies without being flagged if they don't look like formal definitions.
+**Be Wary Of**: Technical jargon or project-specific acronyms that are used across multiple files but missing from the glossary.

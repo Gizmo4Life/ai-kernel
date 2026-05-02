@@ -2,7 +2,7 @@
 id: prompt-file.standard
 title: Prompt File Standard
 type: standard
-version: 2
+version: 3
 created: 2026-05-02
 updated: 2026-05-02
 tags: [governance, prompt-engineering]
@@ -29,3 +29,15 @@ This standard governs the structure and quality of standalone prompts. It ensure
 
 ## Rationale
 Standardizing prompt formats allows for automated metadata auditing, ensuring that all prompts are properly versioned and variable-defined before use.
+
+## Enforcement
+The posture for prompts is **Agent-Audited**. Structural elements (variables, versioning) are caught by metadata audit, but the "quality" and "determinism" of the prompt logic require an audit by the **Standards Auditor**.
+
+### Gaps
+#### Prompt Injection / Security
+**Risk**: Reusable prompts may be written in a way that is vulnerable to injection if the `variables` are not properly sanitized by the calling agent.
+**Be Wary Of**: Prompts that ask the model to "ignore all previous instructions" or similar patterns.
+
+#### Regression
+**Risk**: A prompt version update may work better for one model but break behavior for another.
+**Be Wary Of**: Changing core prompt logic without updating the `version` field.

@@ -2,7 +2,7 @@
 id: standard-file.standard
 title: Standard File Standard
 type: standard
-version: 3
+version: 4
 created: 2026-04-28
 updated: 2026-05-02
 tags: [governance, quality, hierarchy]
@@ -32,9 +32,21 @@ All standards must include a PADU table with the following columns:
 |---|---|---|---|---|
 | Include concise **Abstract** | **P** | Provides immediate context. | `audit-frontmatter-completeness.skill` | None |
 | Include **Enforcement** column | **P** | Ensures standards are actionable and auditable. | `evaluate-against-standard.skill` | None |
+| Include **Enforcement** section | **P** | Summarizes the audit posture and quality debt. | Agent Audit (Auditor) | None |
 | Define `parent_standard` | **P** | Establishes the hierarchy chain. | `verify-repository-integrity.instruction` | Root-level. |
 | Vague practice descriptions | **U** | Prevents objective evaluation. | Agent Audit (Auditor) | None |
-| Missing Enforcement method | **D** | Makes the standard a "soft rule" only. | Agent Audit (Auditor) | None |
 
 ## Rationale
-Standards without enforcement are merely suggestions. By mandating an Enforcement column, we force the architect to think about how a rule will be caught by the system, moving the repository toward automated quality assurance.
+Standards without enforcement are merely suggestions. By mandating an Enforcement column and section, we force the architect to think about how a rule will be caught by the system, moving the repository toward automated quality assurance.
+
+## Enforcement
+The Enforcement posture for this standard is currently **Agent-Audited**. While we have skills to check for the presence of the PADU table and frontmatter fields, verifying the "quality" of the rationales or the "validity" of an exception requires the **Standards Auditor** to perform a semantic review.
+
+### Gaps
+#### Subjective Rationale Evaluation
+**Risk**: If rationales are weak or circular (e.g., "P because it is preferred"), the standard provides no actual guidance.
+**Be Wary Of**: Agents blindly following a standard without understanding the underlying technical trade-offs.
+
+#### Exception Over-use
+**Risk**: If "None" is not strictly followed or if exceptions are too broad, the standard becomes toothless.
+**Be Wary Of**: Using exceptions to bypass architectural constraints like atomicity.

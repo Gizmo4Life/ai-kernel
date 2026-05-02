@@ -2,7 +2,7 @@
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
-version: 3
+version: 4
 created: 2026-04-28
 updated: 2026-05-02
 tags: [governance, glossary]
@@ -29,3 +29,15 @@ This standard defines the requirements for glossary entries. It ensures that eve
 
 ## Rationale
 The glossary's integrity is protected by a suite of skills that search for conceptual overlap and redundant definitions across the repository.
+
+## Enforcement
+The posture for the glossary is **Hybrid-Automated**. We use `find-similar-terms.skill` to catch lexical overlaps, but semantic overlaps (different words, same meaning) require the **Librarian** or **Flynn** to audit.
+
+### Gaps
+#### Concept Fragmentation
+**Risk**: Two different terms (e.g., `Bootstrap` and `Initialization`) may be used to describe the same process in different folders, avoiding lexical detection.
+**Be Wary Of**: Adding new terms that have overlapping "Related" lists with existing entries.
+
+#### Alias Drift
+**Risk**: An alias might be added to a glossary entry that is already the primary ID of another entry.
+**Be Wary Of**: Every alias should be checked against the master ID list. (Gap: Currently requires manual check or `find-similar-terms.skill`).

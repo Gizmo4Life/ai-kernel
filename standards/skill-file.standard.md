@@ -2,7 +2,7 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-version: 4
+version: 5
 created: 2026-04-28
 updated: 2026-05-02
 tags: [automation, quality, atomicity]
@@ -28,4 +28,16 @@ This standard governs the creation of atomic skills. It enforces the "Single Too
 | Multi-tool logic in one skill | **U** | Violates atomicity. | `audit-for-architectural-violations.skill` | None |
 
 ## Rationale
-By forcing skills to be atomic and linking them to specific architectural audit skills, we ensure that the building blocks of the kernel remain modular and easy to re-compose.
+Modularity is the key to the AI Kernel's scalability. By forcing skills to be atomic and linking them to specific architectural audit skills, we ensure that the building blocks of the kernel remain modular.
+
+## Enforcement
+The posture for skills is **Automated**. We use the `audit-for-architectural-violations.skill` to check for multiple tool mentions and ensure the "Execution Steps" are sufficiently simple.
+
+### Gaps
+#### Hidden Tool Dependencies
+**Risk**: A skill might claim to use `grep` but actually rely on a secondary tool (like `awk` or `sed`) inside its command string that isn't declared in frontmatter.
+**Be Wary Of**: Complex one-liners in "Execution Steps" that chain multiple CLI utilities.
+
+#### Action Over-reach
+**Risk**: A skill might use a single tool (`editor`) but perform multiple logical actions (e.g., "Find and Replace" AND "Formatting").
+**Be Wary Of**: Skill descriptions that use the word "and" to describe their primary objective.

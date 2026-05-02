@@ -2,7 +2,7 @@
 id: agent-file.standard
 title: Agent File Standard
 type: standard
-version: 3
+version: 4
 created: 2026-04-28
 updated: 2026-05-02
 tags: [governance, agent]
@@ -29,3 +29,15 @@ This standard defines the requirements for defining autonomous agents within the
 
 ## Rationale
 Standardizing agent definitions ensures that the human user can trust the boundaries of an agent's autonomy and understand how it interacts with other system components.
+
+## Enforcement
+The posture for agents is **Agent-Audited**. While we can verify that the PADU table exists, the **Standards Auditor** must verify that the "Practices" listed in the agent's table are actually consistent with its `authority` level and the `kernel.standard`.
+
+### Gaps
+#### Circular Delegation Analysis
+**Risk**: Detecting delegation loops (A delegates to B, B delegates to A) requires a recursive graph audit that is currently performed manually or via simple agent inspection.
+**Be Wary Of**: Adding peer agents without clear parent-child or caller-callee relationships.
+
+#### Authority Overreach
+**Risk**: An agent may have `authority: suggest` in frontmatter but write its PADU table in a way that implies it can `propose` changes.
+**Be Wary Of**: Behavioral ratings that allow the agent to "draft" or "modify" files if its authority level is restricted.

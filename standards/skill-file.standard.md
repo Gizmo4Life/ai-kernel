@@ -2,7 +2,7 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-version: 3
+version: 4
 created: 2026-04-28
 updated: 2026-05-02
 tags: [automation, quality, atomicity]
@@ -15,21 +15,17 @@ glossary_refs: [skill.glossary, atomicity.glossary]
 # Skill File Standard
 
 ## Abstract
-This standard governs the creation of atomic skills. It enforces the "Single Tool, Single Action" principle to ensure that skills remain modular and predictable. Atomic skills are the building blocks of the AI Kernel, designed to be easily orchestrated into complex instructions or used directly by agents.
-
-## Related Standards
-- [Kernel Standard](kernel.standard.md): The architectural parent setting atomicity expectations.
-- [Instruction File](instruction-file.standard.md): The standard for coordinating these skills.
+This standard governs the creation of atomic skills. It enforces the "Single Tool, Single Action" principle to ensure that skills remain modular and predictable.
 
 ## PADU Table
 
-| Practice | Rating | Rationale | Exception |
-|---|---|---|---|
-| Maintain [Atomicity](glossary/atomicity.glossary.md) | **P** | Ensures skills are reusable across different workflows. | None |
-| Define `tool` in frontmatter | **P** | Agents must know which internal tool to invoke. | None |
-| Use a single tool per skill | **P** | Prevents complex side effects and hidden dependencies. | None |
-| Define `inputs` and `outputs` | **P** | Establishes a machine-readable contract for orchestration. | None |
-| Multi-tool logic in one skill | **U** | Violates atomicity; must be an instruction. | None |
+| Practice | Rating | Rationale | Enforcement | Exception |
+|---|---|---|---|---|
+| Maintain [Atomicity](glossary/atomicity.glossary.md) | **P** | Ensures skills are reusable. | `audit-for-architectural-violations.skill` | None |
+| Define `tool` in frontmatter | **P** | Agents must know the tool. | `audit-frontmatter-completeness.skill` | None |
+| Use single tool per skill | **P** | Prevents side effects. | `audit-for-architectural-violations.skill` | None |
+| Define `inputs` and `outputs` | **P** | Contract for orchestration. | `audit-frontmatter-completeness.skill` | None |
+| Multi-tool logic in one skill | **U** | Violates atomicity. | `audit-for-architectural-violations.skill` | None |
 
 ## Rationale
-Modularity is the key to the AI Kernel's scalability. By forcing skills to be atomic, we ensure that as the repository grows, we can recompose existing functions into new instructions without needing to rewrite core logic.
+By forcing skills to be atomic and linking them to specific architectural audit skills, we ensure that the building blocks of the kernel remain modular and easy to re-compose.

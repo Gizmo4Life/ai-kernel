@@ -2,24 +2,31 @@
 id: padu-scale.glossary
 title: PADU Scale
 type: glossary
-version: 1
+version: 2
 created: 2026-04-28
-updated: 2026-04-28
-tags: [core, governance, quality]
-summary: A four-tier rating system (Preferred, Acceptable, Discouraged, Unacceptable) for evaluating project practices.
-aliases: [rating-system, compliance-scale]
-related: [standard.glossary]
+updated: 2026-05-02
+tags: [core, quality, governance]
+summary: The four-tier rating system (Preferred, Acceptable, Discouraged, Unacceptable) used to evaluate technical practices and repository health.
+aliases: [quality-scale, rating-system]
+related: [standard.glossary, quality-gate.glossary]
 ---
 
 # PADU Scale
 
-The **PADU Scale** is the kernel's mechanism for categorizing and enforcing technical decisions. It allows for nuance between "always do this" and "never do this."
+The **PADU Scale** is the kernel's mechanism for objective quality governance. Every [Standard](../standards/README.md) contains a PADU table that classifies practices into one of four categories.
 
-## Ratings
+## The Ratings
 
-| Rating | Code | Description |
+| Rating | Name | Description |
 |---|---|---|
-| **Preferred** | **P** | The default choice. Use this unless there is a specific, documented reason not to. |
-| **Acceptable** | **A** | A valid alternative that requires no special justification but is not the primary recommendation. |
-| **Discouraged** | **D** | Avoid this if possible. If used, the rationale must be documented and approved. |
-| **Unacceptable** | **U** | Never use. Agents are forbidden from proposing or implementing these practices. |
+| **P** | **Preferred** | The ideal way to perform a task. Should be the default choice. |
+| **A** | **Acceptable** | A valid alternative when **P** is not feasible or optimal. |
+| **D** | **Discouraged** | A pattern that works but has known flaws or technical debt. Requires justification. |
+| **U** | **Unacceptable** | A pattern that is strictly forbidden. Must be refactored immediately. |
+
+## Enforcement Column
+Every PADU table now includes an **Enforcement** column. This column identifies the tool, skill, or manual process used to detect violations of the standard. 
+
+- **Automated**: Linked to a specific [Skill](../skills/README.md) or regex.
+- **Agent-Audited**: Relies on the **Standards Auditor** or **Flynn** to identify during a pass.
+- **Manual**: Requires human verification during a quality gate.

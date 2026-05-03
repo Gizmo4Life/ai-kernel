@@ -2,9 +2,6 @@
 id: summarize-to-context.skill
 title: Summarize to Context
 type: skill
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [memory, context.glossary, summarization]
 summary: Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
 tool: editor
@@ -15,10 +12,21 @@ standards: []
 glossary_refs: [ context.glossary, heuristics.glossary ]
 ---
 
+## Context
+Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
+
+
 # Summarize to Context
 
 This skill implements the "Context Management" directive by distilling transient conversation history into persistent repository knowledge.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Extraction [Heuristics](glossary/heuristics.glossary.md)
 
 Focus on:
@@ -37,3 +45,7 @@ Focus on:
 - **Impact**: ... (e.g., "Updated 5 files in /standards")
 - **Open Questions**: ...
 ```
+
+## Verification Protocol
+1. Perform a manual dry-run of the execution steps.
+2. Verify that the output matches the expected result defined in the Quality Gate.

@@ -2,9 +2,6 @@
 id: create-glossary-entry.instruction
 title: Create Glossary Entry
 type: instruction
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [workflow, documentation, onboarding]
 summary: A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
 goal: A high-quality, non-redundant glossary entry committed to the repository.
@@ -14,10 +11,21 @@ preconditions: - A new concept or term has been identified.
   - The agent has write access to the `glossary/` directory.
 ---
 
+## Context
+A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
+
+
 # Create Glossary Entry
 
 Follow these steps to add a new concept to the AI Kernel.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Steps
 
 1. **Check for Existence**: Run the `find-glossary-terms` skill with the new term and any likely aliases. If a match is found, do NOT proceed. Link to the existing entry instead.
@@ -27,3 +35,7 @@ Follow these steps to add a new concept to the AI Kernel.
 5. **Quality Audit**: Run the `evaluate-against-standard` skill on the draft using `glossary-entry-standard`.
 6. **Refine**: Fix any issues identified in the audit (e.g., missing summary, missing tags).
 7. **Commit**: Save the file and propose a commit message.
+
+## Postconditions
+1. The system state matches the goal defined in the frontmatter.
+2. All related Knowledge Graph nodes are updated and linked.

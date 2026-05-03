@@ -2,9 +2,6 @@
 id: resolve-glossary-conflict.instruction
 title: Resolve Glossary Conflict
 type: instruction
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [conflict-resolution, glossary, cleanup]
 summary: Workflow for merging similar glossary entries or clarifying ambiguous terms.
 goal: A clean glossary with non-overlapping entries and comprehensive aliases.
@@ -14,10 +11,21 @@ preconditions: - Two or more glossary entries are identified as potentially redu
   - Or, a term has multiple conflicting definitions.
 ---
 
+## Context
+Workflow for merging similar glossary entries or clarifying ambiguous terms.
+
+
 # Resolve Glossary Conflict
 
 Flynn's workflow for maintaining the "Single Source of Truth" in the glossary.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Steps
 
 1. **Map the Conflict**: List the IDs and summaries of all conflicting entries.
@@ -27,3 +35,7 @@ Flynn's workflow for maintaining the "Single Source of Truth" in the glossary.
 5. **Update Aliases**: Add the decommissioned terms to the `aliases` field of the canonical entry.
 6. **Redirect References**: (Optional but Recommended) Search for references to the old IDs and update them to point to the new canonical entry.
 7. **Decommission**: Delete the redundant files.
+
+## Postconditions
+1. The system state matches the goal defined in the frontmatter.
+2. All related Knowledge Graph nodes are updated and linked.

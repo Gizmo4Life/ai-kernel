@@ -2,12 +2,9 @@
 id: standard-file.standard
 title: Standard File Standard
 type: standard
-version: 4
-created: 2026-04-28
-updated: 2026-05-02
 tags: [governance, quality, hierarchy]
 summary: Meta-standard for defining the structure, hierarchy, and enforcement of technical standards.
-scope: standards/
+scope: "/standards/**/*.standard.md"
 applies_to: [standard.glossary]
 parent_standard: kernel.standard
 glossary_refs: [ standard.glossary, padu-scale.glossary, heuristics.glossary ]
@@ -15,9 +12,16 @@ glossary_refs: [ standard.glossary, padu-scale.glossary, heuristics.glossary ]
 
 # Standard File Standard
 
-## Abstract
+## Context
 This meta-standard defines the structural and hierarchical requirements for all files in the `standards/` directory. It ensures that standards are part of a tiered governance system with explicit abstracts, inheritance chains, and clear enforcement mechanisms for every quality rule.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## PADU Table Requirements
 All standards must include a PADU table with the following columns:
 1. **Practice**: The specific action or pattern being rated.
@@ -34,9 +38,12 @@ All standards must include a PADU table with the following columns:
 | Include **Enforcement** column | **P** | Ensures standards are actionable and auditable. | `evaluate-against-standard.skill` | None |
 | Include **Enforcement** section | **P** | Summarizes the audit posture and quality debt. | Agent Audit (Auditor) | None |
 | Define `parent_standard` | **P** | Establishes the hierarchy chain. | `verify-repository-integrity.instruction` | Root-level. |
+| Actionable Enforcement | **P** | Every practice must have a verifiable detection method. | `evaluate-against-standard.skill` | None |
+| Purely Subjective Standards | **D** | Standards without automated triggers lead to quality drift. | `standards-auditor.agent` | None |
+| Use `version` field | **U** | Administrative bloat; use content hashes for internal tracking. | `check-id-uniqueness.skill` | None |
+| Use `created/updated` fields | **U** | Administrative bloat; use Git/Filesystem metadata. | `check-id-uniqueness.skill` | None |
 | Vague practice descriptions | **U** | Prevents objective evaluation. | Agent Audit (Auditor) | None |
 
-## Rationale
 Standards without enforcement are merely suggestions. By mandating an Enforcement column and section, we force the architect to think about how a rule will be caught by the system, moving the repository toward automated quality assurance.
 
 ## Enforcement

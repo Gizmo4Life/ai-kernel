@@ -1,22 +1,33 @@
----
-id: standards-manifest
-title: Standards Manifest
-type: manifest
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
-summary: Human-navigable map and organizational overview of the standards directory.
----
+# Standards Manifest
 
-# Standards
+## Context
+This folder contains the formal governance rules and quality bars for the AI Kernel.
 
-This directory contains the formal standards and quality bars for the repository, evaluated using the PADU scale.
+## Architecture
 
-## Core Framework Standards
+```mermaid
+graph TD
+    Folder[standards/] --> Files[Structured Standard Files]
+    Files --> Audit[Standards Auditor: Enforcement]
+```
 
-- [Kernel Standard](kernel.standard.md): Master standard for the entire architecture.
-- [Standard File](standard-file.standard.md): Meta-standard for all standard files.
-- [Glossary Entry](glossary-entry.standard.md): Guidelines for defining terms.
-- [Skill File](skill-file.standard.md): Guidelines for defining atomic actions.
-- [Instruction File](instruction-file.standard.md): Guidelines for multi-step workflows.
-- [Agent File](agent-file.standard.md): Guidelines for defining autonomous actors.
+## File Registry
+
+| ID | Type | Summary |
+|---|---|---|
+| `kernel.standard` | Standard | Root governance and structural rules. |
+| `standard-file.standard` | Standard | Meta-standard for all standard files. |
+| `skill-file.standard` | Standard | Meta-standard for atomic skills. |
+| `instruction-file.standard` | Standard | Meta-standard for workflows. |
+| `agent-file.standard` | Standard | Meta-standard for autonomous agents. |
+| `glossary-entry.standard` | Standard | Meta-standard for glossary terms. |
+| `capability.standard` | Standard | Rules for granting agent capabilities. |
+| `manifest.standard` | Standard | Rules for machine-readable READMEs. |
+| `context-lifecycle.standard` | Standard | Rules for context management. |
+| `atomic-extraction.standard` | Standard | Rules for SSOT de-conflation. || `operability.standard` | Standard | Holistic 3-pillar operability framework. |
+| `naming.standard` | Standard | Rules for deterministic naming. |
+| `quality-gate.standard` | Standard | Rules for verification and enforcement. |
+
+## Quality Gate
+- **Verification**: All standards must include a PADU table and a Tier-specific hardening section.
+- **Enforcement**: This manifest must be in 1:1 sync with the filesystem.

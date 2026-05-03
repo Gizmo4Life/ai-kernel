@@ -2,9 +2,6 @@
 id: collect-repo-ids.skill
 title: Collect Repository IDs
 type: skill
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [audit, technical]
 summary: Extracts all unique 'id' fields from the repository's YAML frontmatter.
 tool: grep
@@ -14,12 +11,27 @@ standards: []
 glossary_refs: [frontmatter.glossary]
 ---
 
+## Context
+Extracts all unique 'id' fields from the repository's YAML frontmatter.
+
+
 # Collect Repository IDs
 
 Atomic skill for indexing the repository.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Execution Steps
 
 1. **Grep**: Search for `id:` at the start of frontmatter blocks.
 2. **Normalize**: Strip whitespace and prefixes.
 3. **Report**: provide the master list of discovered IDs.
+
+## Verification Protocol
+1. Perform a manual dry-run of the execution steps.
+2. Verify that the output matches the expected result defined in the Quality Gate.

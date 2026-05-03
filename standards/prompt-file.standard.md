@@ -2,21 +2,25 @@
 id: prompt-file.standard
 title: Prompt File Standard
 type: standard
-version: 3
-created: 2026-05-02
-updated: 2026-05-02
 tags: [governance, prompt-engineering]
 summary: Standards for defining reusable AI prompts in the `prompts/` directory.
-scope: prompts/
+scope: "/prompts/*.prompt.md"
 parent_standard: kernel.standard
 glossary_refs: [prompt.glossary, kernel.standard]
 ---
 
 # Prompt File Standard
 
-## Abstract
+## Context
 This standard governs the structure and quality of standalone prompts. It ensures that prompts are modular, versioned, and documented with their intended variables.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |
@@ -27,7 +31,6 @@ This standard governs the structure and quality of standalone prompts. It ensure
 | Hardcoding specific data | **U** | Prevents reusability. | Agent Audit (Auditor) | None |
 | Vague instructions | **D** | Non-deterministic behavior. | Agent Audit (Auditor) | None |
 
-## Rationale
 Standardizing prompt formats allows for automated metadata auditing, ensuring that all prompts are properly versioned and variable-defined before use.
 
 ## Enforcement

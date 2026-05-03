@@ -2,9 +2,6 @@
 id: prompts-manifest
 title: Prompts Manifest
 type: manifest
-version: 1
-created: 2026-05-02
-updated: 2026-05-02
 summary: Human-navigable map and organizational overview of the prompts directory.
 ---
 

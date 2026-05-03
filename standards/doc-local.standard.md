@@ -1,0 +1,41 @@
+---
+id: doc-local.standard
+title: Local Documentation Standard
+type: standard
+tags: [documentation, quality, atomicity, local]
+summary: Standards for component-level READMEs embedded within code directories.
+scope: "/**/README.md"
+parent_standard: standard-file.standard
+glossary_refs: [atomicity.glossary, progressive-disclosure.glossary]
+---
+
+# Local Documentation Standard
+
+## Context
+Local documentation provides "Truth at the Source." It is scoped strictly to the directory it resides in, ensuring that technical details are located exactly where they are most relevant to the developer or agent.
+
+## Architecture
+
+```mermaid
+graph TD
+    Directory[Code Directory] --> README[README.md: Local Truth]
+    README --> Technical[Technical Details: Local Scope]
+    README --> Links[Links: External Concepts]
+    Links --> Glossary[Glossary: Canonical Terms]
+    Links --> Architecture[docs/architecture: System Map]
+```
+
+## PADU Table
+
+| Practice | Rating | Rationale | Enforcement | Exception |
+|---|---|---|---|---|
+| Directory-Scoped Context | **P** | The directory structure provides the primary context. | `doc-audit.skill` | None |
+| Link over Rehash | **P** | Prevents definition drift and maintains atomicity. | `doc-audit.skill` | Common language |
+| Technical Detail Depth | **P** | This is the ONLY place for implementation details. | Agent Audit | None |
+| Global Architecture in Local Doc | **U** | Violates scoping; link to `docs/architecture` instead. | `doc-audit.skill` | None |
+| Redundant Definitions | **U** | Violates SSOT; use Glossary links. | `audit-redundant-content.skill` | None |
+
+By forcing local READMEs to stay atomic, we ensure that a developer can understand a component without being overwhelmed by global system complexity.
+
+## Enforcement
+The posture is **Automated**. The **Librarian** verifies that local READMEs do not exceed a "Semantic Scope" (e.g., they don't explain concepts outside their parent directory).

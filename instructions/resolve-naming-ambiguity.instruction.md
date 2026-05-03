@@ -2,28 +2,48 @@
 id: resolve-naming-ambiguity.instruction
 title: Resolve Naming Ambiguity
 type: instruction
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
-tags: [workflow, glossary, architect]
-summary: Workflow for handling overlapping or confusingly named concepts in the glossary.
-goal: A clear, distinct, and unambiguous glossary.
-skills: [find-similar-terms.skill, provide-glossary-guidance.skill]
-instructions: [resolve-glossary-conflict.instruction]
-standards: [glossary-entry.standard, kernel.standard]
-preconditions: - A potential naming conflict has been identified.
+tags: [workflow, naming, quality]
+summary: Workflow for resolving collisions or ambiguous terms in the Knowledge Graph.
+goal: A naming convention that is 100% unique and deterministic.
+skills: [find-similar-terms.skill]
+standards: [naming.standard, kernel.standard]
+preconditions:
+  - An audit identifies a naming collision or ambiguous term.
 ---
 
 # Resolve Naming Ambiguity
 
-This instruction provides the logic for maintaining conceptual clarity in the AI Kernel.
+## Context
+Naming ambiguity is the "Friction" of a Knowledge Graph. This instruction provides the path for resolving collisions by leveraging the **Naming Standard** to enforce uniqueness and deterministic suffixes.
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Detect[Detect: Collision/Ambiguity]
+    Detect --> Analyze[Analyze: Semantic Scope]
+    Analyze --> Standardize[Standardize: Apply Suffix]
+    Standardize --> Update[Update: References]
+    Update --> Verify[Verify: ID Uniqueness]
+    Verify --> End((Resolution Confirmed))
+```
 
 ## Steps
 
-1. **Detection**: Run `find-similar-terms.skill` for the target term.
-2. **Analysis**: Invoke **Flynn** via `provide-glossary-guidance.skill`.
-3. **Decision Tree**: - **Merge**: If terms are identical in intent, use [Resolve Glossary Conflict](resolve-glossary-conflict.instruction.md).
-    - **Rename**: If one term is more specific, propose a renaming to include a namespace or qualifier (e.g., `Standard` -> `File Standard`).
-    - **Disambiguate**: If terms must coexist, add a `## Disambiguation` section to both entries explicitly linking and contrasting them.
-4. **[Quality Gate](glossary/quality-gate.glossary.md)**: - Verify that no two IDs in the repository are confusingly similar (e.g., `standard` vs `standards`).
-5. **Update References**: If renaming occurred, run the `Refactor to Kernel Standards` instruction to fix links.
+1. **Detection**: Identify the ambiguous term or collision ID.
+2. **Semantic Review**: Invoke **[Find Similar Terms](../skills/find-similar-terms.skill.md)** to understand the scope of the ambiguity.
+3. **Application**: Apply the **[Naming Standard](../standards/naming.standard.md)** to generate a new, unique ID.
+    - Prioritize functional suffixes (e.g., `.skill`, `.standard`).
+4. **Graph Update**: Globally replace all references to the old ID with the new ID.
+5. **Validation**: Run the **[ID Uniqueness Check](../skills/check-id-uniqueness.skill.md)** to confirm the fix.
+
+
+## Postconditions
+1. The system state matches the goal defined in the frontmatter.
+2. All related Knowledge Graph nodes are updated and linked.
+
+## Quality Gate
+
+Naming integrity is governed by the **[Naming Standard](../standards/naming.standard.md)**.
+- **Verification**: The new ID must be unique across the entire repository.
+- **Enforcement**: Any node with a non-deterministic or duplicate ID is **Unacceptable (U)** and will be rejected by the **Integrity Guardian**.

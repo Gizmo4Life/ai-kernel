@@ -2,19 +2,28 @@
 id: standard.glossary
 title: Standard
 type: glossary
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [core, governance, quality]
 summary: A set of rules or guidelines governing the creation and maintenance of content, evaluated using the PADU scale.
 aliases: [guideline, rule, requirement]
 related: [ padu-scale.glossary, glossary-entry.glossary ]
 ---
 
+## Context
+Canonical definition of a core AI Kernel concept.
+
+
 # Standard
 
 A **Standard** is a formal document that defines the quality bars and constraints for a specific domain (e.g., C++ coding, documentation structure, API design).
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Term[Concept Term] --> Definition[Semantic Definition]
+    Definition --> Constraints[Usage Constraints]
+```
 ## Key Characteristics
 
 - **PADU Scale**: Uses Preferred, Acceptable, Discouraged, and Unacceptable ratings to categorize practices.
@@ -26,3 +35,7 @@ A **Standard** is a formal document that defines the quality bars and constraint
 1. **Frontmatter**: Defines the `scope` and `applies_to` fields.
 2. **PADU Table**: The core logic of the standard, mapping practices to ratings.
 3. **Rationale**: Explanations for why certain practices are rated the way they are.
+
+## Usage Constraints
+- This term must only be used in its architectural context.
+- Semantic drift from the canonical definition is Unacceptable (U).

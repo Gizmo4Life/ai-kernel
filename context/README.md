@@ -2,9 +2,6 @@
 id: context-manifest
 title: Context Manifest
 type: manifest
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 summary: Human-navigable map and organizational overview of the context directory.
 ---
 

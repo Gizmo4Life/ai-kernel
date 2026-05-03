@@ -2,18 +2,23 @@
 id: agents-manifest
 title: Agents Manifest
 type: manifest
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 summary: Human-navigable map and organizational overview of the agents directory.
 ---
 
 # Agents
 
-Definitions for autonomous actors, including their roles, authority.glossary, and internal PADU policies.
+This directory contains the autonomous actors and subject matter experts (SMEs) that govern the AI Kernel.
 
-## Active Agents
+## Tier 0: Interface
+- [Operator](operator.agent.md): High-level interface and remediation orchestrator.
 
-- [Flynn](flynn.agent.md): The Grid Architect and glossary guardian.
-- [Standards Auditor](standards-auditor.agent.md): The compliance and quality enforcer.
-- [Librarian](librarian.agent.md): Discovery specialist and knowledge mapper.
+## Tier 1: Domain Owners
+- [Flynn](flynn.agent.md): Supreme custodian of the Kernel Core.
+
+## Tier 2: Subject Matter Experts (SMEs)
+- [Standards Auditor](standards-auditor.agent.md): Compliance and PADU evaluation.
+- [Librarian](librarian.agent.md): Discovery and manifest maintenance.
+- [Semantic Auditor](semantic-auditor.agent.md): Logic complexity and atomicity.
+- [Standards Scout](standards-scout.agent.md): Pattern discovery and codification.
+- [Integrity Guardian](integrity-guardian.agent.md): Graph safety and structural health.
+- [Linkage Specialist](linkage-specialist.agent.md): Connectivity and reference completeness.

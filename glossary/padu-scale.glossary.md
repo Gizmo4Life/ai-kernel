@@ -2,19 +2,28 @@
 id: padu-scale.glossary
 title: PADU Scale
 type: glossary
-version: 2
-created: 2026-04-28
-updated: 2026-05-02
 tags: [core, quality, governance]
 summary: The four-tier rating system (Preferred, Acceptable, Discouraged, Unacceptable) used to evaluate technical practices and repository health.
 aliases: [quality-scale, rating-system]
 related: [standard.glossary, quality-gate.glossary]
 ---
 
+## Context
+Canonical definition of a core AI Kernel concept.
+
+
 # PADU Scale
 
 The **PADU Scale** is the kernel's mechanism for objective quality governance. Every [Standard](../standards/README.md) contains a PADU table that classifies practices into one of four categories.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Term[Concept Term] --> Definition[Semantic Definition]
+    Definition --> Constraints[Usage Constraints]
+```
 ## The Ratings
 
 | Rating | Name | Description |
@@ -30,3 +39,7 @@ Every PADU table now includes an **Enforcement** column. This column identifies 
 - **Automated**: Linked to a specific [Skill](../skills/README.md) or regex.
 - **Agent-Audited**: Relies on the **Standards Auditor** or **Flynn** to identify during a pass.
 - **Manual**: Requires human verification during a quality gate.
+
+## Usage Constraints
+- This term must only be used in its architectural context.
+- Semantic drift from the canonical definition is Unacceptable (U).

@@ -2,42 +2,46 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-version: 5
-created: 2026-04-28
-updated: 2026-05-02
 tags: [automation, quality, atomicity]
-summary: Standards for defining atomic skills, emphasizing atomicity and tool clarity.
-scope: skills/
-parent_standard: kernel.standard
-glossary_refs: [skill.glossary, atomicity.glossary]
+summary: Standards for defining atomic skills, emphasizing tool clarity and deterministic verification protocols.
+scope: "/skills/*.skill.md"
+parent_standard: standard-file.standard
+glossary_refs: [skill.glossary, atomicity.glossary, quality-gate.glossary]
 ---
 
 # Skill File Standard
 
-## Abstract
-This standard governs the creation of atomic skills. It enforces the "Single Tool, Single Action" principle to ensure that skills remain modular and predictable.
+## Context
+This standard governs the creation of atomic skills. It enforces the "Single Tool, Single Action" principle. To ensure that skills are truly deterministic, this standard mandates a **Verification Protocol**—the exact steps or commands needed to verify the skill's output.
+
+## Architecture
+
+```mermaid
+graph TD
+    Skill[Atomic Skill] --> Tool[Single Tool Assignment]
+    Skill --> Logic[Atomic Execution Logic]
+    Skill --> Protocol[Verification Protocol: Deterministic Test]
+    Protocol --> End((Quality Gate Passed))
+```
+
+## Mandatory Sections
+1. **Context**: The specific problem this skill solves.
+2. **Architecture**: Visual representation of the logic flow.
+3. **Execution Steps**: The atomic steps to perform the action.
+4. **Verification Protocol**: The machine-executable or deterministic steps to verify success.
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
-| Maintain [Atomicity](glossary/atomicity.glossary.md) | **P** | Ensures skills are reusable. | `audit-for-architectural-violations.skill` | None |
-| Define `tool` in frontmatter | **P** | Agents must know the tool. | `audit-frontmatter-completeness.skill` | None |
-| Use single tool per skill | **P** | Prevents side effects. | `audit-for-architectural-violations.skill` | None |
-| Define `inputs` and `outputs` | **P** | Contract for orchestration. | `audit-frontmatter-completeness.skill` | None |
-| Multi-tool logic in one skill | **U** | Violates atomicity. | `audit-for-architectural-violations.skill` | None |
+| Machine-Executable Protocol | **P** | Allows agents to verify their own work without guesswork. | `doc-audit.skill` | Subjective analysis |
+| Single Tool per Skill | **P** | Prevents side effects and maintains atomicity. | `audit-for-architectural-violations.skill` | None |
+| Post-Execution Verification | **P** | Ensures the deed was actually done. | Agent Audit | None |
+| Narrative Protocols | **D** | "Ensure it looks right" is not a deterministic test. | `semantic-auditor.agent` | UI-only skills |
+| Multi-tool Orchestration | **U** | Belongs in an Instruction; violates skill atomicity. | `audit-for-architectural-violations.skill` | None |
 
 ## Rationale
-Modularity is the key to the AI Kernel's scalability. By forcing skills to be atomic and linking them to specific architectural audit skills, we ensure that the building blocks of the kernel remain modular.
+A skill is a "Function." Like any function, it requires a unit test. The **Verification Protocol** is that unit test, ensuring that the AI Kernel's capabilities are reliable and enforceable.
 
 ## Enforcement
-The posture for skills is **Automated**. We use the `audit-for-architectural-violations.skill` to check for multiple tool mentions and ensure the "Execution Steps" are sufficiently simple.
-
-### Gaps
-#### Hidden Tool Dependencies
-**Risk**: A skill might claim to use `grep` but actually rely on a secondary tool (like `awk` or `sed`) inside its command string that isn't declared in frontmatter.
-**Be Wary Of**: Complex one-liners in "Execution Steps" that chain multiple CLI utilities.
-
-#### Action Over-reach
-**Risk**: A skill might use a single tool (`editor`) but perform multiple logical actions (e.g., "Find and Replace" AND "Formatting").
-**Be Wary Of**: Skill descriptions that use the word "and" to describe their primary objective.
+The posture is **Automated**. We use `audit-for-architectural-violations.skill` to detect multiple tools and ensure the presence of the `## Verification Protocol` section.

@@ -2,19 +2,28 @@
 id: atomicity.glossary
 title: Atomicity
 type: glossary
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [core, technical, skill.glossary ]
 summary: The principle that a skill should perform a single, indivisible action using a single tool.
 aliases: [single-responsibility]
 related: [ skill.glossary, orchestration.glossary ]
 ---
 
+## Context
+Canonical definition of a core AI Kernel concept.
+
+
 # Atomicity
 
 **Atomicity** is the core design principle for **Skills** in the AI Kernel.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Term[Concept Term] --> Definition[Semantic Definition]
+    Definition --> Constraints[Usage Constraints]
+```
 ## Principles
 
 - **Single Action**: A skill should do one thing (e.g., "Search", "Update File").
@@ -22,3 +31,7 @@ related: [ skill.glossary, orchestration.glossary ]
 - **Statelessness**: A skill should not rely on the side effects of other skills beyond its explicit inputs.
 
 Atomic skills are easier to test, reuse, and sequence into complex **Instructions**.
+
+## Usage Constraints
+- This term must only be used in its architectural context.
+- Semantic drift from the canonical definition is Unacceptable (U).

@@ -2,42 +2,46 @@
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
-version: 4
-created: 2026-04-28
-updated: 2026-05-02
-tags: [governance, glossary]
-summary: Standards for defining new terms and concepts in the glossary.
-scope: glossary/
-parent_standard: kernel.standard
-glossary_refs: [ glossary-entry.glossary, standard.glossary, heuristics.glossary ]
+tags: [governance, glossary, ssot]
+summary: Standards for defining canonical terms, including mandatory usage constraints to prevent semantic drift.
+scope: "/glossary/*.glossary.md"
+parent_standard: standard-file.standard
+instructions: [ resolve-glossary-conflict.instruction ]
+glossary_refs: [knowledge-graph.glossary, atomicity.glossary]
 ---
 
 # Glossary Entry Standard
 
-## Abstract
-This standard defines the requirements for glossary entries. It ensures that every term has a single, unambiguous definition that is machine-discoverable.
+## Context
+The Glossary is the "Semantic Anchor" of the AI Kernel. This standard ensures that terms are defined with enough rigor to be enforceable. It mandates that every entry include **Usage Constraints**—explicit rules about what the term is *not* allowed to be or do.
+
+## Architecture
+
+```mermaid
+graph TD
+    Term[Glossary Term] --> Definition[Abstract Definition]
+    Term --> Constraints[Usage Constraints: Negations]
+    Term --> Refs[Cross-References]
+    Constraints --> Audit[Semantic Auditor: Enforcement]
+```
+
+## Mandatory Sections
+1. **Context**: Why this term exists in the AI Kernel.
+2. **Definition**: The concise, canonical meaning of the term.
+3. **Usage Constraints**: Explicit rules/negations (e.g., "A Skill must not orchestrate").
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
-| Use `aliases` for synonyms | **P** | Improves discovery. | Agent Audit (Librarian) | None |
-| Define `related` terms | **P** | Builds Knowledge Graph. | `verify-repository-integrity.instruction` | None |
-| Single-sentence `summary` | **P** | Ideal for machine scanning. | `audit-frontmatter-completeness.skill` | None |
-| Redefining existing terms | **U** | Violates SSoT. | `find-similar-terms.skill` | None |
-| Inline definitions elsewhere | **U** | Violates SSoT. | `audit-redundant-content.skill` | None |
+| Define via Negation | **P** | Constraints are more enforceable than descriptions. | `semantic-auditor.agent` | None |
+| Link to related terms | **P** | Builds the semantic web of the Knowledge Graph. | `linkage-specialist.agent` | None |
+| Descriptive-only entries | **D** | Leads to "Soft" logic that cannot be audited. | `doc-audit.skill` | Common nouns |
+| Ambiguous synonyms | **U** | Fatal error for SSOT; use `resolve-naming-ambiguity.instruction`. | `find-similar-terms.skill` | None |
 
 ## Rationale
-The glossary's integrity is protected by a suite of skills that search for conceptual overlap and redundant definitions across the repository.
+By defining what a term **cannot** be, we create a "Hard" semantic boundary. This allows the **Semantic Auditor** to reject proposals that attempt to conflate concepts (e.g., turning a Skill into a Workflow).
 
 ## Enforcement
-The posture for the glossary is **Hybrid-Automated**. We use `find-similar-terms.skill` to catch lexical overlaps, but semantic overlaps (different words, same meaning) require the **Librarian** or **Flynn** to audit.
-
-### Gaps
-#### Concept Fragmentation
-**Risk**: Two different terms (e.g., `Bootstrap` and `Initialization`) may be used to describe the same process in different folders, avoiding lexical detection.
-**Be Wary Of**: Adding new terms that have overlapping "Related" lists with existing entries.
-
-#### Alias Drift
-**Risk**: An alias might be added to a glossary entry that is already the primary ID of another entry.
-**Be Wary Of**: Every alias should be checked against the master ID list. (Gap: Currently requires manual check or `find-similar-terms.skill`).
+The posture is **Agent-Audited**. The **Semantic Auditor** verifies that all new glossary entries include at least two functional constraints.
+\n## Usage Constraints\n- This standard must only apply to files with the .glossary.md suffix.\n- It is forbidden to use this standard for Agents or Skills.\n

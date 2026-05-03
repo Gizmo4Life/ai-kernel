@@ -2,9 +2,6 @@
 id: validate-kernel-integrity.instruction
 title: Validate Kernel Integrity
 type: instruction
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [workflow, audit, maintenance, quality]
 summary: A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
 goal: A 100% compliant and healthy repository ready for release or major updates.
@@ -15,10 +12,21 @@ preconditions: - Repository content exists.
   - All core agents (Flynn, Auditor, Librarian) are available.
 ---
 
+## Context
+A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
+
+
 # Validate Kernel Integrity
 
 This is the ultimate quality assurance workflow for the AI Kernel.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Steps
 
 1. **Metadata Audit**: Execute the [Perform Frontmatter Audit](instructions/perform-frontmatter-audit.instruction.md) instruction. Fix any missing or malformed fields immediately.
@@ -29,3 +37,7 @@ This is the ultimate quality assurance workflow for the AI Kernel.
 6. **[Quality Gate](glossary/quality-gate.glossary.md)**: - Task the **Standards Auditor** to perform a final pass on the entire repository.
     - Zero **U** (Unacceptable) ratings must remain before the audit is marked as successful.
 7. **Reporting**: Generate a final summary in the `/context/` folder documenting the audit results and any major refactors performed.
+
+## Postconditions
+1. The system state matches the goal defined in the frontmatter.
+2. All related Knowledge Graph nodes are updated and linked.

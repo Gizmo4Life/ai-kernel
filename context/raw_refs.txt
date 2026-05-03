@@ -1,0 +1,402 @@
+id: flynn.agent
+skills: [ provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
+standards: [ kernel.standard, standard-file.standard, naming.standard ]
+prompts: [ flynn-audit-workflow.prompt ]
+**Flynn** is the Tier 1 **[Domain Owner](../glossary/domain-owner.glossary.md)** for the AI Kernel. He is responsible for the "Structural Logic" of the system. While the Operator handles the user, Flynn handles the **Cabinet**—orchestrating specialized SMEs to perform technical, semantic, and structural audits on every piece of knowledge in the repository.
+- **[Standards Auditor](standards-auditor.agent.md)**: Compliance and PADU evaluation.
+- **[Librarian](librarian.agent.md)**: Discovery and context mapping.
+- **[Semantic Auditor](semantic-auditor.agent.md)**: Logic complexity and atomicity.
+- **[Standards Scout](standards-scout.agent.md)**: Pattern discovery and codification.
+- **[Integrity Guardian](integrity-guardian.agent.md)**: Graph safety and structural health.
+- **[Linkage Specialist](linkage-specialist.agent.md)**: Connectivity and reference completeness.
+Flynn manages the repository through the **[Flynn Audit Workflow](../prompts/flynn-audit-workflow.prompt.md)**. This systemic orchestration ensures that all technical, semantic, and structural dimensions are addressed during every maintenance pass.
+id: semantic-auditor.agent
+skills: [ audit-for-architectural-violations.skill, evaluate-against-standard.skill ]
+standards: [ kernel.standard, standard-file.standard ]
+prompts: [ audit-action-atomicity.prompt ]
+The **Semantic Auditor** is a specialized **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** focused on the conceptual and logical clarity of the repository.
+The Semantic Auditor uses the **[Audit Action Atomicity](../prompts/audit-action-atomicity.prompt.md)** prompt to detect architectural violations. 
+The Semantic Auditor is delegated to by **[Flynn](flynn.agent.md)** to perform deep logic audits.
+id: linkage-specialist.agent
+skills: [ audit-repository-connectivity.skill, find-frontmatter-refs.skill, find-glossary-terms.skill ]
+standards: [ kernel.standard, standard-file.standard ]
+The **Linkage Specialist** is a specialized **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** focused on the density and discoverability of the AI Kernel.
+3. **Report**: provide a "Connectivity Score" to **[Flynn](flynn.agent.md)** during house cleaning.
+id: standards-auditor.agent
+skills: [ evaluate-against-standard.skill, audit-for-architectural-violations.skill, audit-frontmatter-completeness.skill ]
+standards: [ standard-file.standard, kernel.standard ]
+The **Standards Auditor** is a specialized **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** in the field of quality governance.
+The Standards Auditor is "contracted" by a [Domain Owner](flynn.agent.md) to perform a pass over their files.
+id: librarian.agent
+skills: [ find-similar-terms.skill, audit-redundant-content.skill, provide-glossary-guidance.skill ]
+standards: [ kernel.standard, standard-file.standard ]
+parent_standard: kernel.standard
+prompts: [ determine-glossary-necessity.prompt ]
+glossary_refs: [ standard.glossary, padu-scale.glossary ]
+The **Librarian** is a specialized **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** dedicated to the discovery and mapping of the AI Kernel.
+The Librarian is the repository's "Cartographer". The Librarian uses the **[Determine Glossary Necessity](../prompts/determine-glossary-necessity.prompt.md)** prompt to decide when to canonicalize a concept.
+id: standards-scout.agent
+skills: [ scan-codebase-patterns.skill, generate-padu-table.skill ]
+standards: [ kernel.standard, standard-file.standard ]
+parent_standard: kernel.standard
+prompts: [ synthesize-padu-logic.prompt, determine-glossary-necessity.prompt ]
+glossary_refs: [ standard.glossary, padu-scale.glossary ]
+The **Standards Scout** is a proactive **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** tasked with evolving the repository's governance.
+The Standards Scout uses the **[Synthesize PADU Logic](../prompts/synthesize-padu-logic.prompt.md)** prompt to draft new quality bars.
+3. Drafts an atomic standard and proposes it to **[Flynn](flynn.agent.md)** for inclusion in the hierarchy.
+id: agents-manifest
+- [Operator](operator.agent.md): High-level interface and remediation orchestrator.
+- [Flynn](flynn.agent.md): Supreme custodian of the Kernel Core.
+- [Standards Auditor](standards-auditor.agent.md): Compliance and PADU evaluation.
+- [Librarian](librarian.agent.md): Discovery and manifest maintenance.
+- [Semantic Auditor](semantic-auditor.agent.md): Logic complexity and atomicity.
+- [Standards Scout](standards-scout.agent.md): Pattern discovery and codification.
+- [Integrity Guardian](integrity-guardian.agent.md): Graph safety and structural health.
+- [Linkage Specialist](linkage-specialist.agent.md): Connectivity and reference completeness.
+id: integrity-guardian.agent
+skills: [ find-similar-terms.skill, detect-circular-delegation.skill, audit-frontmatter-completeness.skill ]
+standards: [ kernel.standard, standard-file.standard ]
+The **Integrity Guardian** is a specialized **[Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)** dedicated to the technical safety of the AI Kernel.
+3. Reports the "Health Score" and critical violations to **[Flynn](flynn.agent.md)**.
+id: operator.agent
+2. **Delegation**: Assign the request to the appropriate **[Domain Owner](flynn.agent.md)** (Tier 1).
+3. **Remediation**: If the user provides feedback on a past error, invoke **[Kernel-First Remediation](../instructions/kernel-first-remediation.instruction.md)** to ensure the core is hardened before re-attempting the task.
+id: find-similar-terms.skill
+standards: [glossary-entry.standard, naming.standard]
+glossary_refs: [heuristics.glossary]
+Conceptual clarity is governed by the **[Naming Standard](../standards/naming.standard.md)** and the **[Glossary Entry Standard](../standards/glossary-entry.standard.md)**.
+id: audit-for-architectural-violations.skill
+standards: [ skill-file.standard, instruction-file.standard ]
+glossary_refs: [ atomicity.glossary, orchestration.glossary, quality-gate.glossary ]
+1. **Check for [Atomicity](glossary/atomicity.glossary.md)**:
+2. **Check for [Orchestration](glossary/orchestration.glossary.md)**:
+The output of this skill is governed by the **[Skill File Standard](../standards/skill-file.standard.md)**.
+- **Verification**: Ensure every violation reported contains a clear [Rationale](../glossary/padu-scale.glossary.md) and a link to the violated standard.
+- **Enforcement**: If a file fails the [Orchestration](../glossary/orchestration.glossary.md) check, it must be marked as **Unacceptable (U)** and remediated before the next commit.
+id: audit-repository-connectivity.skill
+standards: [standard-file.standard]
+glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+Graph density is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: trace-output-to-source.skill
+standards: [kernel.standard]
+glossary_refs: [knowledge-graph.glossary]
+    - Identify which **Instruction** was active (via the `id:` in the file being read or written).
+Traceability is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: generate-mermaid-diagram.skill
+standards: [doc-local.standard, doc-architecture.standard]
+glossary_refs: [knowledge-graph.glossary]
+id: generate-padu-table.skill
+standards: [standard-file.standard]
+prompts: [ synthesize-padu-logic.prompt ]
+glossary_refs: [padu-scale.glossary]
+2. **Rank**: Use the **[Synthesize PADU Logic](../prompts/synthesize-padu-logic.prompt.md)** prompt to assign P, A, D, or U ratings.
+Standard creation is governed by the **[Standard File Standard](../standards/standard-file.standard.md)**.
+id: collect-repo-ids.skill
+standards: []
+glossary_refs: [frontmatter.glossary]
+1. **Grep**: Search for `id:` at the start of frontmatter blocks.
+id: check-id-uniqueness.skill
+standards: [kernel.standard]
+glossary_refs: [frontmatter.glossary, knowledge-graph.glossary]
+    Start((Trigger Audit)) --> Extract[Extract: grep id: pattern]
+1. **Extract IDs**: Run `grep -r "id:" .` across the repository.
+ID integrity is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: tel-audit.skill
+standards: [tel-naming.standard]
+glossary_refs: [knowledge-graph.glossary]
+Telemetry integrity is governed by the **[Telemetry Naming Standard](../standards/tel-naming.standard.md)**.
+id: scan-codebase-patterns.skill
+standards: [naming.standard]
+glossary_refs: [antipattern.glossary]
+Pattern discovery is governed by the **[Naming Standard](../standards/naming.standard.md)**.
+id: find-glossary-terms.skill
+standards: [glossary-entry.standard]
+glossary_refs: [glossary-entry.glossary]
+4. **Link Suggestion**: If a match is found, provide the link format `[Title](file:///path/to/file)`.
+id: skills-manifest
+- [Check ID Uniqueness](check-id-uniqueness.skill.md): Global safety gate for ID collisions.
+- [Audit Repository Connectivity](audit-repository-connectivity.skill.md): Checks for orphans and linkage gaps.
+- [Audit for Architectural Violations](audit-for-architectural-violations.skill.md): Flags complexity and hidden tool usage.
+- [Audit Frontmatter Completeness](audit-frontmatter-completeness.skill.md): Verifies mandatory YAML fields.
+- [Evaluate Against Standard](evaluate-against-standard.skill.md): Core PADU evaluation engine.
+- [Find Similar Terms](find-similar-terms.skill.md): Naming collision and specificity audit.
+- [Scan Codebase Patterns](scan-codebase-patterns.skill.md): Discovery engine for new standards.
+- [Generate PADU Table](generate-padu-table.skill.md): Synthesis engine for codification.
+- [Trace Output to Source](trace-output-to-source.skill.md): Root cause analysis via log scanning.
+- [Summarize to Context](summarize-to-context.skill.md): Conversation mining and decision logging.
+- [Audit Redundant Content](audit-redundant-content.skill.md): Identifies inline definitions for glossary promotion.
+id: extract-prompt.skill
+standards: [prompt-file.standard]
+glossary_refs: [prompt.glossary, orchestration.glossary]
+    - Add the new prompt ID to the `prompts: []` field in the source file's frontmatter.
+Instruction modularity is governed by the **[Prompt File Standard](../standards/prompt-file.standard.md)**.
+id: research-domain-patterns.skill
+standards: []
+glossary_refs: [antipattern.glossary]
+id: detect-circular-delegation.skill
+standards: [agent-file.standard]
+glossary_refs: [delegation.glossary, agent.glossary]
+The integrity of the agent network is governed by the **[Agent File Standard](../standards/agent-file.standard.md)**.
+- **Enforcement**: If cycles are found, the delegation model is marked as **Unacceptable (U)** and must be broken before any further [Delegation](../glossary/delegation.glossary.md) actions are performed.
+id: doc-audit.skill
+standards: [doc-local.standard, doc-architecture.standard, doc-developer.standard, doc-external.standard]
+glossary_refs: [progressive-disclosure.glossary]
+Documentation quality is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: find-frontmatter-refs.skill
+standards: []
+glossary_refs: [frontmatter.glossary]
+id: audit-frontmatter-completeness.skill
+standards: [standard-file.standard]
+glossary_refs: [frontmatter.glossary]
+Metadata integrity is governed by the **[Standard File Standard](../standards/standard-file.standard.md)**.
+id: audit-redundant-content.skill
+standards: [glossary-entry.standard]
+glossary_refs: [glossary-entry.glossary]
+Repository integrity is governed by the **[Glossary Entry Standard](../standards/glossary-entry.standard.md)**.
+id: save-conversation-context.skill
+standards: [kernel.standard]
+glossary_refs: [context.glossary]
+Context management is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: summarize-to-context.skill
+standards: []
+glossary_refs: [ context.glossary, heuristics.glossary ]
+## Extraction [Heuristics](glossary/heuristics.glossary.md)
+id: evaluate-against-standard.skill
+  standard_id: The ID of the standard to use.
+standards: [standard-file.standard]
+glossary_refs: [padu-scale.glossary, standard.glossary]
+2. **Scan Target**: Analyze the `target` file for adherence. Use the **[Kernel Standard](../standards/kernel.standard.md)** to determine the correct selector for the target type.
+Standardized evaluation is governed by the **[Standard File Standard](../standards/standard-file.standard.md)**.
+id: provide-glossary-guidance.skill
+standards: [glossary-entry.standard]
+glossary_refs: [ glossary-entry.glossary, heuristics.glossary ]
+## [Heuristics](glossary/heuristics.glossary.md)
+id: resolve-naming-ambiguity.instruction
+skills: [find-similar-terms.skill, provide-glossary-guidance.skill]
+standards: [glossary-entry.standard, naming.standard, kernel.standard]
+    - **Synonym Selection**: If prefixes are insufficient, select a distinct synonym from the [Glossary](glossary/README.md).
+4. **[Quality Gate](glossary/quality-gate.glossary.md)**:
+    - Invoke **Flynn** to verify that the new names follow the [Naming Standard](standards/naming.standard.md).
+id: validate-kernel-integrity.instruction
+skills: [evaluate-against-standard.skill, audit-for-architectural-violations.skill]
+standards: [kernel.standard, standard-file.standard]
+1. **Metadata Audit**: Execute the [Perform Frontmatter Audit](instructions/perform-frontmatter-audit.instruction.md) instruction. Fix any missing or malformed fields immediately.
+2. **Graph Validation**: Execute the [Verify Repository Integrity](instructions/verify-repository-integrity.instruction.md) instruction. Resolve any broken IDs or dangling references.
+3. **Architectural Sweep**: Run [Audit for Architectural Violations](skills/audit-for-architectural-violations.skill.md) across all core folders. Identify any non-atomic skills or un-orchestrated instructions.
+5. **Remediation**: - If critical violations are found, execute the [Refactor to Kernel Standards](instructions/refactor-to-kernel-standards.instruction.md) instruction to modularize or extract content.
+6. **[Quality Gate](glossary/quality-gate.glossary.md)**: - Task the **Standards Auditor** to perform a final pass on the entire repository.
+id: verify-repository-integrity.instruction
+skills: [ collect-repo-ids.skill, find-frontmatter-refs.skill, detect-circular-delegation.skill ]
+standards: [instruction-file.standard]
+This instruction ensures the repository's [Knowledge Graph](glossary/knowledge-graph.glossary.md) is unbroken and safe.
+5. **[Quality Gate](glossary/quality-gate.glossary.md)**:
+id: heal-structural-debt.instruction
+skills: [generate-mermaid-diagram.skill, doc-audit.skill]
+standards: [doc-local.standard, doc-architecture.standard]
+1. **Intake**: Read the **[Structural Audit Report](../context/audit-reports/structural-audit-v1.5.1.md)** to identify the next target.
+    - Invoke **[Generate Mermaid Diagram](../skills/generate-mermaid-diagram.skill.md)** to analyze the file's steps.
+    - Run **[Audit Technical Documentation](../skills/doc-audit.skill.md)** on the healed file.
+id: codify-emerging-pattern.instruction
+skills: [ scan-codebase-patterns.skill, research-domain-patterns.skill, generate-padu-table.skill ]
+standards: [ instruction-file.standard, standard-file.standard, naming.standard ]
+    - Assign a Context-Qualified name following the [Naming Standard](../standards/naming.standard.md).
+6. **[Quality Gate](glossary/quality-gate.glossary.md)**:
+    - Invoke the **[Semantic Auditor](../agents/semantic-auditor.agent.md)** to verify that the new standard is atomic and not overlapping with existing rules.
+id: kernel-first-remediation.instruction
+skills: [trace-output-to-source.skill, evaluate-against-standard.skill]
+standards: [kernel.standard, quality-gate.standard]
+Systemic learning is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: create-glossary-entry.instruction
+skills: [ find-glossary-terms.skill, evaluate-against-standard.skill ]
+standards: [glossary-entry.standard]
+3. **Populate [Frontmatter](glossary/frontmatter.glossary.md)**: Ensure all required fields (ID, title, type, summary, created, updated) are present.
+id: instructions-manifest
+- [Maintain Kernel Integrity](maintain-kernel-integrity.instruction.md): Self-healing loop for repository health.
+- [Verify Repository Integrity](verify-repository-integrity.instruction.md): High-level structural audit.
+- [Kernel-First Remediation](kernel-first-remediation.instruction.md): Systemic learning and feedback loop.
+- [Refactor to Kernel Standards](refactor-to-kernel-standards.instruction.md): Maximalist alignment workflow.
+- [Codify Emerging Pattern](codify-emerging-pattern.instruction.md): Workflow for drafting new standards.
+- [Bootstrap New Standard](bootstrap-new-standard.instruction.md): End-to-end domain onboarding.
+- [Populate Standard](populate-standard.instruction.md): Research and PADU synthesis phase.
+- [Resolve Naming Ambiguity](resolve-naming-ambiguity.instruction.md): Conflict resolution via specificity.
+id: resolve-glossary-conflict.instruction
+skills: [ find-glossary-terms.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill ]
+standards: [glossary-entry.standard]
+id: perform-frontmatter-audit.instruction
+skills: [audit-frontmatter-completeness.skill, verify-repository-integrity.skill]
+standards: [kernel.standard, standard-file.standard]
+3. **[Quality Gate](glossary/quality-gate.glossary.md)**: - If any mandatory fields are missing, flag as a critical failure.
+id: populate-standard.instruction
+skills: [research-domain-patterns.skill, scan-codebase-patterns.skill, generate-padu-table.skill]
+standards: [instruction-file.standard, standard-file.standard]
+glossary_refs: [padu-scale.glossary, orchestration.glossary]
+This instruction guides the **[Standards Scout](../agents/standards-scout.agent.md)** through the data-gathering phase of codification.
+Standard accuracy is governed by the **[Standard File Standard](../standards/standard-file.standard.md)**.
+id: maintain-kernel-integrity.instruction
+skills: [evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill]
+standards: [kernel.standard, quality-gate.standard, versioning.standard, promotion.standard]
+Flynn invokes the **[Cabinet Audit Workflow](flynn.agent.md#interaction-pattern)**:
+- **Integrity Guardian**: Structural check + **[Check ID Uniqueness](../skills/check-id-uniqueness.skill.md)**.
+- **Linkage Specialist**: Connectivity check + **[Audit Repository Connectivity](../skills/audit-repository-connectivity.skill.md)**.
+- **Standards Scout**: **[Promotion Analysis](../standards/promotion.standard.md)**.
+- **Refactor**: Invoke **[Refactor to Kernel Standards](refactor-to-kernel-standards.instruction.md)**.
+- **Codification**: If the **Standards Auditor** flags an "Enforcement Gap" or an un-codified pattern, invoke the **Standards Scout** via **[Codify Emerging Pattern](codify-emerging-pattern.instruction.md)**.
+- **Versioning**: Update `version` and `updated` fields according to the **[Versioning Standard](../standards/versioning.standard.md)**.
+Maintenance health is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: refactor-to-kernel-standards.instruction
+skills: [audit-for-architectural-violations.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill]
+standards: [skill-file.standard, instruction-file.standard, glossary-entry.standard, kernel.standard]
+glossary_refs: [bootstrap.glossary, orchestration.glossary, quality-gate.glossary]
+1. **Audit**: Run [audit-for-architectural-violations.skill](skills/audit-for-architectural-violations.skill.md) across the target directory or file.
+    - For every inline concept found, use [provide-glossary-guidance.skill](skills/provide-glossary-guidance.skill.md).
+    - If `NEW_ENTRY` is recommended, execute [create-glossary-entry.instruction](instructions/create-glossary-entry.instruction.md).
+Architectural integrity is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+id: bootstrap-new-standard.instruction
+skills: [evaluate-against-standard.skill]
+standards: [ standard-file.standard, glossary-entry.standard, instruction-file.standard ]
+glossary_refs: [ bootstrap.glossary, orchestration.glossary, quality-gate.glossary ]
+1. **Research & Draft**: Execute the [populate-standard.instruction](instructions/populate-standard.instruction.md) instruction.
+2. **Glossary Alignment**: For any new terms identified in Step 1, create new glossary entries using the [create-glossary-entry.instruction](instructions/create-glossary-entry.instruction.md) instruction.
+4. **Final Audit**: Task the **[Standards Auditor](../agents/standards-auditor.agent.md)** to perform a final compliance pass.
+Expansion integrity is governed by the **[Standard File Standard](../standards/standard-file.standard.md)**.
+id: handle-incident.instruction
+skills: [evaluate-against-standard.skill]
+standards: [inc-response.standard, operability.standard]
+2. **Dashboard Review**: Open the **[Span Diagnostic Dashboard](../standards/inc-response.standard.md)** linked in the alert.
+5. **Diagnostic Runbook**: Open the **[Span Diagnostic Runbook](../standards/inc-response.standard.md)** for the highest-priority failing span.
+Restoration integrity is governed by the **[Incident Response Standard](../standards/inc-response.standard.md)**.
+id: agent-file.standard
+parent_standards: [ kernel.standard, standard-file.standard ]
+prompts: [ id_list ]
+glossary_refs: [ agent.glossary, authority.glossary, delegation.glossary, domain-owner.glossary, subject-matter-expert.glossary ]
+- **Tier 1: [Domain Owner](../glossary/domain-owner.glossary.md)**: Custodians of a specific filesystem scope. They orchestrate and maintain their domain.
+- **Tier 2: [Subject Matter Expert](../glossary/subject-matter-expert.glossary.md)**: Specialized agents contracted by Tier 1 for analysis or specific modifications.
+id: mon-alerting.standard
+parent_standard: operability.standard
+glossary_refs: [progressive-disclosure.glossary, tel-naming.standard]
+id: standard-file.standard
+parent_standard: kernel.standard
+glossary_refs: [ standard.glossary, padu-scale.glossary, heuristics.glossary ]
+id: operability.standard
+parent_standard: kernel.standard
+glossary_refs: [knowledge-graph.glossary, tel-naming.standard]
+id: kernel.standard
+parent_standard: None
+glossary_refs: [domain-owner.glossary, knowledge-graph.glossary]
+id: doc-local.standard
+parent_standard: standard-file.standard
+glossary_refs: [atomicity.glossary, progressive-disclosure.glossary]
+id: prompt-file.standard
+parent_standard: kernel.standard
+glossary_refs: [prompt.glossary, kernel.standard]
+id: tel-naming.standard
+parent_standard: kernel.standard
+glossary_refs: [naming.standard, orchestration.glossary]
+id: doc-external.standard
+parent_standard: standard-file.standard
+glossary_refs: [progressive-disclosure.glossary]
+id: instruction-file.standard
+parent_standard: kernel.standard
+glossary_refs: [instruction.glossary, orchestration.glossary, quality-gate.glossary]
+| Include a [Quality Gate](glossary/quality-gate.glossary.md) | **P** | Adheres to standards. | `audit-for-architectural-violations.skill` | Simple flows |
+The posture for instructions is **Automated**. We check for the presence of the `skills:` list in frontmatter and look for "Quality Gate" sections in the markdown body.
+**Be Wary Of**: Broken links in the `skills:` list of the frontmatter. (Enforced by `verify-repository-integrity.instruction`).
+id: doc-developer.standard
+parent_standard: standard-file.standard
+glossary_refs: [progressive-disclosure.glossary]
+id: standards-manifest
+- [Kernel Standard](kernel.standard.md): Master standard for the entire architecture.
+- [Standard File](standard-file.standard.md): Meta-standard for all standard files.
+- [Glossary Entry](glossary-entry.standard.md): Guidelines for defining terms.
+- [Skill File](skill-file.standard.md): Guidelines for defining atomic actions.
+- [Instruction File](instruction-file.standard.md): Guidelines for multi-step workflows.
+- [Agent File](agent-file.standard.md): Guidelines for defining autonomous actors.
+id: doc-architecture.standard
+parent_standard: standard-file.standard
+glossary_refs: [knowledge-graph.glossary]
+id: glossary-entry.standard
+parent_standard: kernel.standard
+glossary_refs: [ glossary-entry.glossary, standard.glossary, heuristics.glossary ]
+id: promotion.standard
+parent_standard: standard-file.standard
+glossary_refs: [context.glossary, standard.glossary, glossary-entry.glossary]
+id: quality-gate.standard
+parent_standard: standard-file.standard
+glossary_refs: [quality-gate.glossary, standard.glossary, kernel.standard]
+id: naming.standard
+parent_standard: kernel.standard
+glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+id: versioning.standard
+parent_standard: standard-file.standard
+glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+The AI Kernel uses **Content Hashing** to track state. The **[Integrity Guardian](../agents/integrity-guardian.agent.md)** maintains an internal `manifest.json` (or similar context file) that maps file IDs to their current SHA-256 hash.
+id: skill-file.standard
+parent_standard: kernel.standard
+glossary_refs: [skill.glossary, atomicity.glossary, quality-gate.glossary]
+- [Kernel Standard](kernel.standard.md): The architectural parent setting atomicity expectations.
+- [Instruction File](instruction-file.standard.md): The standard for coordinating these skills.
+| Maintain [Atomicity](glossary/atomicity.glossary.md) | **P** | Ensures skills are reusable. | `audit-for-architectural-violations.skill` | None |
+id: inc-response.standard
+parent_standard: operability.standard
+glossary_refs: [progressive-disclosure.glossary]
+id: trace-impact-chain.prompt
+id: remediation-triage-logic.prompt
+id: audit-action-atomicity.prompt
+id: synthesize-padu-logic.prompt
+id: prompts-manifest
+Prompts in this directory are governed by the [Prompt File Standard](../standards/prompt-file.standard.md) and are designed to be used across multiple [Skills](../skills/README.md) and [Agents](../agents/README.md).
+id: operator-intake-protocol.prompt
+id: determine-glossary-necessity.prompt
+id: flynn-audit-workflow.prompt
+1. **The Discovery & Integrity Pass**: Task the **[Integrity Guardian](../agents/integrity-guardian.agent.md)** and **[Linkage Specialist](../agents/linkage-specialist.agent.md)** to perform a technical sweep.
+2. **The Semantic & Compliance Pass**: Task the **[Semantic Auditor](../agents/semantic-auditor.agent.md)** and **[Standards Auditor](../agents/standards-auditor.agent.md)** to evaluate logic.
+3. **The Knowledge Synthesis**: Task the **[Librarian](../agents/librarian.agent.md)** to scan for conceptual overlap.
+4. **The Evolutionary Loop**: If recurring patterns are identified, task the **[Standards Scout](../agents/standards-scout.agent.md)** to codify them into new atomic standards.
+id: delegation.glossary
+id: agent.glossary
+id: standard.glossary
+id: padu-scale.glossary
+The **PADU Scale** is the kernel's mechanism for objective quality governance. Every [Standard](../standards/README.md) contains a PADU table that classifies practices into one of four categories.
+- **Automated**: Linked to a specific [Skill](../skills/README.md) or regex.
+id: bootstrap.glossary
+id: orchestration.glossary
+id: prompt.glossary
+Prompts are governed by the [Prompt File Standard](../standards/prompt-file.standard.md).
+id: glossary-entry.glossary
+id: context.glossary
+id: frontmatter.glossary
+id: quality-gate.glossary
+id: progressive-disclosure.glossary
+id: glossary-manifest
+- [Glossary Entry](glossary-entry.glossary.md): The fundamental unit of knowledge.
+- [Standard](standard.glossary.md): Guidelines governed by the PADU scale.
+- [Skill](skill.glossary.md): Atomic, tool-centric actions.
+- [Instruction](instruction.glossary.md): Multi-step workflows.
+- [Agent](agent.glossary.md): Autonomous actor definitions.
+- [Frontmatter](frontmatter.glossary.md): YAML metadata for machine discovery.
+- [PADU Scale](padu-scale.glossary.md): The rating system for standards.
+- [Progressive Disclosure](progressive-disclosure.glossary.md): The optimization strategy for agent scanning.
+- [Context](context.glossary.md): Persistent conversation and project state.
+- [Delegation](delegation.glossary.md): Mechanism for agent collaboration.
+- [Antipattern](antipattern.glossary.md): Identifying and avoiding ineffective practices.
+- [Knowledge Graph](knowledge-graph.glossary.md): The interconnected network of kernel content.
+- [Knowledge Map](knowledge-map.glossary.md): Curated views of the Knowledge Graph for specific tasks.
+- [Heuristics](heuristics.glossary.md): Logic and shortcuts for agent decision-making.
+- [Bootstrap](bootstrap.glossary.md): The self-starting initialization process.
+- [Authority](authority.glossary.md): Permission levels for agents (Propose vs Suggest).
+- [Quality Gate](quality-gate.glossary.md): Validation checkpoints in workflows.
+- [Atomicity](atomicity.glossary.md): The single-responsibility principle for skills.
+- [Orchestration](orchestration.glossary.md): The coordination of skills into instructions.
+id: subject-matter-expert.glossary
+SMEs are not singletons. While their **Definition** (e.g., `librarian.agent.md`) is shared, their **Context** and **Deployment** are scoped to the [Domain Owner](domain-owner.glossary.md) who invokes them.
+id: authority.glossary
+id: instruction.glossary
+id: knowledge-map.glossary
+id: antipattern.glossary
+id: skill.glossary
+id: domain-owner.glossary
+- **Maintenance**: Ensures their "house" is orderly and adheres to the [Kernel Standard](../standards/kernel.standard.md).
+- **Delegation**: Contracts **[Subject Matter Experts](subject-matter-expert.glossary.md)** to perform specific, granular tasks or provide expert analysis.
+id: heuristics.glossary
+id: atomicity.glossary
+id: knowledge-graph.glossary

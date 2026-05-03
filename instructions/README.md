@@ -1,25 +1,27 @@
----
-id: instructions-manifest
-title: Instructions Manifest
-type: manifest
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
-summary: Human-navigable map and organizational overview of the instructions directory.
----
+# Instructions Manifest
 
-# Instructions
+## Context
+This folder contains the multi-step workflows and orchestration logic of the AI Kernel.
 
-Multi-step workflows that coordinate skills and standards to solve complex problems via [Orchestration](../glossary/orchestration.glossary.md).
+## Architecture
 
-## Core Workflows
+```mermaid
+graph TD
+    Folder[instructions/] --> Files[Workflow Files]
+    Files --> Coordination[Skill Orchestration]
+```
 
-- [Create Glossary Entry](create-glossary-entry.instruction.md): Full cycle for adding new terms safely.
-- [Resolve Glossary Conflict](resolve-glossary-conflict.instruction.md): Flynn's workflow for merging redundant entries.
-- [Bootstrap New Standard](bootstrap-new-standard.instruction.md): Full orchestration for domain standards.
-- [Populate Standard](populate-standard.instruction.md): Discovery and synthesis loop for standard creation.
-- [Verify Repository Integrity](verify-repository-integrity.instruction.md): Validation of the knowledge graph nodes.
-- [Refactor to Kernel Standards](refactor-to-kernel-standards.instruction.md): Maximalist alignment workflow.
-- [Perform Frontmatter Audit](perform-frontmatter-audit.instruction.md): Repository-wide metadata check.
-- [Resolve Naming Ambiguity](resolve-naming-ambiguity.instruction.md): Disambiguation and collision handling.
-- [Validate Kernel Integrity](validate-kernel-integrity.instruction.md): Supreme audit and remediation workflow.
+## File Registry
+
+| ID | Type | Summary |
+|---|---|---|
+| `maintain-kernel-integrity.instruction` | Instruction | Master self-healing loop. |
+| `perform-meta-audit.instruction` | Instruction | Synthesized system health report. |
+| `perform-atomic-extraction.instruction` | Instruction | Workflow for de-conflating content. || `handle-incident.instruction` | Instruction | Standard restoration workflow. |
+| `resolve-naming-ambiguity.instruction` | Instruction | Workflow for ID collision resolution. |
+| `kernel-first-remediation.instruction` | Instruction | Workflow for addressing drift. |
+| `codify-emerging-pattern.instruction` | Instruction | Workflow for pattern formalization. |
+
+## Quality Gate
+- **Verification**: Every instruction must include **Postconditions**.
+- **Enforcement**: This manifest must be in 1:1 sync with the filesystem.

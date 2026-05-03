@@ -1,24 +1,31 @@
+---
+id: kernel-root-manifest
+title: AI Kernel Root
+type: manifest
+summary: The central entry point and organizational overview of the AI Kernel framework.
+---
+
 # AI Kernel
 
-A personal workflow framework for autonomous agents. This repository acts as a machine-readable engineering brain, codifying standards, skills, instructions, and agents to ensure high-integrity development across various AI-assisted environments.
+The **AI Kernel** is a personal development sidecar and workflow framework. It codifies glossary definitions, coding standards, skills, instructions, prompts, and agent definitions into a machine-traversable Knowledge Graph.
 
-## Directory Structure
+## Repository Structure
 
-- [agents/](agents/README.md): Definitions for autonomous actors and their authority levels.
-- [context/](context/README.md): Persistent conversation and project state for long-term memory.
-- [glossary/](glossary/README.md): Single source of truth for all concepts and technical terms.
-- [instructions/](instructions/README.md): Orchestrated, multi-step workflows with mandatory quality gates.
-- [prompts/](prompts/README.md): Reusable, template-driven AI instructions and logic.
-- [skills/](skills/README.md): Atomic, tool-centric actions adhering to the single-responsibility principle.
-- [standards/](standards/README.md): Hierarchical quality governance (PADU scale) for all repository components.
+The kernel is organized into 7 core functional domains:
+
+1. **[Agents](agents/README.md)**: Autonomous actors and Tier 2 SMEs (Flynn, Librarian, etc.).
+2. **[Standards](standards/README.md)**: PADU-rated quality bars and architectural rules.
+3. **[Skills](skills/README.md)**: Atomic, tool-using logic nodes.
+4. **[Instructions](instructions/README.md)**: Multi-step orchestrated workflows.
+5. **[Glossary](glossary/README.md)**: Canonical definitions and the Specificity Hierarchy.
+6. **[Prompts](prompts/README.md)**: Reusable AI system instructions and templates.
+7. **[Context](context/README.md)**: Conversation logs, decisions, and learning data.
 
 ## Core Principles
+- **Atomicity**: Every skill performs exactly one technical action.
+- **Orchestration**: Instructions coordinate skills; they do not perform raw tool actions.
+- **Single Source of Truth**: All definitions reside in the Glossary.
+- **Self-Healing**: The kernel maintains its own integrity via the **[Maintain Kernel Integrity](instructions/maintain-kernel-integrity.instruction.md)** workflow.
 
-- **Single Source of Truth**: All concepts must be defined in the [Glossary](glossary/README.md).
-- **Atomicity**: Skills must perform a single action using a single tool.
-- **Orchestration**: Complex tasks are handled by Instructions that coordinate atomic skills.
-- **Hierarchical Governance**: Standards are tiered from global (Kernel Standard) to domain-specific implementations.
-
-## For AI Agents
-
-Agents should start with [AGENTS.md](AGENTS.md) for canonical instructions and framework usage.
+## Usage
+To use this framework, load the **[Kernel Standard](standards/kernel.standard.md)** and delegate tasks to **[Flynn](agents/flynn.agent.md)** or the **[Operator](agents/operator.agent.md)**.

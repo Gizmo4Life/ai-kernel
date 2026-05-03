@@ -2,27 +2,52 @@
 id: audit-for-architectural-violations.skill
 title: Audit for Architectural Violations
 type: skill
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
 tags: [audit, architecture, quality]
-summary: Analyzes kernel files for violations of the core architectural principles (Atomicity, Orchestration, Single Source of Truth).
+summary: Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
 tool: editor
-inputs: file_path: The file to audit.
-outputs: violations: A list of architectural issues found.
+inputs:
+  file_path: The file to audit.
+outputs:
+  violations: A list of architectural issues found.
 standards: [ skill-file.standard, instruction-file.standard ]
 glossary_refs: [ atomicity.glossary, orchestration.glossary, quality-gate.glossary ]
 ---
+
+## Context
+Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
+
 
 # Audit for Architectural Violations
 
 This skill performs a "maximalist" check for architectural integrity.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Execution Steps
 
-1. **Check for [Atomicity](glossary/atomicity.glossary.md)**: (For Skills) Does the file use more than one tool or perform more than one logical action?
-2. **Check for [Orchestration](glossary/orchestration.glossary.md)**: (For Instructions) Does the file perform tool actions directly instead of coordinating skills?
-3. **Check for [Quality Gates](glossary/quality-gate.glossary.md)**: (For Instructions) Is there a mandatory validation step using `evaluate-against-standard`?
-4. **Check for Inline Definitions**: (Global) Are there concepts defined in the body that should be moved to the glossary?
-5. **Check for Cross-Linking**: Are key terms linked to the glossary?
-6. **Report**: provide a detailed list of violations for the refactor loop.
+1. **Check for [Atomicity](glossary/atomicity.glossary.md)**:
+    - (For Skills) Verify the file uses exactly one tool.
+    - **Hidden Tool Detection**: Scan the body for undeclared CLI utilities (e.g., `sed`, `awk`, `jq`, `curl`, `python`). Cross-check with the `tool` field.
+2. **Check for [Orchestration](glossary/orchestration.glossary.md)**:
+    - (For Instructions) Ensure tool actions (like `mkdir`, `grep`, `rm`) are NOT performed directly. Instructions must coordinate skills.
+3. **Check for Inline Definitions**: (Global) Ensure technical concepts link to the glossary rather than being defined locally.
+4. **Report**: provide a detailed list of violations.
+
+
+## Verification Protocol
+1. Perform a manual dry-run of the execution steps.
+2. Verify that the output matches the expected result defined in the Quality Gate.
+
+## Quality Gate
+
+The output of this skill is governed by the **[Skill File Standard](../standards/skill-file.standard.md)**.
+- **Verification**: Ensure every violation reported contains a clear [Rationale](../glossary/padu-scale.glossary.md) and a link to the violated standard.
+- **Enforcement**: If a file fails the [Orchestration](../glossary/orchestration.glossary.md) check, it must be marked as **Unacceptable (U)** and remediated before the next commit.
+
+---
+**Be Wary Of**: Skill descriptions that use "and" to hide multiple logical actions within a single tool invocation.

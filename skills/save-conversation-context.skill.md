@@ -2,26 +2,47 @@
 id: save-conversation-context.skill
 title: Save Conversation Context
 type: skill
-version: 1
-created: 2026-04-28
-updated: 2026-04-28
-tags: [memory, context.glossary, documentation]
-summary: Saves important information collected during a conversation into the /context/ directory.
+tags: [maintenance, context]
+summary: Saves curated information from the current conversation to the `context/` folder.
 tool: editor
-inputs: filename: The name of the context file (e.g., 'project-x-architecture.md').
-  content: The summarized information to save.
-outputs: status: Confirmation of file creation in /context/.
-standards: []
-glossary_refs: []
+inputs:
+  filename: The name of the context file.
+  content: The curated information to save.
+outputs:
+  status: Confirmation of the save action.
+standards: [kernel.standard]
+glossary_refs: [context.glossary]
 ---
+
+## Context
+Saves curated information from the current conversation to the `context/` folder.
+
 
 # Save Conversation Context
 
-This skill implements the **Context Management** requirement from `AGENTS.md`. It ensures that long-term memory of a project or conversation is persisted outside of the transient conversation log.
+This skill ensures that important decisions and data survive across AI sessions.
 
+
+## Architecture
+
+```mermaid
+graph TD
+    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+```
 ## Execution Steps
 
-1. **Summarize**: Distill the conversation into key decisions, findings, or code snippets.
-2. **Name**: Choose an appropriately named file based on the context (e.g., `user-preferences.md`, `feature-y-design.md`).
-3. **Write**: Create or append to the file in the `/context/` directory.
-4. **Link**: (Optional) Reference related glossary terms or standards in the context file.
+1. **Format Content**: Ensure the `content` includes frontmatter with `type: context`.
+2. **Path Selection**: Use the `context/` directory.
+3. **Write**: Save the file using the `.context.md` extension.
+4. **Link**: provide a link to the new context file.
+
+
+## Verification Protocol
+1. Perform a manual dry-run of the execution steps.
+2. Verify that the output matches the expected result defined in the Quality Gate.
+
+## Quality Gate
+
+Context management is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
+- **Verification**: Ensure the filename is descriptive and follows the `[topic].context.md` pattern.
+- **Enforcement**: Context files must not contain redundant data already in the glossary; they should link to the glossary instead.

@@ -5,12 +5,12 @@ type: instruction
 tags: [workflow, audit, self-healing, maintenance, process, orchestration]
 summary: A self-healing loop that audits the repository for architectural decay and addresses violations iteratively until compliance is achieved.
 parent_standard: instruction-file.standard
-skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill, extract-prompt.skill]
+skills: [global-healing-wave.skill, trace-impact-chain.skill, track-enforcement-posture.skill, detect-circular-delegation.skill, evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill, auto-link-glossary.skill, surgical-refactor.skill]
 instructions: [refactor-to-kernel-standards.instruction, validate-kernel-integrity.instruction, codify-emerging-pattern.instruction]
 standards: [kernel.standard, quality-gate.standard, versioning.standard, promotion.standard]
 preconditions:
   - Flynn's analytical cabinet is online.
-glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 # Maintain Kernel Integrity
@@ -23,43 +23,36 @@ The AI Kernel is a complex, evolving Knowledge Graph. Without automated maintena
 ```mermaid
 graph TD
     instruction-file.standard --> maintain-kernel-integrity.instruction
-    maintain-kernel-integrity.instruction --> auto-link-glossary[auto-link-glossary.skill]
-    maintain-kernel-integrity.instruction --> surgical-refactor[surgical-refactor.skill]
-    maintain-kernel-integrity.instruction --> search-kernel[search-kernel.skill]
-    maintain-kernel-integrity.instruction --> doc-audit[doc-audit.skill]
+    maintain-kernel-integrity.instruction --> global-healing-wave[global-healing-wave.skill]
+    maintain-kernel-integrity.instruction --> trace-impact-chain[trace-impact-chain.skill]
+    maintain-kernel-integrity.instruction --> track-enforcement-posture[track-enforcement-posture.skill]
+    maintain-kernel-integrity.instruction --> detect-circular-delegation[detect-circular-delegation.skill]
     maintain-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     maintain-kernel-integrity.instruction --> check-id-uniqueness[check-id-uniqueness.skill]
     maintain-kernel-integrity.instruction --> audit-repository-connectivity[audit-repository-connectivity.skill]
-    maintain-kernel-integrity.instruction --> extract-prompt[extract-prompt.skill]
+    maintain-kernel-integrity.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    maintain-kernel-integrity.instruction --> surgical-refactor[surgical-refactor.skill]
 ```
 
 ## Execution Steps
 
 ### 1. Audit Phase (Detection)
-Flynn invokes the **[Cabinet Audit Workflow](flynn.agent.md#interaction-pattern)**:
-- **Integrity Guardian**: Structural check + **[Check ID Uniqueness](../skills/check-id-uniqueness.skill.md)**.
-- **Linkage Specialist**: Connectivity check + **[Audit Repository Connectivity](../skills/audit-repository-connectivity.skill.md)**.
-- **Semantic Auditor**: Logic check.
-- **Standards Auditor**: Compliance check.
-- **Librarian**: **Manifest Check** (Ensure READMEs are up-to-date).
-- **Standards Scout**: **[Promotion Analysis](../standards/promotion.standard.md)**.
+Invoke the **[Hardened Audit Suite]**:
+- **Safety**: Run `detect-circular-delegation.skill` to ensure a DAG.
+- **Structural**: Run `check-id-uniqueness.skill` and `audit-repository-connectivity.skill`.
+- **Compliance**: Run `evaluate-against-standard.skill` on any modified files.
 
 ### 2. Triage Phase (Prioritization)
-Flynn ranks the identified violations:
-1. **Critical (U)**: **ID Collisions**, Circularity, missing frontmatter.
-2. **Structural (U)**: **Orphaned nodes**, non-atomic skills.
-3. **Evolutionary (U/D)**: Patterns requiring **Promotion**, Versioning drift.
+Use `trace-impact-chain.skill` to analyze the "Blast Radius" of identified violations. Rank issues by their systemic risk.
 
 ### 3. Healing Phase (Remediation)
-Flynn iterates through the prioritized list:
-- **Refactor**: Invoke **[Refactor to Kernel Standards](refactor-to-kernel-standards.instruction.md)**.
-- **Codification**: If the **Standards Auditor** flags an "Enforcement Gap" or an un-codified pattern, invoke the **Standards Scout** via **[Codify Emerging Pattern](codify-emerging-pattern.instruction.md)**.
-- **Manifests**: Task the **Librarian** to regenerate or update `README.md` files to reflect new core files.
-- **Linkage**: For every orphaned node, task the **Linkage Specialist** to find a parent standard or related term.
-- **Versioning**: Update `version` and `updated` fields according to the **[Versioning Standard](../standards/versioning.standard.md)**.
+Execute the **[Restoration Wave]**:
+- **Mass Restoration**: Run `global-healing-wave.skill` to repair frontmatter, links, and diagrams.
+- **Surgical Refactor**: Invoke `surgical-refactor.skill` for complex structural repairs.
+- **Maturity Check**: Run `track-enforcement-posture.skill` to verify the new automation coverage.
 
 ### 4. Verification Pass (Validation)
-Re-run the **Audit Phase** on the modified files. Loop until zero **Unacceptable (U)** violations remain.
+Re-run the **Audit Phase**. Loop until the `global-gap-report.md` shows **Zero Fails**.
 
 
 ## Postconditions

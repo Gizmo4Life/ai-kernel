@@ -11,7 +11,7 @@ scope: "/**/*"
 capabilities: [all]
 delegates: [ standards-auditor.agent, librarian.agent, semantic-auditor.agent, standards-scout.agent, integrity-guardian.agent, linkage-specialist.agent ]
 parent_standards: [ kernel.standard, standard-file.standard ]
-skills: [ provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
+skills: [ global-healing-wave.skill, trace-impact-chain.skill, track-enforcement-posture.skill,  provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
 instructions: [ maintain-kernel-integrity.instruction, resolve-naming-ambiguity.instruction, kernel-first-remediation.instruction ]
 prompts: [ synthesize-padu-logic.prompt, determine-glossary-necessity.prompt, audit-action-atomicity.prompt, flynn-audit-workflow.prompt, remediation-triage-logic.prompt, trace-impact-chain.prompt ]
 glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
@@ -27,6 +27,9 @@ Flynn is the primary custodian of the AI Kernel Knowledge Graph. His role is to 
 ```mermaid
 graph TD
     agent-file.standard --> flynn.agent
+    flynn.agent --> global-healing-wave[global-healing-wave.skill]
+    flynn.agent --> trace-impact-chain[trace-impact-chain.skill]
+    flynn.agent --> track-enforcement-posture[track-enforcement-posture.skill]
     flynn.agent --> provide-glossary-guidance[provide-glossary-guidance.skill]
     flynn.agent --> find-similar-terms[find-similar-terms.skill]
     flynn.agent --> trace-output-to-source[trace-output-to-source.skill]

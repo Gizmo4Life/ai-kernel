@@ -7,8 +7,8 @@ interface:
   input: { target_dir: "path/to/directory" }
   output: { violations: { "file_path": ["violation_type"] } }
 implementation:
-  engine: "python3 engines/doc_auditor.py"
-  command: "python3 engines/doc_auditor.py {{target_dir}}"
+  engine: "python3 drivers/doc_auditor.py"
+  command: "python3 drivers/doc_auditor.py {{target_dir}}"
 summary: High-performance structural auditor that enforces mandatory headers across the AI Kernel.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
 parent_standard: skill-file.standard
@@ -34,7 +34,7 @@ graph TD
 
 ## Verification Protocol
 1. Create a "Bad File" missing a `## Context` header.
-2. Run `python3 engines/doc_auditor.py .`
+2. Run `python3 drivers/doc_auditor.py .`
 3. Verify that the "Bad File" is correctly flagged in the JSON output.
 
 ## Quality Gate

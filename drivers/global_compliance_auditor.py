@@ -21,7 +21,7 @@ def main():
         "errors": []
     }
     
-    domains = ['agents', 'skills', 'instructions', 'standards', 'prompts', 'glossary']
+    domains = ['drivers', 'agents', 'skills', 'instructions', 'standards', 'prompts', 'glossary']
     
     for d in domains:
         path = os.path.join(os.getcwd(), d)
@@ -41,7 +41,7 @@ def main():
                         elif d == 'agents': parent = 'agent-file.standard'
                         elif d == 'glossary': parent = 'glossary-entry.standard'
 
-                    cmd = ["python3", "engines/standard_auditor.py", parent, fpath]
+                    cmd = ["python3", "drivers/standard_auditor.py", parent, fpath]
                     result = subprocess.run(cmd, capture_output=True, text=True)
                     try:
                         audit_data = json.loads(result.stdout)

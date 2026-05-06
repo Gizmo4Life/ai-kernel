@@ -7,8 +7,8 @@ interface:
   input: { target_dir: "path/to/directory" }
   output: { collisions: { "colliding_id": ["file_path_1", "file_path_2"] } }
 implementation:
-  engine: "python3 engines/id_auditor.py"
-  command: "python3 engines/id_auditor.py {{target_dir}}"
+  engine: "python3 drivers/id_auditor.py"
+  command: "python3 drivers/id_auditor.py {{target_dir}}"
 summary: Verifies that every node in the AI Kernel Knowledge Graph possesses a globally unique ID.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
 parent_standard: skill-file.standard
@@ -34,7 +34,7 @@ graph TD
 
 ## Verification Protocol
 1. Create two files with the same `id: duplicate.test`.
-2. Run `python3 engines/id_auditor.py .`.
+2. Run `python3 drivers/id_auditor.py .`.
 3. Verify that `duplicate.test` appears in the JSON output with both file paths.
 
 ## Quality Gate

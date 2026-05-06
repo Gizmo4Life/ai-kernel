@@ -10,6 +10,8 @@ graph TD
     User((User)) --> Operator[Operator: Tier 0]
     Operator --> Flynn[Flynn: Tier 1 Owner]
     Flynn --> SMEs[SMEs: Tier 2 Cabinet]
+    SMEs --> Skills[Skills: Atomic Intent]
+    Skills --> Drivers[Drivers: Execution Layer]
 ```
 
 ## How to Use This Framework
@@ -30,9 +32,10 @@ prompts, and agent definitions.
    output against its [PADU table](glossary/padu-scale.glossary.md). Standards follow a hierarchical model; ensure you load the relevant parent standard (e.g. [Kernel Standard](standards/kernel.standard.md)) for global rules.
 3. [Skills](glossary/skill.glossary.md): Atomic actions are defined in `skills/`. Read the
    [frontmatter](glossary/frontmatter.glossary.md) to find relevant skills, then load the body when needed, the body defines how to effectively utilize a tool or apply a skill.
-4. [Instructions](glossary/instruction.glossary.md): Multi-step workflows are in `instructions/`, these should define how to coordinate skills in order to solve a problem to a high standard of quality. These files leverage standards as quality gates, and will apply them as appropriate throughout the workflow. Rather than standards defining whether or not D solutions are ever allowed, it should be context dependent, and instructions should define this in their quality gates.
-5. [Prompts](glossary/prompt.glossary.md): Standalone AI instructions are in `prompts/`. Use these for reusable LLM logic and template-driven communication that exists outside of a specific skill or agent definition.
-6. [Agents](glossary/agent.glossary.md): Autonomous agent definitions are in `agents/`. Each agent has an overall objective or purpose, and in its definition should be a [PADU table](glossary/padu-scale.glossary.md) that guides and constrains the agent's approach to problem solving. The frontmatter for the agent should define the tools it can use, where it has authority to propose changes vs. only suggest, and what agents it can [delegate](glossary/delegation.glossary.md) to. The frontmatter should also define any [context](glossary/context.glossary.md) (i.e. glossary, standards, instructions) that the agent should be aware of in order to solve problems effectively.
+4. [Drivers](glossary/driver.glossary.md): Directly executable logic (Python/Bash) that implements a Skill's mechanics.
+5. [Instructions](glossary/instruction.glossary.md): Multi-step workflows in `instructions/`.
+6. [Prompts](glossary/prompt.glossary.md): Standalone AI instructions in `prompts/`.
+7. [Agents](glossary/agent.glossary.md): Autonomous agent definitions in `agents/`.
 
 ### Context Management ###
 Save important information collected during a conversation in [/context/](context/) in appropriately named files for the context of the information. This is useful for organizing long term memory of a conversation or project.

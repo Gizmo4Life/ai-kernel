@@ -11,7 +11,7 @@ capabilities: [find-similar-terms.skill, audit-redundant-content.skill, provide-
 delegates: []
 parent_standard: agent-file.standard
 prompts: [ determine-glossary-necessity.prompt ]
-instructions: [ create-glossary-entry.instruction ]
+instructions: [ resolve-glossary-conflict.instruction, create-glossary-entry.instruction,  create-glossary-entry.instruction ]
 glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---
 

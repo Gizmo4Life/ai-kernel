@@ -11,6 +11,7 @@ implementation:
   command: "python3 drivers/kernel/content_auditor.py"
 summary: Audits the semantic quality and knowledge density of the repository content, identifying placeholders and shallow documentation.
 parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Content Excellence Auditor
@@ -23,7 +24,6 @@ High-integrity governance requires high-quality documentation. Structural compli
 ```mermaid
 graph TD
     skill-file.standard --> audit-content-quality.skill
-    audit-content-quality.skill --> content_auditor[content_auditor.py]
 ```
 
 ## Execution Steps

@@ -11,6 +11,7 @@ implementation:
   command: "python3 drivers/kernel/mermaid_gen.py {{target_path}}"
 summary: Automatically generates and injects Mermaid diagrams based on a node's metadata.
 parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Architecture Visualizer
@@ -23,7 +24,6 @@ Visual consistency is critical for rapid system understanding. This skill ensure
 ```mermaid
 graph TD
     skill-file.standard --> generate-mermaid-diagram.skill
-    generate-mermaid-diagram.skill --> mermaid_gen[mermaid_gen.py]
 ```
 
 ## Execution Steps

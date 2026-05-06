@@ -1,7 +1,5 @@
-.skill
 audit-for-architectural-violations.skill
 audit-frontmatter-completeness.skill
-audit-redundant-content.skill
 audit-repository-connectivity.skill
 auto-link-glossary.skill
 check-id-uniqueness.skill
@@ -9,7 +7,6 @@ collect-repo-ids.skill
 detect-circular-delegation.skill
 doc-audit.skill
 evaluate-against-standard.skill
-find-frontmatter-refs.skill
 find-glossary-terms.skill
 find-similar-terms.skill
 generate-mermaid-diagram.skill

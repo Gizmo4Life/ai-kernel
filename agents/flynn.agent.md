@@ -11,7 +11,7 @@ scope: "/**/*"
 capabilities: [all]
 delegates: [ standards-auditor.agent, librarian.agent, semantic-auditor.agent, standards-scout.agent, integrity-guardian.agent, linkage-specialist.agent ]
 parent_standards: [ kernel.standard, standard-file.standard ]
-skills: [ emit-telemetry.skill, git-issue-audit.skill, query-mcp-context.skill,  global-healing-wave.skill, trace-impact-chain.skill, track-enforcement-posture.skill,  provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
+skills: [ invoke-remote-mcp.skill,  emit-telemetry.skill, git-issue-audit.skill, query-mcp-context.skill,  global-healing-wave.skill, trace-impact-chain.skill, track-enforcement-posture.skill,  provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
 instructions: [ maintain-kernel-integrity.instruction, review-pull-request.instruction,  review-pull-request.instruction,  maintain-kernel-integrity.instruction, resolve-naming-ambiguity.instruction, kernel-first-remediation.instruction ]
 prompts: [ synthesize-padu-logic.prompt, determine-glossary-necessity.prompt, audit-action-atomicity.prompt, flynn-audit-workflow.prompt, remediation-triage-logic.prompt, trace-impact-chain.prompt ]
 glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
@@ -27,6 +27,7 @@ Flynn is the primary custodian of the AI Kernel Knowledge Graph. His role is to 
 ```mermaid
 graph TD
     agent-file.standard --> flynn.agent
+    flynn.agent --> invoke-remote-mcp[invoke-remote-mcp.skill]
     flynn.agent --> emit-telemetry[emit-telemetry.skill]
     flynn.agent --> git-issue-audit[git-issue-audit.skill]
     flynn.agent --> query-mcp-context[query-mcp-context.skill]

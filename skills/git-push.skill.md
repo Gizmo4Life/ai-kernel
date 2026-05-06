@@ -31,3 +31,11 @@ The final step of any hardening wave. This skill ensures that the local "Diamond
 graph TD
     skill-file.standard --> git-push.skill
 ```
+\n## Verification Protocol\n1. Run {
+  "status": "fail",
+  "message": "fatal: unable to access 'https://github.com/Gizmo4Life/ai-kernel.git/': Could not resolve host: github.com\n"
+}.\n2. Verify remote reflects local changes.
+
+## Verification Protocol
+1. Run `python3 drivers/git/git_push.py`.
+2. Verify remote reflects local changes.

@@ -31,3 +31,12 @@ Automates the "Stabilization" of the repository. Every commit must be accompanie
 graph TD
     skill-file.standard --> git-commit.skill
 ```
+\n## Verification Protocol\n1. Run {
+  "status": "success",
+  "message": "test",
+  "output": "[main 485384f] test"
+}.\n2. Verify git log contains the test commit.
+
+## Verification Protocol
+1. Run `python3 drivers/git/git_commit.py 'test'`.
+2. Verify git log contains the test commit.

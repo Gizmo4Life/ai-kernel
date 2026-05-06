@@ -74,3 +74,7 @@ graph TD
   ],
   "count": 36
 }.\n2. Verify JSON output contains .
+
+## Verification Protocol
+1. Run `python3 drivers/git/git_status.py`.
+2. Verify JSON output contains `modified_files`.

@@ -1,43 +1,41 @@
 ---
 id: synonym.standard
-title: Synonym Standard
+title: Discovery Tag Standard
 type: standard
-tags: [governance, discovery, semantics]
-summary: Standards for defining and managing synonyms in the AI Kernel to prevent logic duplication.
+tags: [governance, discovery, semantics, tagging]
+summary: Standards for using vibrant tags to ensure Knowledge Graph discoverability and prevent logic duplication.
 scope: "/**/*"
 parent_standard: kernel.standard
 glossary_refs: [knowledge-graph.glossary, reachability.glossary]
 ---
 
-# Synonym Standard
+# Discovery Tag Standard
 
 ## Context
-Synonyms are the "Discovery Anchors" of the AI Kernel. Because agents search via keywords and semantic similarity, a lack of synonyms leads to "Ghost Logic" (recreating existing functionality under a different name). This standard mandates the inclusion of alternative terms for every core concept.
+Tags are the primary "Discovery Anchors" for the AI Kernel. Because agents and search engines rely on the `tags: []` field for semantic indexing, we must use this field to include all synonyms and alternative terms. This ensures that a search for "Feedback" correctly surfaces "System-First Remediation."
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Search[Search: "Feedback"] --> Match[Match: Synonym "Codify Feedback"]
+    UserQuery[Query: "Fix this error"] --> Search[Search: tags]
+    Search --> Match[Match: "fix", "error"]
     Match --> Node[Node: System-First Remediation]
-    Node --> Execution[Execution: No Duplication]
 ```
 
 ## Mandatory Requirements
-1. **Frontmatter**: Every Glossary and Instruction file must include a `synonyms: []` list.
-2. **Body**: Every Glossary entry must include a `## Synonyms` section for human/agent cross-reference.
+1. **Frontmatter**: Every file must include a `tags: []` list.
+2. **Vibrant Tagging**: The tags list must include at least 3 alternative terms or common user keywords related to the node's function.
+3. **Mnemonic Tags**: Include memorable phrases (e.g., "fix-the-factory") to aid human and agentic recall.
 
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
-| Define 3+ Synonyms | **P** | Increases the "Semantic Surface Area" for discovery. | `librarian.agent` | Very unique terms |
-| Use "Vibrant" Keywords | **P** | Use terms the user is likely to say (e.g., "Fix", "Wrong"). | `standards-auditor.agent` | None |
-| Naming Divergence | **U** | Creating a file with a name that is a synonym of another file. | `find-similar-terms.skill` | None |
-| Narrative Overlap | **D** | Describing synonyms in the summary instead of the field. | `doc-audit.skill` | None |
-
-## Rationale
-By formalizing synonyms, we make the Knowledge Graph "Stickier." It ensures that regardless of the prompt's phrasing, the agent is routed to the single source of truth.
+| Use Common Keywords | **P** | Includes terms like "fix", "wrong", "change" to match user intent. | `librarian.agent` | None |
+| Include Legacy Terms | **P** | Keeps old names (e.g., "kernel-first") as tags for backward compatibility. | `standards-auditor.agent` | None |
+| Tag Overloading | **D** | Adding >10 unrelated tags just to "game" the search. | Flynn Review | None |
+| Missing Logic Tags | **U** | Failing to tag a core workflow with its primary action words. | `doc-audit.skill` | None |
 
 ## Enforcement
-The posture is **Automated**. The `find-similar-terms.skill` must be run during the creation of any new node to check for synonym collisions.
+The posture is **Automated**. The `librarian.agent` will periodically audit tags for semantic coverage and suggest "Vibrant" additions based on recent conversation history.

@@ -2,7 +2,7 @@
 id: authority.glossary
 title: Authority
 type: glossary
-tags: [core, autonomy, agent.glossary , definition, term, meaning]
+tags: [core, autonomy, agent.glossary, definition, term, meaning]
 summary: The level of permission granted to an agent to either propose changes for review or suggest actions without direct modification.
 aliases: [permission-level, autonomy-rank]
 related: [ agent.glossary, agent-file.standard ]

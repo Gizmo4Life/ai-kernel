@@ -2,7 +2,7 @@
 id: determinism.glossary
 title: Determinism
 type: glossary
-tags: [logic, quality, predictability, definition, term, meaning]
+tags: [predictability, consistency, logic, quality, definition, term, meaning]
 summary: The property where a process or audit produces the same result given the same inputs, regardless of the agent performing it.
 ---
 

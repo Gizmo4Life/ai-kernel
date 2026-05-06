@@ -2,7 +2,7 @@
 id: orchestration.glossary
 title: Orchestration
 type: glossary
-tags: [core, workflow, instruction.glossary , definition, term, meaning]
+tags: [core, workflow, instruction.glossary, definition, term, meaning]
 summary: The coordination of multiple atomic skills to achieve a high-level goal or instruction.
 aliases: [sequencing, workflow-management]
 related: [ instruction.glossary, skill.glossary, atomicity.glossary ]

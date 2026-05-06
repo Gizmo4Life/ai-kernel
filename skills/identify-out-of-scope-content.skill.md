@@ -4,7 +4,7 @@ title: Identify Out-of-Scope Content
 type: skill
 tags: [logic, audit, semantics, tool, action, execution]
 summary: Detect content within a file that violates the atomicity of its current domain or tier.
-parent_standard: skill-file.standardtool: none
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 glossary_refs: [context.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 

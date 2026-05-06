@@ -4,7 +4,7 @@ title: Find Similar Terms
 type: skill
 tags: [discovery, glossary, ambiguity, tool, action, execution]
 summary: Searches the glossary for naming collisions, conceptual overlaps, and specificity violations.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   term: The new or existing term to check.
 outputs:

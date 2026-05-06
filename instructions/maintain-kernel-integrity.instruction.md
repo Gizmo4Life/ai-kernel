@@ -4,8 +4,8 @@ title: Maintain Kernel Integrity
 type: instruction
 tags: [workflow, audit, self-healing, maintenance, process, orchestration]
 summary: A self-healing loop that audits the repository for architectural decay and addresses violations iteratively until compliance is achieved.
-parent_standard: instruction-file.standardgoal: A 100% compliant repository with zero Unacceptable (U) or Discouraged (D) violations.
-skills: [evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill, extract-prompt.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill, extract-prompt.skill]
 instructions: [refactor-to-kernel-standards.instruction, validate-kernel-integrity.instruction, codify-emerging-pattern.instruction]
 standards: [kernel.standard, quality-gate.standard, versioning.standard, promotion.standard]
 preconditions:
@@ -22,14 +22,15 @@ The AI Kernel is a complex, evolving Knowledge Graph. Without automated maintena
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> maintain-kernel-integrity.instruction
+    instruction-file.standard
+goal --> maintain-kernel-integrity.instruction
     maintain-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     maintain-kernel-integrity.instruction --> check-id-uniqueness[check-id-uniqueness.skill]
     maintain-kernel-integrity.instruction --> audit-repository-connectivity[audit-repository-connectivity.skill]
     maintain-kernel-integrity.instruction --> extract-prompt[extract-prompt.skill]
 ```
 
-## Steps
+## Execution Steps
 
 ### 1. Audit Phase (Detection)
 Flynn invokes the **[Cabinet Audit Workflow](flynn.agent.md#interaction-pattern)**:

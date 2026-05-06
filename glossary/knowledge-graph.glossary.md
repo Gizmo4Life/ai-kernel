@@ -2,6 +2,7 @@
 id: knowledge-graph.glossary
 title: Knowledge Graph
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [map, connections, graph, core, technical, visualization, definition, term, meaning]
 summary: The network of interconnected concepts, standards, skills, and agents that form the AI Kernel's intelligence.
 aliases: [id-network, reference-map]

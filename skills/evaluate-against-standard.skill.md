@@ -2,6 +2,7 @@
 id: evaluate-against-standard.skill
 title: Standard Compliance Auditor
 type: skill
+parent_standard: skill-file.standard
 tags: [quality, audit, compliance, governance, tool, action, execution]
 interface:
   input: { standard_id: "standard_id", target_path: "path/to/file" }
@@ -10,7 +11,7 @@ implementation:
   engine: "python3 scratch/standard_auditor.py"
   command: "python3 scratch/standard_auditor.py {{standard_id}} {{target_path}}"
 summary: Deterministically evaluates a file against the requirements of a specific standard.
----
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."---
 
 # Standard Compliance Auditor
 

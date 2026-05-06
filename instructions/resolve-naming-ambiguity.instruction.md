@@ -4,8 +4,8 @@ title: Resolve Naming Ambiguity
 type: instruction
 tags: [workflow, naming, quality, process, orchestration]
 summary: Workflow for resolving collisions or ambiguous terms in the Knowledge Graph.
-parent_standard: instruction-file.standardgoal: A naming convention that is 100% unique and deterministic.
-skills: [find-similar-terms.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, find-similar-terms.skill]
 standards: [naming.standard, kernel.standard]
 preconditions:
   - An audit identifies a naming collision or ambiguous term.
@@ -21,11 +21,12 @@ Naming ambiguity is the "Friction" of a Knowledge Graph. This instruction provid
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> resolve-naming-ambiguity.instruction
+    instruction-file.standard
+goal --> resolve-naming-ambiguity.instruction
     resolve-naming-ambiguity.instruction --> find-similar-terms[find-similar-terms.skill]
 ```
 
-## Steps
+## Execution Steps
 
 1. **Detection**: Identify the ambiguous term or collision ID.
 2. **Semantic Review**: Invoke **[Find Similar Terms](../skills/find-similar-terms.skill.md)** to understand the scope of the ambiguity.

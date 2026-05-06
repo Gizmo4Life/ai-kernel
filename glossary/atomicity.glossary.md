@@ -2,6 +2,7 @@
 id: atomicity.glossary
 title: Atomicity
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [de-conflation, surgical, focused, core, technical, skill.glossary, definition, term, meaning]
 summary: The principle that a skill should perform a single, indivisible action using a single tool.
 aliases: [single-responsibility]

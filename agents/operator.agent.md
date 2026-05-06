@@ -9,7 +9,7 @@ authority: propose
 scope: "/**/*"
 capabilities: [system-first-remediation.instruction]
 delegates: [ flynn.agent ]
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 prompts: [ operator-intake-protocol.prompt ]
 instructions: [ system-first-remediation.instruction ]
 glossary_refs: [context.glossary, domain-owner.glossary, instruction.glossary, knowledge-graph.glossary, prompt.glossary, standard.glossary, system-first-remediation.glossary]

@@ -4,8 +4,8 @@ title: Validate Kernel Integrity
 type: instruction
 tags: [workflow, audit, maintenance, quality, process, orchestration]
 summary: A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
-parent_standard: instruction-file.standardgoal: A 100% compliant and healthy repository ready for release or major updates.
-skills: [evaluate-against-standard.skill, audit-for-architectural-violations.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, evaluate-against-standard.skill, audit-for-architectural-violations.skill]
 instructions: [perform-frontmatter-audit.instruction, verify-repository-integrity.instruction, refactor-to-kernel-standards.instruction]
 standards: [kernel.standard, standard-file.standard]
 preconditions: - Repository content exists.
@@ -26,11 +26,12 @@ This is the ultimate quality assurance workflow for the AI Kernel.
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> validate-kernel-integrity.instruction
+    instruction-file.standard
+goal --> validate-kernel-integrity.instruction
     validate-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     validate-kernel-integrity.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Metadata Audit**: Execute the [Perform Frontmatter Audit](instructions/perform-frontmatter-audit.instruction.md) instruction. Fix any missing or malformed fields immediately.
 2. **Graph Validation**: Execute the [Verify Repository Integrity](instructions/verify-repository-integrity.instruction.md) instruction. Resolve any broken IDs or dangling references.

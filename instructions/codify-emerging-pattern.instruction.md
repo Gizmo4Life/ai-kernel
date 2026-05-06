@@ -4,8 +4,8 @@ title: Codify Emerging Pattern
 type: instruction
 tags: [workflow, governance, codification, process, orchestration]
 summary: Orchestration for discovering, researching, and formalizing an emerging pattern into a hierarchical standard.
-parent_standard: instruction-file.standardgoal: A new, atomic standard properly linked to the kernel hierarchy.
-skills: [ scan-codebase-patterns.skill, research-domain-patterns.skill, generate-padu-table.skill ]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill,  scan-codebase-patterns.skill, research-domain-patterns.skill, generate-padu-table.skill ]
 standards: [ instruction-file.standard, standard-file.standard, naming.standard ]
 preconditions:
   - A recurring pattern has been identified in the codebase or context.
@@ -25,12 +25,13 @@ This instruction provides the workflow for the **Standards Scout** to aggressive
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> codify-emerging-pattern.instruction
+    instruction-file.standard
+goal --> codify-emerging-pattern.instruction
     codify-emerging-pattern.instruction --> scan-codebase-patterns[scan-codebase-patterns.skill]
     codify-emerging-pattern.instruction --> research-domain-patterns[research-domain-patterns.skill]
     codify-emerging-pattern.instruction --> generate-padu-table[generate-padu-table.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Pattern Discovery**: Run `scan-codebase-patterns.skill` to collect real-world examples of the practice.
 2. **Domain Research**: Run `research-domain-patterns.skill` to identify industry best practices and potential anti-patterns.

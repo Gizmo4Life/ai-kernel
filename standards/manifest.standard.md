@@ -4,6 +4,7 @@ title: Manifest Standard
 type: standard
 tags: [discovery, documentation, automation, rules, governance, compliance]
 summary: Standards for machine-readable README.md manifests at the folder level.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/README.md"
 parent_standard: doc-local.standard
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, knowledge-map.glossary, reachability.glossary, skill.glossary, standard.glossary]

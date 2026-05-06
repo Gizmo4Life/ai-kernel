@@ -4,8 +4,8 @@ title: Perform Atomic Extraction
 type: instruction
 tags: [workflow, de-conflation, refactor, process, orchestration]
 summary: The master workflow for moving out-of-scope content to its correct SSOT domain and restoring reachability.
-parent_standard: instruction-file.standardgoal: A fully de-conflated repository with zero "Semantic Bleeding."
-skills: [identify-out-of-scope-content.skill, linkage-specialist.agent]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, identify-out-of-scope-content.skill, linkage-specialist.agent]
 standards: [atomic-extraction.standard, kernel.standard]
 preconditions:
   - An out-of-scope content block has been identified.
@@ -21,12 +21,13 @@ This instruction is the "Scalpel" of the AI Kernel. It orchestrates the removal 
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> perform-atomic-extraction.instruction
+    instruction-file.standard
+goal --> perform-atomic-extraction.instruction
     perform-atomic-extraction.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]
     perform-atomic-extraction.instruction --> linkage-specialist.agent[linkage-specialist.agent]
 ```
 
-## Steps
+## Execution Steps
 1. **Isolation**: Capture the exact character-range of the out-of-scope content.
 2. **Transfer**: Create a new file in the appropriate domain (e.g., `glossary/*.glossary.md`) with the extracted content.
 3. **Formalization**: Apply the mandatory headers (Context, Architecture, Gate) to the new file.

@@ -4,8 +4,8 @@ title: Bootstrap New Standard
 type: instruction
 tags: [workflow, quality, onboarding, process, orchestration]
 summary: Orchestrates the full process of researching, drafting, auditing, and committing a new technical standard.
-parent_standard: instruction-file.standardgoal: A high-quality, codebase-aware standard committed to the repository.
-skills: [evaluate-against-standard.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, evaluate-against-standard.skill]
 instructions: [ populate-standard.instruction, create-glossary-entry.instruction ]
 standards: [ standard-file.standard, glossary-entry.standard, instruction-file.standard ]
 preconditions:
@@ -27,10 +27,11 @@ This is the primary workflow for expanding the AI Kernel's reach into new domain
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> bootstrap-new-standard.instruction
+    instruction-file.standard
+goal --> bootstrap-new-standard.instruction
     bootstrap-new-standard.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Research & Draft**: Execute the [populate-standard.instruction](instructions/populate-standard.instruction.md) instruction.
 2. **Glossary Alignment**: For any new terms identified in Step 1, create new glossary entries using the [create-glossary-entry.instruction](instructions/create-glossary-entry.instruction.md) instruction.

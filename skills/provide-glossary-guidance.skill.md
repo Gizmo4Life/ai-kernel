@@ -4,7 +4,7 @@ title: Provide Glossary Guidance
 type: skill
 tags: [guidance, glossary, architecture, tool, action, execution]
 summary: Analyzes a concept and recommends whether it should be a glossary entry or inlined.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs: concept: The term or concept being considered.
   context: Where the term is being used.
 outputs: recommendation: A choice between 'NEW_ENTRY' or 'INLINE' with a detailed rationale.

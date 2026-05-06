@@ -2,6 +2,7 @@
 id: instruction.glossary
 title: Instruction
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, workflow, sequence, definition, term, meaning]
 summary: A multi-step workflow that sequences skills and standards to solve a complex problem.
 aliases: [workflow, procedure, recipe]

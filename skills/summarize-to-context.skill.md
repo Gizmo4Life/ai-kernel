@@ -4,7 +4,7 @@ title: Summarize to Context
 type: skill
 tags: [memory, context.glossary, summarization, tool, action, execution]
 summary: Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs: conversation_log: The raw conversation transcript.
   target_file: The name of the file in /context/ to update or create.
 outputs: context_entry: A structured summary of the conversation.

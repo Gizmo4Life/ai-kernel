@@ -4,8 +4,8 @@ title: Handle Incident
 type: instruction
 tags: [workflow, operability, incident-response, restoration, process, orchestration]
 summary: The master orchestration workflow for resolving production alerts through deterministic restoration.
-parent_standard: instruction-file.standardgoal: Rapid restoration of system health with minimal manual diagnosis.
-skills: [evaluate-against-standard.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, evaluate-against-standard.skill]
 standards: [inc-response.standard, operability.standard]
 preconditions:
   - An aggregate alert has been triggered by a Monitor.
@@ -22,11 +22,12 @@ This instruction defines the bridge between **Detection** and **Restoration**. I
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> handle-incident.instruction
+    instruction-file.standard
+goal --> handle-incident.instruction
     handle-incident.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 
-## Steps
+## Execution Steps
 
 1. **Intake**: Accept the aggregate alert signal.
 2. **Dashboard Review**: Open the **[Span Diagnostic Dashboard](../standards/inc-response.standard.md)** linked in the alert.

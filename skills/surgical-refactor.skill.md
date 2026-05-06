@@ -14,7 +14,7 @@ implementation:
   engine: "sed"
   command: "sed -i '' 's/{{target_pattern}}/{{replacement}}/g' {{file_glob}}"
 summary: Performs high-speed, bulk regex refactoring across multiple files (The Agentic Vim).
-parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 glossary_refs: [agent.glossary, context.glossary, skill.glossary]
 ---
 

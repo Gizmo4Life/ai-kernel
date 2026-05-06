@@ -4,8 +4,8 @@ title: System-First Remediation
 type: instruction
 tags: [workflow, feedback, self-healing, evolution, codify-user-feedback, fix-kernel-error, systemic-learning-workflow, root-cause-fix, process, orchestration]
 summary: Master workflow for systemic self-correction. Use this whenever a user provides a correction or reports an error. Trace the error to its source (Standard, Prompt, Glossary), fix the source, and then re-execute.
-parent_standard: instruction-file.standardgoal: A fixed kernel that prevents the recurrence of a specific error.
-skills: [trace-output-to-source.skill, evaluate-against-standard.skill, identify-out-of-scope-content.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, trace-output-to-source.skill, evaluate-against-standard.skill, identify-out-of-scope-content.skill]
 instructions: [maintain-kernel-integrity.instruction]
 standards: [kernel.standard, quality-gate.standard, synonym.standard]
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary, system-first-remediation.glossary]
@@ -22,13 +22,14 @@ When an AI agent fails, the traditional response is to fix the specific output. 
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> system-first-remediation.instruction
+    instruction-file.standard
+goal --> system-first-remediation.instruction
     system-first-remediation.instruction --> trace-output-to-source[trace-output-to-source.skill]
     system-first-remediation.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     system-first-remediation.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]
 ```
 
-## Steps
+## Execution Steps
 
 1. **Intake**: The **Operator** captures the user's feedback and the sub-optimal output snippet.
 2. **Trace**: Flynn runs `trace-output-to-source.skill` to identify the active instructions, skills, and agents.

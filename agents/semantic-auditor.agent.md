@@ -9,7 +9,7 @@ authority: suggest
 scope: "/**/*"
 capabilities: [audit-for-architectural-violations.skill, evaluate-against-standard.skill, resolve-glossary-conflict.instruction]
 delegates: []
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 instructions: [ resolve-glossary-conflict.instruction ]
 glossary_refs: [context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, subject-matter-expert.glossary]
 ---

@@ -4,6 +4,7 @@ title: Versioning Standard
 type: standard
 tags: [governance, maintenance, versioning, rules, compliance]
 summary: Rules for internal versioning and change tracking of Knowledge Graph nodes.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: /
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]

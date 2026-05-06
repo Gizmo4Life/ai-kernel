@@ -4,6 +4,7 @@ title: Developer Documentation Standard
 type: standard
 tags: [documentation, developer, onboarding, contribution, rules, governance, compliance]
 summary: Standards for internal project documentation, focusing on local setup and contribution workflows.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/* [tag:developer]"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]

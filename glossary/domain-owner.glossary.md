@@ -2,6 +2,7 @@
 id: domain-owner.glossary
 title: Domain Owner
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [agent, authority, core, definition, term, meaning]
 summary: A Tier 1 agent with primary authority over a specific portion of the filesystem or Knowledge Graph.
 aliases: [custodian, domain-agent]

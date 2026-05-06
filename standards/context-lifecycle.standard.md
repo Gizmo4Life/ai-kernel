@@ -4,6 +4,7 @@ title: Context Lifecycle Standard
 type: standard
 tags: [memory, quality, context, rules, governance, compliance]
 summary: Standards for the creation, preservation, and pruning of architectural context.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/context/*.md"
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]

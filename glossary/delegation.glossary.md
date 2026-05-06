@@ -2,6 +2,7 @@
 id: delegation.glossary
 title: Delegation
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, autonomy, multi-agent, definition, term, meaning]
 summary: The act of an agent tasking another agent with a specific objective or skill execution.
 aliases: [task-handoff, agent-cooperation]

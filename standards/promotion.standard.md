@@ -4,6 +4,7 @@ title: Promotion Standard
 type: standard
 tags: [governance, evolution, patterns, rules, compliance]
 summary: Rules for promoting knowledge from raw context to formal core files.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: /
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, skill.glossary, standard.glossary]

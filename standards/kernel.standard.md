@@ -4,6 +4,7 @@ title: Kernel Standard
 type: standard
 tags: [governance, root, architecture, rules, compliance]
 summary: The foundational standard defining the core structural rules of the AI Kernel.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/*"
 parent_standard: None
 instructions: [ heal-structural-debt.instruction ]

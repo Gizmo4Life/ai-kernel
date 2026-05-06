@@ -2,6 +2,7 @@
 id: prompt.glossary
 title: Prompt
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, technical, communication, definition, term, meaning]
 summary: A reusable, template-driven set of instructions for an AI model that exists independently of a specific skill or agent.
 aliases: [ai-instruction, template-prompt]

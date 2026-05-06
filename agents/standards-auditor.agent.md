@@ -9,7 +9,7 @@ authority: suggest
 scope: "/standards/*.md"
 capabilities: [evaluate-against-standard.skill, audit-for-architectural-violations.skill, audit-frontmatter-completeness.skill]
 delegates: []
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 glossary_refs: [context.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---
 

@@ -10,7 +10,7 @@ implementation:
   engine: "find + md5 + awk"
   command: "find {{target_dir}} -name '*.md' -exec md5 {} + | sort | awk 'BEGIN{last=\"\"} {if($1==last) print $2; last=$1}'"
 summary: Identifies byte-identical duplicate files to prevent Knowledge Graph redundancy.
-parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 glossary_refs: [context.glossary, skill.glossary]
 ---
 

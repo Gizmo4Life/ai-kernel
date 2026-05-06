@@ -10,7 +10,7 @@ implementation:
   engine: "python3 scratch/id_auditor.py"
   command: "python3 scratch/id_auditor.py {{target_dir}}"
 summary: Verifies that every node in the AI Kernel Knowledge Graph possesses a globally unique ID.
-parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
 ---
 

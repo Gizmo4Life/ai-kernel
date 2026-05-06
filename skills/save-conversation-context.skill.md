@@ -4,7 +4,7 @@ title: Save Conversation Context
 type: skill
 tags: [maintenance, context, tool, action, execution]
 summary: Saves curated information from the current conversation to the `context/` folder.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   filename: The name of the context file.
   content: The curated information to save.

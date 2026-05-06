@@ -4,8 +4,8 @@ title: Resolve Glossary Conflict
 type: instruction
 tags: [conflict-resolution, glossary, cleanup, workflow, process, orchestration]
 summary: Workflow for merging similar glossary entries or clarifying ambiguous terms.
-parent_standard: instruction-file.standardgoal: A clean glossary with non-overlapping entries and comprehensive aliases.
-skills: [ find-glossary-terms.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill ]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill,  find-glossary-terms.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill ]
 standards: [glossary-entry.standard]
 preconditions: - Two or more glossary entries are identified as potentially redundant.
   - Or, a term has multiple conflicting definitions.
@@ -25,12 +25,13 @@ Flynn's workflow for maintaining the "Single Source of Truth" in the glossary.
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> resolve-glossary-conflict.instruction
+    instruction-file.standard
+goal --> resolve-glossary-conflict.instruction
     resolve-glossary-conflict.instruction --> find-glossary-terms[find-glossary-terms.skill]
     resolve-glossary-conflict.instruction --> provide-glossary-guidance[provide-glossary-guidance.skill]
     resolve-glossary-conflict.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Map the Conflict**: List the IDs and summaries of all conflicting entries.
 2. **Evaluate Core Intent**: Determine the primary concept that encompasses all variants.

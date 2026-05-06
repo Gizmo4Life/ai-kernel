@@ -4,8 +4,8 @@ title: Populate Standard
 type: instruction
 tags: [workflow, technical, research, process, orchestration]
 summary: Orchestrates the research and synthesis phase of standard creation.
-parent_standard: instruction-file.standardgoal: A complete PADU table based on industry research and local codebase patterns.
-skills: [research-domain-patterns.skill, scan-codebase-patterns.skill, generate-padu-table.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, research-domain-patterns.skill, scan-codebase-patterns.skill, generate-padu-table.skill]
 standards: [instruction-file.standard, standard-file.standard]
 preconditions:
   - The Standards Scout agent is available.
@@ -25,12 +25,13 @@ This instruction guides the **[Standards Scout](../agents/standards-scout.agent.
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> populate-standard.instruction
+    instruction-file.standard
+goal --> populate-standard.instruction
     populate-standard.instruction --> research-domain-patterns[research-domain-patterns.skill]
     populate-standard.instruction --> scan-codebase-patterns[scan-codebase-patterns.skill]
     populate-standard.instruction --> generate-padu-table[generate-padu-table.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Industry Research**: Run `research-domain-patterns.skill` to identify global best practices for the target domain.
 2. **Codebase Scan**: Run `scan-codebase-patterns.skill` to identify how the domain is currently handled in the repository.

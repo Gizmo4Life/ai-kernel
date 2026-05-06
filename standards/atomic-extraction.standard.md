@@ -4,6 +4,7 @@ title: Atomic Extraction Standard
 type: standard
 tags: [architecture, atomicity, de-conflation, rules, governance, compliance]
 summary: Standards for identifying out-of-scope content and extracting it to its correct SSOT domain.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/*"
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, progressive-disclosure.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]

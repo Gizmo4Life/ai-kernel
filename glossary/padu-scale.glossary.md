@@ -2,6 +2,7 @@
 id: padu-scale.glossary
 title: PADU Scale
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, quality, governance, definition, term, meaning]
 summary: The four-tier rating system (Preferred, Acceptable, Discouraged, Unacceptable) used to evaluate technical practices and repository health.
 aliases: [quality-scale, rating-system]

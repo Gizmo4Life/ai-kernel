@@ -4,6 +4,7 @@ title: Monitoring & Alerting Standard
 type: standard
 tags: [operability, monitoring, alerting, quality, rules, governance, compliance]
 summary: Standards for aggregate detection systems, prioritizing unhealthiness detection over diagnostic specificity.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/*"
 parent_standard: operability.standard
 glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary, tel-naming.standard]

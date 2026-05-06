@@ -4,8 +4,8 @@ title: Create Glossary Entry
 type: instruction
 tags: [workflow, documentation, onboarding, process, orchestration]
 summary: A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
-parent_standard: instruction-file.standardgoal: A high-quality, non-redundant glossary entry committed to the repository.
-skills: [ find-glossary-terms.skill, evaluate-against-standard.skill ]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill,  find-glossary-terms.skill, evaluate-against-standard.skill ]
 standards: [glossary-entry.standard]
 preconditions: - A new concept or term has been identified.
   - The agent has write access to the `glossary/` directory.
@@ -25,11 +25,12 @@ Follow these steps to add a new concept to the AI Kernel.
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> create-glossary-entry.instruction
+    instruction-file.standard
+goal --> create-glossary-entry.instruction
     create-glossary-entry.instruction --> find-glossary-terms[find-glossary-terms.skill]
     create-glossary-entry.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Check for Existence**: Run the `find-glossary-terms` skill with the new term and any likely aliases. If a match is found, do NOT proceed. Link to the existing entry instead.
 2. **Draft Content**: Create a new markdown file in `glossary/` using the `{term-id}.md` naming convention.

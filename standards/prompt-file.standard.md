@@ -4,6 +4,7 @@ title: Prompt File Standard
 type: standard
 tags: [governance, prompt-engineering, rules, compliance]
 summary: Standards for defining reusable AI prompts in the `prompts/` directory.
+requirements: ["## Context", "## Architecture"]
 scope: "/prompts/*.prompt.md"
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, context.glossary, determinism.glossary, frontmatter.glossary, kernel.standard, prompt.glossary, skill.glossary, standard.glossary]

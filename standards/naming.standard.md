@@ -4,6 +4,7 @@ title: Naming Standard
 type: standard
 tags: [governance, organization, naming, rules, compliance]
 summary: Rules for unambiguous file naming and ID assignment in the AI Kernel.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: /
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]

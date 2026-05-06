@@ -4,7 +4,7 @@ title: Research Domain Patterns
 type: skill
 tags: [research, standards, tool, action, execution]
 summary: Analyzes industry best practices for a specific technical domain.
-parent_standard: skill-file.standardtool: search
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs: domain: The subject (e.g., 'React Testing').
 outputs: practices: A list of recommended patterns and anti-patterns.
 standards: []

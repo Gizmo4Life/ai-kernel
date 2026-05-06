@@ -4,7 +4,7 @@ title: Scan Codebase Patterns
 type: skill
 tags: [audit, search, patterns, tool, action, execution]
 summary: Identifies recurring patterns (exemplary or problematic) in the codebase or context.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   domain: The subject (e.g., 'Error Handling').
 outputs:

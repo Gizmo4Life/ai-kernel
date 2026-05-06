@@ -4,7 +4,7 @@ title: Audit Telemetry Naming
 type: skill
 tags: [audit, telemetry, observability, tool, action, execution]
 summary: Scans codebase strings and configurations for violations of the Telemetry Naming Standard.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   path: The directory to scan.
 outputs:

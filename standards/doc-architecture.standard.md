@@ -4,6 +4,7 @@ title: Architecture Documentation Standard
 type: standard
 tags: [documentation, architecture, orientation, rules, governance, compliance]
 summary: Standards for the global orientation layer located in `docs/architecture/`.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/docs/architecture/**/*.md"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]

@@ -10,7 +10,7 @@ implementation:
   engine: "python3 scratch/mermaid_gen.py"
   command: "python3 scratch/mermaid_gen.py {{target_path}}"
 summary: Automatically generates and injects Mermaid diagrams based on a node's metadata.
-parent_standard: skill-file.standard---
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 
 # Architecture Visualizer
 
@@ -29,7 +29,7 @@ graph TD
 3. **Verification**: Confirm the Mermaid diagram correctly reflects the hierarchy.
 
 ## Verification Protocol
-1. Create a file with `parent_standard: root` and `skills: [test.skill]`.
+1. Create a file with `parent_standard: skill-file.standard
 2. Run `python3 scratch/mermaid_gen.py test.md`.
 3. Verify the Mermaid code contains `root --> test` and `test --> test.skill`.
 

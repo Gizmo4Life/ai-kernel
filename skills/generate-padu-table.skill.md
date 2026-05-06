@@ -4,7 +4,7 @@ title: Generate PADU Table
 type: skill
 tags: [generation, standard.glossary, tool, action, execution]
 summary: Synthesizes patterns into a formal, atomic PADU table.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   researched_patterns: Output from industry research.
   codebase_patterns: Output from local scan.

@@ -9,7 +9,7 @@ authority: suggest
 scope: "/**/*"
 capabilities: [audit-repository-connectivity.skill, find-frontmatter-refs.skill, find-glossary-terms.skill, resolve-naming-ambiguity.instruction]
 delegates: []
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 instructions: [ resolve-naming-ambiguity.instruction ]
 glossary_refs: [context.glossary, instruction.glossary, knowledge-graph.glossary, reachability.glossary, skill.glossary, subject-matter-expert.glossary]
 ---

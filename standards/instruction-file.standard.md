@@ -2,7 +2,7 @@
 id: instruction-file.standard
 title: Instruction File Standard
 type: standard
-tags: [orchestration, workflow, quality, rules, governance, compliance]
+requirements: ["## Postconditions", "## Execution Steps"], tags: [orchestration, workflow, quality, rules, governance, compliance]
 summary: Standards for multi-step instructions, emphasizing state-based pre/postconditions.
 scope: "/instructions/*.instruction.md"
 parent_standard: standard-file.standard

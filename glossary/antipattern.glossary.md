@@ -2,6 +2,7 @@
 id: antipattern.glossary
 title: Antipattern
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, quality, software-engineering, definition, term, meaning]
 summary: A common response to a recurring problem that is usually ineffective and risks being highly counterproductive.
 aliases: [bad-practice, dark-pattern]

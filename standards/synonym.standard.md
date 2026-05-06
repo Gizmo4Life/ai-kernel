@@ -4,6 +4,7 @@ title: Discovery Tag Standard
 type: standard
 tags: [governance, discovery, semantics, tagging, rules, compliance]
 summary: Standards for using vibrant tags to ensure Knowledge Graph discoverability and prevent logic duplication.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/*"
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, reachability.glossary, skill.glossary, standard.glossary]

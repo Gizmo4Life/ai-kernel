@@ -2,6 +2,7 @@
 id: reachability.glossary
 title: Reachability
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [connectivity, linkage, discovery, graph, definition, term, meaning]
 summary: The property of a node in the Knowledge Graph being discoverable through a continuous chain of references starting from the Kernel Root.
 ---

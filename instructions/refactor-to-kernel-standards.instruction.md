@@ -4,8 +4,8 @@ title: Refactor to Kernel Standards
 type: instruction
 tags: [workflow, architecture, refactor, process, orchestration]
 summary: A maximalist workflow for aligning repository content with the core architectural principles of the AI Kernel.
-parent_standard: instruction-file.standardgoal: A fully modular, linked, and standards-compliant repository.
-skills: [audit-for-architectural-violations.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill, audit-for-architectural-violations.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill]
 instructions: [create-glossary-entry.instruction, populate-standard.instruction]
 standards: [skill-file.standard, instruction-file.standard, glossary-entry.standard, kernel.standard]
 preconditions:
@@ -27,12 +27,13 @@ This instruction codifies the "maximalist extraction" process used to maintain t
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> refactor-to-kernel-standards.instruction
+    instruction-file.standard
+goal --> refactor-to-kernel-standards.instruction
     refactor-to-kernel-standards.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
     refactor-to-kernel-standards.instruction --> provide-glossary-guidance[provide-glossary-guidance.skill]
     refactor-to-kernel-standards.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
-## Steps
+## Execution Steps
 
 1. **Audit**: Run [audit-for-architectural-violations.skill](skills/audit-for-architectural-violations.skill.md) across the target directory or file.
 2. **Glossary Extraction**: 

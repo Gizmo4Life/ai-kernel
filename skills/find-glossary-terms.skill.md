@@ -4,7 +4,7 @@ title: Find Glossary Terms
 type: skill
 tags: [discovery, search, glossary, tool, action, execution]
 summary: Searches the glossary for terms or aliases matching a query.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs: query: The term or concept to search for.
 outputs: matches: A list of matching glossary file paths and their IDs.
 standards: [glossary-entry.standard]

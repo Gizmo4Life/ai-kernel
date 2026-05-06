@@ -4,6 +4,7 @@ title: External Documentation Standard
 type: standard
 tags: [documentation, customer, manual, api, rules, governance, compliance]
 summary: Standards for customer-facing documentation, including user manuals and API specifications.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/* [tag:external]"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]

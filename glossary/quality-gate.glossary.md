@@ -2,6 +2,7 @@
 id: quality-gate.glossary
 title: Quality Gate
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, quality, workflow, definition, term, meaning]
 summary: A checkpoint in an instruction or workflow where a standard is applied to validate the current state of work.
 aliases: [checkpoint, validation-step]

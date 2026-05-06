@@ -4,7 +4,7 @@ title: Trace Output to Source
 type: skill
 tags: [audit, technical, trace, tool, action, execution]
 summary: Scans conversation logs to identify the chain of agents, instructions, and skills that contributed to a specific output.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   output_snippet: A piece of the sub-optimal output to search for.
 outputs:

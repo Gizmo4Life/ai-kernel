@@ -9,7 +9,7 @@ authority: suggest
 scope: "/standards/*.md"
 capabilities: [scan-codebase-patterns.skill, generate-padu-table.skill, codify-emerging-pattern.instruction]
 delegates: []
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 instructions: [ codify-emerging-pattern.instruction ]
 glossary_refs: [context.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---

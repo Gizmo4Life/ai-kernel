@@ -4,7 +4,7 @@ title: Audit Frontmatter Completeness
 type: skill
 tags: [audit, technical, frontmatter.glossary, tool, action, execution]
 summary: Verifies that every file contains the mandatory YAML frontmatter fields required by its type.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   file_path: The file to audit.
 outputs:

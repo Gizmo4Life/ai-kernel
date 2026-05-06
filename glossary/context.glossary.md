@@ -2,6 +2,7 @@
 id: context.glossary
 title: Context
 type: glossary
+parent_standard: glossary-entry.standard
 tags: [core, memory, documentation, definition, term, meaning]
 summary: Important information collected during a conversation or project, persisted for long-term memory.
 aliases: [background, conversation-history, project-state]

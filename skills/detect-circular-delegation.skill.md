@@ -4,7 +4,7 @@ title: Detect Circular Delegation
 type: skill
 tags: [audit, technical, graph, tool, action, execution]
 summary: Analyzes the agent delegation graph to identify infinite logic loops.
-parent_standard: skill-file.standardtool: grep
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   path: The directory containing agent files (defaults to `agents/`).
 outputs:

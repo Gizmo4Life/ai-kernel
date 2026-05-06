@@ -4,7 +4,7 @@ title: Extract Prompt
 type: skill
 tags: [refactor, prompts, modularity, tool, action, execution]
 summary: Identifies instruction-heavy sections in agents or instructions and moves them to the `prompts/` directory.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   source_file: The file containing the prompt logic.
   section_

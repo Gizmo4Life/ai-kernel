@@ -4,6 +4,7 @@ title: Capability Standard
 type: standard
 tags: [governance, authority, token, rules, compliance]
 summary: Standards for granting and verifying agent capabilities (licenses to act).
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/agents/*.agent.md"
 parent_standard: agent-file.standard
 glossary_refs: [agent.glossary, atomicity.glossary, authority.glossary, capability.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
@@ -41,3 +42,4 @@ By tokenizing actions as "Capabilities," we make the AI Kernel's security model 
 
 ## Enforcement
 The posture is **Automated**. The **Integrity Guardian** verifies that all skill invocations in an agent's logs match their `capabilities` manifest.
+\n## Quality Gate\n- **Verification**: All capability nodes must define a machine-verifiable interface.\n- **Enforcement**: Capabilities without a skill implementation are prohibited.

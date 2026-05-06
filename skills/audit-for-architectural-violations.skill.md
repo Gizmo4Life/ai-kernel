@@ -4,7 +4,7 @@ title: Audit for Architectural Violations
 type: skill
 tags: [audit, architecture, quality, tool, action, execution]
 summary: Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
-parent_standard: skill-file.standardtool: editor
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 inputs:
   file_path: The file to audit.
 outputs:

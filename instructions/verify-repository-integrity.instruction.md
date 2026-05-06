@@ -4,8 +4,8 @@ title: Verify Repository Integrity
 type: instruction
 tags: [workflow, audit, maintenance, process, orchestration]
 summary: Orchestrates the indexing and reference discovery skills to ensure knowledge graph integrity and delegation safety.
-parent_standard: instruction-file.standardgoal: A healthy repository with zero broken frontmatter references and zero circular delegations.
-skills: [ collect-repo-ids.skill, find-frontmatter-refs.skill, detect-circular-delegation.skill ]
+parent_standard: instruction-file.standard
+skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill, doc-audit.skill,  collect-repo-ids.skill, doc-audit.skill, detect-circular-delegation.skill ]
 standards: [instruction-file.standard]
 preconditions:
   - Access to the repository root.
@@ -25,15 +25,16 @@ This instruction ensures the repository's [Knowledge Graph](glossary/knowledge-g
 
 ```mermaid
 graph TD
-    instruction-file.standardgoal --> verify-repository-integrity.instruction
+    instruction-file.standard
+goal --> verify-repository-integrity.instruction
     verify-repository-integrity.instruction --> collect-repo-ids[collect-repo-ids.skill]
-    verify-repository-integrity.instruction --> find-frontmatter-refs[find-frontmatter-refs.skill]
+    verify-repository-integrity.instruction --> find-frontmatter-refs[doc-audit.skill]
     verify-repository-integrity.instruction --> detect-circular-delegation[detect-circular-delegation.skill]
 ```
-## Steps
+## Execution Steps
 
-1. **Index**: Run `collect-repo-ids.skill` to build the master list of valid IDs.
-2. **Discovery**: Run `find-frontmatter-refs.skill` to map all dependencies.
+1. **Index**: Run `collect-repo-ids.skill` to run audit-repository-connectivity.skill of valid IDs.
+2. **Discovery**: Run `doc-audit.skill` to map all dependencies.
 3. **Cross-Check**: Verify every reference against the master ID list.
 4. **Delegation Audit**: Run `detect-circular-delegation.skill` on the `agents/` directory.
 5. **[Quality Gate](glossary/quality-gate.glossary.md)**:

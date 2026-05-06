@@ -4,6 +4,7 @@ title: Telemetry Naming Standard
 type: standard
 tags: [telemetry, observability, naming, rules, governance, compliance]
 summary: Standards for naming spans, metrics, and logs to ensure cross-domain observability.
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/* [tag:telemetry]"
 parent_standard: kernel.standard
 glossary_refs: [agent.glossary, context.glossary, naming.standard, orchestration.glossary, skill.glossary, standard.glossary]

@@ -2,7 +2,7 @@
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
-tags: [governance, glossary, ssot, rules, compliance]
+requirements: ["## Usage Constraints", tags], tags: [governance, glossary, ssot, rules, compliance]
 summary: Standards for defining canonical terms, including mandatory usage constraints to prevent semantic drift.
 scope: "/glossary/*.glossary.md"
 parent_standard: standard-file.standard

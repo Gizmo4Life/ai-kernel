@@ -9,7 +9,7 @@ authority: suggest
 scope: "/glossary/*.md"
 capabilities: [find-similar-terms.skill, audit-redundant-content.skill, provide-glossary-guidance.skill, create-glossary-entry.instruction]
 delegates: []
-parent_standard: kernel.standard
+parent_standard: agent-file.standard
 prompts: [ determine-glossary-necessity.prompt ]
 instructions: [ create-glossary-entry.instruction ]
 glossary_refs: [context.glossary, knowledge-graph.glossary, skill.glossary, subject-matter-expert.glossary]

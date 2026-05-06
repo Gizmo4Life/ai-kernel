@@ -10,7 +10,7 @@ inputs: conversation_log: The raw conversation transcript.
   target_file: The name of the file in /context/ to update or create.
 outputs: context_entry: A structured summary of the conversation.
 standards: []
-glossary_refs: [context.glossary, heuristics.glossary, skill.glossary]
+glossary_refs: [context.glossary, heuristics.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context

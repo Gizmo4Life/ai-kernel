@@ -9,7 +9,7 @@ parent_standard: skill-file.standard
 inputs: path: Directory to scan.
 outputs: ref_map: A mapping of files to the IDs they reference.
 standards: []
-glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context

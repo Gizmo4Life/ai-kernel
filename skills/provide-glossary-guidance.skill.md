@@ -10,7 +10,7 @@ inputs: concept: The term or concept being considered.
   context: Where the term is being used.
 outputs: recommendation: A choice between 'NEW_ENTRY' or 'INLINE' with a detailed rationale.
 standards: [glossary-entry.standard]
-glossary_refs: [context.glossary, glossary-entry.glossary, heuristics.glossary, skill.glossary]
+glossary_refs: [context.glossary, glossary-entry.glossary, heuristics.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context

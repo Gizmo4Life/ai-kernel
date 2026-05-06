@@ -6,7 +6,7 @@ tags: [logic, audit, priority, tool, action, execution]
 summary: Rank architectural violations into P0-P3 priority tiers based on system impact.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary, prompt.glossary, skill.glossary]
+glossary_refs: [context.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 # Triage Architectural Violations

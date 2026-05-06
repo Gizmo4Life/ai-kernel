@@ -9,7 +9,7 @@ parent_standard: skill-file.standard
 inputs: query: The term or concept to search for.
 outputs: matches: A list of matching glossary file paths and their IDs.
 standards: [glossary-entry.standard]
-glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, skill.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context

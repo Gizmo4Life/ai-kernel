@@ -21,21 +21,21 @@ def main():
     print("=== INITIALIZING GLOBAL HEALING WAVE (v5.0.0) ===")
     
     # 1. Structural Repair
-    run_step("Frontmatter Repair", "python3 drivers/fm_repair.py")
+    run_step("Frontmatter Repair", "python3 drivers/kernel/fm_repair.py")
     
     # 2. Semantic Healing
-    run_step("Auto-Link Glossary", "python3 drivers/auto_linker.py .")
+    run_step("Auto-Link Glossary", "python3 drivers/kernel/auto_linker.py .")
     
     # 3. Visual Healing
-    run_step("Mermaid Diagram Generation", "python3 drivers/mermaid_gen.py .")
+    run_step("Mermaid Diagram Generation", "python3 drivers/kernel/mermaid_gen.py .")
     
     # 4. Integrity Audits
-    ids = run_step("ID Collision Audit", "python3 drivers/id_auditor.py .")
-    conn = run_step("Connectivity Audit", "python3 drivers/connectivity_auditor.py .")
-    cycles = run_step("Agent Cycle Audit", "python3 drivers/cycle_detector.py")
+    ids = run_step("ID Collision Audit", "python3 drivers/kernel/id_auditor.py .")
+    conn = run_step("Connectivity Audit", "python3 drivers/kernel/connectivity_auditor.py .")
+    cycles = run_step("Agent Cycle Audit", "python3 drivers/kernel/cycle_detector.py")
     
     # 5. Final Compliance Certification
-    run_step("Global Compliance Audit", "python3 drivers/global_compliance_auditor.py")
+    run_step("Global Compliance Audit", "python3 drivers/kernel/global_compliance_auditor.py")
     
     print("\n=== HEALING WAVE COMPLETE ===")
     print("View the final status in context/global-gap-report.md")

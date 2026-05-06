@@ -7,8 +7,8 @@ interface:
   input: { target_path: "path/to/file_or_dir" }
   output: { status: "success", linked_refs: ["id1", "id2"] }
 implementation:
-  engine: "python3 drivers/auto_linker.py"
-  command: "python3 drivers/auto_linker.py {{target_path}}"
+  engine: "python3 drivers/kernel/auto_linker.py"
+  command: "python3 drivers/kernel/auto_linker.py {{target_path}}"
 summary: Automatically scans file bodies for glossary terms and populates frontmatter glossary_refs.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
 parent_standard: skill-file.standard
@@ -34,7 +34,7 @@ graph TD
 
 ## Verification Protocol
 1. Create a file containing the word "Determinism" with an empty `glossary_refs: []`.
-2. Run `python3 drivers/auto_linker.py test.md`.
+2. Run `python3 drivers/kernel/auto_linker.py test.md`.
 3. Verify that `glossary_refs` now contains `determinism.glossary`.
 
 ## Quality Gate

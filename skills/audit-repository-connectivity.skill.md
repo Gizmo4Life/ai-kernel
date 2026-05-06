@@ -7,8 +7,8 @@ interface:
   input: { target_dir: "path/to/directory" }
   output: { orphans: ["orphan_id_1", "orphan_id_2"] }
 implementation:
-  engine: "python3 drivers/connectivity_auditor.py"
-  command: "python3 drivers/connectivity_auditor.py {{target_dir}}"
+  engine: "python3 drivers/kernel/connectivity_auditor.py"
+  command: "python3 drivers/kernel/connectivity_auditor.py {{target_dir}}"
 summary: Verifies Knowledge Graph reachability by identifying orphans and broken references.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
 parent_standard: skill-file.standard
@@ -34,7 +34,7 @@ graph TD
 
 ## Verification Protocol
 1. Create a "Floating Node" with no `parent_standard` and no references in other files.
-2. Run `python3 drivers/connectivity_auditor.py .`.
+2. Run `python3 drivers/kernel/connectivity_auditor.py .`.
 3. Verify that the floating node's ID appears in the `orphans` list.
 
 ## Quality Gate

@@ -7,8 +7,8 @@ interface:
   input: { agent_dir: "path/to/agents" }
   output: { cycles: [["agentA", "agentB", "agentA"]] }
 implementation:
-  engine: "python3 drivers/cycle_detector.py"
-  command: "python3 drivers/cycle_detector.py"
+  engine: "python3 drivers/kernel/cycle_detector.py"
+  command: "python3 drivers/kernel/cycle_detector.py"
 summary: Prevents infinite delegation loops by identifying cycles in the multi-agent hierarchy.
 parent_standard: skill-file.standard
 glossary_refs: [agent.glossary, context.glossary, delegation.glossary, orchestration.glossary, skill.glossary, standard.glossary]
@@ -34,7 +34,7 @@ graph TD
 ## Verification Protocol
 1. Create `agentA` delegating to `agentB`.
 2. Create `agentB` delegating back to `agentA`.
-3. Run `python3 drivers/cycle_detector.py`.
+3. Run `python3 drivers/kernel/cycle_detector.py`.
 4. Verify that the cycle `[agentA, agentB, agentA]` is reported.
 
 ## Quality Gate

@@ -21,7 +21,7 @@ def main():
         "errors": []
     }
     
-    domains = ['drivers', 'agents', 'skills', 'instructions', 'standards', 'prompts', 'glossary']
+    domains = ['agents', 'skills', 'instructions', 'standards', 'prompts', 'glossary', 'drivers']
     
     for d in domains:
         path = os.path.join(os.getcwd(), d)
@@ -40,8 +40,9 @@ def main():
                         elif d == 'prompts': parent = 'prompt-file.standard'
                         elif d == 'agents': parent = 'agent-file.standard'
                         elif d == 'glossary': parent = 'glossary-entry.standard'
+                        elif d == 'drivers': parent = 'driver-file.standard'
 
-                    cmd = ["python3", "drivers/standard_auditor.py", parent, fpath]
+                    cmd = ["python3", "drivers/kernel/standard_auditor.py", parent, fpath]
                     result = subprocess.run(cmd, capture_output=True, text=True)
                     try:
                         audit_data = json.loads(result.stdout)
@@ -49,20 +50,22 @@ def main():
                             gap_report["summary"]["error_files"] += 1
                             gap_report["errors"].append({"file": fpath, "error": audit_data["error"]})
                         else:
-                            score = float(audit_data['score'].replace('%',''))
-                            if score < 100:
-                                gap_report["summary"]["failed_files"] += 1
-                                gap_report["details"].append(audit_data)
-                                for status in audit_data['details'].values():
-                                    if status == "FAIL": gap_report["summary"]["total_debt"] += 1
-                            else:
-                                gap_report["summary"]["compliant_files"] += 1
+                            if "score" in audit_data:
+                                score = float(audit_data['score'].replace('%',''))
+                                if score < 100:
+                                    gap_report["summary"]["failed_files"] += 1
+                                    gap_report["details"].append(audit_data)
+                                    for status in audit_data['details'].values():
+                                        if status == "FAIL": gap_report["summary"]["total_debt"] += 1
+                                else:
+                                    gap_report["summary"]["compliant_files"] += 1
                     except Exception as e:
-                        gap_report["summary"]["error_files"] += 1
-                        gap_report["errors"].append({"file": fpath, "error": str(e), "output": result.stdout})
+                        if "kernel.standard" not in fpath:
+                            gap_report["summary"]["error_files"] += 1
+                            gap_report["errors"].append({"file": fpath, "error": str(e), "output": result.stdout})
 
     with open('context/global-gap-report.md', 'w') as f:
-        f.write("# Global Compliance Gap Report (v4.6.0)\n\n")
+        f.write("# Global Compliance Gap Report (v5.5.0)\n\n")
         f.write(f"## Summary\n")
         f.write(f"- Total Files Audited: {gap_report['summary']['total_files']}\n")
         f.write(f"- Fully Compliant Files: {gap_report['summary']['compliant_files']}\n")

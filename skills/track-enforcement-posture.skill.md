@@ -7,8 +7,8 @@ interface:
   input: { standards_dir: "path/to/standards" }
   output: { "standard_name": { "total": 10, "automated": 8, "maturity": 0.8 } }
 implementation:
-  engine: "python3 drivers/enforcement_tracker.py"
-  command: "python3 drivers/enforcement_tracker.py"
+  engine: "python3 drivers/kernel/enforcement_tracker.py"
+  command: "python3 drivers/kernel/enforcement_tracker.py"
 summary: Quantifies the ratio of automated vs. manual enforcement across the AI Kernel Standards Cabinet.
 parent_standard: skill-file.standard
 glossary_refs: [context.glossary, skill.glossary, standard.glossary]
@@ -33,7 +33,7 @@ graph TD
 
 ## Verification Protocol
 1. Create a "Legacy Standard" with 10 manual rules.
-2. Run `python3 drivers/enforcement_tracker.py`.
+2. Run `python3 drivers/kernel/enforcement_tracker.py`.
 3. Verify that the maturity score is reported as `0.0`.
 4. Add a `.skill` to one of the rules and verify the score increases to `0.1`.
 

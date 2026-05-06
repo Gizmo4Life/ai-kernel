@@ -10,7 +10,8 @@ implementation:
   engine: "python3 drivers/kernel/mermaid_gen.py"
   command: "python3 drivers/kernel/mermaid_gen.py {{target_path}}"
 summary: Automatically generates and injects Mermaid diagrams based on a node's metadata.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+parent_standard: skill-file.standard
+---
 
 # Architecture Visualizer
 
@@ -21,6 +22,8 @@ Visual consistency is critical for rapid system understanding. This skill ensure
 
 ```mermaid
 graph TD
+    skill-file.standard --> generate-mermaid-diagram.skill
+    generate-mermaid-diagram.skill --> mermaid_gen[mermaid_gen.py]
 ```
 
 ## Execution Steps
@@ -29,9 +32,9 @@ graph TD
 3. **Verification**: Confirm the Mermaid diagram correctly reflects the hierarchy.
 
 ## Verification Protocol
-1. Create a file with `parent_standard: skill-file.standard
+1. Create a file with `parent_standard: skill-file.standard`.
 2. Run `python3 drivers/kernel/mermaid_gen.py test.md`.
-3. Verify the Mermaid code contains `root --> test` and `test --> test.skill`.
+3. Verify the Mermaid code contains the expected hierarchy.
 
 ## Quality Gate
 - **Verification**: Diagrams must be valid Mermaid syntax.

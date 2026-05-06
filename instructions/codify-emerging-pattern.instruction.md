@@ -45,7 +45,7 @@ graph TD
 5. **Hierarchy Mapping**:
     - Select a `parent_standard` from the existing `standards/` directory.
     - Assign a Context-Qualified name following the [Naming Standard](../standards/naming.standard.md).
-6. **[Quality Gate](glossary/quality-gate.glossary.md)**:
+6. **[Quality Gate](../glossary/quality-gate.glossary.md)**:
     - Invoke the **[Semantic Auditor](../agents/semantic-auditor.agent.md)** to verify that the new standard is atomic and not overlapping with existing rules.
     - Ensure every practice has an **Enforcement** method.
 7. **Final Review**: Present the new `.[standard].md` file to **Flynn** for approval.

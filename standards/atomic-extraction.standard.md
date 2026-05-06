@@ -26,10 +26,10 @@ graph TD
 
 | Source Content | Correct Target Domain | Action |
 |---|---|---|
-| Term Definition | `glossary/*.glossary.md` | Extract to Glossary; Link via [term]. |
-| Multi-tool logic | `instructions/*.instruction.md` | Extract to Instruction; Link via ID. |
-| Reusable AI logic | `prompts/*.prompt.md` | Extract to Prompt; Link via frontmatter. |
-| Verification logic | `skills/*.skill.md` | Extract to Skill; Link via ID. |
+| Term Definition | `glossary/*.md` | Extract to Glossary; Link via [term]. |
+| Multi-tool logic | `instructions/*.md` | Extract to Instruction; Link via ID. |
+| Reusable AI logic | `prompts/*.md` | Extract to Prompt; Link via frontmatter. |
+| Verification logic | `skills/*.md` | Extract to Skill; Link via ID. |
 
 ## PADU Table
 

@@ -36,7 +36,7 @@ graph TD
 
 1. **Completeness Check**: Run `audit-frontmatter-completeness.skill` on all markdown files (excluding READMEs).
 2. **Integrity Check**: Run the `Verify Repository Integrity` instruction to ensure all IDs resolve.
-3. **[Quality Gate](glossary/quality-gate.glossary.md)**: - If any mandatory fields are missing, flag as a critical failure.
+3. **[Quality Gate](../glossary/quality-gate.glossary.md)**: - If any mandatory fields are missing, flag as a critical failure.
     - If IDs do not match filenames (standard practice), suggest renaming.
 4. **Report**: provide a compliance report for the Standards Auditor.
 

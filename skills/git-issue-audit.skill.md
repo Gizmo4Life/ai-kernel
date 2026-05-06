@@ -5,7 +5,7 @@ type: skill
 tags: [git, github, audit, review, tool, action, execution]
 interface:
   input: { owner: "org", repo: "repo-name", issue_number: "123", token: "optional-token" }
-  output: { status: "success", 
+  output: { status: "success",
 title: "...", body: "...", labels: ["bug"] }
 implementation:
   engine: "python3 drivers/git/github_issue_audit.py"

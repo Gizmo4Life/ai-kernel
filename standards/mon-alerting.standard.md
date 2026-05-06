@@ -25,7 +25,7 @@ graph TD
 ## Monitoring Principles
 
 ### 1. Aggregation over Diagnosis
-- **Rule**: Create one monitor for many scenarios. 
+- **Rule**: Create one monitor for many scenarios.
 - **Example**: A single monitor for "API Latency > 500ms" covers database slowness, network congestion, and code inefficiencies simultaneously.
 
 ### 2. Detection over Feedback

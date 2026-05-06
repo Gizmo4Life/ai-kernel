@@ -32,7 +32,7 @@ graph TD
 
 ## Execution Steps
 1. **Isolation**: Capture the exact character-range of the out-of-scope content.
-2. **Transfer**: Create a new file in the appropriate domain (e.g., `glossary/*.glossary.md`) with the extracted content.
+2. **Transfer**: Create a new file in the appropriate domain (e.g., `glossary/*.md`) with the extracted content.
 3. **Formalization**: Apply the mandatory headers (Context, Architecture, Gate) to the new file.
 4. **Linkage**: Replace the original content block in the source file with a markdown link to the new node.
 5. **Validation**: Run the **Connectivity Audit** to ensure the new node is reachable.

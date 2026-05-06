@@ -10,15 +10,15 @@ summary: Human-navigable map and organizational overview of the agents directory
 This directory contains the autonomous actors and subject matter experts (SMEs) that govern the AI Kernel.
 
 ## Tier 0: Interface
-- [Operator](operator.agent.md): High-level interface and remediation orchestrator.
+- [Operator](operator.md): High-level interface and remediation orchestrator.
 
 ## Tier 1: Domain Owners
-- [Flynn](flynn.agent.md): Supreme custodian of the Kernel Core.
+- [Flynn](flynn.md): Supreme custodian of the Kernel Core.
 
 ## Tier 2: Subject Matter Experts (SMEs)
-- [Standards Auditor](standards-auditor.agent.md): Compliance and PADU evaluation.
-- [Librarian](librarian.agent.md): Discovery and manifest maintenance.
-- [Semantic Auditor](semantic-auditor.agent.md): Logic complexity and atomicity.
-- [Standards Scout](standards-scout.agent.md): Pattern discovery and codification.
-- [Integrity Guardian](integrity-guardian.agent.md): Graph safety and structural health.
-- [Linkage Specialist](linkage-specialist.agent.md): Connectivity and reference completeness.
+- [Standards Auditor](standards-auditor.md): Compliance and PADU evaluation.
+- [Librarian](librarian.md): Discovery and manifest maintenance.
+- [Semantic Auditor](semantic-auditor.md): Logic complexity and atomicity.
+- [Standards Scout](standards-scout.md): Pattern discovery and codification.
+- [Integrity Guardian](integrity-guardian.md): Graph safety and structural health.
+- [Linkage Specialist](linkage-specialist.md): Connectivity and reference completeness.

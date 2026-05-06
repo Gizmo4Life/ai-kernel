@@ -28,7 +28,7 @@ This skill enables Flynn to evaluate the "weight" of a concept and its long-term
 graph TD
     skill-file.standard --> provide-glossary-guidance.skill
 ```
-## [Heuristics](glossary/heuristics.glossary.md)
+## [Heuristics](../glossary/heuristics.glossary.md)
 
 Flynn uses the following heuristics:
 - **Reuse**: Is this term likely to be used in 3+ files or across different domains? (-> NEW_ENTRY)

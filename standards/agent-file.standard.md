@@ -2,10 +2,10 @@
 id: agent-file.standard
 title: Agent File Standard
 type: standard
-requirements: [authority, scope, capabilities, "## Quality Gate"], 
+requirements: [authority, scope, capabilities, "## Quality Gate"],
 tags: [governance, agent, rules, compliance]
 summary: Standards for defining autonomous agents, emphasizing the 2-tier delegation model.
-scope: "/agents/**/*.agent.md"
+scope: "/agents/**/*.md"
 parent_standards: [ kernel.standard, standard-file.standard ]
 prompts: [ id_list ]
 glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]

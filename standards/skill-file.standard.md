@@ -2,10 +2,10 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-requirements: [interface, implementation, "## Verification Protocol"], 
+requirements: [interface, implementation, "## Verification Protocol"],
 tags: [automation, quality, atomicity, rules, governance, compliance]
 summary: Standards for defining code-backed atomic skills, emphasizing deterministic interfaces and automated verification.
-scope: "/skills/*.skill.md"
+scope: "/skills/*.md"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, instruction.glossary, orchestration.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---

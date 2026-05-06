@@ -38,15 +38,15 @@ graph TD
 ```
 ## Execution Steps
 
-1. **Audit**: Run [audit-for-architectural-violations.skill](skills/audit-for-architectural-violations.skill.md) across the target directory or file.
-2. **Glossary Extraction**: 
-    - For every inline concept found, use [provide-glossary-guidance.skill](skills/provide-glossary-guidance.skill.md).
-    - If `NEW_ENTRY` is recommended, execute [create-glossary-entry.instruction](instructions/create-glossary-entry.instruction.md).
+1. **Audit**: Run [audit-for-architectural-violations.skill](../skills/audit-for-architectural-violations.skill.md) across the target directory or file.
+2. **Glossary Extraction**:
+    - For every inline concept found, use [provide-glossary-guidance.skill](../skills/provide-glossary-guidance.skill.md).
+    - If `NEW_ENTRY` is recommended, execute [create-glossary-entry.instruction](create-glossary-entry.instruction.md).
     - Replace the inline definition with a link to the new glossary file.
-3. **Modularization**: 
+3. **Modularization**:
     - If a **Skill** is found to be non-atomic, decompose it into new atomic skills.
     - Create a new **Instruction** to orchestrate the new skills.
-4. **Standard Extraction**: 
+4. **Standard Extraction**:
     - If a skill or instruction contains "hardcoded" quality rules, move them to a relevant **Standard** (PADU table).
 5. **Commit**: Save and propose changes.
 

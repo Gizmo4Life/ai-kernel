@@ -28,7 +28,7 @@ This skill implements the "Context Management" directive by distilling transient
 graph TD
     skill-file.standard --> summarize-to-context.skill
 ```
-## Extraction [Heuristics](glossary/heuristics.glossary.md)
+## Extraction [Heuristics](../glossary/heuristics.glossary.md)
 
 Focus on:
 - **Decisions**: What was agreed upon? (e.g., "Move glossary to root").

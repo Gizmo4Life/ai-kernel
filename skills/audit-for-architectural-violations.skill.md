@@ -31,10 +31,10 @@ graph TD
 ```
 ## Execution Steps
 
-1. **Check for [Atomicity](glossary/atomicity.glossary.md)**:
+1. **Check for [Atomicity](../glossary/atomicity.glossary.md)**:
     - (For Skills) Verify the file uses exactly one tool.
     - **Hidden Tool Detection**: Scan the body for undeclared CLI utilities (e.g., `sed`, `awk`, `jq`, `curl`, `python`). Cross-check with the `tool` field.
-2. **Check for [Orchestration](glossary/orchestration.glossary.md)**:
+2. **Check for [Orchestration](../glossary/orchestration.glossary.md)**:
     - (For Instructions) Ensure tool actions (like `mkdir`, `grep`, `rm`) are NOT performed directly. Instructions must coordinate skills.
 3. **Check for Inline Definitions**: (Global) Ensure technical concepts link to the glossary rather than being defined locally.
 4. **Report**: provide a detailed list of violations.

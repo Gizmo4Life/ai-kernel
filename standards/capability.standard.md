@@ -5,7 +5,7 @@ type: standard
 tags: [governance, authority, token, rules, compliance]
 summary: Standards for granting and verifying agent capabilities (licenses to act).
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/agents/*.agent.md"
+scope: "/agents/*.md"
 parent_standard: agent-file.standard
 glossary_refs: [agent.glossary, atomicity.glossary, authority.glossary, capability.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---

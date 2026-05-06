@@ -2,10 +2,10 @@
 id: instruction-file.standard
 title: Instruction File Standard
 type: standard
-requirements: ["## Postconditions", "## Execution Steps"], 
+requirements: ["## Postconditions", "## Execution Steps"],
 tags: [orchestration, workflow, quality, rules, governance, compliance]
 summary: Standards for multi-step instructions, emphasizing state-based pre/postconditions.
-scope: "/instructions/*.instruction.md"
+scope: "/instructions/*.md"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
@@ -36,7 +36,7 @@ graph TD
 | Coordination of Skills | **P** | Instructions should use skills as their building blocks. | evaluate-against-standard.skill | Trivial logic |
 | Recursive Verification | **P** | Re-run preconditions at the end to ensure stability. | evaluate-against-standard.skill | None |
 | Narrative Goals | **D** | "Make it better" is not a verifiable postcondition. | `semantic-auditor.agent` | None |
-| Skill Logic in Instruction | **U** | Violates atomicity; move logic to a `.skill.md`. | `audit-for-architectural-violations.skill` | None |
+| Skill Logic in Instruction | **U** | Violates atomicity; move logic to a `.md`. | `audit-for-architectural-violations.skill` | None |
 
 ## Rationale
 By mandating **Postconditions**, we move from "Instruction Following" to "Goal Fulfillment." An agent is not finished when the steps are done; they are finished when the system state matches the postconditions.

@@ -18,7 +18,7 @@ Orchestrates the indexing and reference discovery skills to ensure knowledge gra
 
 # Verify Repository Integrity
 
-This instruction ensures the repository's [Knowledge Graph](glossary/knowledge-graph.glossary.md) is unbroken and safe.
+This instruction ensures the repository's [Knowledge Graph](../glossary/knowledge-graph.glossary.md) is unbroken and safe.
 
 
 ## Architecture
@@ -40,7 +40,7 @@ graph TD
 2. **Discovery**: Run `doc-audit.skill` to map all dependencies.
 3. **Cross-Check**: Verify every reference against the master ID list.
 4. **Delegation Audit**: Run `detect-circular-delegation.skill` on the `agents/` directory.
-5. **[Quality Gate](glossary/quality-gate.glossary.md)**:
+5. **[Quality Gate](../glossary/quality-gate.glossary.md)**:
     - If any ID is missing, flag as a critical standard violation.
     - If circular delegations are found, flag as a critical structural failure.
     - Report all broken nodes or loops to the user for remediation.

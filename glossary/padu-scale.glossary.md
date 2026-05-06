@@ -34,7 +34,7 @@ graph TD
 | **U** | **Unacceptable** | A pattern that is strictly forbidden. Must be refactored immediately. |
 
 ## Enforcement Column
-Every PADU table now includes an **Enforcement** column. This column identifies the tool, skill, or manual process used to detect violations of the standard. 
+Every PADU table now includes an **Enforcement** column. This column identifies the tool, skill, or manual process used to detect violations of the standard.
 
 - **Automated**: Linked to a specific [Skill](../skills/README.md) or regex.
 - **Agent-Audited**: Relies on the **Standards Auditor** or **Flynn** to identify during a pass.

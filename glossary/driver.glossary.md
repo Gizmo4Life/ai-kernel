@@ -10,7 +10,7 @@ parent_standard: glossary-entry.standard
 # Driver
 
 ## Context
-In the AI Kernel hierarchy, the **Driver** is the "Bottom Layer" of execution. It is the bridge between the agent's intent (Skill) and the physical action (Execution). 
+In the AI Kernel hierarchy, the **Driver** is the "Bottom Layer" of execution. It is the bridge between the agent's intent (Skill) and the physical action (Execution).
 
 ## Usage Constraints
 - **Atomicity**: A driver must never attempt to perform multi-step orchestration. Orchestration belongs in **Instructions** or **Agents**.

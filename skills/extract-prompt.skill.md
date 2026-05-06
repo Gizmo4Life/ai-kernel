@@ -11,7 +11,7 @@ inputs:
   section_
 title: The title of the section to extract.
 outputs:
-  prompt_file: The newly created `.prompt.md` file.
+  prompt_file: The newly created `.md` file.
   updated_source: The refactored source file with prompt links.
 standards: [prompt-file.standard]
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, orchestration.glossary, prompt.glossary, skill.glossary, standard.glossary]
@@ -36,7 +36,7 @@ graph TD
 
 1. **Identify**: Locate a section (e.g., `## Interaction Pattern`) that contains complex, multi-paragraph AI instructions.
 2. **Draft Prompt**:
-    - Create a new file in `prompts/` using the `[source-file]-[section-name].prompt.md` pattern.
+    - Create a new file in `prompts/` using the `[source-file]-[section-name].md` pattern.
     - Copy the instruction content into the body.
     - Define variables (e.g., `{{input}}`, `{{context}}`) if the logic is reusable.
 3. **Refactor Source**:

@@ -36,8 +36,8 @@ graph TD
 ```
 ## Execution Steps
 
-1. **Research & Draft**: Execute the [populate-standard.instruction](instructions/populate-standard.instruction.md) instruction.
-2. **Glossary Alignment**: For any new terms identified in Step 1, create new glossary entries using the [create-glossary-entry.instruction](instructions/create-glossary-entry.instruction.md) instruction.
+1. **Research & Draft**: Execute the [populate-standard.instruction](populate-standard.instruction.md) instruction.
+2. **Glossary Alignment**: For any new terms identified in Step 1, create new glossary entries using the [create-glossary-entry.instruction](create-glossary-entry.instruction.md) instruction.
 3. **Refine**: Address any meta-standard violations identified during the draft.
 4. **Final Audit**: Task the **[Standards Auditor](../agents/standards-auditor.agent.md)** to perform a final compliance pass.
 5. **Commit**: Save the new standard and all supporting glossary entries.

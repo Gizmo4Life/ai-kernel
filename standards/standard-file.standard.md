@@ -4,7 +4,7 @@ title: Standard File Standard
 type: standard
 tags: [governance, quality, hierarchy, rules, compliance, audit, standard]
 summary: Meta-standard for defining the structure, hierarchy, and deterministic requirements of technical standards.
-scope: "/standards/**/*.standard.md"
+scope: "/standards/**/*.md"
 parent_standard: kernel.standard
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, frontmatter.glossary, heuristics.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary]

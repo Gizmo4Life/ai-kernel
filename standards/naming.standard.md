@@ -23,9 +23,9 @@ graph TD
     kernel.standard --> naming.standard
 ```
 ## The Specificity Hierarchy
-- **Level 1 (Root)**: Abstract, kernel-level concepts. Use simple, canonical terms (e.g., `test.glossary.md`, `standard.glossary.md`).
-- **Level 2 (Domain)**: Concepts specific to a technical domain or folder. MUST use a domain prefix (e.g., `js-test.glossary.md`, `agent-standard.standard.md`).
-- **Level 3 (Implementation)**: Highly specific instances. Use multiple qualifiers (e.g., `react-component-unit-test.skill.md`).
+- **Level 1 (Root)**: Abstract, kernel-level concepts. Use simple, canonical terms (e.g., `test.md`, `standard.md`).
+- **Level 2 (Domain)**: Concepts specific to a technical domain or folder. MUST use a domain prefix (e.g., `js-test.md`, `agent-standard.md`).
+- **Level 3 (Implementation)**: Highly specific instances. Use multiple qualifiers (e.g., `react-component-unit-test.md`).
 
 ## PADU Table
 

@@ -28,12 +28,12 @@ To ensure that agents and audits target the correct file types, the following na
 
 | File Type | Pattern (Glob) | Purpose |
 |---|---|---|
-| **Standard** | `*.standard.md` | Governance and Quality Bars |
-| **Skill** | `*.skill.md` | Atomic Logic and Tool Usage |
-| **Instruction** | `*.instruction.md` | Orchestration and Workflows |
-| **Agent** | `*.agent.md` | Autonomous Role Definitions |
-| **Glossary** | `*.glossary.md` | Canonical Term Definitions |
-| **Prompt** | `*.prompt.md` | Reusable AI Instructions |
+| **Standard** | `*.md` | Governance and Quality Bars |
+| **Skill** | `*.md` | Atomic Logic and Tool Usage |
+| **Instruction** | `*.md` | Orchestration and Workflows |
+| **Agent** | `*.md` | Autonomous Role Definitions |
+| **Glossary** | `*.md` | Canonical Term Definitions |
+| **Prompt** | `*.md` | Reusable AI Instructions |
 | **Runbook** | `*.runbook.md` | Diagnostic and Restoration Logic |
 | **Dashboard** | `*.dashboard.md` | Observability Maps (System Health) |
 | **Manifest** | `README.md` | Folder-level Maps (Excluded from Graph) |

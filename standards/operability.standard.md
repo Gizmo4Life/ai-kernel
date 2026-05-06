@@ -28,7 +28,7 @@ graph TD
 ### 1. Telemetry (The Signal)
 - **Goal**: High-fidelity root cause analysis.
 - **Rule**: "Less is More" - focus on signals that actually indicate component state.
-- **Selector**: `*.standard.md` (Governed by `tel-naming.standard.md`).
+- **Selector**: `*.md` (Governed by `tel-naming.md`).
 
 ### 2. Monitoring (The Sensor)
 - **Goal**: Detection of unhealthiness.

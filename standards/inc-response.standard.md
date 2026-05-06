@@ -32,7 +32,7 @@ graph TD
 - **Purpose**: Explains *how* to identify the root cause for a specific failing span.
 - **Rule**: Must link a "Failing Signal" to a specific "Corrective Action."
 
-### 3. Span Actions (`*.skill.md` or `*.instruction.md`)
+### 3. Span Actions (`*.md` or `*.md`)
 - **Purpose**: The atomic steps to **Verify**, **Apply**, and **Re-verify**.
 - **Rule**: Actions must be deterministic and repeatable.
 

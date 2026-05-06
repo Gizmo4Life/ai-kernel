@@ -4,7 +4,7 @@ title: Surgical Refactor
 type: skill
 tags: [automation, refactor, sed, rapid-update, tool, action, execution]
 interface:
-  input: 
+  input:
     target_pattern: "regex_pattern"
     replacement: "replacement_string"
     file_glob: "path/to/files/*.md"

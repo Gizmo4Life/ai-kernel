@@ -2,10 +2,10 @@
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
-requirements: ["## Usage Constraints", tags], 
+requirements: ["## Usage Constraints", tags],
 tags: [governance, glossary, ssot, rules, compliance]
 summary: Standards for defining canonical terms, including mandatory usage constraints to prevent semantic drift.
-scope: "/glossary/*.glossary.md"
+scope: "/glossary/*.md"
 parent_standard: standard-file.standard
 instructions: [ resolve-glossary-conflict.instruction ]
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
@@ -42,4 +42,4 @@ By defining what a term **cannot** be, we create a "Hard" semantic boundary. Thi
 
 ## Enforcement
 The posture is **Agent-Audited**. The **Semantic Auditor** verifies that all new glossary entries include at least two functional constraints.
-\n## Usage Constraints\n- This standard must only apply to files with the .glossary.md suffix.\n- It is forbidden to use this standard for Agents or Skills.\n
+\n## Usage Constraints\n- This standard must only apply to files with the .md suffix.\n- It is forbidden to use this standard for Agents or Skills.\n

@@ -2,7 +2,7 @@
 id: evaluate-against-standard.skill
 title: Evaluate Against Standard
 type: skill
-tags: [audit, quality, standards]
+tags: [audit, quality, standards, tool, action, execution]
 summary: Evaluates a target file or practice against a specific PADU table.
 tool: editor
 inputs:

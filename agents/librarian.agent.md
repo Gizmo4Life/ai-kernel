@@ -2,7 +2,7 @@
 id: librarian.agent
 title: Librarian
 type: agent
-tags: [governance, sme, discovery, manifest]
+tags: [governance, sme, discovery, manifest, role, persona, delegation]
 summary: Tier 2 SME responsible for Knowledge discovery, indexing, and glossary maintenance.
 tier: 2
 authority: suggest

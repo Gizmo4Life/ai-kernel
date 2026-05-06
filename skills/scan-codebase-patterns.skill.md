@@ -2,7 +2,7 @@
 id: scan-codebase-patterns.skill
 title: Scan Codebase Patterns
 type: skill
-tags: [audit, search, patterns]
+tags: [audit, search, patterns, tool, action, execution]
 summary: Identifies recurring patterns (exemplary or problematic) in the codebase or context.
 tool: grep
 inputs:

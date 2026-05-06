@@ -2,9 +2,13 @@
 id: remediation-triage-logic.prompt
 title: Remediation Triage Logic
 type: prompt
-tags: [logic, triage, priority]
+tags: [logic, triage, priority, ai-logic, intuition]
 summary: The priority-ranking logic for addressing structural vs. semantic vs. technical debt.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Remediation Triage Logic
 
@@ -18,6 +22,13 @@ When presented with multiple violations, prioritize them in the following order:
     - *Rationale*: These allow "Soft" logic to leak into the system.
 4. **P3: Documentation Debt** (Missing Context/Architecture sections).
     - *Rationale*: These increase cognitive load but do not break the "Hard" logic of the system.
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```
 
 ## Quality Gate
 A remediation plan is invalid if it addresses P3 debt while P0 or P1 violations remain unaddressed.

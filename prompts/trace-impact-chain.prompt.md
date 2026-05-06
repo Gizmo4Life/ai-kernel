@@ -2,9 +2,13 @@
 id: trace-impact-chain.prompt
 title: Trace Impact Chain
 type: prompt
-tags: [logic, audit, linkage, root-cause]
+tags: [logic, audit, linkage, root-cause, ai-logic, intuition]
 summary: The systematic logic for traversing the Knowledge Graph to identify the root cause of a structural or semantic failure.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Trace Impact Chain
 
@@ -17,6 +21,13 @@ Use the following "Recursive Upstream" heuristic to identify the source of an er
     - If a skill performed multiple actions -> **Root Cause Found**.
     - If an instruction lacked a verification step -> **Root Cause Found**.
 4. **The Impact Radius**: Once the root cause is found, identify all other "Leaf Nodes" that rely on the same faulty standard/instruction.
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```
 
 ## Quality Gate
 A trace is only complete when it reaches a **Standard** or **Instruction** that requires modification to prevent the error's recurrence.

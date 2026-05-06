@@ -2,7 +2,7 @@
 id: doc-architecture.standard
 title: Architecture Documentation Standard
 type: standard
-tags: [documentation, architecture, orientation]
+tags: [documentation, architecture, orientation, rules, governance, compliance]
 summary: Standards for the global orientation layer located in `docs/architecture/`.
 scope: "/docs/architecture/**/*.md"
 parent_standard: standard-file.standard

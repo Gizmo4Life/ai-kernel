@@ -2,7 +2,7 @@
 id: kernel.standard
 title: Kernel Standard
 type: standard
-tags: [governance, root, architecture]
+tags: [governance, root, architecture, rules, compliance]
 summary: The foundational standard defining the core structural rules of the AI Kernel.
 scope: "/**/*"
 parent_standard: None

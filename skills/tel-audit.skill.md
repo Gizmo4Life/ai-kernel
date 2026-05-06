@@ -2,7 +2,7 @@
 id: tel-audit.skill
 title: Audit Telemetry Naming
 type: skill
-tags: [audit, telemetry, observability]
+tags: [audit, telemetry, observability, tool, action, execution]
 summary: Scans codebase strings and configurations for violations of the Telemetry Naming Standard.
 tool: grep
 inputs:

@@ -2,7 +2,7 @@
 id: doc-external.standard
 title: External Documentation Standard
 type: standard
-tags: [documentation, customer, manual, api]
+tags: [documentation, customer, manual, api, rules, governance, compliance]
 summary: Standards for customer-facing documentation, including user manuals and API specifications.
 scope: "/**/* [tag:external]"
 parent_standard: standard-file.standard

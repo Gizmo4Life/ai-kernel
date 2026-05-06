@@ -2,7 +2,7 @@
 id: maintain-kernel-integrity.instruction
 title: Maintain Kernel Integrity
 type: instruction
-tags: [workflow, audit, self-healing, maintenance]
+tags: [workflow, audit, self-healing, maintenance, process, orchestration]
 summary: A self-healing loop that audits the repository for architectural decay and addresses violations iteratively until compliance is achieved.
 goal: A 100% compliant repository with zero Unacceptable (U) or Discouraged (D) violations.
 skills: [evaluate-against-standard.skill, check-id-uniqueness.skill, audit-repository-connectivity.skill, extract-prompt.skill]

@@ -2,7 +2,7 @@
 id: provide-glossary-guidance.skill
 title: Provide Glossary Guidance
 type: skill
-tags: [guidance, glossary, architecture]
+tags: [guidance, glossary, architecture, tool, action, execution]
 summary: Analyzes a concept and recommends whether it should be a glossary entry or inlined.
 tool: editor
 inputs: concept: The term or concept being considered.

@@ -2,7 +2,7 @@
 id: generate-mermaid-diagram.skill
 title: Generate Mermaid Diagram
 type: skill
-tags: [generation, documentation, visual]
+tags: [generation, documentation, visual, tool, action, execution]
 summary: Analyzes the execution logic of a file and synthesizes a Mermaid flowchart representation.
 tool: editor
 inputs:

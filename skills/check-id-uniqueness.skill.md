@@ -2,7 +2,7 @@
 id: check-id-uniqueness.skill
 title: Check ID Uniqueness
 type: skill
-tags: [audit, technical, integrity]
+tags: [audit, technical, integrity, tool, action, execution]
 summary: Scans the entire repository to ensure that every `id` in frontmatter is globally unique.
 tool: grep
 inputs:

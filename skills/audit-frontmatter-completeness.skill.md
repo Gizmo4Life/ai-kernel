@@ -2,7 +2,7 @@
 id: audit-frontmatter-completeness.skill
 title: Audit Frontmatter Completeness
 type: skill
-tags: [audit, technical, frontmatter.glossary ]
+tags: [audit, technical, frontmatter.glossary , tool, action, execution]
 summary: Verifies that every file contains the mandatory YAML frontmatter fields required by its type.
 tool: editor
 inputs:

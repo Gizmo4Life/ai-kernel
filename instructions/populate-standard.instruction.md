@@ -2,7 +2,7 @@
 id: populate-standard.instruction
 title: Populate Standard
 type: instruction
-tags: [workflow, technical, research]
+tags: [workflow, technical, research, process, orchestration]
 summary: Orchestrates the research and synthesis phase of standard creation.
 goal: A complete PADU table based on industry research and local codebase patterns.
 skills: [research-domain-patterns.skill, scan-codebase-patterns.skill, generate-padu-table.skill]

@@ -2,7 +2,7 @@
 id: save-conversation-context.skill
 title: Save Conversation Context
 type: skill
-tags: [maintenance, context]
+tags: [maintenance, context, tool, action, execution]
 summary: Saves curated information from the current conversation to the `context/` folder.
 tool: editor
 inputs:

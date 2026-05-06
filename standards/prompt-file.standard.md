@@ -2,7 +2,7 @@
 id: prompt-file.standard
 title: Prompt File Standard
 type: standard
-tags: [governance, prompt-engineering]
+tags: [governance, prompt-engineering, rules, compliance]
 summary: Standards for defining reusable AI prompts in the `prompts/` directory.
 scope: "/prompts/*.prompt.md"
 parent_standard: kernel.standard

@@ -2,7 +2,7 @@
 id: collect-repo-ids.skill
 title: Collect Repository IDs
 type: skill
-tags: [audit, technical]
+tags: [audit, technical, tool, action, execution]
 summary: Extracts all unique 'id' fields from the repository's YAML frontmatter.
 tool: grep
 inputs: path: Directory to scan.

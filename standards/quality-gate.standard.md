@@ -2,7 +2,7 @@
 id: quality-gate.standard
 title: Quality Gate Standard
 type: standard
-tags: [governance, quality, verification]
+tags: [governance, quality, verification, rules, compliance]
 summary: Standards for defining and implementing Quality Gate sections in skills and instructions.
 scope: /
 parent_standard: standard-file.standard

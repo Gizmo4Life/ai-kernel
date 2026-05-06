@@ -2,7 +2,7 @@
 id: naming.standard
 title: Naming Standard
 type: standard
-tags: [governance, organization, naming]
+tags: [governance, organization, naming, rules, compliance]
 summary: Rules for unambiguous file naming and ID assignment in the AI Kernel.
 scope: /
 parent_standard: kernel.standard

@@ -2,7 +2,7 @@
 id: doc-audit.skill
 title: Audit Technical Documentation
 type: skill
-tags: [audit, documentation, quality]
+tags: [audit, documentation, quality, tool, action, execution]
 summary: Upgraded structural auditor that enforces the Tiered Documentation Model (Local vs. Architecture vs. Persona).
 tool: grep
 inputs:

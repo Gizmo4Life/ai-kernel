@@ -2,7 +2,7 @@
 id: heal-structural-debt.instruction
 title: Heal Structural Debt
 type: instruction
-tags: [workflow, documentation, healing]
+tags: [workflow, documentation, healing, process, orchestration]
 summary: Systematic workflow for addressing structural debt in the AI Kernel.
 goal: 100% Pass status on the Structural Audit Report.
 skills: [generate-mermaid-diagram.skill, doc-audit.skill]

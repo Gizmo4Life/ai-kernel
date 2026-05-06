@@ -2,7 +2,7 @@
 id: perform-frontmatter-audit.instruction
 title: Perform Frontmatter Audit
 type: instruction
-tags: [workflow, audit, frontmatter.glossary ]
+tags: [workflow, audit, frontmatter.glossary , process, orchestration]
 summary: Orchestrates a repository-wide check for frontmatter completeness and validity.
 goal: 100% compliance with frontmatter standards across all content files.
 skills: [audit-frontmatter-completeness.skill, verify-repository-integrity.skill]

@@ -2,7 +2,7 @@
 id: doc-local.standard
 title: Local Documentation Standard
 type: standard
-tags: [documentation, quality, atomicity, local]
+tags: [documentation, quality, atomicity, local, rules, governance, compliance]
 summary: Standards for component-level READMEs embedded within code directories.
 scope: "/**/README.md"
 parent_standard: standard-file.standard

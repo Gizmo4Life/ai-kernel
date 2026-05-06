@@ -2,7 +2,7 @@
 id: agent-file.standard
 title: Agent File Standard
 type: standard
-tags: [governance, agent]
+tags: [governance, agent, rules, compliance]
 summary: Standards for defining autonomous agents, emphasizing the 2-tier delegation model.
 scope: "/agents/**/*.agent.md"
 parent_standards: [ kernel.standard, standard-file.standard ]

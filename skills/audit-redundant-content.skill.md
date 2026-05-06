@@ -2,7 +2,7 @@
 id: audit-redundant-content.skill
 title: Audit Redundant Content
 type: skill
-tags: [audit, cleanup, single-source-of-truth]
+tags: [audit, cleanup, single-source-of-truth, tool, action, execution]
 summary: Identifies inline definitions that should be replaced with links to the glossary.
 tool: grep
 inputs:

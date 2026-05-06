@@ -2,7 +2,7 @@
 id: heuristics.glossary
 title: Heuristics
 type: glossary
-tags: [core, logic, decision-making]
+tags: [core, logic, decision-making, definition, term, meaning]
 summary: Rules of thumb or mental shortcuts used by agents to make decisions when formal standards are ambiguous.
 aliases: [guidelines, principles]
 related: [ flynn.agent, provide-glossary-guidance.skill ]

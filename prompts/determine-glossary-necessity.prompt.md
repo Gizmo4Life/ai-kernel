@@ -2,9 +2,13 @@
 id: determine-glossary-necessity.prompt
 title: Determine Glossary Necessity
 type: prompt
-tags: [logic, glossary, discovery]
+tags: [logic, glossary, discovery, ai-logic, intuition]
 summary: Heuristic for deciding whether a term needs a canonical glossary entry or should be inlined.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Determine Glossary Necessity
 
@@ -18,3 +22,11 @@ Apply the following "3-Strike Rule" and "Ambiguity Check" to any concept being u
 - **Inline**: If the term is common language and used once.
 - **Link**: If the term exists in `glossary/`.
 - **Create**: If the term meets the criteria above and is missing from the glossary.
+
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```

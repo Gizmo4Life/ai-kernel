@@ -2,9 +2,13 @@
 id: operator-intake-protocol.prompt
 title: Operator Intake Protocol
 type: prompt
-tags: [agent-logic, triage, interaction]
+tags: [agent-logic, triage, interaction, ai-logic, intuition]
 summary: The standard pattern for triaging user feedback and requests at the Tier 0 entry point, emphasizing system-first remediation.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Operator Intake Protocol
 
@@ -20,6 +24,13 @@ Follow these steps for every new user message:
 3. **Delegation**:
     - Summarize the intent clearly for the delegated agent.
     - If remediating, explicitly state the **Kernel Node** that requires hardening.
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```
 
 ## Quality Gate
 The Operator must prioritize **Root Cause Codification**. Manual corrections that bypass the Kernel's governance are considered **Unacceptable (U)** and lead to architectural decay.

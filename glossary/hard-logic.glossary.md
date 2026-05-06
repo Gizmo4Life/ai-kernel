@@ -2,7 +2,7 @@
 id: hard-logic.glossary
 title: Hard Logic
 type: glossary
-tags: [architecture, logic, stability]
+tags: [architecture, logic, stability, definition, term, meaning]
 summary: Structural or machine-enforceable rules that define the constraints of the system (Standards, Skills, Globs).
 ---
 

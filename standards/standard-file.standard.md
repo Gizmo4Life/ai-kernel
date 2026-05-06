@@ -2,7 +2,7 @@
 id: standard-file.standard
 title: Standard File Standard
 type: standard
-tags: [governance, quality, hierarchy]
+tags: [governance, quality, hierarchy, rules, compliance]
 summary: Meta-standard for defining the structure, hierarchy, and enforcement of technical standards.
 scope: "/standards/**/*.standard.md"
 applies_to: [standard.glossary]

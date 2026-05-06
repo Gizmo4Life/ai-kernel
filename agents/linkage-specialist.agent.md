@@ -2,7 +2,7 @@
 id: linkage-specialist.agent
 title: Linkage Specialist
 type: agent
-tags: [governance, sme, connectivity, graph]
+tags: [governance, sme, connectivity, graph, role, persona, delegation]
 summary: Tier 2 SME responsible for graph reachability and reference integrity.
 tier: 2
 authority: suggest

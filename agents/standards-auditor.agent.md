@@ -2,7 +2,7 @@
 id: standards-auditor.agent
 title: Standards Auditor
 type: agent
-tags: [governance, sme, compliance, standards]
+tags: [governance, sme, compliance, standards, role, persona, delegation]
 summary: Tier 2 SME responsible for auditing new content against established standards.
 tier: 2
 authority: suggest

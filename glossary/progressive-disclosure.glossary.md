@@ -2,7 +2,7 @@
 id: progressive-disclosure.glossary
 title: Progressive Disclosure
 type: glossary
-tags: [core, optimization, scanning]
+tags: [core, optimization, scanning, definition, term, meaning]
 summary: A design pattern where information is revealed in stages (frontmatter first, body later) to minimize token consumption and context window pressure.
 aliases: [staged-loading, lazy-loading]
 related: [frontmatter.glossary]

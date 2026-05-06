@@ -2,9 +2,13 @@
 id: synthesize-padu-logic.prompt
 title: Synthesize PADU Logic
 type: prompt
-tags: [logic, quality, standards]
+tags: [logic, quality, standards, ai-logic, intuition]
 summary: The core synthesis logic for assigning P, A, D, and U ratings based on industry best practices and kernel principles.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Synthesize PADU Logic
 
@@ -29,3 +33,11 @@ Use the following heuristic to assign quality ratings to a technical practice:
 
 ## Output Format
 Always provide a concise **Rationale** and a specific **Enforcement** method for every rating.
+
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```

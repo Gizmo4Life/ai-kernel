@@ -2,7 +2,7 @@
 id: context-lifecycle.standard
 title: Context Lifecycle Standard
 type: standard
-tags: [memory, quality, context]
+tags: [memory, quality, context, rules, governance, compliance]
 summary: Standards for the creation, preservation, and pruning of architectural context.
 scope: "/context/*.md"
 parent_standard: kernel.standard

@@ -2,7 +2,7 @@
 id: codify-emerging-pattern.instruction
 title: Codify Emerging Pattern
 type: instruction
-tags: [workflow, governance, codification]
+tags: [workflow, governance, codification, process, orchestration]
 summary: Orchestration for discovering, researching, and formalizing an emerging pattern into a hierarchical standard.
 goal: A new, atomic standard properly linked to the kernel hierarchy.
 skills: [ scan-codebase-patterns.skill, research-domain-patterns.skill, generate-padu-table.skill ]

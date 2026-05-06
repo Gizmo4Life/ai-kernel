@@ -2,7 +2,7 @@
 id: summarize-to-context.skill
 title: Summarize to Context
 type: skill
-tags: [memory, context.glossary, summarization]
+tags: [memory, context.glossary, summarization, tool, action, execution]
 summary: Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
 tool: editor
 inputs: conversation_log: The raw conversation transcript.

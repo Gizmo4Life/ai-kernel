@@ -2,7 +2,7 @@
 id: agent.glossary
 title: Agent
 type: glossary
-tags: [core, autonomy, actor]
+tags: [core, autonomy, actor, definition, term, meaning]
 summary: An autonomous actor defined by a specific role, a set of skills it can use, and the standards it must follow.
 aliases: [persona, bot, actor]
 related: [ skill.glossary, instruction.glossary, standard.glossary ]

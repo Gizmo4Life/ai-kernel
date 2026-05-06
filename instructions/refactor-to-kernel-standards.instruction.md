@@ -2,7 +2,7 @@
 id: refactor-to-kernel-standards.instruction
 title: Refactor to Kernel Standards
 type: instruction
-tags: [workflow, architecture, refactor]
+tags: [workflow, architecture, refactor, process, orchestration]
 summary: A maximalist workflow for aligning repository content with the core architectural principles of the AI Kernel.
 goal: A fully modular, linked, and standards-compliant repository.
 skills: [audit-for-architectural-violations.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill]

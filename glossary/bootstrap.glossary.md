@@ -2,7 +2,7 @@
 id: bootstrap.glossary
 title: Bootstrap
 type: glossary
-tags: [core, process, onboarding]
+tags: [core, process, onboarding, definition, term, meaning]
 summary: The initial process of establishing a framework or standard from nothing, often using the framework's own tools to build itself.
 aliases: [initialization, skeleton-build]
 related: [bootstrap-new-standard.instruction]

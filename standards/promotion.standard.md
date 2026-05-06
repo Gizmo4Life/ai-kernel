@@ -2,7 +2,7 @@
 id: promotion.standard
 title: Promotion Standard
 type: standard
-tags: [governance, evolution, patterns]
+tags: [governance, evolution, patterns, rules, compliance]
 summary: Rules for promoting knowledge from raw context to formal core files.
 scope: /
 parent_standard: standard-file.standard

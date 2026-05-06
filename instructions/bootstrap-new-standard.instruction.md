@@ -2,7 +2,7 @@
 id: bootstrap-new-standard.instruction
 title: Bootstrap New Standard
 type: instruction
-tags: [workflow, quality, onboarding]
+tags: [workflow, quality, onboarding, process, orchestration]
 summary: Orchestrates the full process of researching, drafting, auditing, and committing a new technical standard.
 goal: A high-quality, codebase-aware standard committed to the repository.
 skills: [evaluate-against-standard.skill]

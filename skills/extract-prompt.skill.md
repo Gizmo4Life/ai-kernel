@@ -2,7 +2,7 @@
 id: extract-prompt.skill
 title: Extract Prompt
 type: skill
-tags: [refactor, prompts, modularity]
+tags: [refactor, prompts, modularity, tool, action, execution]
 summary: Identifies instruction-heavy sections in agents or instructions and moves them to the `prompts/` directory.
 tool: editor
 inputs:

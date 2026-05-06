@@ -2,7 +2,7 @@
 id: mon-alerting.standard
 title: Monitoring & Alerting Standard
 type: standard
-tags: [operability, monitoring, alerting, quality]
+tags: [operability, monitoring, alerting, quality, rules, governance, compliance]
 summary: Standards for aggregate detection systems, prioritizing unhealthiness detection over diagnostic specificity.
 scope: "/**/*"
 parent_standard: operability.standard

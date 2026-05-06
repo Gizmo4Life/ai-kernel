@@ -2,7 +2,7 @@
 id: tel-naming.standard
 title: Telemetry Naming Standard
 type: standard
-tags: [telemetry, observability, naming]
+tags: [telemetry, observability, naming, rules, governance, compliance]
 summary: Standards for naming spans, metrics, and logs to ensure cross-domain observability.
 scope: "/**/* [tag:telemetry]"
 parent_standard: kernel.standard

@@ -2,7 +2,7 @@
 id: standard.glossary
 title: Standard
 type: glossary
-tags: [core, governance, quality]
+tags: [core, governance, quality, definition, term, meaning]
 summary: A set of rules or guidelines governing the creation and maintenance of content, evaluated using the PADU scale.
 aliases: [guideline, rule, requirement]
 related: [ padu-scale.glossary, glossary-entry.glossary ]

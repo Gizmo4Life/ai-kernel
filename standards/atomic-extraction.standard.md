@@ -2,7 +2,7 @@
 id: atomic-extraction.standard
 title: Atomic Extraction Standard
 type: standard
-tags: [architecture, atomicity, de-conflation]
+tags: [architecture, atomicity, de-conflation, rules, governance, compliance]
 summary: Standards for identifying out-of-scope content and extracting it to its correct SSOT domain.
 scope: "/**/*"
 parent_standard: kernel.standard

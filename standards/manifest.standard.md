@@ -2,7 +2,7 @@
 id: manifest.standard
 title: Manifest Standard
 type: standard
-tags: [discovery, documentation, automation]
+tags: [discovery, documentation, automation, rules, governance, compliance]
 summary: Standards for machine-readable README.md manifests at the folder level.
 scope: "/**/README.md"
 parent_standard: doc-local.standard

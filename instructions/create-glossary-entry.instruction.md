@@ -2,7 +2,7 @@
 id: create-glossary-entry.instruction
 title: Create Glossary Entry
 type: instruction
-tags: [workflow, documentation, onboarding]
+tags: [workflow, documentation, onboarding, process, orchestration]
 summary: A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
 goal: A high-quality, non-redundant glossary entry committed to the repository.
 skills: [ find-glossary-terms.skill, evaluate-against-standard.skill ]

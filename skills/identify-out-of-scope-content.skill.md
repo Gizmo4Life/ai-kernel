@@ -2,7 +2,7 @@
 id: identify-out-of-scope-content.skill
 title: Identify Out-of-Scope Content
 type: skill
-tags: [logic, audit, semantics]
+tags: [logic, audit, semantics, tool, action, execution]
 summary: Detect content within a file that violates the atomicity of its current domain or tier.
 tool: none
 ---

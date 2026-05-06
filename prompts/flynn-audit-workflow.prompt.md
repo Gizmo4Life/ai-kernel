@@ -2,9 +2,13 @@
 id: flynn-audit-workflow.prompt
 title: Flynn's Audit Workflow
 type: prompt
-tags: [agent-logic, audit, orchestration]
+tags: [agent-logic, audit, orchestration, ai-logic, intuition]
 summary: The systematic orchestration logic for Flynn's kernel audit and remediation passes.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Flynn's Audit Workflow
 
@@ -22,3 +26,11 @@ This prompt defines the "Chain of Command" for performing a comprehensive AI Ker
     - Ensure new additions are linked to the glossary.
     - Deduplicate any inline definitions.
 4. **The Evolutionary Loop**: If recurring patterns are identified, task the **[Standards Scout](../agents/standards-scout.agent.md)** to codify them into new atomic standards.
+
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```

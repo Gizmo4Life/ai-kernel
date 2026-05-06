@@ -2,7 +2,7 @@
 id: frontmatter.glossary
 title: Frontmatter
 type: glossary
-tags: [core, metadata, technical]
+tags: [core, metadata, technical, definition, term, meaning]
 summary: YAML metadata at the top of markdown files used for machine-readable indexing and progressive disclosure.
 aliases: [metadata, header, yaml-block]
 related: [progressive-disclosure.glossary]

@@ -2,7 +2,7 @@
 id: handle-incident.instruction
 title: Handle Incident
 type: instruction
-tags: [workflow, operability, incident-response, restoration]
+tags: [workflow, operability, incident-response, restoration, process, orchestration]
 summary: The master orchestration workflow for resolving production alerts through deterministic restoration.
 goal: Rapid restoration of system health with minimal manual diagnosis.
 skills: [evaluate-against-standard.skill]

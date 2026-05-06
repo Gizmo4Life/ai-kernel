@@ -2,7 +2,7 @@
 id: find-glossary-terms.skill
 title: Find Glossary Terms
 type: skill
-tags: [discovery, search, glossary]
+tags: [discovery, search, glossary, tool, action, execution]
 summary: Searches the glossary for terms or aliases matching a query.
 tool: grep
 inputs: query: The term or concept to search for.

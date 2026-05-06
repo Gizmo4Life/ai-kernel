@@ -2,7 +2,7 @@
 id: versioning.standard
 title: Versioning Standard
 type: standard
-tags: [governance, maintenance, versioning]
+tags: [governance, maintenance, versioning, rules, compliance]
 summary: Rules for internal versioning and change tracking of Knowledge Graph nodes.
 scope: /
 parent_standard: standard-file.standard

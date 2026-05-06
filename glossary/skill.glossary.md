@@ -2,7 +2,7 @@
 id: skill.glossary
 title: Skill
 type: glossary
-tags: [core, automation, tool-use]
+tags: [core, automation, tool-use, definition, term, meaning]
 summary: An atomic, tool-centric action that an AI agent can perform to achieve a specific outcome.
 aliases: [action, tool-command, capability]
 related: [ instruction.glossary, agent.glossary ]

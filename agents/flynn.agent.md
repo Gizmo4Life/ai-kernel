@@ -2,7 +2,7 @@
 id: flynn.agent
 title: Flynn (Kernel Domain Owner)
 type: agent
-tags: [governance, authority, custodian]
+tags: [governance, authority, custodian, role, persona, delegation]
 summary: The Tier 1 Domain Owner for the AI Kernel. Flynn is responsible for structural integrity, semantic consistency, and the enforcement of architectural standards.
 tier: 1
 authority: propose

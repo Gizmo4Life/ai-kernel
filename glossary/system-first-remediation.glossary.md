@@ -2,7 +2,7 @@
 id: system-first-remediation.glossary
 title: System-First Remediation
 type: glossary
-tags: [logic, quality, self-healing, codify-feedback, kernel-first-remediation, systemic-learning, root-cause-healing, fix-the-factory, systemic-correction]
+tags: [logic, quality, self-healing, codify-feedback, kernel-first-remediation, systemic-learning, root-cause-healing, fix-the-factory, systemic-correction, definition, term, meaning]
 summary: The governance pattern of tracing failures to their root cause in the AI Kernel and hardening the system logic before correcting individual outputs.
 ---
 

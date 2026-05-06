@@ -2,7 +2,7 @@
 id: research-domain-patterns.skill
 title: Research Domain Patterns
 type: skill
-tags: [research, standards]
+tags: [research, standards, tool, action, execution]
 summary: Analyzes industry best practices for a specific technical domain.
 tool: search
 inputs: domain: The subject (e.g., 'React Testing').

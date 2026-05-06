@@ -2,7 +2,7 @@
 id: perform-meta-audit.instruction
 title: Perform Meta-Audit
 type: instruction
-tags: [workflow, audit, quality]
+tags: [workflow, audit, quality, process, orchestration]
 summary: The master workflow for coordinating all individual auditors and generating a synthesized system health report.
 goal: A 100% verified and prioritized "State-of-the-Kernel" report.
 skills: [check-id-uniqueness.skill, audit-repository-connectivity.skill, doc-audit.skill, tel-audit.skill, triage-architectural-violations.skill]

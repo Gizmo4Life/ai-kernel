@@ -2,7 +2,7 @@
 id: capability.glossary
 title: Capability
 type: glossary
-tags: [governance, authority, token]
+tags: [governance, authority, token, definition, term, meaning]
 summary: A specific "License to Act" granted to an agent, represented by an authorized Skill or Instruction ID.
 ---
 

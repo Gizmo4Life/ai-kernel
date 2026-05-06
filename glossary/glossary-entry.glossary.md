@@ -2,7 +2,7 @@
 id: glossary-entry.glossary
 title: Glossary Entry
 type: glossary
-tags: [core, documentation]
+tags: [core, documentation, definition, term, meaning]
 summary: A machine-readable definition of a concept or term used within the kernel or target projects.
 aliases: [term, definition, concept]
 related: [ standard.glossary, skill.glossary ]

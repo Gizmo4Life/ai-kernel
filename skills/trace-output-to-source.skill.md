@@ -2,7 +2,7 @@
 id: trace-output-to-source.skill
 title: Trace Output to Source
 type: skill
-tags: [audit, technical, trace]
+tags: [audit, technical, trace, tool, action, execution]
 summary: Scans conversation logs to identify the chain of agents, instructions, and skills that contributed to a specific output.
 tool: grep
 inputs:

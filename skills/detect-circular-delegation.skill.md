@@ -2,7 +2,7 @@
 id: detect-circular-delegation.skill
 title: Detect Circular Delegation
 type: skill
-tags: [audit, technical, graph]
+tags: [audit, technical, graph, tool, action, execution]
 summary: Analyzes the agent delegation graph to identify infinite logic loops.
 tool: grep
 inputs:

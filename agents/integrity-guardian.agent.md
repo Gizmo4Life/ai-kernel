@@ -2,7 +2,7 @@
 id: integrity-guardian.agent
 title: Integrity Guardian
 type: agent
-tags: [governance, quality, audit]
+tags: [governance, quality, audit, role, persona, delegation]
 summary: Tier 2 SME responsible for repository-wide structural audits and ID uniqueness.
 tier: 2
 authority: suggest

@@ -2,7 +2,7 @@
 id: capability.standard
 title: Capability Standard
 type: standard
-tags: [governance, authority, token]
+tags: [governance, authority, token, rules, compliance]
 summary: Standards for granting and verifying agent capabilities (licenses to act).
 scope: "/agents/*.agent.md"
 parent_standard: agent-file.standard

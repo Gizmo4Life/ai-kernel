@@ -2,7 +2,7 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-tags: [automation, quality, atomicity]
+tags: [automation, quality, atomicity, rules, governance, compliance]
 summary: Standards for defining atomic skills, emphasizing tool clarity and deterministic verification protocols.
 scope: "/skills/*.skill.md"
 parent_standard: standard-file.standard

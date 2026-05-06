@@ -2,7 +2,7 @@
 id: resolve-glossary-conflict.instruction
 title: Resolve Glossary Conflict
 type: instruction
-tags: [conflict-resolution, glossary, cleanup]
+tags: [conflict-resolution, glossary, cleanup, workflow, process, orchestration]
 summary: Workflow for merging similar glossary entries or clarifying ambiguous terms.
 goal: A clean glossary with non-overlapping entries and comprehensive aliases.
 skills: [ find-glossary-terms.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill ]

@@ -2,7 +2,7 @@
 id: atomicity.glossary
 title: Atomicity
 type: glossary
-tags: [core, technical, skill.glossary ]
+tags: [core, technical, skill.glossary , definition, term, meaning]
 summary: The principle that a skill should perform a single, indivisible action using a single tool.
 aliases: [single-responsibility]
 related: [ skill.glossary, orchestration.glossary ]

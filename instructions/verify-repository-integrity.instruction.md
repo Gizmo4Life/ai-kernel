@@ -2,7 +2,7 @@
 id: verify-repository-integrity.instruction
 title: Verify Repository Integrity
 type: instruction
-tags: [workflow, audit, maintenance]
+tags: [workflow, audit, maintenance, process, orchestration]
 summary: Orchestrates the indexing and reference discovery skills to ensure knowledge graph integrity and delegation safety.
 goal: A healthy repository with zero broken frontmatter references and zero circular delegations.
 skills: [ collect-repo-ids.skill, find-frontmatter-refs.skill, detect-circular-delegation.skill ]

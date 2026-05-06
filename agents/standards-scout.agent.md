@@ -2,7 +2,7 @@
 id: standards-scout.agent
 title: Standards Scout
 type: agent
-tags: [governance, sme, discovery, patterns]
+tags: [governance, sme, discovery, patterns, role, persona, delegation]
 summary: Tier 2 SME responsible for discovering emerging patterns and drafting initial standards.
 tier: 2
 authority: suggest

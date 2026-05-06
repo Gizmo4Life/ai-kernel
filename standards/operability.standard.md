@@ -2,7 +2,7 @@
 id: operability.standard
 title: Operability Standard
 type: standard
-tags: [operability, monitoring, incident-response, architecture]
+tags: [operability, monitoring, incident-response, architecture, rules, governance, compliance]
 summary: The master philosophy and quality bar for the 3 pillars of operability: Telemetry, Monitoring, and Incident Response.
 scope: "/**/* [tag:operability]"
 parent_standard: kernel.standard

@@ -2,7 +2,7 @@
 id: validate-kernel-integrity.instruction
 title: Validate Kernel Integrity
 type: instruction
-tags: [workflow, audit, maintenance, quality]
+tags: [workflow, audit, maintenance, quality, process, orchestration]
 summary: A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
 goal: A 100% compliant and healthy repository ready for release or major updates.
 skills: [evaluate-against-standard.skill, audit-for-architectural-violations.skill]

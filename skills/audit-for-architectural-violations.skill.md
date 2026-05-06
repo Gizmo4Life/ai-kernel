@@ -2,7 +2,7 @@
 id: audit-for-architectural-violations.skill
 title: Audit for Architectural Violations
 type: skill
-tags: [audit, architecture, quality]
+tags: [audit, architecture, quality, tool, action, execution]
 summary: Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
 tool: editor
 inputs:

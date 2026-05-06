@@ -2,7 +2,7 @@
 id: semantic-auditor.agent
 title: Semantic Auditor
 type: agent
-tags: [governance, sme, logic, semantics]
+tags: [governance, sme, logic, semantics, role, persona, delegation]
 summary: Tier 2 SME responsible for enforcing usage constraints and conceptual purity.
 tier: 2
 authority: suggest

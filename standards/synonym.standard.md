@@ -2,7 +2,7 @@
 id: synonym.standard
 title: Discovery Tag Standard
 type: standard
-tags: [governance, discovery, semantics, tagging]
+tags: [governance, discovery, semantics, tagging, rules, compliance]
 summary: Standards for using vibrant tags to ensure Knowledge Graph discoverability and prevent logic duplication.
 scope: "/**/*"
 parent_standard: kernel.standard

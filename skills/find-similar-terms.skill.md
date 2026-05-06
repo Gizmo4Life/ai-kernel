@@ -2,7 +2,7 @@
 id: find-similar-terms.skill
 title: Find Similar Terms
 type: skill
-tags: [discovery, glossary, ambiguity]
+tags: [discovery, glossary, ambiguity, tool, action, execution]
 summary: Searches the glossary for naming collisions, conceptual overlaps, and specificity violations.
 tool: grep
 inputs:

@@ -2,7 +2,7 @@
 id: resolve-naming-ambiguity.instruction
 title: Resolve Naming Ambiguity
 type: instruction
-tags: [workflow, naming, quality]
+tags: [workflow, naming, quality, process, orchestration]
 summary: Workflow for resolving collisions or ambiguous terms in the Knowledge Graph.
 goal: A naming convention that is 100% unique and deterministic.
 skills: [find-similar-terms.skill]

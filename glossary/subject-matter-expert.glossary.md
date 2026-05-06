@@ -2,7 +2,7 @@
 id: subject-matter-expert.glossary
 title: Subject Matter Expert
 type: glossary
-tags: [agent, authority, core]
+tags: [agent, authority, core, definition, term, meaning]
 summary: A Tier 2 agent contracted by a Domain Owner for specialized analysis.
 aliases: [sme, expert-agent]
 related: [domain-owner.glossary, delegation.glossary, agent.glossary]

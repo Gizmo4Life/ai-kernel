@@ -2,7 +2,7 @@
 id: perform-atomic-extraction.instruction
 title: Perform Atomic Extraction
 type: instruction
-tags: [workflow, de-conflation, refactor]
+tags: [workflow, de-conflation, refactor, process, orchestration]
 summary: The master workflow for moving out-of-scope content to its correct SSOT domain and restoring reachability.
 goal: A fully de-conflated repository with zero "Semantic Bleeding."
 skills: [identify-out-of-scope-content.skill, linkage-specialist.agent]

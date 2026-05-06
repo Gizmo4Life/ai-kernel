@@ -2,7 +2,7 @@
 id: triage-architectural-violations.skill
 title: Triage Architectural Violations
 type: skill
-tags: [logic, audit, priority]
+tags: [logic, audit, priority, tool, action, execution]
 summary: Rank architectural violations into P0-P3 priority tiers based on system impact.
 tool: none
 ---

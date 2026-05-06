@@ -2,7 +2,7 @@
 id: generate-padu-table.skill
 title: Generate PADU Table
 type: skill
-tags: [generation, standard.glossary ]
+tags: [generation, standard.glossary , tool, action, execution]
 summary: Synthesizes patterns into a formal, atomic PADU table.
 tool: editor
 inputs:

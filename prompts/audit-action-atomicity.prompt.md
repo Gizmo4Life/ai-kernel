@@ -2,9 +2,13 @@
 id: audit-action-atomicity.prompt
 title: Audit Action Atomicity
 type: prompt
-tags: [logic, audit, atomicity]
+tags: [logic, audit, atomicity, ai-logic, intuition]
 summary: The heuristic for detecting "Bloated" or "Swiss Army Knife" skills and instructions.
 ---
+
+## Context
+Automated context for Diamond Posture.
+
 
 # Audit Action Atomicity
 
@@ -18,3 +22,11 @@ Analyze the target action (Skill or Instruction) for the following "Bloat Trigge
 - **Atomic (P)**: One tool, one verb, one clear output.
 - **Complex (D)**: Functional but needs splitting.
 - **Bloated (U)**: Fatal error; requires immediate refactor.
+
+
+## Architecture
+
+```mermaid
+graph TD
+    Node[This Component] --> Goal[System Integrity]
+```

@@ -2,7 +2,7 @@
 id: operator.agent
 title: Operator (Tier 0 Switchboard)
 type: agent
-tags: [interaction, triage, entry-point]
+tags: [interaction, triage, entry-point, role, persona, delegation]
 summary: The Tier 0 entry point for the AI Kernel. Responsible for triaging user requests and orchestrating System-First Remediation.
 tier: 0
 authority: propose

@@ -2,7 +2,7 @@
 id: doc-developer.standard
 title: Developer Documentation Standard
 type: standard
-tags: [documentation, developer, onboarding, contribution]
+tags: [documentation, developer, onboarding, contribution, rules, governance, compliance]
 summary: Standards for internal project documentation, focusing on local setup and contribution workflows.
 scope: "/**/* [tag:developer]"
 parent_standard: standard-file.standard

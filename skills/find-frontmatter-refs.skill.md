@@ -2,7 +2,7 @@
 id: find-frontmatter-refs.skill
 title: Find Frontmatter References
 type: skill
-tags: [audit, technical]
+tags: [audit, technical, tool, action, execution]
 summary: Scans the repository for fields that reference other IDs (e.g., glossary_refs, standards).
 tool: grep
 inputs: path: Directory to scan.

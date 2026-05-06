@@ -2,7 +2,7 @@
 id: audit-repository-connectivity.skill
 title: Audit Repository Connectivity
 type: skill
-tags: [audit, graph, connectivity]
+tags: [audit, graph, connectivity, tool, action, execution]
 summary: Analyzes the Knowledge Graph for orphaned nodes, missing frontmatter references, and linkage gaps.
 tool: grep
 inputs:

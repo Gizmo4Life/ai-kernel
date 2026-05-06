@@ -51,7 +51,6 @@ inc-response.standard
 instruction-file.standard
 instruction.glossary
 integrity-guardian.agent
-kernel-first-remediation.instruction
 kernel.standard
 knowledge-graph.glossary
 knowledge-map.glossary
@@ -96,6 +95,8 @@ standards-scout.agent
 subject-matter-expert.glossary
 summarize-to-context.skill
 synthesize-padu-logic.prompt
+system-first-remediation.glossary
+system-first-remediation.instruction
 tel-audit.skill
 tel-naming.standard
 trace-impact-chain.prompt

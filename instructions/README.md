@@ -19,7 +19,7 @@ graph TD
 | `perform-meta-audit.instruction` | Instruction | Synthesized system health report. |
 | `perform-atomic-extraction.instruction` | Instruction | Workflow for de-conflating content. || `handle-incident.instruction` | Instruction | Standard restoration workflow. |
 | `resolve-naming-ambiguity.instruction` | Instruction | Workflow for ID collision resolution. |
-| `kernel-first-remediation.instruction` | Instruction | Workflow for addressing drift. |
+| `system-first-remediation.instruction` | Instruction | Workflow for addressing drift. |
 | `codify-emerging-pattern.instruction` | Instruction | Workflow for pattern formalization. |
 
 ## Quality Gate

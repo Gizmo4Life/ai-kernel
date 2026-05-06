@@ -4,13 +4,16 @@ title: Semantic Impact Analyzer
 type: skill
 tags: [architecture, safety, audit, graph, logic, tool, action, execution]
 interface:
-  input: { target_id: "node.id" }
-  output: { target: "...", dependents: [{id: "...", path: "..."}], count: 10 }
+  input: { target_
+id: "node.id" }
+  output: { target: "...", dependents: [{
+id: "...", path: "..."}], count: 10 }
 implementation:
   engine: "python3 drivers/kernel/impact_analyzer.py"
   command: "python3 drivers/kernel/impact_analyzer.py {{target_id}}"
 summary: Traces the "Blast Radius" of a proposed change by identifying all nodes that reference or depend on a target ID.
 parent_standard: skill-file.standard
+glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Semantic Impact Analyzer
@@ -23,7 +26,6 @@ Architectural drift is caused by localized changes that ignore global dependenci
 ```mermaid
 graph TD
     skill-file.standard --> trace-impact-chain.skill
-    trace-impact-chain.skill --> impact_analyzer[impact_analyzer.py]
 ```
 
 ## Execution Steps

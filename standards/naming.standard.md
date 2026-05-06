@@ -33,7 +33,7 @@ graph TD
 |---|---|---|---|---|
 | Domain-Prefixed naming | **P** | Prevents conflation in a flat filesystem. | `find-similar-terms.skill` | Root concepts |
 | Namespace Qualification | **P** | `[domain]-[concept]` is the ideal format. | `audit-frontmatter-completeness.skill` | None |
-| Using synonyms for clarity | **A** | Helps distinguish between similar actions. | Agent Audit (Flynn) | None |
+| Using synonyms for clarity | **A** | Helps distinguish between similar actions. | evaluate-against-standard.skill (Flynn) | None |
 | Canonical term usurping | **U** | Using a broad term for a narrow concept. | `find-similar-terms.skill` | None |
 | ID vs Alias collision | **U** | Using an ID that exists elsewhere as an alias. | `find-similar-terms.skill` | None |
 

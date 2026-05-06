@@ -32,8 +32,8 @@ graph TD
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
 | State-based Postconditions | **P** | Ensures the instruction actually achieved its goal. | `doc-audit.skill` | None |
-| Coordination of Skills | **P** | Instructions should use skills as their building blocks. | Agent Audit | Trivial logic |
-| Recursive Verification | **P** | Re-run preconditions at the end to ensure stability. | Agent Audit | None |
+| Coordination of Skills | **P** | Instructions should use skills as their building blocks. | evaluate-against-standard.skill | Trivial logic |
+| Recursive Verification | **P** | Re-run preconditions at the end to ensure stability. | evaluate-against-standard.skill | None |
 | Narrative Goals | **D** | "Make it better" is not a verifiable postcondition. | `semantic-auditor.agent` | None |
 | Skill Logic in Instruction | **U** | Violates atomicity; move logic to a `.skill.md`. | `audit-for-architectural-violations.skill` | None |
 

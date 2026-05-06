@@ -28,7 +28,7 @@ graph TD
 |---|---|---|---|---|
 | Directory-Scoped Context | **P** | The directory structure provides the primary context. | `doc-audit.skill` | None |
 | Link over Rehash | **P** | Prevents definition drift and maintains atomicity. | `doc-audit.skill` | Common language |
-| Technical Detail Depth | **P** | This is the ONLY place for implementation details. | Agent Audit | None |
+| Technical Detail Depth | **P** | This is the ONLY place for implementation details. | evaluate-against-standard.skill | None |
 | Global Architecture in Local Doc | **U** | Violates scoping; link to `docs/architecture` instead. | `doc-audit.skill` | None |
 | Redundant Definitions | **U** | Violates SSOT; use Glossary links. | `audit-redundant-content.skill` | None |
 

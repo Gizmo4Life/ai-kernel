@@ -46,7 +46,7 @@ graph TD
 | Aggregate Alerting | **P** | One monitor for many scenarios reduces alert fatigue. | `mon-audit.skill` | None |
 | High-Fidelity Telemetry | **P** | Ensures enough data for RCA without noise. | `tel-audit.skill` | None |
 | Mandatory 3-Piece IR Docs | **P** | Dashboard, Runbook, and Actions are non-negotiable. | `inc-audit.skill` | None |
-| Diagnostic Monitors | **D** | Creates multiple alerts for the same root cause. | Agent Audit | None |
+| Diagnostic Monitors | **D** | Creates multiple alerts for the same root cause. | evaluate-against-standard.skill | None |
 | One-off Manual Restoration | **U** | Prevents system learning and repeatability. | `inc-audit.skill` | None |
 
 "Hard" operability relies on the separation of **Detection** and **Diagnosis**. By keeping monitors aggregated and runbooks atomic, we minimize the time-to-restoration while maximizing system stability.

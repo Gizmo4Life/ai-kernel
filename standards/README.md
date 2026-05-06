@@ -8,7 +8,7 @@ This folder contains the formal governance rules and quality bars for the AI Ker
 ```mermaid
 graph TD
     Folder[standards/] --> Files[Structured Standard Files]
-    Files --> Audit[Standards Auditor: Enforcement]
+    Files --> Audit[evaluate-against-standard.skill: Enforcement]
 ```
 
 ## File Registry

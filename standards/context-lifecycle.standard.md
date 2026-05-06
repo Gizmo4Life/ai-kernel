@@ -34,7 +34,7 @@ graph TD
 | Distill Raw Logs | **P** | Saves token space and reduces noise. | `summarize-to-context.skill` | Forensics |
 | Mark Versioned Context | **P** | Ensures we don't follow v1.0 logic in a v2.0 world. | `doc-audit.skill` | None |
 | Prune Obsolete Context | **P** | Prevents "Semantic Pollution." | `maintain-kernel-integrity.instruction` | None |
-| Rely on 6-month old logs | **D** | Architectural drift makes old logs misleading. | Agent Audit | None |
+| Rely on 6-month old logs | **D** | Architectural drift makes old logs misleading. | evaluate-against-standard.skill | None |
 
 ## Rationale
 Context should be a "Refined Resource." By mandating distillation and pruning, we ensure that agents are always working with the most accurate and compact "Current State" possible.

@@ -30,16 +30,16 @@ graph TD
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
 | Mandate 3-Point Profile | **P** | Tokenizes Authority, Scope, and Capabilities. | `doc-audit.skill` | None |
-| Define Agent Tier (1 or 2) | **P** | Clarifies the agent's role in the hierarchy. | Agent Audit (Auditor) | None |
+| Define Agent Tier (1 or 2) | **P** | Clarifies the agent's role in the hierarchy. | doc-audit.skill | None |
 | Scope-Restricted Authority | **P** | Ensures agents cannot modify files outside their token. | `verify-repository-integrity.instruction` | None |
 | Tier 1 Orchestration | **P** | Owners should drive the workflow, not just skills. | `audit-for-architectural-violations.skill` | None |
-| Tier 2 owning a domain | **U** | Conflicts with the custodial model. | Agent Audit (Auditor) | None |
+| Tier 2 owning a domain | **U** | Conflicts with the custodial model. | doc-audit.skill | None |
 | Circular Delegation | **U** | Risk of infinite logic loops. | `detect-circular-delegation.skill` | None |
 
 By separating "Ownership" from "Expertise", we allow the AI Kernel to scale. New domains can be added with their own Tier 1 owners, all sharing the same pool of Tier 2 experts.
 
 ## Enforcement
-The posture for agents is **Hybrid-Automated**. Structural elements and circularity are enforced via `verify-repository-integrity.instruction`. Tier classification and role-to-authority consistency still require semantic audit by the **Standards Auditor**.
+The posture for agents is **Hybrid-Automated**. Structural elements and circularity are enforced via `verify-repository-integrity.instruction`. Tier classification and role-to-authority consistency still require semantic audit by the **evaluate-against-standard.skill**.
 
 ### Gaps
 #### Behavioral Consistency

@@ -41,4 +41,4 @@ graph TD
 By separating the **Execution (Code)** from the **Orchestration (Agent)**, we allow the AI Kernel to scale. Agents focus on high-level architecture while the skills provide the high-leverage data needed for decisions.
 
 ## Enforcement
-The posture is **Automated**. The **Standards Auditor** verifies the presence of the `interface` and `implementation` fields and validates the `Verification Protocol` command.
+The posture is **Automated**. The **evaluate-against-standard.skill** verifies the presence of the `interface` and `implementation` fields and validates the `Verification Protocol` command.

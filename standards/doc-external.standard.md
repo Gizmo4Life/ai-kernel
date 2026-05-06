@@ -32,9 +32,9 @@ graph TD
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
 | Use OpenAPI/Swagger | **P** | Provides interactive, machine-readable API documentation. | `doc-audit.skill` | None |
-| Task-Oriented Manuals | **P** | Focuses on what the user wants to achieve, not just button descriptions. | Agent Audit | None |
-| Include Examples | **P** | Reduces integration time for API consumers. | Agent Audit | None |
+| Task-Oriented Manuals | **P** | Focuses on what the user wants to achieve, not just button descriptions. | evaluate-against-standard.skill | None |
+| Include Examples | **P** | Reduces integration time for API consumers. | evaluate-against-standard.skill | None |
 | Implementation Detail Leaks | **U** | Confuses customers with irrelevant technical debt. | `doc-audit.skill` | Open Source |
-| Vague Release Notes | **D** | "Bug fixes and improvements" provides zero customer value. | Agent Audit | None |
+| Vague Release Notes | **D** | "Bug fixes and improvements" provides zero customer value. | evaluate-against-standard.skill | None |
 
 External documentation must prioritize **Simplicity** and **Interface Stability**. It should hide the "Sausage-Making" details of the implementation to focus on user success.

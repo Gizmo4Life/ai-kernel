@@ -38,7 +38,7 @@ graph TD
 | Immediate Extraction | **P** | Prevents technical debt from compounding. | `perform-atomic-extraction.instruction` | None |
 | Link-back after Extraction | **P** | Maintains reachability and context. | `linkage-specialist.agent` | None |
 | Inline duplication | **U** | Violates SSOT; leads to semantic drift. | `audit-redundant-content.skill` | None |
-| Narrating the extraction | **D** | "I moved this here" is noise; the link is the truth. | Agent Audit | None |
+| Narrating the extraction | **D** | "I moved this here" is noise; the link is the truth. | evaluate-against-standard.skill | None |
 
 ## Rationale
 "Semantic Bleeding" is the primary cause of architectural decay. By mandating that information lives exactly where it is defined, we ensure that updates to a concept (e.g., a naming rule) propagate globally without manual search-and-replace.

@@ -27,15 +27,15 @@ graph TD
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
 | Define `variables` | **P** | Lists expected inputs. | `audit-frontmatter-completeness.skill` | None |
-| Include `model_recommendation` | **A** | Context for tuning. | Agent Audit (Auditor) | Model-agnostic |
+| Include `model_recommendation` | **A** | Context for tuning. | doc-audit.skill | Model-agnostic |
 | Use Clear Versioning | **P** | Tracks model evolution. | `audit-frontmatter-completeness.skill` | None |
-| Hardcoding specific data | **U** | Prevents reusability. | Agent Audit (Auditor) | None |
-| Vague instructions | **D** | Non-deterministic behavior. | Agent Audit (Auditor) | None |
+| Hardcoding specific data | **U** | Prevents reusability. | doc-audit.skill | None |
+| Vague instructions | **D** | Non-deterministic behavior. | doc-audit.skill | None |
 
 Standardizing prompt formats allows for automated metadata auditing, ensuring that all prompts are properly versioned and variable-defined before use.
 
 ## Enforcement
-The posture for prompts is **Agent-Audited**. Structural elements (variables, versioning) are caught by metadata audit, but the "quality" and "determinism" of the prompt logic require an audit by the **Standards Auditor**.
+The posture for prompts is **Agent-Audited**. Structural elements (variables, versioning) are caught by metadata audit, but the "quality" and "determinism" of the prompt logic require an audit by the **evaluate-against-standard.skill**.
 
 ### Gaps
 #### Prompt Injection / Security

@@ -47,8 +47,8 @@ To ensure that agents and audits target the correct file types, the following na
 | Reachability from Root | **P** | Every node must have an incoming reference path. | `audit-repository-connectivity.skill` | README.md |
 | Deterministic Suffixes | **P** | Ensures automated tools can safely select files. | `ls` scan | README.md |
 | Maintain Manifests | **P** | Folder READMEs must list all current files. | `maintain-kernel-integrity.instruction` | None |
-| Explicit Domain Ownership | **P** | Every file must belong to a Tier 1 agent's scope. | Agent Audit (Auditor) | None |
-| Use `.{filetype}.md` naming | **P** | Enables deterministic discovery. | `ls` / Agent Audit | README.md |
+| Explicit Domain Ownership | **P** | Every file must belong to a Tier 1 agent's scope. | doc-audit.skill | None |
+| Use `.{filetype}.md` naming | **P** | Enables deterministic discovery. | `ls` / evaluate-against-standard.skill | README.md |
 | Hierarchical Standards | **P** | Organizes rules logically. | `verify-repository-integrity.instruction` | None |
 | Link to Glossary for all terms | **P** | Eliminates definition drift. | `audit-redundant-content.skill` | Common language |
 | Missing Frontmatter | **U** | Breaks the Knowledge Graph. | `audit-frontmatter-completeness.skill` | None |

@@ -39,9 +39,9 @@ graph TD
 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
-| One Monitor : Many Scenarios | **P** | Maximizes detection coverage with minimal alert noise. | Agent Audit | Trivial components |
+| One Monitor : Many Scenarios | **P** | Maximizes detection coverage with minimal alert noise. | evaluate-against-standard.skill | Trivial components |
 | Alert links to Dashboard | **P** | Provides the first step for deterministic restoration. | `linkage-specialist.agent` | None |
-| Diagnostic Alerts | **D** | Leads to "Alert Storms" where one root cause triggers 50 alerts. | Agent Audit | Critical safety loops |
+| Diagnostic Alerts | **D** | Leads to "Alert Storms" where one root cause triggers 50 alerts. | evaluate-against-standard.skill | Critical safety loops |
 | Informational Alerts | **U** | Causes "Alert Fatigue" and leads to ignored production issues. | `mon-audit.skill` | None |
 
 ## Rationale

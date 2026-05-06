@@ -31,7 +31,7 @@ graph TD
 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
-| Least Privilege | **P** | Agents should only have capabilities for their scope. | Agent Audit (Auditor) | Tier 1 Owners |
+| Least Privilege | **P** | Agents should only have capabilities for their scope. | doc-audit.skill | Tier 1 Owners |
 | Mandatory Registry | **P** | Every capability must be an existing `.skill` or `.instruction`. | `doc-audit.skill` | None |
 | Capability-Scope Alignment | **P** | Skill capabilities must align with the agent's glob scope. | `semantic-auditor.agent` | None |
 | Ghost Capabilities | **U** | Using a skill not listed in the frontmatter. | `perform-meta-audit.instruction` | None |

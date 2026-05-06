@@ -35,9 +35,9 @@ All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.
 |---|---|---|---|---|
 | Use Tri-Part Naming | **P** | Enables deterministic filtering and grouping. | `tel-audit.skill` | None |
 | Lowercase Dot Notation | **P** | Standardizes across different telemetry providers. | `tel-audit.skill` | None |
-| Include `correlation_id` | **P** | Critical for tracing requests across boundaries. | Agent Audit | None |
+| Include `correlation_id` | **P** | Critical for tracing requests across boundaries. | evaluate-against-standard.skill | None |
 | Use CamelCase or SnakeCase | **U** | Inconsistent with the global dot-notation standard. | `tel-audit.skill` | None |
-| Vague actions (e.g., `.process`) | **D** | Provides zero diagnostic value. | Agent Audit | None |
+| Vague actions (e.g., `.process`) | **D** | Provides zero diagnostic value. | evaluate-against-standard.skill | None |
 
 "Hard" observability requires a shared vocabulary. By forcing a pillar-based hierarchy, we prevent "Key Pollution" where different developers use different names for the same logical event.
 

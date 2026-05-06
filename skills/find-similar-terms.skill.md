@@ -1,51 +1,41 @@
 ---
 id: find-similar-terms.skill
-title: Find Similar Terms
+title: Glossary Similarity Auditor
 type: skill
-tags: [discovery, glossary, ambiguity, tool, action, execution]
-summary: Searches the glossary for naming collisions, conceptual overlaps, and specificity violations.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
-inputs:
-  term: The new or existing term to check.
-outputs:
-  similar_terms: A list of terms that might be confused with the input.
-standards: [glossary-entry.standard, naming.standard]
-glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, heuristics.glossary, skill.glossary, standard.glossary]
+tags: [quality, glossary, search, tool, action, execution]
+interface:
+  input: { threshold: "float (0.0 to 1.0)" }
+  output: { collisions: [{"term1": "id1", "term2": "id2", "similarity": "0.8"}] }
+implementation:
+  engine: "python3 scratch/similarity_auditor.py"
+  command: "python3 scratch/similarity_auditor.py {{threshold}}"
+summary: Identifies conceptually overlapping or duplicate terms in the glossary to prevent semantic sprawl.
+parent_standard: skill-file.standard
 ---
 
+# Glossary Similarity Auditor
+
 ## Context
-Searches the glossary for naming collisions, conceptual overlaps, and specificity violations.
-
-
-# Find Similar Terms
-
-This skill identifies potential naming collisions and conceptual overlaps, ensuring that specific concepts don't pollute general ones.
-
+Semantic ambiguity is a form of architectural debt. If two terms describe the same concept (e.g., "Skill" vs. "Function"), they should be consolidated. This skill uses word-overlap analysis to identify potential collisions.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> find-similar-terms.skill
+    skill-file.standard --> find-similar-terms.skill
+    find-similar-terms.skill --> similarity_auditor[similarity_auditor.py]
 ```
+
 ## Execution Steps
-
-1. **Alias Collision Check**: Compare every `alias` of the target `term` against the master ID list of the repository.
-2. **Lexical Search**: Grep the glossary for partial matches. If a match is found, check if one is a sub-string of the other (e.g., `test` vs `unit-test`).
-3. **Specificity Audit**:
-    - If the `term` is used in a specific context but uses a Level 1 (Root) name, flag it for renaming.
-    - Check if a domain prefix exists in the filename that matches the `tags` or `scope` in frontmatter.
-4. **Semantic Check**: (LLM-assisted) Compare summaries to detect if the same concept is described under different names (Fragmentation).
-5. **Report**: provide a list of candidates for **Namespace Qualification** or **Disambiguation**.
-
+1. **Engine Invocation**: Run `similarity_auditor.py`.
+2. **Analysis**: Review the JSON list for any similarity scores above 0.5.
+3. **Consolidation**: Use the `resolve-naming-ambiguity.instruction` to merge overlapping terms.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create two glossary entries with identical summaries.
+2. Run `python3 scratch/similarity_auditor.py`.
+3. Verify that the two terms are flagged with a similarity score of `1.00`.
 
 ## Quality Gate
-
-Conceptual clarity is governed by the **[Naming Standard](../standards/naming.standard.md)** and the **[Glossary Entry Standard](../standards/glossary-entry.standard.md)**.
-- **Verification**: Ensure that the report explicitly identifies the "Level" (Root/Domain/Implementation) of any colliding terms.
-- **Enforcement**: Any Alias-to-ID collision is an **Unacceptable (U)** violation and must be resolved before the term is finalized.
-
+- **Verification**: Output must be a valid JSON collision report.
+- **Enforcement**: Mandatory step during "Naming and Purity" audits.

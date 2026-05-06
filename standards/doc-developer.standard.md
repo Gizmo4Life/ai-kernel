@@ -32,7 +32,7 @@ graph TD
 | Practice | Rating | Rationale | Enforcement | Exception |
 |---|---|---|---|---|
 | One-Step Setup Script | **P** | Minimizes onboarding friction and manual errors. | `doc-audit.skill` | Complex infra |
-| Document Build Internals | **P** | Helps developers debug pipeline failures. | Agent Audit | None |
+| Document Build Internals | **P** | Helps developers debug pipeline failures. | evaluate-against-standard.skill | None |
 | Hardcoded Credentials | **U** | Fatal security risk; use environment templates. | `doc-audit.skill` | None |
 | Outdated Setup Steps | **U** | Causes developer frustration and setup decay. | `maintain-kernel-integrity.instruction` | None |
 

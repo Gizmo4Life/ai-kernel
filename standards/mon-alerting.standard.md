@@ -6,7 +6,7 @@ tags: [operability, monitoring, alerting, quality, rules, governance, compliance
 summary: Standards for aggregate detection systems, prioritizing unhealthiness detection over diagnostic specificity.
 scope: "/**/*"
 parent_standard: operability.standard
-glossary_refs: [progressive-disclosure.glossary, tel-naming.standard]
+glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary, tel-naming.standard]
 ---
 
 # Monitoring & Alerting Standard
@@ -18,11 +18,7 @@ Monitoring is the system's "Pain Receptor." Its goal is to detect that the syste
 
 ```mermaid
 graph TD
-    System((Live System)) --> Metrics[Metrics/Telemetry]
-    Metrics --> Monitor{Aggregate Monitor}
-    Monitor -->|Healthy| OK((Wait))
-    Monitor -->|Unhealthy| Alert[Critical Alert]
-    Alert --> Dashboard[IR Step 1: Span Dashboard]
+    operability.standard --> mon-alerting.standard
 ```
 
 ## Monitoring Principles

@@ -6,7 +6,7 @@ tags: [documentation, developer, onboarding, contribution, rules, governance, co
 summary: Standards for internal project documentation, focusing on local setup and contribution workflows.
 scope: "/**/* [tag:developer]"
 parent_standard: standard-file.standard
-glossary_refs: [progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Developer Documentation Standard
@@ -18,12 +18,7 @@ Developer documentation is the onboarding engine of a project. Its goal is to mi
 
 ```mermaid
 graph TD
-    Start((New Developer)) --> Clone[Clone Repository]
-    Clone --> Setup[Local Environment Setup]
-    Setup --> Patterns[Coding Standards & Patterns]
-    Patterns --> Commit[First Contribution]
-    Commit --> Verify[Verification/CI Pass]
-    Verify --> Review[Peer Review]
+    standard-file.standard --> doc-developer.standard
 ```
 
 ## Mandatory Sections

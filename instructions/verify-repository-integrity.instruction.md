@@ -4,11 +4,12 @@ title: Verify Repository Integrity
 type: instruction
 tags: [workflow, audit, maintenance, process, orchestration]
 summary: Orchestrates the indexing and reference discovery skills to ensure knowledge graph integrity and delegation safety.
-goal: A healthy repository with zero broken frontmatter references and zero circular delegations.
+parent_standard: instruction-file.standardgoal: A healthy repository with zero broken frontmatter references and zero circular delegations.
 skills: [ collect-repo-ids.skill, find-frontmatter-refs.skill, detect-circular-delegation.skill ]
 standards: [instruction-file.standard]
 preconditions:
   - Access to the repository root.
+glossary_refs: [context.glossary, delegation.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -24,7 +25,10 @@ This instruction ensures the repository's [Knowledge Graph](glossary/knowledge-g
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> verify-repository-integrity.instruction
+    verify-repository-integrity.instruction --> collect-repo-ids[collect-repo-ids.skill]
+    verify-repository-integrity.instruction --> find-frontmatter-refs[find-frontmatter-refs.skill]
+    verify-repository-integrity.instruction --> detect-circular-delegation[detect-circular-delegation.skill]
 ```
 ## Steps
 

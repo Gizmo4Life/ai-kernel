@@ -21,8 +21,6 @@ A **Knowledge Map** is a subset of the **Knowledge Graph**. While the graph cont
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Utility
 

@@ -7,7 +7,7 @@ summary: Standards for defining autonomous agents, emphasizing the 2-tier delega
 scope: "/agents/**/*.agent.md"
 parent_standards: [ kernel.standard, standard-file.standard ]
 prompts: [ id_list ]
-glossary_refs: [ agent.glossary, authority.glossary, delegation.glossary, domain-owner.glossary, subject-matter-expert.glossary ]
+glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---
 
 # Agent File Standard
@@ -20,7 +20,6 @@ This standard defines the requirements for autonomous agents within the AI Kerne
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
 ```
 ## The Delegation Tiers
 - **Tier 1: [Domain Owner](../glossary/domain-owner.glossary.md)**: Custodians of a specific filesystem scope. They orchestrate and maintain their domain.

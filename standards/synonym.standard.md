@@ -6,7 +6,7 @@ tags: [governance, discovery, semantics, tagging, rules, compliance]
 summary: Standards for using vibrant tags to ensure Knowledge Graph discoverability and prevent logic duplication.
 scope: "/**/*"
 parent_standard: kernel.standard
-glossary_refs: [knowledge-graph.glossary, reachability.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Discovery Tag Standard
@@ -18,9 +18,7 @@ Tags are the primary "Discovery Anchors" for the AI Kernel. Because agents and s
 
 ```mermaid
 graph TD
-    UserQuery[Query: "Fix this error"] --> Search[Search: tags]
-    Search --> Match[Match: "fix", "error"]
-    Match --> Node[Node: System-First Remediation]
+    kernel.standard --> synonym.standard
 ```
 
 ## Mandatory Requirements

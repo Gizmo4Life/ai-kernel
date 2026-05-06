@@ -4,11 +4,12 @@ title: Heal Structural Debt
 type: instruction
 tags: [workflow, documentation, healing, process, orchestration]
 summary: Systematic workflow for addressing structural debt in the AI Kernel.
-goal: 100% Pass status on the Structural Audit Report.
+parent_standard: instruction-file.standardgoal: 100% Pass status on the Structural Audit Report.
 skills: [generate-mermaid-diagram.skill, doc-audit.skill]
 standards: [doc-local.standard, doc-architecture.standard]
 preconditions:
   - Structural Audit Report identifies ⚠️ DEBT or ❌ violations.
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
 ---
 
 # Heal Structural Debt
@@ -20,12 +21,9 @@ Systematic workflow for addressing structural debt in the AI Kernel.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Intake[Intake: Audit Report]
-    Intake --> Inject[Inject: Context/Abstract]
-    Inject --> Visual[Visual: Generate Mermaid]
-    Visual --> Link[Link: Glossary Refs]
-    Link --> Verify[Verify: doc-audit]
-    Verify --> End((Update Report))
+    instruction-file.standardgoal --> heal-structural-debt.instruction
+    heal-structural-debt.instruction --> generate-mermaid-diagram[generate-mermaid-diagram.skill]
+    heal-structural-debt.instruction --> doc-audit[doc-audit.skill]
 ```
 
 ## Steps

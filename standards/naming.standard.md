@@ -6,7 +6,7 @@ tags: [governance, organization, naming, rules, compliance]
 summary: Rules for unambiguous file naming and ID assignment in the AI Kernel.
 scope: /
 parent_standard: kernel.standard
-glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Naming Standard
@@ -19,7 +19,7 @@ This standard defines the "Unambiguous Naming" policy for the AI Kernel. It ensu
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    kernel.standard --> naming.standard
 ```
 ## The Specificity Hierarchy
 - **Level 1 (Root)**: Abstract, kernel-level concepts. Use simple, canonical terms (e.g., `test.glossary.md`, `standard.glossary.md`).

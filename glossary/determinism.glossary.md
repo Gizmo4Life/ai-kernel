@@ -15,9 +15,6 @@ Determinism is the primary quality bar for AI Kernel operations. It ensures that
 
 ```mermaid
 graph TD
-    Input[Input State] --> Process[Deterministic Skill/Logic]
-    Process --> Output[Identical Output State]
-    Output --> Audit[Verification: 1:1 Match]
 ```
 
 ## Usage Constraints

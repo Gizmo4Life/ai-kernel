@@ -15,10 +15,6 @@ Reachability ensures that the AI Kernel is a single, connected Knowledge Graph r
 
 ```mermaid
 graph TD
-    Root((Root Standard)) --> Node1[Node A]
-    Node1 --> Node2[Node B]
-    Node2 --> Target[Target Node]
-    linkStyle default interpolate basis
 ```
 
 ## Usage Constraints

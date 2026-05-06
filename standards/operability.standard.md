@@ -7,7 +7,7 @@ summary: The master philosophy and quality bar for the 3 pillars of operability:
 scope: "/**/* [tag:operability]"
 parent_standard: kernel.standard
 instructions: [ handle-incident.instruction ]
-glossary_refs: [knowledge-graph.glossary, tel-naming.standard]
+glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary, tel-naming.standard]
 ---
 
 # Operability Standard
@@ -19,14 +19,7 @@ Operability is the "Nervous System" of a production application. This standard e
 
 ```mermaid
 graph TD
-    System((Live System)) --> Telemetry[Telemetry: High-Fidelity Spans]
-    Telemetry --> Monitoring[Monitoring: Aggregate Alerting]
-    Monitoring -->|Alert!| Incident[Incident Response: Restoration]
-    Incident --> Dashboard[1. Span Dashboard: Identification]
-    Dashboard --> Runbook[2. Span Runbook: Diagnosis]
-    Runbook --> Action[3. Span Action: Restoration]
-    Action --> Verification[Verification: System Restored]
-    Verification --> System
+    kernel.standard --> operability.standard
 ```
 
 ## The 3 Pillars
@@ -59,5 +52,3 @@ graph TD
 
 ## Enforcement
 The posture is **Automated**. We will implement specialized auditors for each pillar to ensure that every new component includes its corresponding dashboard and runbook.
----
-**Note**: This standard serves as the parent for `tel-naming.standard`, `mon-alerting.standard`, and `inc-response.standard`.

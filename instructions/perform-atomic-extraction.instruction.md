@@ -4,11 +4,12 @@ title: Perform Atomic Extraction
 type: instruction
 tags: [workflow, de-conflation, refactor, process, orchestration]
 summary: The master workflow for moving out-of-scope content to its correct SSOT domain and restoring reachability.
-goal: A fully de-conflated repository with zero "Semantic Bleeding."
+parent_standard: instruction-file.standardgoal: A fully de-conflated repository with zero "Semantic Bleeding."
 skills: [identify-out-of-scope-content.skill, linkage-specialist.agent]
 standards: [atomic-extraction.standard, kernel.standard]
 preconditions:
   - An out-of-scope content block has been identified.
+glossary_refs: [context.glossary, instruction.glossary, reachability.glossary]
 ---
 
 # Perform Atomic Extraction
@@ -20,12 +21,9 @@ This instruction is the "Scalpel" of the AI Kernel. It orchestrates the removal 
 
 ```mermaid
 graph TD
-    Start((Start)) --> Isolate[Isolate: Content Block]
-    Isolate --> Target[Select: Target Domain Folder]
-    Target --> Create[Create: New SSOT Node]
-    Create --> Replace[Replace: Source Content with Link]
-    Replace --> Verify[Verify: Connectivity and Reachability]
-    Verify --> End((Extraction Complete))
+    instruction-file.standardgoal --> perform-atomic-extraction.instruction
+    perform-atomic-extraction.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]
+    perform-atomic-extraction.instruction --> linkage-specialist.agent[linkage-specialist.agent]
 ```
 
 ## Steps

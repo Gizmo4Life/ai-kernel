@@ -6,7 +6,7 @@ tags: [memory, quality, context, rules, governance, compliance]
 summary: Standards for the creation, preservation, and pruning of architectural context.
 scope: "/context/*.md"
 parent_standard: kernel.standard
-glossary_refs: [context.glossary, progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Context Lifecycle Standard
@@ -18,10 +18,7 @@ Context is the "Long-Term Memory" of the AI Kernel. To prevent "Context Poisonin
 
 ```mermaid
 graph TD
-    Audit[Audit/Task] --> Log[Log: Raw Context]
-    Log --> Summary[Summary: Distilled Context]
-    Summary --> Archive[Archive: Stale Context]
-    Archive --> Delete[Purge: Obsolete Context]
+    kernel.standard --> context-lifecycle.standard
 ```
 
 ## Mandatory Lifecycle States

@@ -4,11 +4,11 @@ title: Research Domain Patterns
 type: skill
 tags: [research, standards, tool, action, execution]
 summary: Analyzes industry best practices for a specific technical domain.
-tool: search
+parent_standard: skill-file.standardtool: search
 inputs: domain: The subject (e.g., 'React Testing').
 outputs: practices: A list of recommended patterns and anti-patterns.
 standards: []
-glossary_refs: [antipattern.glossary]
+glossary_refs: [antipattern.glossary, authority.glossary, context.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -24,7 +24,7 @@ This skill researches industry standards for a specified `domain`.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> research-domain-patterns.skill
 ```
 ## Execution Steps
 

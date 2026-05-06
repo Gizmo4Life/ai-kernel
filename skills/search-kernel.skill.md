@@ -10,6 +10,8 @@ implementation:
   engine: "grep"
   command: "grep -rnE '{{query}}' {{domain}} --include='*.md'"
 summary: Performs high-speed, line-numbered search across the Knowledge Graph.
+parent_standard: skill-file.standard
+glossary_refs: [agent.glossary, context.glossary, skill.glossary]
 ---
 
 # Kernel Semantic Search
@@ -21,9 +23,7 @@ Finding specific patterns, headers, or references across 100+ files requires a h
 
 ```mermaid
 graph TD
-    Query[Query: Header/Pattern] --> Grep[Engine: grep -rnE]
-    Grep --> Filter[Filter: *.md]
-    Filter --> Result[List: Path:Line:Content]
+    skill-file.standard --> search-kernel.skill
 ```
 
 ## Execution Steps

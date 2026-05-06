@@ -6,7 +6,7 @@ tags: [documentation, customer, manual, api, rules, governance, compliance]
 summary: Standards for customer-facing documentation, including user manuals and API specifications.
 scope: "/**/* [tag:external]"
 parent_standard: standard-file.standard
-glossary_refs: [progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # External Documentation Standard
@@ -18,10 +18,7 @@ External documentation is the "Product Face" of the codebase. It is designed for
 
 ```mermaid
 graph TD
-    Customer((External User)) --> Manual[User Manual: UI/UX Flow]
-    Customer --> API[API Spec: Endpoints/Data]
-    Manual --> Success((Task Completed))
-    API --> Integration((App Integrated))
+    standard-file.standard --> doc-external.standard
 ```
 
 ## Mandatory Sections

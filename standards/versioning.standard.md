@@ -6,7 +6,7 @@ tags: [governance, maintenance, versioning, rules, compliance]
 summary: Rules for internal versioning and change tracking of Knowledge Graph nodes.
 scope: /
 parent_standard: standard-file.standard
-glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Versioning Standard
@@ -19,7 +19,7 @@ This standard defines how the AI Kernel tracks the evolution of its nodes. To re
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    standard-file.standard --> versioning.standard
 ```
 ## Internal Versioning Logic
 The AI Kernel uses **Content Hashing** to track state. The **[Integrity Guardian](../agents/integrity-guardian.agent.md)** maintains an internal `manifest.json` (or similar context file) that maps file IDs to their current SHA-256 hash.

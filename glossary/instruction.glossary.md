@@ -21,8 +21,6 @@ An **Instruction** is a high-level procedure that guides an agent through a sequ
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Structure
 

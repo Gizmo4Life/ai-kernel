@@ -4,14 +4,14 @@ title: Save Conversation Context
 type: skill
 tags: [maintenance, context, tool, action, execution]
 summary: Saves curated information from the current conversation to the `context/` folder.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   filename: The name of the context file.
   content: The curated information to save.
 outputs:
   status: Confirmation of the save action.
 standards: [kernel.standard]
-glossary_refs: [context.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -27,7 +27,7 @@ This skill ensures that important decisions and data survive across AI sessions.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> save-conversation-context.skill
 ```
 ## Execution Steps
 

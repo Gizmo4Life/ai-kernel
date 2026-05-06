@@ -6,7 +6,7 @@ tags: [orchestration, workflow, quality, rules, governance, compliance]
 summary: Standards for multi-step instructions, emphasizing state-based pre/postconditions.
 scope: "/instructions/*.instruction.md"
 parent_standard: standard-file.standard
-glossary_refs: [instruction.glossary, progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Instruction File Standard
@@ -18,10 +18,7 @@ Instructions are the "Workflows" of the AI Kernel. They coordinate multiple skil
 
 ```mermaid
 graph TD
-    Pre[Preconditions: Verifiable Start] --> Steps[Execution Steps: Coordination]
-    Steps --> Post[Postconditions: Verifiable End]
-    Post -->|Match| Success((Workflow Complete))
-    Post -->|Mismatch| Heal[Loop: Triage & Fix]
+    standard-file.standard --> instruction-file.standard
 ```
 
 ## Mandatory Sections

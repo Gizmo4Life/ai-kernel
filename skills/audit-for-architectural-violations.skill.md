@@ -4,13 +4,13 @@ title: Audit for Architectural Violations
 type: skill
 tags: [audit, architecture, quality, tool, action, execution]
 summary: Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   file_path: The file to audit.
 outputs:
   violations: A list of architectural issues found.
 standards: [ skill-file.standard, instruction-file.standard ]
-glossary_refs: [ atomicity.glossary, orchestration.glossary, quality-gate.glossary ]
+glossary_refs: [atomicity.glossary, context.glossary, orchestration.glossary, padu-scale.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill performs a "maximalist" check for architectural integrity.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> audit-for-architectural-violations.skill
 ```
 ## Execution Steps
 
@@ -49,5 +49,3 @@ The output of this skill is governed by the **[Skill File Standard](../standards
 - **Verification**: Ensure every violation reported contains a clear [Rationale](../glossary/padu-scale.glossary.md) and a link to the violated standard.
 - **Enforcement**: If a file fails the [Orchestration](../glossary/orchestration.glossary.md) check, it must be marked as **Unacceptable (U)** and remediated before the next commit.
 
----
-**Be Wary Of**: Skill descriptions that use "and" to hide multiple logical actions within a single tool invocation.

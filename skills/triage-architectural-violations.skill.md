@@ -4,7 +4,8 @@ title: Triage Architectural Violations
 type: skill
 tags: [logic, audit, priority, tool, action, execution]
 summary: Rank architectural violations into P0-P3 priority tiers based on system impact.
-tool: none
+parent_standard: skill-file.standardtool: none
+glossary_refs: [context.glossary, prompt.glossary, skill.glossary]
 ---
 
 # Triage Architectural Violations
@@ -16,13 +17,7 @@ This skill provides the deterministic logic for ranking "Debt" in the AI Kernel.
 
 ```mermaid
 graph TD
-    Input[List of Violations] --> CheckP0{Is Structural?}
-    CheckP0 -->|Yes| P0[Priority: P0 Fatal]
-    CheckP0 -->|No| CheckP1{Is Linkage?}
-    CheckP1 -->|Yes| P1[Priority: P1 Critical]
-    CheckP1 -->|No| CheckP2{Is Semantic?}
-    CheckP2 -->|Yes| P2[Priority: P2 Warning]
-    CheckP2 -->|No| P3[Priority: P3 Debt]
+    skill-file.standardtool --> triage-architectural-violations.skill
 ```
 
 ## Execution Steps

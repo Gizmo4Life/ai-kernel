@@ -6,7 +6,7 @@ tags: [governance, evolution, patterns, rules, compliance]
 summary: Rules for promoting knowledge from raw context to formal core files.
 scope: /
 parent_standard: standard-file.standard
-glossary_refs: [context.glossary, standard.glossary, glossary-entry.glossary]
+glossary_refs: [agent.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Promotion Standard
@@ -19,7 +19,7 @@ This standard defines the "Path to Core" for all new knowledge. it prevents the 
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    standard-file.standard --> promotion.standard
 ```
 ## Promotion Thresholds
 - **Tier 2 (SME) Draft**: 1-2 occurrences of a pattern in `context/`. No formal standard required yet.

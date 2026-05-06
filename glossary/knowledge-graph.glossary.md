@@ -21,8 +21,6 @@ The **Knowledge Graph** is the conceptual map of the AI Kernel. It is formed by 
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Utility
 

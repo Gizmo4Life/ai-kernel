@@ -15,9 +15,6 @@ Capabilities are the "Tokens" of the agent governance model. They define what an
 
 ```mermaid
 graph TD
-    Agent[Agent Role] --> License[Capability Token]
-    License --> Skill[Authorized Skill]
-    Skill --> Action[Deed: Verified Action]
 ```
 
 ## Usage Constraints

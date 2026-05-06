@@ -4,6 +4,8 @@ title: Synthesize PADU Logic
 type: prompt
 tags: [logic, quality, standards, ai-logic, intuition]
 summary: The core synthesis logic for assigning P, A, D, and U ratings based on industry best practices and kernel principles.
+parent_standard: prompt-file.standard
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, orchestration.glossary]
 ---
 
 ## Context
@@ -39,5 +41,5 @@ Always provide a concise **Rationale** and a specific **Enforcement** method for
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> synthesize-padu-logic.prompt
 ```

@@ -6,7 +6,7 @@ tags: [telemetry, observability, naming, rules, governance, compliance]
 summary: Standards for naming spans, metrics, and logs to ensure cross-domain observability.
 scope: "/**/* [tag:telemetry]"
 parent_standard: kernel.standard
-glossary_refs: [naming.standard, orchestration.glossary]
+glossary_refs: [agent.glossary, context.glossary, naming.standard, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
 # Telemetry Naming Standard
@@ -19,7 +19,7 @@ This standard defines a deterministic hierarchy for all telemetry signals. It en
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    kernel.standard --> tel-naming.standard
 ```
 ## The Tri-Part Pattern
 All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.<module>.<action>`** pattern:

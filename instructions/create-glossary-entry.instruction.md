@@ -4,11 +4,12 @@ title: Create Glossary Entry
 type: instruction
 tags: [workflow, documentation, onboarding, process, orchestration]
 summary: A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
-goal: A high-quality, non-redundant glossary entry committed to the repository.
+parent_standard: instruction-file.standardgoal: A high-quality, non-redundant glossary entry committed to the repository.
 skills: [ find-glossary-terms.skill, evaluate-against-standard.skill ]
 standards: [glossary-entry.standard]
 preconditions: - A new concept or term has been identified.
   - The agent has write access to the `glossary/` directory.
+glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -24,7 +25,9 @@ Follow these steps to add a new concept to the AI Kernel.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> create-glossary-entry.instruction
+    create-glossary-entry.instruction --> find-glossary-terms[find-glossary-terms.skill]
+    create-glossary-entry.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 ## Steps
 

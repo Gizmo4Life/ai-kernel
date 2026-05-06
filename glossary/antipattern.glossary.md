@@ -21,8 +21,6 @@ An **Antipattern** is a pattern that may appear to be a beneficial solution to a
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Role in the Kernel
 

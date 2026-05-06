@@ -10,6 +10,8 @@ implementation:
   engine: "python3 scratch/id_auditor.py"
   command: "python3 scratch/id_auditor.py {{target_dir}}"
 summary: Verifies that every node in the AI Kernel Knowledge Graph possesses a globally unique ID.
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
 ---
 
 # ID Uniqueness Auditor
@@ -21,11 +23,7 @@ Global uniqueness is the primary constraint for the AI Kernel Knowledge Graph. T
 
 ```mermaid
 graph TD
-    Input[Target Directory] --> Engine[id_auditor.py]
-    Engine --> Scan[Scan: Frontmatter]
-    Scan --> Map[Map: ID to Path]
-    Map --> Collision[Detect: Duplicates]
-    Collision --> Result[JSON Collision Report]
+    skill-file.standard --> check-id-uniqueness.skill
 ```
 
 ## Execution Steps

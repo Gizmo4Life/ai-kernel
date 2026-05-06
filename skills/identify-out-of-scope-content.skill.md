@@ -4,7 +4,8 @@ title: Identify Out-of-Scope Content
 type: skill
 tags: [logic, audit, semantics, tool, action, execution]
 summary: Detect content within a file that violates the atomicity of its current domain or tier.
-tool: none
+parent_standard: skill-file.standardtool: none
+glossary_refs: [context.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
 # Identify Out-of-Scope Content
@@ -16,10 +17,7 @@ This skill provides the "Sensing" logic for the De-conflation engine. It compare
 
 ```mermaid
 graph TD
-    Input[File Content] --> Type{File Type?}
-    Type -->|Skill| CheckSkill[Check for Orchestration/Definitions]
-    Type -->|Standard| CheckStd[Check for Implementation/Logic]
-    CheckSkill & CheckStd --> Flags[Generate: Extraction Candidates]
+    skill-file.standardtool --> identify-out-of-scope-content.skill
 ```
 
 ## Execution Steps

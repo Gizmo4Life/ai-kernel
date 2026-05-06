@@ -15,9 +15,6 @@ summary: Structural or machine-enforceable rules that define the constraints of 
 
 ```mermaid
 graph TD
-    Hard[Hard Logic: Constraints] --> Enforce[Enforcement: Automated]
-    Soft[Soft Logic: Narrative] --> Guide[Guidance: Agentic]
-    Enforce --> Stability[Stability: High]
 ```
 
 ## Usage Constraints

@@ -6,7 +6,7 @@ tags: [architecture, atomicity, de-conflation, rules, governance, compliance]
 summary: Standards for identifying out-of-scope content and extracting it to its correct SSOT domain.
 scope: "/**/*"
 parent_standard: kernel.standard
-glossary_refs: [atomicity.glossary, knowledge-graph.glossary, progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, progressive-disclosure.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Atomic Extraction Standard
@@ -18,10 +18,7 @@ This standard defines the "De-conflation" protocol. To maintain the "Hardness" o
 
 ```mermaid
 graph TD
-    File[Source File] --> Detect{Out of Scope?}
-    Detect -->|Yes| Extract[Extract to Target Domain]
-    Extract --> Link[Replace with reference link]
-    Link --> End((Atomicity Restored))
+    kernel.standard --> atomic-extraction.standard
 ```
 
 ## Extraction Rules

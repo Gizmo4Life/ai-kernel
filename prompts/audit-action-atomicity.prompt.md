@@ -4,6 +4,8 @@ title: Audit Action Atomicity
 type: prompt
 tags: [logic, audit, atomicity, ai-logic, intuition]
 summary: The heuristic for detecting "Bloated" or "Swiss Army Knife" skills and instructions.
+parent_standard: prompt-file.standard
+glossary_refs: [atomicity.glossary, context.glossary, instruction.glossary, orchestration.glossary, skill.glossary]
 ---
 
 ## Context
@@ -28,5 +30,5 @@ Analyze the target action (Skill or Instruction) for the following "Bloat Trigge
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> audit-action-atomicity.prompt
 ```

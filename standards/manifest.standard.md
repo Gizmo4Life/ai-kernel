@@ -6,7 +6,7 @@ tags: [discovery, documentation, automation, rules, governance, compliance]
 summary: Standards for machine-readable README.md manifests at the folder level.
 scope: "/**/README.md"
 parent_standard: doc-local.standard
-glossary_refs: [knowledge-map.glossary, reachability.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, knowledge-map.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Manifest Standard
@@ -18,9 +18,7 @@ Manifests (`README.md` files) are the "Discovery Maps" of the AI Kernel. To ensu
 
 ```mermaid
 graph TD
-    Folder[Filesystem Folder] --> Manifest[README.md Manifest]
-    Manifest --> Table[Structured Table: SSOT]
-    Table --> Agent[Agent: Deterministic Discovery]
+    doc-local.standard --> manifest.standard
 ```
 
 ## Mandatory Content

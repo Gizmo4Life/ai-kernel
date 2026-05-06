@@ -4,6 +4,8 @@ title: Determine Glossary Necessity
 type: prompt
 tags: [logic, glossary, discovery, ai-logic, intuition]
 summary: Heuristic for deciding whether a term needs a canonical glossary entry or should be inlined.
+parent_standard: prompt-file.standard
+glossary_refs: [context.glossary, instruction.glossary, standard.glossary]
 ---
 
 ## Context
@@ -28,5 +30,5 @@ Apply the following "3-Strike Rule" and "Ambiguity Check" to any concept being u
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> determine-glossary-necessity.prompt
 ```

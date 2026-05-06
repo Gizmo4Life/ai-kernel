@@ -11,7 +11,7 @@ capabilities: [audit-repository-connectivity.skill, find-frontmatter-refs.skill,
 delegates: []
 parent_standard: kernel.standard
 instructions: [ resolve-naming-ambiguity.instruction ]
-glossary_refs: [ subject-matter-expert.glossary, knowledge-graph.glossary ]
+glossary_refs: [context.glossary, instruction.glossary, knowledge-graph.glossary, reachability.glossary, skill.glossary, subject-matter-expert.glossary]
 ---
 
 # Linkage Specialist
@@ -23,9 +23,7 @@ The Linkage Specialist is responsible for the "Hard Reachability" of the AI Kern
 
 ```mermaid
 graph TD
-    Audit[Audit Trigger] --> Scan[Scan: References]
-    Scan --> Identify[Identify: Orphans/Dark Matter]
-    Identify --> Propose[Propose: Connectivity Links]
+    kernel.standard --> linkage-specialist.agent
 ```
 
 ## Interaction Pattern

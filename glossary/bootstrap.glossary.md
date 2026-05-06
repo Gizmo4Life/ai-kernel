@@ -21,8 +21,6 @@ Canonical definition of a core AI Kernel concept.
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Kernel Bootstrap
 

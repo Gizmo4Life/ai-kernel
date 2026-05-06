@@ -4,13 +4,13 @@ title: Find Similar Terms
 type: skill
 tags: [discovery, glossary, ambiguity, tool, action, execution]
 summary: Searches the glossary for naming collisions, conceptual overlaps, and specificity violations.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs:
   term: The new or existing term to check.
 outputs:
   similar_terms: A list of terms that might be confused with the input.
 standards: [glossary-entry.standard, naming.standard]
-glossary_refs: [heuristics.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, heuristics.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill identifies potential naming collisions and conceptual overlaps, ensur
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> find-similar-terms.skill
 ```
 ## Execution Steps
 
@@ -49,5 +49,3 @@ Conceptual clarity is governed by the **[Naming Standard](../standards/naming.st
 - **Verification**: Ensure that the report explicitly identifies the "Level" (Root/Domain/Implementation) of any colliding terms.
 - **Enforcement**: Any Alias-to-ID collision is an **Unacceptable (U)** violation and must be resolved before the term is finalized.
 
----
-**Be Wary Of**: "The broader the concept, the shorter the name." If you are writing a skill for a specific tool, the tool name must be in the filename.

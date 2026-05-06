@@ -8,8 +8,11 @@ interface:
   output: { ids: ["id1", "id2"] }
 implementation:
   engine: "grep + awk"
-  command: "grep -rh '^id: ' {{target_dir}} | awk '{print $2}' | sort | uniq"
+  command: "grep -rh '^
+id: ' {{target_dir}} | awk '{print $2}' | sort | uniq"
 summary: Extracts a unique, sorted list of all IDs currently active in the Knowledge Graph.
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary]
 ---
 
 # Collect Repository IDs
@@ -21,11 +24,7 @@ To perform graph-wide operations (like checking for orphans or broken links), we
 
 ```mermaid
 graph TD
-    Input[Target Directory] --> Grep[Grep: ^id:]
-    Grep --> Awk[Awk: Extract 2nd Field]
-    Awk --> Sort[Sort: Alphabetical]
-    Sort --> Uniq[Uniq: Remove Duplicates]
-    Uniq --> List[Result: Sorted ID List]
+    skill-file.standard --> collect-repo-ids.skill
 ```
 
 ## Execution Steps

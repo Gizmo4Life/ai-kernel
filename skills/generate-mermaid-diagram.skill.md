@@ -1,51 +1,38 @@
 ---
 id: generate-mermaid-diagram.skill
-title: Generate Mermaid Diagram
+title: Architecture Visualizer
 type: skill
-tags: [generation, documentation, visual, tool, action, execution]
-summary: Analyzes the execution logic of a file and synthesizes a Mermaid flowchart representation.
-tool: editor
-inputs:
-  source_file: The file to visualize.
-outputs:
-  mermaid_code: A text block containing the Mermaid syntax.
-standards: [doc-local.standard, doc-architecture.standard]
-glossary_refs: [knowledge-graph.glossary]
----
+tags: [automation, visualization, mermaid, tool, action, execution]
+interface:
+  input: { target_path: "path/to/file_or_dir" }
+  output: { status: "success" }
+implementation:
+  engine: "python3 scratch/mermaid_gen.py"
+  command: "python3 scratch/mermaid_gen.py {{target_path}}"
+summary: Automatically generates and injects Mermaid diagrams based on a node's metadata.
+parent_standard: skill-file.standard---
 
-# Generate Mermaid Diagram
+# Architecture Visualizer
 
 ## Context
-Analyzes the execution logic of a file and synthesizes a Mermaid flowchart representation.
+Visual consistency is critical for rapid system understanding. This skill ensures that every `## Architecture` section is a deterministic reflection of the file's metadata, preventing "Visual Drift" and documentation debt.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Start)) --> Scan[Scan: Logic Block]
-    Scan --> Parse[Parse: Extract Steps]
-    Parse --> Synthesize[Synthesize: Mermaid Code]
-    Synthesize --> Verify[Verify: Syntax Check]
-    Verify --> End((Output Diagram))
 ```
 
 ## Execution Steps
-
-1. **Scan**: Identify the primary logic block (e.g., `## Execution Steps` or `## Interaction Pattern`).
-2. **Parse**: Extract the sequential or conditional steps.
-3. **Synthesize**: Generate a Mermaid `graph TD` or `sequenceDiagram` block.
-    - Use clear labels for nodes.
-    - Link nodes according to the execution order.
-    - Include a "Start" and "End/Quality Gate" node.
-4. **Verification**: Invoke the **Semantic Auditor** to ensure the diagram accurately reflects the text.
-
+1. **Target Identification**: Specify the node requiring visualization.
+2. **Engine Invocation**: Run `mermaid_gen.py`.
+3. **Verification**: Confirm the Mermaid diagram correctly reflects the hierarchy.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create a file with `parent_standard: root` and `skills: [test.skill]`.
+2. Run `python3 scratch/mermaid_gen.py test.md`.
+3. Verify the Mermaid code contains `root --> test` and `test --> test.skill`.
 
 ## Quality Gate
-
-Visual integrity is governed by our documentation standards.
-- **Verification**: The Mermaid code must be syntactically valid and renderable.
-- **Enforcement**: Diagrams that contradict the textual steps are **Unacceptable (U)** and must be refactored.
+- **Verification**: Diagrams must be valid Mermaid syntax.
+- **Enforcement**: Mandatory for all logic nodes to ensure 100% visual transparency.

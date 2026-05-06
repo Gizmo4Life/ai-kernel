@@ -21,8 +21,6 @@ A **Skill** is a discrete capability that leverages specific tools (e.g., git, g
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Design Principles
 

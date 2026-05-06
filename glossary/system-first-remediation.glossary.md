@@ -15,9 +15,6 @@ System-First Remediation is the fundamental operating philosophy of the AI Kerne
 
 ```mermaid
 graph TD
-    Error[Failure/Feedback] --> Analysis[Root Cause: Kernel Logic]
-    Analysis --> Hardening[Update: Standard/Prompt/Glossary]
-    Hardening --> Production[Regenerate: Output]
 ```
 
 ## Synonyms (Human Reference)

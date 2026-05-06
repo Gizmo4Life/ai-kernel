@@ -6,7 +6,7 @@ tags: [documentation, architecture, orientation, rules, governance, compliance]
 summary: Standards for the global orientation layer located in `docs/architecture/`.
 scope: "/docs/architecture/**/*.md"
 parent_standard: standard-file.standard
-glossary_refs: [knowledge-graph.glossary]
+glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Architecture Documentation Standard
@@ -18,10 +18,7 @@ The Architecture layer provides "Orientation over Detail." It serves as the high
 
 ```mermaid
 graph TD
-    Map((docs/architecture/)) --> System[System Overview: Global Map]
-    System --> Components[Component Links]
-    Components --> Local[Local READMEs: Technical Detail]
-    System --> Personas[Persona Orientation: Consumer/Maintainer]
+    standard-file.standard --> doc-architecture.standard
 ```
 
 ## PADU Table

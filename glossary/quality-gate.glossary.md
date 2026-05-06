@@ -21,8 +21,6 @@ A **Quality Gate** is a mandatory validation step within an **Instruction**. It 
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Implementation
 

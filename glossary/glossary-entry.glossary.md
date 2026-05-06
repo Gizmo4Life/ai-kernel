@@ -21,8 +21,6 @@ A **Glossary Entry** is the fundamental unit of knowledge in the AI Kernel. It p
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Purpose
 

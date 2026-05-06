@@ -21,8 +21,6 @@ A **Subject Matter Expert** is a specialized agent designed to handle a single d
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Per-Domain Instantiation
 SMEs are not singletons. While their **Definition** (e.g., `librarian.agent.md`) is shared, their **Context** and **Deployment** are scoped to the [Domain Owner](domain-owner.glossary.md) who invokes them.

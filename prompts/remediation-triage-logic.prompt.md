@@ -4,6 +4,8 @@ title: Remediation Triage Logic
 type: prompt
 tags: [logic, triage, priority, ai-logic, intuition]
 summary: The priority-ranking logic for addressing structural vs. semantic vs. technical debt.
+parent_standard: prompt-file.standard
+glossary_refs: [context.glossary, reachability.glossary]
 ---
 
 ## Context
@@ -27,7 +29,7 @@ When presented with multiple violations, prioritize them in the following order:
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> remediation-triage-logic.prompt
 ```
 
 ## Quality Gate

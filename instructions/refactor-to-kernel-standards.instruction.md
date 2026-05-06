@@ -4,14 +4,14 @@ title: Refactor to Kernel Standards
 type: instruction
 tags: [workflow, architecture, refactor, process, orchestration]
 summary: A maximalist workflow for aligning repository content with the core architectural principles of the AI Kernel.
-goal: A fully modular, linked, and standards-compliant repository.
+parent_standard: instruction-file.standardgoal: A fully modular, linked, and standards-compliant repository.
 skills: [audit-for-architectural-violations.skill, provide-glossary-guidance.skill, evaluate-against-standard.skill]
 instructions: [create-glossary-entry.instruction, populate-standard.instruction]
 standards: [skill-file.standard, instruction-file.standard, glossary-entry.standard, kernel.standard]
 preconditions:
   - Repository content exists that needs alignment.
   - Flynn and the Librarian agents are available.
-glossary_refs: [bootstrap.glossary, orchestration.glossary, quality-gate.glossary]
+glossary_refs: [bootstrap.glossary, context.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, orchestration.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -27,7 +27,10 @@ This instruction codifies the "maximalist extraction" process used to maintain t
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> refactor-to-kernel-standards.instruction
+    refactor-to-kernel-standards.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
+    refactor-to-kernel-standards.instruction --> provide-glossary-guidance[provide-glossary-guidance.skill]
+    refactor-to-kernel-standards.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 ## Steps
 

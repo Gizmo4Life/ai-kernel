@@ -7,7 +7,7 @@ summary: The foundational standard defining the core structural rules of the AI 
 scope: "/**/*"
 parent_standard: None
 instructions: [ heal-structural-debt.instruction ]
-glossary_refs: [domain-owner.glossary, knowledge-graph.glossary]
+glossary_refs: [agent.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, orchestration.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Kernel Standard
@@ -19,14 +19,7 @@ The **Kernel Standard** is the absolute source of truth for the AI Kernel's arch
 
 ```mermaid
 graph TD
-    Root((AI Kernel Root)) --> Selectors{File Selectors}
-    Selectors -->|*.standard.md| Standards[Standards: Governance]
-    Selectors -->|*.skill.md| Skills[Skills: Atomic Logic]
-    Selectors -->|*.instruction.md| Instructions[Instructions: Orchestration]
-    Selectors -->|*.agent.md| Agents[Agents: Roles]
-    Selectors -->|*.glossary.md| Glossary[Glossary: SSOT]
-    Selectors -->|*.prompt.md| Prompts[Prompts: AI Logic]
-    Standards & Skills & Instructions & Agents & Glossary & Prompts --> Graph((Connected Knowledge Graph))
+    None --> kernel.standard
 ```
 
 ## Deterministic File Selectors

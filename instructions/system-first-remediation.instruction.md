@@ -4,11 +4,11 @@ title: System-First Remediation
 type: instruction
 tags: [workflow, feedback, self-healing, evolution, codify-user-feedback, fix-kernel-error, systemic-learning-workflow, root-cause-fix, process, orchestration]
 summary: Master workflow for systemic self-correction. Use this whenever a user provides a correction or reports an error. Trace the error to its source (Standard, Prompt, Glossary), fix the source, and then re-execute.
-goal: A fixed kernel that prevents the recurrence of a specific error.
+parent_standard: instruction-file.standardgoal: A fixed kernel that prevents the recurrence of a specific error.
 skills: [trace-output-to-source.skill, evaluate-against-standard.skill, identify-out-of-scope-content.skill]
 instructions: [maintain-kernel-integrity.instruction]
 standards: [kernel.standard, quality-gate.standard, synonym.standard]
-glossary_refs: [system-first-remediation.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary, system-first-remediation.glossary]
 preconditions:
   - User has provided feedback or correction on a sub-optimal output.
 ---
@@ -22,11 +22,10 @@ When an AI agent fails, the traditional response is to fix the specific output. 
 
 ```mermaid
 graph TD
-    Error((User Feedback/Error)) --> Trace[Trace: Map Output to Kernel Source]
-    Trace --> Audit[Audit: Identify Logic/Enforcement Gap]
-    Audit --> Heal[Heal: Harden Standard/Prompt/Glossary]
-    Heal --> Verify[Verify: Ensure System Integrity]
-    Verify --> ReExec[Re-Execute: Generate Output with New Logic]
+    instruction-file.standardgoal --> system-first-remediation.instruction
+    system-first-remediation.instruction --> trace-output-to-source[trace-output-to-source.skill]
+    system-first-remediation.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
+    system-first-remediation.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]
 ```
 
 ## Steps

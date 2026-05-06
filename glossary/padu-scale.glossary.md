@@ -21,8 +21,6 @@ The **PADU Scale** is the kernel's mechanism for objective quality governance. E
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## The Ratings
 

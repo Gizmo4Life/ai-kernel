@@ -6,7 +6,7 @@ tags: [documentation, quality, atomicity, local, rules, governance, compliance]
 summary: Standards for component-level READMEs embedded within code directories.
 scope: "/**/README.md"
 parent_standard: standard-file.standard
-glossary_refs: [atomicity.glossary, progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Local Documentation Standard
@@ -18,11 +18,7 @@ Local documentation provides "Truth at the Source." It is scoped strictly to the
 
 ```mermaid
 graph TD
-    Directory[Code Directory] --> README[README.md: Local Truth]
-    README --> Technical[Technical Details: Local Scope]
-    README --> Links[Links: External Concepts]
-    Links --> Glossary[Glossary: Canonical Terms]
-    Links --> Architecture[docs/architecture: System Map]
+    standard-file.standard --> doc-local.standard
 ```
 
 ## PADU Table

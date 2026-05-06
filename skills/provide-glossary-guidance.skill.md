@@ -4,12 +4,12 @@ title: Provide Glossary Guidance
 type: skill
 tags: [guidance, glossary, architecture, tool, action, execution]
 summary: Analyzes a concept and recommends whether it should be a glossary entry or inlined.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs: concept: The term or concept being considered.
   context: Where the term is being used.
 outputs: recommendation: A choice between 'NEW_ENTRY' or 'INLINE' with a detailed rationale.
 standards: [glossary-entry.standard]
-glossary_refs: [ glossary-entry.glossary, heuristics.glossary ]
+glossary_refs: [context.glossary, glossary-entry.glossary, heuristics.glossary, skill.glossary]
 ---
 
 ## Context
@@ -25,7 +25,7 @@ This skill enables Flynn to evaluate the "weight" of a concept and its long-term
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> provide-glossary-guidance.skill
 ```
 ## [Heuristics](glossary/heuristics.glossary.md)
 

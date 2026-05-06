@@ -21,8 +21,6 @@ An **Agent** is a specialized persona that operates within the kernel. It is def
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Attributes
 

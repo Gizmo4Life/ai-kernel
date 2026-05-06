@@ -21,8 +21,6 @@ A **Standard** is a formal document that defines the quality bars and constraint
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Key Characteristics
 

@@ -4,10 +4,11 @@ title: Perform Frontmatter Audit
 type: instruction
 tags: [workflow, audit, frontmatter.glossary, process, orchestration]
 summary: Orchestrates a repository-wide check for frontmatter completeness and validity.
-goal: 100% compliance with frontmatter standards across all content files.
+parent_standard: instruction-file.standardgoal: 100% compliance with frontmatter standards across all content files.
 skills: [audit-frontmatter-completeness.skill, verify-repository-integrity.skill]
 standards: [kernel.standard, standard-file.standard]
 preconditions: - Repository content exists.
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -23,7 +24,9 @@ This instruction ensures every file in the AI Kernel is a valid node in the Know
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> perform-frontmatter-audit.instruction
+    perform-frontmatter-audit.instruction --> audit-frontmatter-completeness[audit-frontmatter-completeness.skill]
+    perform-frontmatter-audit.instruction --> verify-repository-integrity[verify-repository-integrity.skill]
 ```
 ## Steps
 

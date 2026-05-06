@@ -4,6 +4,8 @@ title: Operator Intake Protocol
 type: prompt
 tags: [agent-logic, triage, interaction, ai-logic, intuition]
 summary: The standard pattern for triaging user feedback and requests at the Tier 0 entry point, emphasizing system-first remediation.
+parent_standard: prompt-file.standard
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, instruction.glossary, prompt.glossary, standard.glossary]
 ---
 
 ## Context
@@ -29,7 +31,7 @@ Follow these steps for every new user message:
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> operator-intake-protocol.prompt
 ```
 
 ## Quality Gate

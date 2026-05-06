@@ -4,13 +4,13 @@ title: Audit Telemetry Naming
 type: skill
 tags: [audit, telemetry, observability, tool, action, execution]
 summary: Scans codebase strings and configurations for violations of the Telemetry Naming Standard.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs:
   path: The directory to scan.
 outputs:
   violations: A list of non-compliant telemetry keys and their locations.
 standards: [tel-naming.standard]
-glossary_refs: [knowledge-graph.glossary]
+glossary_refs: [context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill provides automated enforcement for global observability standards. It
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> tel-audit.skill
 ```
 ## Execution Steps
 

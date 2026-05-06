@@ -4,11 +4,11 @@ title: Find Frontmatter References
 type: skill
 tags: [audit, technical, tool, action, execution]
 summary: Scans the repository for fields that reference other IDs (e.g., glossary_refs, standards).
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs: path: Directory to scan.
 outputs: ref_map: A mapping of files to the IDs they reference.
 standards: []
-glossary_refs: [frontmatter.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
 ---
 
 ## Context
@@ -24,7 +24,7 @@ Atomic skill for identifying dependencies.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> find-frontmatter-refs.skill
 ```
 ## Execution Steps
 

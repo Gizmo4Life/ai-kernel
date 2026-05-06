@@ -7,7 +7,7 @@ summary: Standards for defining canonical terms, including mandatory usage const
 scope: "/glossary/*.glossary.md"
 parent_standard: standard-file.standard
 instructions: [ resolve-glossary-conflict.instruction ]
-glossary_refs: [knowledge-graph.glossary, atomicity.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Glossary Entry Standard
@@ -19,10 +19,7 @@ The Glossary is the "Semantic Anchor" of the AI Kernel. This standard ensures th
 
 ```mermaid
 graph TD
-    Term[Glossary Term] --> Definition[Abstract Definition]
-    Term --> Constraints[Usage Constraints: Negations]
-    Term --> Refs[Cross-References]
-    Constraints --> Audit[Semantic Auditor: Enforcement]
+    standard-file.standard --> glossary-entry.standard
 ```
 
 ## Mandatory Sections

@@ -4,13 +4,13 @@ title: Detect Circular Delegation
 type: skill
 tags: [audit, technical, graph, tool, action, execution]
 summary: Analyzes the agent delegation graph to identify infinite logic loops.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs:
   path: The directory containing agent files (defaults to `agents/`).
 outputs:
   cycles: A list of circular delegation paths found.
 standards: [agent-file.standard]
-glossary_refs: [delegation.glossary, agent.glossary]
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill ensures that the agent peer network remains a Directed Acyclic Graph 
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> detect-circular-delegation.skill
 ```
 ## Execution Steps
 

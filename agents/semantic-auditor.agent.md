@@ -11,7 +11,7 @@ capabilities: [audit-for-architectural-violations.skill, evaluate-against-standa
 delegates: []
 parent_standard: kernel.standard
 instructions: [ resolve-glossary-conflict.instruction ]
-glossary_refs: [ subject-matter-expert.glossary, knowledge-graph.glossary ]
+glossary_refs: [context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, subject-matter-expert.glossary]
 ---
 
 # Semantic Auditor
@@ -23,9 +23,7 @@ The Semantic Auditor is the "Grammar Guardian" of the AI Kernel logic. Their rol
 
 ```mermaid
 graph TD
-    Proposal[Proposal Received] --> Review[Review: Usage Constraints]
-    Review --> Compare[Compare: SSOT Glossary]
-    Compare --> Verdict[Verdict: Reject/Approve]
+    kernel.standard --> semantic-auditor.agent
 ```
 
 ## Interaction Pattern

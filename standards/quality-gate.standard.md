@@ -6,7 +6,7 @@ tags: [governance, quality, verification, rules, compliance]
 summary: Standards for defining and implementing Quality Gate sections in skills and instructions.
 scope: /
 parent_standard: standard-file.standard
-glossary_refs: [quality-gate.glossary, standard.glossary, kernel.standard]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, kernel.standard, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 # Quality Gate Standard
@@ -19,7 +19,7 @@ This standard governs the structure and content of `## Quality Gate` sections. I
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    standard-file.standard --> quality-gate.standard
 ```
 ## PADU Table
 

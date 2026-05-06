@@ -4,14 +4,14 @@ title: Bootstrap New Standard
 type: instruction
 tags: [workflow, quality, onboarding, process, orchestration]
 summary: Orchestrates the full process of researching, drafting, auditing, and committing a new technical standard.
-goal: A high-quality, codebase-aware standard committed to the repository.
+parent_standard: instruction-file.standardgoal: A high-quality, codebase-aware standard committed to the repository.
 skills: [evaluate-against-standard.skill]
 instructions: [ populate-standard.instruction, create-glossary-entry.instruction ]
 standards: [ standard-file.standard, glossary-entry.standard, instruction-file.standard ]
 preconditions:
   - A technical domain for the standard has been identified.
   - Flynn and the Standards Auditor agents are available.
-glossary_refs: [ bootstrap.glossary, orchestration.glossary, quality-gate.glossary ]
+glossary_refs: [agent.glossary, bootstrap.glossary, context.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, orchestration.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -27,7 +27,8 @@ This is the primary workflow for expanding the AI Kernel's reach into new domain
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> bootstrap-new-standard.instruction
+    bootstrap-new-standard.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 ## Steps
 

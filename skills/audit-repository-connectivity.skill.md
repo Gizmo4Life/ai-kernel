@@ -10,6 +10,8 @@ implementation:
   engine: "python3 scratch/connectivity_auditor.py"
   command: "python3 scratch/connectivity_auditor.py {{target_dir}}"
 summary: Verifies Knowledge Graph reachability by identifying orphans and broken references.
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---
 
 # Connectivity Auditor
@@ -21,11 +23,7 @@ A disconnected node is "Dark Knowledge." This skill uses graph-traversal logic t
 
 ```mermaid
 graph TD
-    Input[Target Directory] --> Engine[connectivity_auditor.py]
-    Engine --> Map[Map: Frontmatter Refs]
-    Map --> Trace[Trace: Incoming References]
-    Trace --> Orphan[Detect: Nodes with 0 In-Refs]
-    Orphan --> Result[JSON Orphan Report]
+    skill-file.standard --> audit-repository-connectivity.skill
 ```
 
 ## Execution Steps

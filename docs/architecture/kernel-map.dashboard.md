@@ -4,6 +4,7 @@ title: AI Kernel Master Map
 type: dashboard
 tags: [architecture, orientation, map]
 summary: The supreme visual orientation layer for the AI Kernel, linking global governance to local component implementation.
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
 # AI Kernel Master Map
@@ -15,19 +16,6 @@ This dashboard serves as the **Entry Point** for the AI Kernel. It visualizes th
 
 ```mermaid
 graph TD
-    Root((AI Kernel Root)) --> Governance[Governance Layer]
-    Root --> Orchestration[Orchestration Layer]
-    Root --> Execution[Execution Layer]
-    
-    Governance -->|Standards| StandardsFolder[standards/]
-    Orchestration -->|Instructions| InstructionsFolder[instructions/]
-    Execution -->|Skills| SkillsFolder[skills/]
-    
-    StandardsFolder --> StandardsREADME[standards/README.md: Local Details]
-    InstructionsFolder --> InstructionsREADME[instructions/README.md: Local Details]
-    SkillsFolder --> SkillsREADME[skills/README.md: Local Details]
-    
-    linkStyle default interpolate basis
 ```
 
 ## Navigation Layer

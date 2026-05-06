@@ -6,7 +6,7 @@ tags: [incident-response, quality, reliability, rules, governance, compliance]
 summary: Standards for the 3-piece documentation set required for every production component.
 scope: "/**/*"
 parent_standard: operability.standard
-glossary_refs: [progressive-disclosure.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Incident Response Standard
@@ -19,7 +19,7 @@ Incident Response is the process of diagnosing and correcting live production is
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    operability.standard --> inc-response.standard
 ```
 ## The 3-Piece Restoration Kit
 

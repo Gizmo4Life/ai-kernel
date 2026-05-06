@@ -4,15 +4,16 @@ title: Evaluate Against Standard
 type: skill
 tags: [audit, quality, standards, tool, action, execution]
 summary: Evaluates a target file or practice against a specific PADU table.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   target: The file or practice to evaluate.
-  standard_id: The ID of the standard to use.
+  standard_
+id: The ID of the standard to use.
 outputs:
   rating: The PADU rating assigned.
   report: A detailed rationale for the rating and enforcement gaps.
 standards: [standard-file.standard]
-glossary_refs: [padu-scale.glossary, standard.glossary]
+glossary_refs: [context.glossary, padu-scale.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -28,7 +29,7 @@ This is the primary quality enforcement skill of the AI Kernel.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> evaluate-against-standard.skill
 ```
 ## Execution Steps
 

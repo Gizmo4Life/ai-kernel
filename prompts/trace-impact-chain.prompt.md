@@ -4,6 +4,8 @@ title: Trace Impact Chain
 type: prompt
 tags: [logic, audit, linkage, root-cause, ai-logic, intuition]
 summary: The systematic logic for traversing the Knowledge Graph to identify the root cause of a structural or semantic failure.
+parent_standard: prompt-file.standard
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +28,7 @@ Use the following "Recursive Upstream" heuristic to identify the source of an er
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> trace-impact-chain.prompt
 ```
 
 ## Quality Gate

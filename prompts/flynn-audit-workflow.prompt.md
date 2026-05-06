@@ -4,6 +4,8 @@ title: Flynn's Audit Workflow
 type: prompt
 tags: [agent-logic, audit, orchestration, ai-logic, intuition]
 summary: The systematic orchestration logic for Flynn's kernel audit and remediation passes.
+parent_standard: prompt-file.standard
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatter.glossary, prompt.glossary]
 ---
 
 ## Context
@@ -32,5 +34,5 @@ This prompt defines the "Chain of Command" for performing a comprehensive AI Ker
 
 ```mermaid
 graph TD
-    Node[This Component] --> Goal[System Integrity]
+    prompt-file.standard --> flynn-audit-workflow.prompt
 ```

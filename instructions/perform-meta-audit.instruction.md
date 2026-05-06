@@ -4,11 +4,12 @@ title: Perform Meta-Audit
 type: instruction
 tags: [workflow, audit, quality, process, orchestration]
 summary: The master workflow for coordinating all individual auditors and generating a synthesized system health report.
-goal: A 100% verified and prioritized "State-of-the-Kernel" report.
+parent_standard: instruction-file.standardgoal: A 100% verified and prioritized "State-of-the-Kernel" report.
 skills: [check-id-uniqueness.skill, audit-repository-connectivity.skill, doc-audit.skill, tel-audit.skill, triage-architectural-violations.skill]
 standards: [kernel.standard, quality-gate.standard]
 preconditions:
   - Repository is in a "Stable" state (all files saved).
+glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
 ---
 
 # Perform Meta-Audit
@@ -20,11 +21,12 @@ The Meta-Audit is the "Supreme Court" of the AI Kernel. It runs every specialize
 
 ```mermaid
 graph TD
-    Start((Start)) --> Audit[Run: All Atomic Auditors]
-    Audit --> Collect[Collect: All Violations]
-    Collect --> Triage[Invoke: Triage Skill]
-    Triage --> Report[Generate: synthesized Supreme Report]
-    Report --> End((Audit Complete))
+    instruction-file.standardgoal --> perform-meta-audit.instruction
+    perform-meta-audit.instruction --> check-id-uniqueness[check-id-uniqueness.skill]
+    perform-meta-audit.instruction --> audit-repository-connectivity[audit-repository-connectivity.skill]
+    perform-meta-audit.instruction --> doc-audit[doc-audit.skill]
+    perform-meta-audit.instruction --> tel-audit[tel-audit.skill]
+    perform-meta-audit.instruction --> triage-architectural-violations[triage-architectural-violations.skill]
 ```
 
 ## Steps

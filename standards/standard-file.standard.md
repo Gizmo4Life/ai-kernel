@@ -7,7 +7,7 @@ summary: Meta-standard for defining the structure, hierarchy, and enforcement of
 scope: "/standards/**/*.standard.md"
 applies_to: [standard.glossary]
 parent_standard: kernel.standard
-glossary_refs: [ standard.glossary, padu-scale.glossary, heuristics.glossary ]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, frontmatter.glossary, heuristics.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary]
 ---
 
 # Standard File Standard
@@ -20,7 +20,7 @@ This meta-standard defines the structural and hierarchical requirements for all 
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    kernel.standard --> standard-file.standard
 ```
 ## PADU Table Requirements
 All standards must include a PADU table with the following columns:

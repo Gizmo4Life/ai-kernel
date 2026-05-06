@@ -4,12 +4,12 @@ title: Populate Standard
 type: instruction
 tags: [workflow, technical, research, process, orchestration]
 summary: Orchestrates the research and synthesis phase of standard creation.
-goal: A complete PADU table based on industry research and local codebase patterns.
+parent_standard: instruction-file.standardgoal: A complete PADU table based on industry research and local codebase patterns.
 skills: [research-domain-patterns.skill, scan-codebase-patterns.skill, generate-padu-table.skill]
 standards: [instruction-file.standard, standard-file.standard]
 preconditions:
   - The Standards Scout agent is available.
-glossary_refs: [padu-scale.glossary, orchestration.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, orchestration.glossary, padu-scale.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -25,7 +25,10 @@ This instruction guides the **[Standards Scout](../agents/standards-scout.agent.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> populate-standard.instruction
+    populate-standard.instruction --> research-domain-patterns[research-domain-patterns.skill]
+    populate-standard.instruction --> scan-codebase-patterns[scan-codebase-patterns.skill]
+    populate-standard.instruction --> generate-padu-table[generate-padu-table.skill]
 ```
 ## Steps
 

@@ -12,7 +12,7 @@ delegates: [ flynn.agent ]
 parent_standard: kernel.standard
 prompts: [ operator-intake-protocol.prompt ]
 instructions: [ system-first-remediation.instruction ]
-glossary_refs: [ domain-owner.glossary, knowledge-graph.glossary, system-first-remediation.glossary ]
+glossary_refs: [context.glossary, domain-owner.glossary, instruction.glossary, knowledge-graph.glossary, prompt.glossary, standard.glossary, system-first-remediation.glossary]
 ---
 
 # Operator (Tier 0 Switchboard)
@@ -24,10 +24,7 @@ The Operator is the initial interface between the human USER and the AI Kernel. 
 
 ```mermaid
 graph TD
-    User((User)) --> Operator[Operator: Tier 0]
-    Operator -->|Feedback| Heal[System-First Remediation]
-    Operator -->|Triage| Flynn[Flynn: Tier 1 Owner]
-    Heal --> Regenerate[Regenerate: System Output]
+    kernel.standard --> operator.agent
 ```
 
 ## Interaction Pattern

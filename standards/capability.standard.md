@@ -6,7 +6,7 @@ tags: [governance, authority, token, rules, compliance]
 summary: Standards for granting and verifying agent capabilities (licenses to act).
 scope: "/agents/*.agent.md"
 parent_standard: agent-file.standard
-glossary_refs: [capability.glossary, authority.glossary, domain-owner.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, authority.glossary, capability.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Capability Standard
@@ -18,10 +18,7 @@ This standard governs the granting of "Licenses to Act" within the AI Kernel. It
 
 ```mermaid
 graph TD
-    Request[Grant Request] --> Domain[Domain Check: Scope]
-    Domain --> Skill[Skill Check: Atomicity]
-    Skill --> Grant[Grant: capability token added]
-    Grant --> Audit[Verification: Capability Audit]
+    agent-file.standard --> capability.standard
 ```
 
 ## Mandatory Sections

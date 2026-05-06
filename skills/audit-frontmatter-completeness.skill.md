@@ -4,13 +4,13 @@ title: Audit Frontmatter Completeness
 type: skill
 tags: [audit, technical, frontmatter.glossary, tool, action, execution]
 summary: Verifies that every file contains the mandatory YAML frontmatter fields required by its type.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   file_path: The file to audit.
 outputs:
   missing_fields: A list of mandatory fields that are missing or empty.
 standards: [standard-file.standard]
-glossary_refs: [frontmatter.glossary]
+glossary_refs: [agent.glossary, authority.glossary, context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill ensures that every node in the Knowledge Graph is fully indexed and c
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> audit-frontmatter-completeness.skill
 ```
 ## Execution Steps
 

@@ -10,6 +10,8 @@ implementation:
   engine: "find + md5 + awk"
   command: "find {{target_dir}} -name '*.md' -exec md5 {} + | sort | awk 'BEGIN{last=\"\"} {if($1==last) print $2; last=$1}'"
 summary: Identifies byte-identical duplicate files to prevent Knowledge Graph redundancy.
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary]
 ---
 
 # Redundant Content Auditor
@@ -21,11 +23,7 @@ Redundancy is the enemy of SSOT (Single Source of Truth). This skill identifies 
 
 ```mermaid
 graph TD
-    Input[Target Directory] --> Find[Find: .md files]
-    Find --> Hash[MD5: Generate Fingerprints]
-    Hash --> Sort[Sort: Group Identical Hashes]
-    Sort --> Awk[Detect: Duplicate Hashes]
-    Awk --> Result[List: Duplicate File Paths]
+    skill-file.standard --> audit-redundant-content.skill
 ```
 
 ## Execution Steps

@@ -6,7 +6,7 @@ tags: [automation, quality, atomicity, rules, governance, compliance]
 summary: Standards for defining code-backed atomic skills, emphasizing deterministic interfaces and automated verification.
 scope: "/skills/*.skill.md"
 parent_standard: standard-file.standard
-glossary_refs: [skill.glossary, atomicity.glossary, quality-gate.glossary, determinism.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, instruction.glossary, orchestration.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 # Skill File Standard
@@ -18,10 +18,7 @@ A Skill is a "Deterministic Function" within the AI Kernel. To maximize token ef
 
 ```mermaid
 graph TD
-    Agent[Agent Cortex] --> Input[Input: JSON Interface]
-    Input --> Logic[Logic: Code Implementation]
-    Logic --> Output[Output: JSON Result]
-    Output --> Verify[Verify: Verification Protocol]
+    standard-file.standard --> skill-file.standard
 ```
 
 ## Mandatory Sections

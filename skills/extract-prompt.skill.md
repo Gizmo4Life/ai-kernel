@@ -4,15 +4,16 @@ title: Extract Prompt
 type: skill
 tags: [refactor, prompts, modularity, tool, action, execution]
 summary: Identifies instruction-heavy sections in agents or instructions and moves them to the `prompts/` directory.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   source_file: The file containing the prompt logic.
-  section_title: The title of the section to extract.
+  section_
+title: The title of the section to extract.
 outputs:
   prompt_file: The newly created `.prompt.md` file.
   updated_source: The refactored source file with prompt links.
 standards: [prompt-file.standard]
-glossary_refs: [prompt.glossary, orchestration.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, orchestration.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -28,7 +29,7 @@ This skill implements the "Modular Instruction" principle. It decouples the *Wha
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> extract-prompt.skill
 ```
 ## Execution Steps
 

@@ -14,6 +14,8 @@ implementation:
   engine: "sed"
   command: "sed -i '' 's/{{target_pattern}}/{{replacement}}/g' {{file_glob}}"
 summary: Performs high-speed, bulk regex refactoring across multiple files (The Agentic Vim).
+parent_standard: skill-file.standard
+glossary_refs: [agent.glossary, context.glossary, skill.glossary]
 ---
 
 # Surgical Refactor
@@ -25,10 +27,7 @@ Mass-updating IDs, tags, or headers across 100+ files is slow and token-expensiv
 
 ```mermaid
 graph TD
-    Agent[Agent] --> Pattern[Define: Regex Pattern]
-    Pattern --> Glob[Define: File Glob]
-    Glob --> Sed[Engine: sed -i]
-    Sed --> Update[Update: Bulk Files]
+    skill-file.standard --> surgical-refactor.skill
 ```
 
 ## Execution Steps

@@ -4,13 +4,13 @@ title: Scan Codebase Patterns
 type: skill
 tags: [audit, search, patterns, tool, action, execution]
 summary: Identifies recurring patterns (exemplary or problematic) in the codebase or context.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs:
   domain: The subject (e.g., 'Error Handling').
 outputs:
   patterns: A list of code snippets and their location.
 standards: [naming.standard]
-glossary_refs: [antipattern.glossary]
+glossary_refs: [antipattern.glossary, context.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill identifies real-world usage patterns to support standard codification
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> scan-codebase-patterns.skill
 ```
 ## Execution Steps
 

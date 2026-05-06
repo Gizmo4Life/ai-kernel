@@ -4,7 +4,7 @@ title: Generate PADU Table
 type: skill
 tags: [generation, standard.glossary, tool, action, execution]
 summary: Synthesizes patterns into a formal, atomic PADU table.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs:
   researched_patterns: Output from industry research.
   codebase_patterns: Output from local scan.
@@ -12,7 +12,7 @@ outputs:
   padu_table: A formatted markdown table.
 standards: [standard-file.standard]
 prompts: [ synthesize-padu-logic.prompt ]
-glossary_refs: [padu-scale.glossary]
+glossary_refs: [context.glossary, padu-scale.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -28,7 +28,7 @@ This skill converts pattern data into the kernel's formal quality format.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> generate-padu-table.skill
 ```
 ## Execution Steps
 

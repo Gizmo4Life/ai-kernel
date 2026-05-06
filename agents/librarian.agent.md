@@ -12,7 +12,7 @@ delegates: []
 parent_standard: kernel.standard
 prompts: [ determine-glossary-necessity.prompt ]
 instructions: [ create-glossary-entry.instruction ]
-glossary_refs: [ subject-matter-expert.glossary, knowledge-graph.glossary ]
+glossary_refs: [context.glossary, knowledge-graph.glossary, skill.glossary, subject-matter-expert.glossary]
 ---
 
 # Librarian
@@ -24,10 +24,7 @@ The Librarian is the repository's "Cartographer." Their role is to ensure that a
 
 ```mermaid
 graph TD
-    Audit[Audit Trigger] --> Scan[Scan: Filesystem]
-    Scan --> Index[Index: Update READMEs]
-    Index --> Glossary[Link: Glossary Terms]
-    Glossary --> Report[Report: Discovery Status]
+    kernel.standard --> librarian.agent
 ```
 
 ## Interaction Pattern

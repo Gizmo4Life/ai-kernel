@@ -6,7 +6,7 @@ tags: [governance, prompt-engineering, rules, compliance]
 summary: Standards for defining reusable AI prompts in the `prompts/` directory.
 scope: "/prompts/*.prompt.md"
 parent_standard: kernel.standard
-glossary_refs: [prompt.glossary, kernel.standard]
+glossary_refs: [agent.glossary, context.glossary, determinism.glossary, frontmatter.glossary, kernel.standard, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 # Prompt File Standard
@@ -19,7 +19,7 @@ This standard governs the structure and quality of standalone prompts. It ensure
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    kernel.standard --> prompt-file.standard
 ```
 ## PADU Table
 

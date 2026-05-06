@@ -5,6 +5,7 @@ type: dashboard
 tags: [telemetry, observability, registry]
 summary: The central registry for all OpenTelemetry spans and metrics defined within the AI Kernel.
 scope: "/**/* [tag:telemetry]"
+glossary_refs: [context.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
 # Global Telemetry Registry
@@ -16,13 +17,6 @@ This dashboard is the **Single Source of Truth** for the telemetry layer. It pre
 
 ```mermaid
 graph TD
-    Registry[Telemetry Registry] --> Pillar1[Governance Spans]
-    Registry --> Pillar2[Operability Spans]
-    Registry --> Pillar3[Execution Spans]
-    
-    Pillar1 --> gov_audit[gov.audit.structural]
-    Pillar2 --> op_mon[op.monitor.health]
-    Pillar3 --> exe_skill[exe.skill.execute]
 ```
 
 ## Span Registry

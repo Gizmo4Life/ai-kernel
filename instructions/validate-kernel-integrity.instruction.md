@@ -4,12 +4,13 @@ title: Validate Kernel Integrity
 type: instruction
 tags: [workflow, audit, maintenance, quality, process, orchestration]
 summary: A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
-goal: A 100% compliant and healthy repository ready for release or major updates.
+parent_standard: instruction-file.standardgoal: A 100% compliant and healthy repository ready for release or major updates.
 skills: [evaluate-against-standard.skill, audit-for-architectural-violations.skill]
 instructions: [perform-frontmatter-audit.instruction, verify-repository-integrity.instruction, refactor-to-kernel-standards.instruction]
 standards: [kernel.standard, standard-file.standard]
 preconditions: - Repository content exists.
   - All core agents (Flynn, Auditor, Librarian) are available.
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -25,7 +26,9 @@ This is the ultimate quality assurance workflow for the AI Kernel.
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    instruction-file.standardgoal --> validate-kernel-integrity.instruction
+    validate-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
+    validate-kernel-integrity.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
 ```
 ## Steps
 

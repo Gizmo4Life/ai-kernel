@@ -10,6 +10,8 @@ implementation:
   engine: "python3 scratch/doc_auditor.py"
   command: "python3 scratch/doc_auditor.py {{target_dir}}"
 summary: High-performance structural auditor that enforces mandatory headers across the AI Kernel.
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary]
 ---
 
 # Document Auditor
@@ -21,10 +23,7 @@ Structural integrity is the foundation of the AI Kernel's machine-readability. T
 
 ```mermaid
 graph TD
-    Input[Target Directory] --> Engine[doc_auditor.py]
-    Engine --> Scan[Scan: Markdown Files]
-    Scan --> Check[Check: Mandatory Headers]
-    Check --> Report[Report: JSON Violation Map]
+    skill-file.standard --> doc-audit.skill
 ```
 
 ## Execution Steps

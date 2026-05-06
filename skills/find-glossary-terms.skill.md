@@ -4,11 +4,11 @@ title: Find Glossary Terms
 type: skill
 tags: [discovery, search, glossary, tool, action, execution]
 summary: Searches the glossary for terms or aliases matching a query.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs: query: The term or concept to search for.
 outputs: matches: A list of matching glossary file paths and their IDs.
 standards: [glossary-entry.standard]
-glossary_refs: [glossary-entry.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, skill.glossary]
 ---
 
 ## Context
@@ -24,7 +24,7 @@ This skill uses `grep` to quickly find if a concept is already defined in the gl
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> find-glossary-terms.skill
 ```
 ## Execution Steps
 

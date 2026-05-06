@@ -4,12 +4,13 @@ title: Handle Incident
 type: instruction
 tags: [workflow, operability, incident-response, restoration, process, orchestration]
 summary: The master orchestration workflow for resolving production alerts through deterministic restoration.
-goal: Rapid restoration of system health with minimal manual diagnosis.
+parent_standard: instruction-file.standardgoal: Rapid restoration of system health with minimal manual diagnosis.
 skills: [evaluate-against-standard.skill]
 standards: [inc-response.standard, operability.standard]
 preconditions:
   - An aggregate alert has been triggered by a Monitor.
   - A 3-piece Restoration Kit (Dashboard, Runbook, Actions) is available for the target component.
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Handle Incident
@@ -21,14 +22,8 @@ This instruction defines the bridge between **Detection** and **Restoration**. I
 
 ```mermaid
 graph TD
-    Alert((Aggregate Alert)) --> Dashboard[1. Check Status: Dashboard]
-    Dashboard --> Identify[2. Identify: Unhealthy Spans]
-    Identify --> Prioritize[3. Prioritize: Critical Path first]
-    Prioritize --> Runbook[4. Diagnose: Refer to Runbook]
-    Runbook --> Action[5. Restore: Execute Restoration Action]
-    Action --> Verify[6. Verify: Re-check Dashboard]
-    Verify -->|Unhealthy| Runbook
-    Verify -->|Healthy| Success((Incident Resolved))
+    instruction-file.standardgoal --> handle-incident.instruction
+    handle-incident.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 
 ## Steps

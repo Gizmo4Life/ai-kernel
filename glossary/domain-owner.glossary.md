@@ -21,8 +21,6 @@ A **Domain Owner** is a high-authority agent responsible for the integrity, orga
 
 ```mermaid
 graph TD
-    Term[Concept Term] --> Definition[Semantic Definition]
-    Definition --> Constraints[Usage Constraints]
 ```
 ## Responsibilities
 - **Orchestration**: Directs the high-level workflows within their domain.

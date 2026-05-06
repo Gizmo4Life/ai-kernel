@@ -4,12 +4,12 @@ title: Summarize to Context
 type: skill
 tags: [memory, context.glossary, summarization, tool, action, execution]
 summary: Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
-tool: editor
+parent_standard: skill-file.standardtool: editor
 inputs: conversation_log: The raw conversation transcript.
   target_file: The name of the file in /context/ to update or create.
 outputs: context_entry: A structured summary of the conversation.
 standards: []
-glossary_refs: [ context.glossary, heuristics.glossary ]
+glossary_refs: [context.glossary, heuristics.glossary, skill.glossary]
 ---
 
 ## Context
@@ -25,7 +25,7 @@ This skill implements the "Context Management" directive by distilling transient
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> summarize-to-context.skill
 ```
 ## Extraction [Heuristics](glossary/heuristics.glossary.md)
 

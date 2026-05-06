@@ -4,13 +4,13 @@ title: Trace Output to Source
 type: skill
 tags: [audit, technical, trace, tool, action, execution]
 summary: Scans conversation logs to identify the chain of agents, instructions, and skills that contributed to a specific output.
-tool: grep
+parent_standard: skill-file.standardtool: grep
 inputs:
   output_snippet: A piece of the sub-optimal output to search for.
 outputs:
   source_chain: A list of IDs (agents, instructions, skills) that were active during the generation.
 standards: [kernel.standard]
-glossary_refs: [knowledge-graph.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -26,7 +26,7 @@ This skill enables "Root Cause Analysis" for the AI Kernel by mapping an output 
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    skill-file.standardtool --> trace-output-to-source.skill
 ```
 ## Execution Steps
 
@@ -48,5 +48,3 @@ graph TD
 Traceability is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
 - **Verification**: The trace must reach back to at least one **Standard** (PADU table).
 - **Enforcement**: If an output cannot be traced back to a specific kernel component, the action is marked as **Un-owned** and a new standard must be codified.
----
-**Note**: This skill relies on the structured nature of the `overview.txt` logs.

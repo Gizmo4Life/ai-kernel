@@ -5,7 +5,7 @@ type: prompt
 tags: [logic, triage, priority, ai-logic, intuition]
 summary: The priority-ranking logic for addressing structural vs. semantic vs. technical debt.
 parent_standard: prompt-file.standard
-glossary_refs: [context.glossary, reachability.glossary]
+glossary_refs: [context.glossary, prompt.glossary, reachability.glossary, standard.glossary]
 ---
 
 ## Context

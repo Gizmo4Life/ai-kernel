@@ -10,7 +10,7 @@ instructions: [refactor-to-kernel-standards.instruction, validate-kernel-integri
 standards: [kernel.standard, quality-gate.standard, versioning.standard, promotion.standard]
 preconditions:
   - Flynn's analytical cabinet is online.
-glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 # Maintain Kernel Integrity
@@ -22,8 +22,11 @@ The AI Kernel is a complex, evolving Knowledge Graph. Without automated maintena
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> maintain-kernel-integrity.instruction
+    instruction-file.standard --> maintain-kernel-integrity.instruction
+    maintain-kernel-integrity.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    maintain-kernel-integrity.instruction --> surgical-refactor[surgical-refactor.skill]
+    maintain-kernel-integrity.instruction --> search-kernel[search-kernel.skill]
+    maintain-kernel-integrity.instruction --> doc-audit[doc-audit.skill]
     maintain-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     maintain-kernel-integrity.instruction --> check-id-uniqueness[check-id-uniqueness.skill]
     maintain-kernel-integrity.instruction --> audit-repository-connectivity[audit-repository-connectivity.skill]

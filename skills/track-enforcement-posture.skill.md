@@ -11,6 +11,7 @@ implementation:
   command: "python3 scratch/enforcement_tracker.py"
 summary: Quantifies the ratio of automated vs. manual enforcement across the AI Kernel Standards Cabinet.
 parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Enforcement Maturity Tracker
@@ -23,7 +24,6 @@ Our goal is 100% Deterministic Governance. This skill tracks our progress by ana
 ```mermaid
 graph TD
     skill-file.standard --> track-enforcement-posture.skill
-    track-enforcement-posture.skill --> enforcement_tracker[enforcement_tracker.py]
 ```
 
 ## Execution Steps

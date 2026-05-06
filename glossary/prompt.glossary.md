@@ -22,6 +22,7 @@ A **Prompt** in the AI Kernel is a standalone artifact designed to guide AI beha
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> prompt.glossary
 ```
 ## Utility
 While **Skills** use tools and **Agents** have roles, **Prompts** provide the "personality" or "logic" for the LLM itself. They are extracted into the `prompts/` directory when they have utility across multiple skills or agents, preventing duplication of complex prompt engineering.

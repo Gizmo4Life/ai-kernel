@@ -27,8 +27,11 @@ This instruction codifies the "maximalist extraction" process used to maintain t
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> refactor-to-kernel-standards.instruction
+    instruction-file.standard --> refactor-to-kernel-standards.instruction
+    refactor-to-kernel-standards.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    refactor-to-kernel-standards.instruction --> surgical-refactor[surgical-refactor.skill]
+    refactor-to-kernel-standards.instruction --> search-kernel[search-kernel.skill]
+    refactor-to-kernel-standards.instruction --> doc-audit[doc-audit.skill]
     refactor-to-kernel-standards.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
     refactor-to-kernel-standards.instruction --> provide-glossary-guidance[provide-glossary-guidance.skill]
     refactor-to-kernel-standards.instruction --> evaluate-against-standard[evaluate-against-standard.skill]

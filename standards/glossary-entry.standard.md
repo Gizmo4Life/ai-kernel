@@ -2,12 +2,13 @@
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
-requirements: ["## Usage Constraints", tags], tags: [governance, glossary, ssot, rules, compliance]
+requirements: ["## Usage Constraints", tags], 
+tags: [governance, glossary, ssot, rules, compliance]
 summary: Standards for defining canonical terms, including mandatory usage constraints to prevent semantic drift.
 scope: "/glossary/*.glossary.md"
 parent_standard: standard-file.standard
 instructions: [ resolve-glossary-conflict.instruction ]
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Glossary Entry Standard

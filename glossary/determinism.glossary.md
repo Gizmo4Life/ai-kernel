@@ -16,6 +16,7 @@ Determinism is the primary quality bar for AI Kernel operations. It ensures that
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> determinism.glossary
 ```
 
 ## Usage Constraints

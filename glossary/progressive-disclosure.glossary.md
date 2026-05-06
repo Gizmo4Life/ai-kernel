@@ -22,6 +22,7 @@ Canonical definition of a core AI Kernel concept.
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> progressive-disclosure.glossary
 ```
 ## Implementation
 

@@ -22,8 +22,11 @@ This instruction defines the bridge between **Detection** and **Restoration**. I
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> handle-incident.instruction
+    instruction-file.standard --> handle-incident.instruction
+    handle-incident.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    handle-incident.instruction --> surgical-refactor[surgical-refactor.skill]
+    handle-incident.instruction --> search-kernel[search-kernel.skill]
+    handle-incident.instruction --> doc-audit[doc-audit.skill]
     handle-incident.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 

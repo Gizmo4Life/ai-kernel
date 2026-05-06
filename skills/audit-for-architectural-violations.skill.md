@@ -4,7 +4,8 @@ title: Audit for Architectural Violations
 type: skill
 tags: [audit, architecture, quality, tool, action, execution]
 summary: Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs:
   file_path: The file to audit.
 outputs:
@@ -26,7 +27,7 @@ This skill performs a "maximalist" check for architectural integrity.
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> audit-for-architectural-violations.skill
+    skill-file.standard --> audit-for-architectural-violations.skill
 ```
 ## Execution Steps
 

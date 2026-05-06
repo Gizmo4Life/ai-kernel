@@ -27,8 +27,11 @@ This is the primary workflow for expanding the AI Kernel's reach into new domain
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> bootstrap-new-standard.instruction
+    instruction-file.standard --> bootstrap-new-standard.instruction
+    bootstrap-new-standard.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    bootstrap-new-standard.instruction --> surgical-refactor[surgical-refactor.skill]
+    bootstrap-new-standard.instruction --> search-kernel[search-kernel.skill]
+    bootstrap-new-standard.instruction --> doc-audit[doc-audit.skill]
     bootstrap-new-standard.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```
 ## Execution Steps

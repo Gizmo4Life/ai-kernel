@@ -9,7 +9,7 @@ skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill,
 standards: [glossary-entry.standard]
 preconditions: - Two or more glossary entries are identified as potentially redundant.
   - Or, a term has multiple conflicting definitions.
-glossary_refs: [context.glossary, frontmatter.glossary, standard.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -25,8 +25,11 @@ Flynn's workflow for maintaining the "Single Source of Truth" in the glossary.
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> resolve-glossary-conflict.instruction
+    instruction-file.standard --> resolve-glossary-conflict.instruction
+    resolve-glossary-conflict.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    resolve-glossary-conflict.instruction --> surgical-refactor[surgical-refactor.skill]
+    resolve-glossary-conflict.instruction --> search-kernel[search-kernel.skill]
+    resolve-glossary-conflict.instruction --> doc-audit[doc-audit.skill]
     resolve-glossary-conflict.instruction --> find-glossary-terms[find-glossary-terms.skill]
     resolve-glossary-conflict.instruction --> provide-glossary-guidance[provide-glossary-guidance.skill]
     resolve-glossary-conflict.instruction --> evaluate-against-standard[evaluate-against-standard.skill]

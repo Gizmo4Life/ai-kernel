@@ -7,7 +7,7 @@ summary: Meta-standard for defining the structure, hierarchy, and deterministic 
 scope: "/standards/**/*.standard.md"
 parent_standard: kernel.standard
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, frontmatter.glossary, heuristics.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary, determinism.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, frontmatter.glossary, heuristics.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary]
 ---
 
 # Standard File Standard
@@ -19,9 +19,7 @@ A Standard is a "Contract." To ensure absolute compliance, every standard must d
 
 ```mermaid
 graph TD
-    Standard[Standard Node] --> Req[Requirements List]
-    Req --> Auditor[Standard Auditor Engine]
-    Auditor --> Report[Compliance Report]
+    kernel.standard --> standard-file.standard
 ```
 
 ## Mandatory Sections

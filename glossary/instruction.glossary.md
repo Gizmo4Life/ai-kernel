@@ -22,6 +22,7 @@ An **Instruction** is a high-level procedure that guides an agent through a sequ
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> instruction.glossary
 ```
 ## Structure
 

@@ -5,7 +5,7 @@ type: prompt
 tags: [logic, audit, linkage, root-cause, ai-logic, intuition]
 summary: The systematic logic for traversing the Knowledge Graph to identify the root cause of a structural or semantic failure.
 parent_standard: prompt-file.standard
-glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context

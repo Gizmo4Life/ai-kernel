@@ -24,8 +24,11 @@ This instruction ensures every file in the AI Kernel is a valid node in the Know
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> perform-frontmatter-audit.instruction
+    instruction-file.standard --> perform-frontmatter-audit.instruction
+    perform-frontmatter-audit.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    perform-frontmatter-audit.instruction --> surgical-refactor[surgical-refactor.skill]
+    perform-frontmatter-audit.instruction --> search-kernel[search-kernel.skill]
+    perform-frontmatter-audit.instruction --> doc-audit[doc-audit.skill]
     perform-frontmatter-audit.instruction --> audit-frontmatter-completeness[audit-frontmatter-completeness.skill]
     perform-frontmatter-audit.instruction --> verify-repository-integrity[verify-repository-integrity.skill]
 ```

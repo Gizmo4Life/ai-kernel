@@ -9,7 +9,7 @@ skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill,
 standards: [atomic-extraction.standard, kernel.standard]
 preconditions:
   - An out-of-scope content block has been identified.
-glossary_refs: [context.glossary, instruction.glossary, reachability.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Perform Atomic Extraction
@@ -21,8 +21,11 @@ This instruction is the "Scalpel" of the AI Kernel. It orchestrates the removal 
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> perform-atomic-extraction.instruction
+    instruction-file.standard --> perform-atomic-extraction.instruction
+    perform-atomic-extraction.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    perform-atomic-extraction.instruction --> surgical-refactor[surgical-refactor.skill]
+    perform-atomic-extraction.instruction --> search-kernel[search-kernel.skill]
+    perform-atomic-extraction.instruction --> doc-audit[doc-audit.skill]
     perform-atomic-extraction.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]
     perform-atomic-extraction.instruction --> linkage-specialist.agent[linkage-specialist.agent]
 ```

@@ -22,6 +22,7 @@ A **Glossary Entry** is the fundamental unit of knowledge in the AI Kernel. It p
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> glossary-entry.glossary
 ```
 ## Purpose
 

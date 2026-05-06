@@ -9,7 +9,7 @@ skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill,
 standards: [doc-local.standard, doc-architecture.standard]
 preconditions:
   - Structural Audit Report identifies ⚠️ DEBT or ❌ violations.
-glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Heal Structural Debt
@@ -21,8 +21,11 @@ Systematic workflow for addressing structural debt in the AI Kernel.
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> heal-structural-debt.instruction
+    instruction-file.standard --> heal-structural-debt.instruction
+    heal-structural-debt.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    heal-structural-debt.instruction --> surgical-refactor[surgical-refactor.skill]
+    heal-structural-debt.instruction --> search-kernel[search-kernel.skill]
+    heal-structural-debt.instruction --> doc-audit[doc-audit.skill]
     heal-structural-debt.instruction --> generate-mermaid-diagram[generate-mermaid-diagram.skill]
     heal-structural-debt.instruction --> doc-audit[doc-audit.skill]
 ```

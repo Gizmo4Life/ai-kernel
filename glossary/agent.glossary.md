@@ -22,6 +22,7 @@ An **Agent** is a specialized persona that operates within the kernel. It is def
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> agent.glossary
 ```
 ## Attributes
 

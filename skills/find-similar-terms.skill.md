@@ -11,6 +11,7 @@ implementation:
   command: "python3 scratch/similarity_auditor.py {{threshold}}"
 summary: Identifies conceptually overlapping or duplicate terms in the glossary to prevent semantic sprawl.
 parent_standard: skill-file.standard
+glossary_refs: [context.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Glossary Similarity Auditor
@@ -23,7 +24,6 @@ Semantic ambiguity is a form of architectural debt. If two terms describe the sa
 ```mermaid
 graph TD
     skill-file.standard --> find-similar-terms.skill
-    find-similar-terms.skill --> similarity_auditor[similarity_auditor.py]
 ```
 
 ## Execution Steps

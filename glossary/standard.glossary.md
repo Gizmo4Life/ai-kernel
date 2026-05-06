@@ -22,6 +22,7 @@ A **Standard** is a formal document that defines the quality bars and constraint
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> standard.glossary
 ```
 ## Key Characteristics
 

@@ -16,6 +16,7 @@ Capabilities are the "Tokens" of the agent governance model. They define what an
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> capability.glossary
 ```
 
 ## Usage Constraints

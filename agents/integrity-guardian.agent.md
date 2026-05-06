@@ -11,7 +11,7 @@ scope: "/**/*"
 capabilities: [check-id-uniqueness.skill, collect-repo-ids.skill, audit-frontmatter-completeness.skill, audit-repository-connectivity.skill]
 context: [ naming.standard, agent-file.standard, kernel.standard ]
 prompts: [ remediation-triage-logic.prompt ]
-glossary_refs: [context.glossary, domain-owner.glossary, frontmatter.glossary, knowledge-graph.glossary, standard.glossary]
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, domain-owner.glossary, frontmatter.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 skills: [ find-similar-terms.skill, detect-circular-delegation.skill, audit-frontmatter-completeness.skill ]
 instructions: [ verify-repository-integrity.instruction ]
 standards: [ kernel.standard, standard-file.standard ]
@@ -26,6 +26,7 @@ The Integrity Guardian is a specialized auditor focused on the "Hard" structural
 
 ```mermaid
 graph TD
+    agent-file.standard --> integrity-guardian.agent
     integrity-guardian.agent --> find-similar-terms[find-similar-terms.skill]
     integrity-guardian.agent --> detect-circular-delegation[detect-circular-delegation.skill]
     integrity-guardian.agent --> audit-frontmatter-completeness[audit-frontmatter-completeness.skill]

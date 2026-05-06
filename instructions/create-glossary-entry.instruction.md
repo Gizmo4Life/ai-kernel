@@ -9,7 +9,7 @@ skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill,
 standards: [glossary-entry.standard]
 preconditions: - A new concept or term has been identified.
   - The agent has write access to the `glossary/` directory.
-glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, skill.glossary, standard.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 ## Context
@@ -25,8 +25,11 @@ Follow these steps to add a new concept to the AI Kernel.
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> create-glossary-entry.instruction
+    instruction-file.standard --> create-glossary-entry.instruction
+    create-glossary-entry.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    create-glossary-entry.instruction --> surgical-refactor[surgical-refactor.skill]
+    create-glossary-entry.instruction --> search-kernel[search-kernel.skill]
+    create-glossary-entry.instruction --> doc-audit[doc-audit.skill]
     create-glossary-entry.instruction --> find-glossary-terms[find-glossary-terms.skill]
     create-glossary-entry.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
 ```

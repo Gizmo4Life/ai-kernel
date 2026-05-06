@@ -4,7 +4,8 @@ title: Audit Telemetry Naming
 type: skill
 tags: [audit, telemetry, observability, tool, action, execution]
 summary: Scans codebase strings and configurations for violations of the Telemetry Naming Standard.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs:
   path: The directory to scan.
 outputs:
@@ -26,7 +27,7 @@ This skill provides automated enforcement for global observability standards. It
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> tel-audit.skill
+    skill-file.standard --> tel-audit.skill
 ```
 ## Execution Steps
 

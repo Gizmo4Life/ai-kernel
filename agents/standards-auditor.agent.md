@@ -10,7 +10,7 @@ scope: "/standards/*.md"
 capabilities: [evaluate-against-standard.skill, audit-for-architectural-violations.skill, audit-frontmatter-completeness.skill]
 delegates: []
 parent_standard: agent-file.standard
-glossary_refs: [context.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
+glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---
 
 # Standards Auditor
@@ -22,7 +22,7 @@ The Standards Auditor ensures that all repository content adheres to the formal 
 
 ```mermaid
 graph TD
-    kernel.standard --> standards-auditor.agent
+    agent-file.standard --> standards-auditor.agent
 ```
 
 ## Interaction Pattern

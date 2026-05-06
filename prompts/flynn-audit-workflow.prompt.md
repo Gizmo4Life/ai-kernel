@@ -5,7 +5,7 @@ type: prompt
 tags: [agent-logic, audit, orchestration, ai-logic, intuition]
 summary: The systematic orchestration logic for Flynn's kernel audit and remediation passes.
 parent_standard: prompt-file.standard
-glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatter.glossary, prompt.glossary]
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatter.glossary, prompt.glossary, standard.glossary]
 ---
 
 ## Context

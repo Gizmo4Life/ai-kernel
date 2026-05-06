@@ -11,6 +11,7 @@ implementation:
   command: "python3 scratch/cycle_detector.py"
 summary: Prevents infinite delegation loops by identifying cycles in the multi-agent hierarchy.
 parent_standard: skill-file.standard
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
 # Agent Cycle Detector
@@ -23,7 +24,6 @@ Multi-agent orchestration is vulnerable to infinite loops if delegation is not a
 ```mermaid
 graph TD
     skill-file.standard --> detect-circular-delegation.skill
-    detect-circular-delegation.skill --> cycle_detector[cycle_detector.py]
 ```
 
 ## Execution Steps

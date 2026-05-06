@@ -22,6 +22,7 @@ A **Knowledge Map** is a subset of the **Knowledge Graph**. While the graph cont
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> knowledge-map.glossary
 ```
 ## Utility
 

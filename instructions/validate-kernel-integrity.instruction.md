@@ -26,8 +26,11 @@ This is the ultimate quality assurance workflow for the AI Kernel.
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> validate-kernel-integrity.instruction
+    instruction-file.standard --> validate-kernel-integrity.instruction
+    validate-kernel-integrity.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    validate-kernel-integrity.instruction --> surgical-refactor[surgical-refactor.skill]
+    validate-kernel-integrity.instruction --> search-kernel[search-kernel.skill]
+    validate-kernel-integrity.instruction --> doc-audit[doc-audit.skill]
     validate-kernel-integrity.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     validate-kernel-integrity.instruction --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
 ```

@@ -4,7 +4,8 @@ title: Find Glossary Terms
 type: skill
 tags: [discovery, search, glossary, tool, action, execution]
 summary: Searches the glossary for terms or aliases matching a query.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs: query: The term or concept to search for.
 outputs: matches: A list of matching glossary file paths and their IDs.
 standards: [glossary-entry.standard]
@@ -24,7 +25,7 @@ This skill uses `grep` to quickly find if a concept is already defined in the gl
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> find-glossary-terms.skill
+    skill-file.standard --> find-glossary-terms.skill
 ```
 ## Execution Steps
 

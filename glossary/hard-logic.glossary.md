@@ -16,6 +16,7 @@ summary: Structural or machine-enforceable rules that define the constraints of 
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> hard-logic.glossary
 ```
 
 ## Usage Constraints

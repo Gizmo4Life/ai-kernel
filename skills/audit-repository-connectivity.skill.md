@@ -10,7 +10,8 @@ implementation:
   engine: "python3 scratch/connectivity_auditor.py"
   command: "python3 scratch/connectivity_auditor.py {{target_dir}}"
 summary: Verifies Knowledge Graph reachability by identifying orphans and broken references.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---
 

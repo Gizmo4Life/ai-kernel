@@ -4,7 +4,8 @@ title: Generate PADU Table
 type: skill
 tags: [generation, standard.glossary, tool, action, execution]
 summary: Synthesizes patterns into a formal, atomic PADU table.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs:
   researched_patterns: Output from industry research.
   codebase_patterns: Output from local scan.
@@ -28,7 +29,7 @@ This skill converts pattern data into the kernel's formal quality format.
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> generate-padu-table.skill
+    skill-file.standard --> generate-padu-table.skill
 ```
 ## Execution Steps
 

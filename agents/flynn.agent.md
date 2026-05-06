@@ -14,7 +14,7 @@ parent_standards: [ kernel.standard, standard-file.standard ]
 skills: [ provide-glossary-guidance.skill, find-similar-terms.skill, trace-output-to-source.skill ]
 instructions: [ maintain-kernel-integrity.instruction, resolve-naming-ambiguity.instruction, kernel-first-remediation.instruction ]
 prompts: [ synthesize-padu-logic.prompt, determine-glossary-necessity.prompt, audit-action-atomicity.prompt, flynn-audit-workflow.prompt, remediation-triage-logic.prompt, trace-impact-chain.prompt ]
-glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, knowledge-graph.glossary, standard.glossary]
+glossary_refs: [agent.glossary, authority.glossary, context.glossary, delegation.glossary, domain-owner.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Flynn (Kernel Domain Owner)
@@ -26,6 +26,7 @@ Flynn is the primary custodian of the AI Kernel Knowledge Graph. His role is to 
 
 ```mermaid
 graph TD
+    agent-file.standard --> flynn.agent
     flynn.agent --> provide-glossary-guidance[provide-glossary-guidance.skill]
     flynn.agent --> find-similar-terms[find-similar-terms.skill]
     flynn.agent --> trace-output-to-source[trace-output-to-source.skill]

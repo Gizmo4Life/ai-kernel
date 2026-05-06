@@ -4,7 +4,8 @@ title: Triage Architectural Violations
 type: skill
 tags: [logic, audit, priority, tool, action, execution]
 summary: Rank architectural violations into P0-P3 priority tiers based on system impact.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 glossary_refs: [context.glossary, prompt.glossary, skill.glossary]
 ---
 
@@ -17,7 +18,7 @@ This skill provides the deterministic logic for ranking "Debt" in the AI Kernel.
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> triage-architectural-violations.skill
+    skill-file.standard --> triage-architectural-violations.skill
 ```
 
 ## Execution Steps

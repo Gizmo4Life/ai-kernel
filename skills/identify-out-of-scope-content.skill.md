@@ -4,7 +4,8 @@ title: Identify Out-of-Scope Content
 type: skill
 tags: [logic, audit, semantics, tool, action, execution]
 summary: Detect content within a file that violates the atomicity of its current domain or tier.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 glossary_refs: [context.glossary, instruction.glossary, orchestration.glossary, skill.glossary, standard.glossary]
 ---
 
@@ -17,7 +18,7 @@ This skill provides the "Sensing" logic for the De-conflation engine. It compare
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> identify-out-of-scope-content.skill
+    skill-file.standard --> identify-out-of-scope-content.skill
 ```
 
 ## Execution Steps

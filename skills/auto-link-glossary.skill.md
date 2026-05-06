@@ -10,8 +10,9 @@ implementation:
   engine: "python3 scratch/auto_linker.py"
   command: "python3 scratch/auto_linker.py {{target_path}}"
 summary: Automatically scans file bodies for glossary terms and populates frontmatter glossary_refs.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
-glossary_refs: [context.glossary, determinism.glossary, frontmatter.glossary, reachability.glossary, skill.glossary]
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, determinism.glossary, frontmatter.glossary, reachability.glossary, skill.glossary, standard.glossary]
 ---
 
 # Auto-Link Glossary

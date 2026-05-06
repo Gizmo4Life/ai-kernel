@@ -11,7 +11,7 @@ capabilities: [scan-codebase-patterns.skill, generate-padu-table.skill, codify-e
 delegates: []
 parent_standard: agent-file.standard
 instructions: [ codify-emerging-pattern.instruction ]
-glossary_refs: [context.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary, subject-matter-expert.glossary]
 ---
 
 # Standards Scout
@@ -23,7 +23,7 @@ The Standards Scout is the repository's "Explorer." Their role is to identify re
 
 ```mermaid
 graph TD
-    kernel.standard --> standards-scout.agent
+    agent-file.standard --> standards-scout.agent
 ```
 
 ## Interaction Pattern

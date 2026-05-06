@@ -11,8 +11,9 @@ implementation:
   command: "grep -rh '^
 id: ' {{target_dir}} | awk '{print $2}' | sort | uniq"
 summary: Extracts a unique, sorted list of all IDs currently active in the Knowledge Graph.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
-glossary_refs: [context.glossary, skill.glossary]
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Collect Repository IDs

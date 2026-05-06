@@ -5,7 +5,7 @@ type: prompt
 tags: [logic, glossary, discovery, ai-logic, intuition]
 summary: Heuristic for deciding whether a term needs a canonical glossary entry or should be inlined.
 parent_standard: prompt-file.standard
-glossary_refs: [context.glossary, instruction.glossary, standard.glossary]
+glossary_refs: [context.glossary, instruction.glossary, prompt.glossary, standard.glossary]
 ---
 
 ## Context

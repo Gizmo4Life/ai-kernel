@@ -25,8 +25,11 @@ This instruction guides the **[Standards Scout](../agents/standards-scout.agent.
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> populate-standard.instruction
+    instruction-file.standard --> populate-standard.instruction
+    populate-standard.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    populate-standard.instruction --> surgical-refactor[surgical-refactor.skill]
+    populate-standard.instruction --> search-kernel[search-kernel.skill]
+    populate-standard.instruction --> doc-audit[doc-audit.skill]
     populate-standard.instruction --> research-domain-patterns[research-domain-patterns.skill]
     populate-standard.instruction --> scan-codebase-patterns[scan-codebase-patterns.skill]
     populate-standard.instruction --> generate-padu-table[generate-padu-table.skill]

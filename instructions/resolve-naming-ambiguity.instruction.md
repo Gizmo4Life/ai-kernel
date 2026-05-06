@@ -21,8 +21,11 @@ Naming ambiguity is the "Friction" of a Knowledge Graph. This instruction provid
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> resolve-naming-ambiguity.instruction
+    instruction-file.standard --> resolve-naming-ambiguity.instruction
+    resolve-naming-ambiguity.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    resolve-naming-ambiguity.instruction --> surgical-refactor[surgical-refactor.skill]
+    resolve-naming-ambiguity.instruction --> search-kernel[search-kernel.skill]
+    resolve-naming-ambiguity.instruction --> doc-audit[doc-audit.skill]
     resolve-naming-ambiguity.instruction --> find-similar-terms[find-similar-terms.skill]
 ```
 

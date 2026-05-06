@@ -10,8 +10,9 @@ implementation:
   engine: "grep"
   command: "grep -rnE '{{query}}' {{domain}} --include='*.md'"
 summary: Performs high-speed, line-numbered search across the Knowledge Graph.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
-glossary_refs: [agent.glossary, context.glossary, skill.glossary]
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
+glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Kernel Semantic Search

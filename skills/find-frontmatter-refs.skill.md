@@ -4,7 +4,8 @@ title: Find Frontmatter References
 type: skill
 tags: [audit, technical, tool, action, execution]
 summary: Scans the repository for fields that reference other IDs (e.g., glossary_refs, standards).
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs: path: Directory to scan.
 outputs: ref_map: A mapping of files to the IDs they reference.
 standards: []
@@ -24,7 +25,7 @@ Atomic skill for identifying dependencies.
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> find-frontmatter-refs.skill
+    skill-file.standard --> find-frontmatter-refs.skill
 ```
 ## Execution Steps
 

@@ -22,8 +22,11 @@ When an AI agent fails, the traditional response is to fix the specific output. 
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> system-first-remediation.instruction
+    instruction-file.standard --> system-first-remediation.instruction
+    system-first-remediation.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    system-first-remediation.instruction --> surgical-refactor[surgical-refactor.skill]
+    system-first-remediation.instruction --> search-kernel[search-kernel.skill]
+    system-first-remediation.instruction --> doc-audit[doc-audit.skill]
     system-first-remediation.instruction --> trace-output-to-source[trace-output-to-source.skill]
     system-first-remediation.instruction --> evaluate-against-standard[evaluate-against-standard.skill]
     system-first-remediation.instruction --> identify-out-of-scope-content[identify-out-of-scope-content.skill]

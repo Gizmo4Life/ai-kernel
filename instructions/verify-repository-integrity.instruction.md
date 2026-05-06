@@ -25,10 +25,13 @@ This instruction ensures the repository's [Knowledge Graph](glossary/knowledge-g
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> verify-repository-integrity.instruction
+    instruction-file.standard --> verify-repository-integrity.instruction
+    verify-repository-integrity.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    verify-repository-integrity.instruction --> surgical-refactor[surgical-refactor.skill]
+    verify-repository-integrity.instruction --> search-kernel[search-kernel.skill]
+    verify-repository-integrity.instruction --> doc-audit[doc-audit.skill]
     verify-repository-integrity.instruction --> collect-repo-ids[collect-repo-ids.skill]
-    verify-repository-integrity.instruction --> find-frontmatter-refs[doc-audit.skill]
+    verify-repository-integrity.instruction --> doc-audit[doc-audit.skill]
     verify-repository-integrity.instruction --> detect-circular-delegation[detect-circular-delegation.skill]
 ```
 ## Execution Steps

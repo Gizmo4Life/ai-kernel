@@ -22,6 +22,7 @@ A **Quality Gate** is a mandatory validation step within an **Instruction**. It 
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> quality-gate.glossary
 ```
 ## Implementation
 

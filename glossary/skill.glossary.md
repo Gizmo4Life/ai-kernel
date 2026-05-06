@@ -22,6 +22,7 @@ A **Skill** is a discrete capability that leverages specific tools (e.g., git, g
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> skill.glossary
 ```
 ## Design Principles
 

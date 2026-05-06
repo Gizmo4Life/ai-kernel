@@ -9,7 +9,7 @@ skills: [auto-link-glossary.skill, surgical-refactor.skill, search-kernel.skill,
 standards: [kernel.standard, quality-gate.standard]
 preconditions:
   - Repository is in a "Stable" state (all files saved).
-glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary]
+glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---
 
 # Perform Meta-Audit
@@ -21,8 +21,11 @@ The Meta-Audit is the "Supreme Court" of the AI Kernel. It runs every specialize
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> perform-meta-audit.instruction
+    instruction-file.standard --> perform-meta-audit.instruction
+    perform-meta-audit.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    perform-meta-audit.instruction --> surgical-refactor[surgical-refactor.skill]
+    perform-meta-audit.instruction --> search-kernel[search-kernel.skill]
+    perform-meta-audit.instruction --> doc-audit[doc-audit.skill]
     perform-meta-audit.instruction --> check-id-uniqueness[check-id-uniqueness.skill]
     perform-meta-audit.instruction --> audit-repository-connectivity[audit-repository-connectivity.skill]
     perform-meta-audit.instruction --> doc-audit[doc-audit.skill]

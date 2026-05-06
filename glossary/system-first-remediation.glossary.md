@@ -16,6 +16,7 @@ System-First Remediation is the fundamental operating philosophy of the AI Kerne
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> system-first-remediation.glossary
 ```
 
 ## Synonyms (Human Reference)

@@ -10,8 +10,9 @@ implementation:
   engine: "python3 scratch/doc_auditor.py"
   command: "python3 scratch/doc_auditor.py {{target_dir}}"
 summary: High-performance structural auditor that enforces mandatory headers across the AI Kernel.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
-glossary_refs: [context.glossary, skill.glossary]
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
 ---
 
 # Document Auditor

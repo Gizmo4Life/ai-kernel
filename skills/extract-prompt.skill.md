@@ -4,7 +4,8 @@ title: Extract Prompt
 type: skill
 tags: [refactor, prompts, modularity, tool, action, execution]
 summary: Identifies instruction-heavy sections in agents or instructions and moves them to the `prompts/` directory.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs:
   source_file: The file containing the prompt logic.
   section_
@@ -29,7 +30,7 @@ This skill implements the "Modular Instruction" principle. It decouples the *Wha
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> extract-prompt.skill
+    skill-file.standard --> extract-prompt.skill
 ```
 ## Execution Steps
 

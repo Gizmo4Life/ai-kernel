@@ -16,6 +16,7 @@ Reachability ensures that the AI Kernel is a single, connected Knowledge Graph r
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> reachability.glossary
 ```
 
 ## Usage Constraints

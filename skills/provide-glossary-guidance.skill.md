@@ -4,7 +4,8 @@ title: Provide Glossary Guidance
 type: skill
 tags: [guidance, glossary, architecture, tool, action, execution]
 summary: Analyzes a concept and recommends whether it should be a glossary entry or inlined.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+parent_standard: skill-file.standard
 inputs: concept: The term or concept being considered.
   context: Where the term is being used.
 outputs: recommendation: A choice between 'NEW_ENTRY' or 'INLINE' with a detailed rationale.
@@ -25,7 +26,7 @@ This skill enables Flynn to evaluate the "weight" of a concept and its long-term
 
 ```mermaid
 graph TD
-    skill-file.standardtool --> provide-glossary-guidance.skill
+    skill-file.standard --> provide-glossary-guidance.skill
 ```
 ## [Heuristics](glossary/heuristics.glossary.md)
 

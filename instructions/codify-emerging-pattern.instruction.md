@@ -25,8 +25,11 @@ This instruction provides the workflow for the **Standards Scout** to aggressive
 
 ```mermaid
 graph TD
-    instruction-file.standard
-goal --> codify-emerging-pattern.instruction
+    instruction-file.standard --> codify-emerging-pattern.instruction
+    codify-emerging-pattern.instruction --> auto-link-glossary[auto-link-glossary.skill]
+    codify-emerging-pattern.instruction --> surgical-refactor[surgical-refactor.skill]
+    codify-emerging-pattern.instruction --> search-kernel[search-kernel.skill]
+    codify-emerging-pattern.instruction --> doc-audit[doc-audit.skill]
     codify-emerging-pattern.instruction --> scan-codebase-patterns[scan-codebase-patterns.skill]
     codify-emerging-pattern.instruction --> research-domain-patterns[research-domain-patterns.skill]
     codify-emerging-pattern.instruction --> generate-padu-table[generate-padu-table.skill]

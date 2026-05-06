@@ -22,6 +22,7 @@ An **Antipattern** is a pattern that may appear to be a beneficial solution to a
 
 ```mermaid
 graph TD
+    glossary-entry.standard --> antipattern.glossary
 ```
 ## Role in the Kernel
 

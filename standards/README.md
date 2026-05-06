@@ -23,7 +23,7 @@ graph TD
 | `glossary-entry.standard` | Standard | Meta-standard for glossary terms. |
 | `capability.standard` | Standard | Rules for granting agent capabilities. |
 | `manifest.standard` | Standard | Rules for machine-readable READMEs. |
-| `context-lifecycle.standard` | Standard | Rules for context management. |
+| `synonym.standard` | Standard | Rules for discovery-friendly naming. || `context-lifecycle.standard` | Standard | Rules for context management. |
 | `atomic-extraction.standard` | Standard | Rules for SSOT de-conflation. || `operability.standard` | Standard | Holistic 3-pillar operability framework. |
 | `naming.standard` | Standard | Rules for deterministic naming. |
 | `quality-gate.standard` | Standard | Rules for verification and enforcement. |

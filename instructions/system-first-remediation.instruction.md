@@ -2,12 +2,13 @@
 id: system-first-remediation.instruction
 title: System-First Remediation
 type: instruction
-tags: [workflow, feedback, self-healing]
-summary: The master workflow for systemic self-correction: trace an error to the kernel source, fix the kernel (Standard, Skill, Prompt, or Glossary), and then re-execute.
+tags: [workflow, feedback, self-healing, evolution]
+synonyms: [codify-user-feedback, fix-kernel-error, systemic-learning-workflow, root-cause-fix]
+summary: Master workflow for systemic self-correction. Use this whenever a user provides a correction or reports an error. Trace the error to its source (Standard, Prompt, Glossary), fix the source, and then re-execute.
 goal: A fixed kernel that prevents the recurrence of a specific error.
 skills: [trace-output-to-source.skill, evaluate-against-standard.skill, identify-out-of-scope-content.skill]
 instructions: [maintain-kernel-integrity.instruction]
-standards: [kernel.standard, quality-gate.standard]
+standards: [kernel.standard, quality-gate.standard, synonym.standard]
 glossary_refs: [system-first-remediation.glossary]
 preconditions:
   - User has provided feedback or correction on a sub-optimal output.

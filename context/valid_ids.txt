@@ -94,6 +94,7 @@ standards-auditor.agent
 standards-scout.agent
 subject-matter-expert.glossary
 summarize-to-context.skill
+synonym.standard
 synthesize-padu-logic.prompt
 system-first-remediation.glossary
 system-first-remediation.instruction

@@ -7,8 +7,8 @@ interface:
   input: {}
   output: { status: "complete", report_path: "context/global-gap-report.md" }
 implementation:
-  engine: "python3 scratch/master_healer.py"
-  command: "python3 scratch/master_healer.py"
+  engine: "python3 engines/master_healer.py"
+  command: "python3 engines/master_healer.py"
 summary: Orchestrates all hardened tools to perform a repository-wide structural, visual, and semantic restoration.
 parent_standard: skill-file.standard
 glossary_refs: [context.glossary, skill.glossary, standard.glossary]
@@ -33,7 +33,7 @@ graph TD
 
 ## Verification Protocol
 1. Introduce a missing header in a skill.
-2. Run `python3 scratch/master_healer.py`.
+2. Run `python3 engines/master_healer.py`.
 3. Verify that the file is flagged in the final report.
 
 ## Quality Gate

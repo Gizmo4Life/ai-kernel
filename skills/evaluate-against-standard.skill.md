@@ -8,8 +8,8 @@ interface:
   input: { standard_id: "standard_id", target_path: "path/to/file" }
   output: { score: "percentage", details: { "requirement": "PASS/FAIL" } }
 implementation:
-  engine: "python3 scratch/standard_auditor.py"
-  command: "python3 scratch/standard_auditor.py {{standard_id}} {{target_path}}"
+  engine: "python3 engines/standard_auditor.py"
+  command: "python3 engines/standard_auditor.py {{standard_id}} {{target_path}}"
 summary: Deterministically evaluates a file against the requirements of a specific standard.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."---
 
@@ -36,7 +36,7 @@ graph TD
 ## Verification Protocol
 1. Create a "Test Standard" with `requirements: [test_req]`.
 2. Create a "Test File" missing the string `test_req`.
-3. Run `python3 scratch/standard_auditor.py test.standard test.file`.
+3. Run `python3 engines/standard_auditor.py test.standard test.file`.
 4. Verify the output shows `score: 0.0%` and `test_req: FAIL`.
 
 ## Quality Gate

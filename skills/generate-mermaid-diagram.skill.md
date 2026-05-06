@@ -7,8 +7,8 @@ interface:
   input: { target_path: "path/to/file_or_dir" }
   output: { status: "success" }
 implementation:
-  engine: "python3 scratch/mermaid_gen.py"
-  command: "python3 scratch/mermaid_gen.py {{target_path}}"
+  engine: "python3 engines/mermaid_gen.py"
+  command: "python3 engines/mermaid_gen.py {{target_path}}"
 summary: Automatically generates and injects Mermaid diagrams based on a node's metadata.
 interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."parent_standard: skill-file.standard
 
@@ -30,7 +30,7 @@ graph TD
 
 ## Verification Protocol
 1. Create a file with `parent_standard: skill-file.standard
-2. Run `python3 scratch/mermaid_gen.py test.md`.
+2. Run `python3 engines/mermaid_gen.py test.md`.
 3. Verify the Mermaid code contains `root --> test` and `test --> test.skill`.
 
 ## Quality Gate

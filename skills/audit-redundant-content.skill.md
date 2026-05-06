@@ -1,47 +1,43 @@
 ---
 id: audit-redundant-content.skill
-title: Audit Redundant Content
+title: Redundant Content Auditor
 type: skill
-tags: [audit, cleanup, single-source-of-truth, tool, action, execution]
-summary: Identifies inline definitions that should be replaced with links to the glossary.
-tool: grep
-inputs:
-  path: The directory or file to audit.
-outputs:
-  redundancies: A list of files containing definitions that exist in the glossary.
-standards: [glossary-entry.standard]
-glossary_refs: [glossary-entry.glossary]
+tags: [quality, deduplication, optimization, tool, action, execution]
+interface:
+  input: { target_dir: "path/to/dir" }
+  output: { duplicates: ["path1", "path2"] }
+implementation:
+  engine: "find + md5 + awk"
+  command: "find {{target_dir}} -name '*.md' -exec md5 {} + | sort | awk 'BEGIN{last=\"\"} {if($1==last) print $2; last=$1}'"
+summary: Identifies byte-identical duplicate files to prevent Knowledge Graph redundancy.
 ---
 
+# Redundant Content Auditor
+
 ## Context
-Identifies inline definitions that should be replaced with links to the glossary.
-
-
-# Audit Redundant Content
-
-This skill helps maintain the "Single Source of Truth" principle by finding where concepts are being defined manually instead of referenced.
-
+Redundancy is the enemy of SSOT (Single Source of Truth). This skill identifies files that have different names but identical content, allowing for surgical deduplication.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    Input[Target Directory] --> Find[Find: .md files]
+    Find --> Hash[MD5: Generate Fingerprints]
+    Hash --> Sort[Sort: Group Identical Hashes]
+    Sort --> Awk[Detect: Duplicate Hashes]
+    Awk --> Result[List: Duplicate File Paths]
 ```
+
 ## Execution Steps
-
-1. **Load All Glossary IDs**: Get a list of all IDs from `glossary/`.
-2. **Scan Path**: For each ID, search the target `path` for occurrences of the term or its aliases.
-3. **Identify Definitions**: Use heuristics (e.g., proximity to "is a", "defined as") to distinguish between a reference and a definition.
-4. **Propose Refactor**: Suggest replacing the inline definition with a link to the glossary entry.
-
+1. Specify the directory to audit.
+2. Execute the hash-and-compare pipe.
+3. Review the duplicate list and perform atomic deletion or linking.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create a copy of an existing file: `cp target.md target_copy.md`.
+2. Run the skill on the directory.
+3. Verify that `target_copy.md` is listed as a duplicate.
 
 ## Quality Gate
-
-Repository integrity is governed by the **[Glossary Entry Standard](../standards/glossary-entry.standard.md)**.
-- **Verification**: Ensure that every proposed refactor includes the correct `file:///` link to the glossary.
-- **Enforcement**: Redundant definitions found in core folders (`agents/`, `standards/`) are **Unacceptable (U)** and must be merged immediately.
+- **Verification**: Only byte-identical files are flagged.
+- **Enforcement**: Zero byte-identical duplicates permitted in the logic domains.

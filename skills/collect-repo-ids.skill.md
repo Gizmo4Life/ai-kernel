@@ -2,36 +2,42 @@
 id: collect-repo-ids.skill
 title: Collect Repository IDs
 type: skill
-tags: [audit, technical, tool, action, execution]
-summary: Extracts all unique 'id' fields from the repository's YAML frontmatter.
-tool: grep
-inputs: path: Directory to scan.
-outputs: id_list: A list of all valid IDs in the kernel.
-standards: []
-glossary_refs: [frontmatter.glossary]
+tags: [audit, architecture, logic, tool, action, execution]
+interface:
+  input: { target_dir: "path/to/dir" }
+  output: { ids: ["id1", "id2"] }
+implementation:
+  engine: "grep + awk"
+  command: "grep -rh '^id: ' {{target_dir}} | awk '{print $2}' | sort | uniq"
+summary: Extracts a unique, sorted list of all IDs currently active in the Knowledge Graph.
 ---
-
-## Context
-Extracts all unique 'id' fields from the repository's YAML frontmatter.
-
 
 # Collect Repository IDs
 
-Atomic skill for indexing the repository.
-
+## Context
+To perform graph-wide operations (like checking for orphans or broken links), we first need a clean list of all available IDs. This bash pipe provides that list in milliseconds.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    Input[Target Directory] --> Grep[Grep: ^id:]
+    Grep --> Awk[Awk: Extract 2nd Field]
+    Awk --> Sort[Sort: Alphabetical]
+    Sort --> Uniq[Uniq: Remove Duplicates]
+    Uniq --> List[Result: Sorted ID List]
 ```
-## Execution Steps
 
-1. **Grep**: Search for `id:` at the start of frontmatter blocks.
-2. **Normalize**: Strip whitespace and prefixes.
-3. **Report**: provide the master list of discovered IDs.
+## Execution Steps
+1. Specify the repository root.
+2. Execute the bash pipe.
+3. Use the list as the "Source of Truth" for graph traversal.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Count the number of `.md` files in `glossary/`.
+2. Run the skill on `glossary/`.
+3. Verify the ID count matches the file count (assuming 1 ID per file).
+
+## Quality Gate
+- **Verification**: Output must be a clean, newline-separated list of IDs.
+- **Enforcement**: Mandatory step before running any graph-wide connectivity audit.

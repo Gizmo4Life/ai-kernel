@@ -1,54 +1,42 @@
 ---
 id: doc-audit.skill
-title: Audit Technical Documentation
+title: Document Auditor
 type: skill
-tags: [audit, documentation, quality, tool, action, execution]
-summary: Upgraded structural auditor that enforces the Tiered Documentation Model (Local vs. Architecture vs. Persona).
-tool: grep
-inputs:
-  path: The file or directory to audit.
-outputs:
-  report: A list of structural violations based on the file's tier.
-standards: [doc-local.standard, doc-architecture.standard, doc-developer.standard, doc-external.standard]
-glossary_refs: [progressive-disclosure.glossary]
+tags: [quality, documentation, audit, tool, action, how-to]
+interface:
+  input: { target_dir: "path/to/directory" }
+  output: { violations: { "file_path": ["violation_type"] } }
+implementation:
+  engine: "python3 scratch/doc_auditor.py"
+  command: "python3 scratch/doc_auditor.py {{target_dir}}"
+summary: High-performance structural auditor that enforces mandatory headers across the AI Kernel.
 ---
 
+# Document Auditor
+
 ## Context
-Upgraded structural auditor that enforces the Tiered Documentation Model (Local vs. Architecture vs. Persona).
-
-
-# Audit Technical Documentation
-
-This skill enforces the "Layered Knowledge" requirement of the AI Kernel.
-
+Structural integrity is the foundation of the AI Kernel's machine-readability. This skill replaces manual "reading" with deterministic regex-based parsing to ensure every node possesses its mandatory headers (Context, Architecture, Quality Gate).
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    Input[Target Directory] --> Engine[doc_auditor.py]
+    Engine --> Scan[Scan: Markdown Files]
+    Scan --> Check[Check: Mandatory Headers]
+    Check --> Report[Report: JSON Violation Map]
 ```
+
 ## Execution Steps
-
-1. **Identify Tier**:
-    - If file is in `docs/architecture/` -> Apply `doc-architecture.standard`.
-    - If file is a `README.md` in a code folder -> Apply `doc-local.standard`.
-    - If file is tagged `developer` -> Apply `doc-developer.standard`.
-    - If file is tagged `external` -> Apply `doc-external.standard`.
-2. **Layer-Specific Checks**:
-    - **Architecture**: Verify presence of Mermaid maps and links to `README.md` files. Flag deep implementation details as **Unacceptable (U)**.
-    - **Local**: Verify "Technical Detail" sections. Flag global system context as **Unacceptable (U)**.
-    - **Persona**: Check tags. Ensure "Maintainer" docs have **Restoration** links.
-3. **SSOT Check**: Invoke `audit-redundant-content.skill` to ensure no "Rehashing" of glossary terms is occurring.
-4. **Report**: provide a tier-aware compliance report.
-
+1. **Target Identification**: Specify the folder to be audited.
+2. **Engine Invocation**: Run the `doc_auditor.py` script against the target.
+3. **Synthesis**: Process the JSON output to identify high-priority debt.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create a "Bad File" missing a `## Context` header.
+2. Run `python3 scratch/doc_auditor.py .`
+3. Verify that the "Bad File" is correctly flagged in the JSON output.
 
 ## Quality Gate
-
-Documentation quality is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
-- **Verification**: The audit must identify the specific "Tier Violation" (e.g., "Architecture doc is too detailed").
-- **Enforcement**: Tier violations are **Unacceptable (U)** and will block the **Self-Healing Loop**.
+- **Verification**: Output must be a valid JSON object.
+- **Enforcement**: 100% accuracy in detecting missing mandatory headers.

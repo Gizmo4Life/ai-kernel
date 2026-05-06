@@ -1,53 +1,43 @@
 ---
 id: check-id-uniqueness.skill
-title: Check ID Uniqueness
+title: ID Uniqueness Auditor
 type: skill
-tags: [audit, technical, integrity, tool, action, execution]
-summary: Scans the entire repository to ensure that every `id` in frontmatter is globally unique.
-tool: grep
-inputs:
-  scope: The directory to scan (defaults to `/`).
-outputs:
-  collisions: A list of duplicate IDs and their file paths.
-standards: [kernel.standard]
-glossary_refs: [frontmatter.glossary, knowledge-graph.glossary]
+tags: [quality, architecture, audit, tool, action, execution]
+interface:
+  input: { target_dir: "path/to/directory" }
+  output: { collisions: { "colliding_id": ["file_path_1", "file_path_2"] } }
+implementation:
+  engine: "python3 scratch/id_auditor.py"
+  command: "python3 scratch/id_auditor.py {{target_dir}}"
+summary: Verifies that every node in the AI Kernel Knowledge Graph possesses a globally unique ID.
 ---
 
-# Check ID Uniqueness
+# ID Uniqueness Auditor
 
 ## Context
-In a decentralized Knowledge Graph, ID collisions are a fatal error. If two files share an ID, cross-references become ambiguous and the graph's integrity is compromised. This skill serves as the **Global Safety Gate**, ensuring that every identifier in the repository is a unique, deterministic pointer.
+Global uniqueness is the primary constraint for the AI Kernel Knowledge Graph. This skill identifies ID collisions across all domains to prevent cross-linking errors and semantic confusion.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Trigger Audit)) --> Extract[Extract: grep id: pattern]
-    Extract --> Normalize[Normalize: Strip whitespace/values]
-    Normalize --> Count{Count Occurrences}
-    Count -->|Count > 1| Collision[Flag: ID Collision Found]
-    Count -->|Count = 1| Success[Pass: ID Unique]
-    Collision --> Report[Output: Error List]
-    Success --> Report
-    Report --> End((Audit Complete))
+    Input[Target Directory] --> Engine[id_auditor.py]
+    Engine --> Scan[Scan: Frontmatter]
+    Scan --> Map[Map: ID to Path]
+    Map --> Collision[Detect: Duplicates]
+    Collision --> Result[JSON Collision Report]
 ```
 
 ## Execution Steps
-
-1. **Extract IDs**: Run `grep -r "id:" .` across the repository.
-2. **Normalize**: Strip whitespace and extract the ID values.
-3. **Count Occurrences**: Identify any ID that appears more than once.
-4. **Report Collisions**:
-    - List the duplicated ID.
-    - provide the absolute paths of all files claiming that ID.
-
+1. **Target Identification**: Specify the repository root or a sub-folder.
+2. **Engine Invocation**: Run `id_auditor.py`.
+3. **Surgical Triage**: Address any collisions identified in the JSON output.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create two files with the same `id: duplicate.test`.
+2. Run `python3 scratch/id_auditor.py .`.
+3. Verify that `duplicate.test` appears in the JSON output with both file paths.
 
 ## Quality Gate
-
-ID integrity is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
-- **Verification**: The check must be case-sensitive and scan all file types except `README.md`.
-- **Enforcement**: Any ID collision is an **Unacceptable (U)** violation. The repository is considered "Broken" until the collision is resolved via renaming.
+- **Verification**: Output must be an empty JSON object `{}` in a healthy repo.
+- **Enforcement**: Zero collisions are permitted in the stable branch.

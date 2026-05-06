@@ -1,5 +1,19 @@
 # AI Kernel
 
+## Context
+This file serves as the master entry point for understanding the agentic hierarchy of the AI Kernel. It defines how Tier 0, Tier 1, and Tier 2 agents collaborate to maintain the system.
+
+## Architecture
+
+```mermaid
+graph TD
+    User((User)) --> Operator[Operator: Tier 0]
+    Operator --> Flynn[Flynn: Tier 1 Owner]
+    Flynn --> SMEs[SMEs: Tier 2 Cabinet]
+```
+
+## How to Use This Framework
+
 You are operating with the ai-kernel personal workflow framework.
 This repository is a companion workspace — it provides reusable
 glossary definitions, coding standards, skills, instructions,

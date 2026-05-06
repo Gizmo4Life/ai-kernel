@@ -1,53 +1,43 @@
 ---
 id: audit-repository-connectivity.skill
-title: Audit Repository Connectivity
+title: Connectivity Auditor
 type: skill
-tags: [audit, graph, connectivity, tool, action, execution]
-summary: Analyzes the Knowledge Graph for orphaned nodes, missing frontmatter references, and linkage gaps.
-tool: grep
-inputs:
-  scope: The directory or file type to audit.
-outputs:
-  orphans: A list of nodes with no incoming references.
-  context_gaps: A list of files missing relevant frontmatter links.
-standards: [standard-file.standard]
-glossary_refs: [knowledge-graph.glossary, frontmatter.glossary]
+tags: [quality, architecture, graph, audit, tool, action, execution]
+interface:
+  input: { target_dir: "path/to/directory" }
+  output: { orphans: ["orphan_id_1", "orphan_id_2"] }
+implementation:
+  engine: "python3 scratch/connectivity_auditor.py"
+  command: "python3 scratch/connectivity_auditor.py {{target_dir}}"
+summary: Verifies Knowledge Graph reachability by identifying orphans and broken references.
 ---
 
+# Connectivity Auditor
+
 ## Context
-Analyzes the Knowledge Graph for orphaned nodes, missing frontmatter references, and linkage gaps.
-
-
-# Audit Repository Connectivity
-
-This skill ensures that the Knowledge Graph is a dense, traversable network rather than a collection of isolated files.
-
+A disconnected node is "Dark Knowledge." This skill uses graph-traversal logic to ensure every node in the AI Kernel is reachable from the root standards.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    Start((Start)) --> Process[Process: Logic Flow] --> End((End))
+    Input[Target Directory] --> Engine[connectivity_auditor.py]
+    Engine --> Map[Map: Frontmatter Refs]
+    Map --> Trace[Trace: Incoming References]
+    Trace --> Orphan[Detect: Nodes with 0 In-Refs]
+    Orphan --> Result[JSON Orphan Report]
 ```
+
 ## Execution Steps
-
-1. **Map All Nodes**: Run `collect-repo-ids.skill` to get the master list.
-2. **Map All References**: Run `find-frontmatter-refs.skill` to see all current connections.
-3. **Identify Orphans**:
-    - For every ID in the master list, check if it appears in any other file's `glossary_refs`, `standards`, or body.
-    - Flag nodes with zero incoming references as **Orphaned**.
-4. **Identify Context Gaps**:
-    - Scan the body of files for terms that exist in the glossary but are missing from the `glossary_refs` frontmatter.
-    - Ensure every skill links to its `parent_standard` and relevant `standards`.
-5. **Report**: provide a detailed "Linkage Health" report.
-
+1. **Target Identification**: Specify the repository root.
+2. **Engine Invocation**: Run `connectivity_auditor.py`.
+3. **Healing**: Link any identified orphans to their appropriate parent standard or manifest.
 
 ## Verification Protocol
-1. Perform a manual dry-run of the execution steps.
-2. Verify that the output matches the expected result defined in the Quality Gate.
+1. Create a "Floating Node" with no `parent_standard` and no references in other files.
+2. Run `python3 scratch/connectivity_auditor.py .`.
+3. Verify that the floating node's ID appears in the `orphans` list.
 
 ## Quality Gate
-
-Graph density is governed by the **[Kernel Standard](../standards/kernel.standard.md)**.
-- **Verification**: Every new file must have at least one incoming reference from a parent standard, a manifest, or a related glossary entry.
-- **Enforcement**: Orphaned nodes are marked as **Discouraged (D)** and should be linked or deprecated.
+- **Verification**: Zero orphans allowed (excluding `kernel.standard`).
+- **Enforcement**: Any unreachable node is **Unacceptable (U)**.

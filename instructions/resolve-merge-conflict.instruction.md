@@ -5,7 +5,10 @@ type: instruction
 tags: [git, collaboration, conflict, resolution, workflow]
 summary: A deterministic workflow for identifying, analyzing, and resolving git merge conflicts while maintaining documentation and code integrity.
 parent_standard: instruction-file.standard
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Merge Conflict Resolution
+glossary_refs: [instruction.glossary, standard.glossary]
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Merge Conflict Resolution
 
 ## 1. Objective
 Ensuring that merge conflicts are resolved by preserving the semantic intent of both conflicting versions, rather than destructive choosing or blind overwriting.

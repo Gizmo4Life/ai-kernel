@@ -5,8 +5,10 @@ type: registry
 tags: [registry, networking, services, endpoints, connectivity, definition, config]
 summary: The master registry of external services connected to the AI Kernel.
 parent_standard: standard-file.standard
-glossary_refs: [context.glossary, driver.glossary, standard.glossary]
----# Global Service Map
+glossary_refs: [context.glossary, driver.glossary, sidecar.glossary, standard.glossary]
+---
+
+# Global Service Map
 
 ## Registry
 

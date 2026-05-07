@@ -17,11 +17,9 @@ glossary_refs: [antipattern.glossary, context.glossary, skill.glossary, standard
 ## Context
 Identifies recurring patterns (exemplary or problematic) in the codebase or context.
 
-
 # Scan Codebase Patterns
 
 This skill identifies real-world usage patterns to support standard codification.
-
 
 ## Architecture
 
@@ -37,7 +35,6 @@ graph TD
     - **Positive**: Patterns that are clean, modular, and follow kernel principles.
     - **Negative**: Patterns that are complex, un-owned, or non-atomic.
 4. **Report**: provide a detailed list of practices and their frequency.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

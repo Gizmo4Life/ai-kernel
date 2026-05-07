@@ -12,11 +12,9 @@ related: [progressive-disclosure.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Frontmatter
 
 **Frontmatter** is a block of YAML-formatted data located at the very beginning of a file, delimited by triple dashes (`---`).
-
 
 ## Architecture
 

@@ -17,11 +17,9 @@ glossary_refs: [atomicity.glossary, context.glossary, orchestration.glossary, pa
 ## Context
 Analyzes kernel files for violations of core architectural principles, including atomicity, orchestration, and hidden tool dependencies.
 
-
 # Audit for Architectural Violations
 
 This skill performs a "maximalist" check for architectural integrity.
-
 
 ## Architecture
 
@@ -38,7 +36,6 @@ graph TD
     - (For Instructions) Ensure tool actions (like `mkdir`, `grep`, `rm`) are NOT performed directly. Instructions must coordinate skills.
 3. **Check for Inline Definitions**: (Global) Ensure technical concepts link to the glossary rather than being defined locally.
 4. **Report**: provide a detailed list of violations.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

@@ -36,3 +36,9 @@ By mandating **Postconditions**, we move from "Instruction Following" to "Goal F
 ## Enforcement
 The posture is **Agent-Audited**. The **Flynn** agent verifies that all new instructions have verifiable end-states.
 
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> instruction-file.standard
+```

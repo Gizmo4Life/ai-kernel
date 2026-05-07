@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/git/git_status.py"
 summary: Audits the working tree for uncommitted changes using the Git Toolchain.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary, skill.glossary]
----# Git Status Auditor
+glossary_refs: [context.glossary, delegation.glossary, skill.glossary, standard.glossary]
+---
+
+# Git Status Auditor
 
 ## Context
 Standardizes the process of checking the repository's working state. This skill is a prerequisite for any automated commit or deployment workflow.
@@ -32,7 +34,9 @@ Standardizes the process of checking the repository's working state. This skill 
 graph TD
     skill-file.standard --> git-status.skill
 ```
-\n## Verification Protocol\n1. Run {
+
+## Verification Protocol
+1. Run {
   "status": "success",
   "modified_files": [
     "M context/global-gap-report.md",
@@ -73,7 +77,8 @@ graph TD
     "?? skills/git-status.skill.md"
   ],
   "count": 36
-}.\n2. Verify JSON output contains .
+}.
+2. Verify JSON output contains .
 
 ## Verification Protocol
 1. Run `python3 drivers/git/git_status.py`.

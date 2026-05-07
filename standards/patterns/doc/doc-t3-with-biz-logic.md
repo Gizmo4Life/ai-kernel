@@ -4,7 +4,9 @@ type: pattern
 tags: [anti-pattern, architecture]
 category: geometry
 glossary_refs: [capability.glossary, orchestration.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > T3 with Business Logic
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > T3 with Business Logic
 
 # Anti-pattern: T3 detailing Business Logic
 

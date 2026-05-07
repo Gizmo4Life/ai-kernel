@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, governance, automation]
 category: cicd
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Gov Protocol
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Gov Protocol
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: protocol`.

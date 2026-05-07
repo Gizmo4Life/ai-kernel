@@ -15,11 +15,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard
 ## Context
 Scans the repository for fields that reference other IDs (e.g., glossary_refs, standards).
 
-
 # Find Frontmatter References
 
 Atomic skill for identifying dependencies.
-
 
 ## Architecture
 

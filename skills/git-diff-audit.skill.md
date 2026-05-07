@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/git/git_diff_audit.py {{pr_branch}} {{base_branch}}"
 summary: Audits the logical diff between a PR branch and the base branch using local git metadata.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary, skill.glossary]
----# PR Diff Auditor
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
+---
+
+# PR Diff Auditor
 
 ## Context
 Provides structural visibility into a PR's impact. This skill is used by the **Integrity Guardian** to verify that a PR doesn't introduce massive structural debt or violate repository standards.

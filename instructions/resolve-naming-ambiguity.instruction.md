@@ -38,7 +38,6 @@ graph TD
 4. **Graph Update**: Globally replace all references to the old ID with the new ID.
 5. **Validation**: Run the **[ID Uniqueness Check](../skills/check-id-uniqueness.skill.md)** to confirm the fix.
 
-
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.
 2. All related Knowledge Graph nodes are updated and linked.

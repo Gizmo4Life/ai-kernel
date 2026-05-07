@@ -11,7 +11,6 @@ glossary_refs: [context.glossary, instruction.glossary, prompt.glossary, standar
 ## Context
 Automated context for Diamond Posture.
 
-
 # Determine Glossary Necessity
 
 Apply the following "3-Strike Rule" and "Ambiguity Check" to any concept being used in a standard or instruction:
@@ -24,7 +23,6 @@ Apply the following "3-Strike Rule" and "Ambiguity Check" to any concept being u
 - **Inline**: If the term is common language and used once.
 - **Link**: If the term exists in `glossary/`.
 - **Create**: If the term meets the criteria above and is missing from the glossary.
-
 
 ## Architecture
 

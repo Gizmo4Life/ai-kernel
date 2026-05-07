@@ -3,7 +3,9 @@ id: cpp-compiler-driven-refactoring
 type: pattern
 tags: [workflow, build, refactoring]
 category: logic
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Compiler-Driven Refactoring
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Compiler-Driven Refactoring
 
 # Pattern: Compiler-Driven Refactoring
 

@@ -15,11 +15,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary,
 ## Context
 Searches the glossary for terms or aliases matching a query.
 
-
 # Find Glossary Terms
 
 This skill uses `grep` to quickly find if a concept is already defined in the glossary, preventing duplication.
-
 
 ## Architecture
 

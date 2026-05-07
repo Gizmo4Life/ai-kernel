@@ -5,8 +5,10 @@ type: instruction
 tags: [workflow, git, development, change, process]
 summary: The definitive protocol for staging, verifying, and committing changes to any governed repository.
 parent_standard: instruction-file.standard
-glossary_refs: [capability.glossary, context.glossary, orchestration.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Unified Change
+glossary_refs: [capability.glossary, context.glossary, instruction.glossary, orchestration.glossary, standard.glossary]
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Unified Change
 
 # Protocol: Unified Change
 

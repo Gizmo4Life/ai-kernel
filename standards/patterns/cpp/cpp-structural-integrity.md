@@ -4,7 +4,9 @@ type: pattern
 tags: [foundation, build, structural-hygiene]
 category: logic
 glossary_refs: [agent.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Structural Integrity
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Structural Integrity
 
 # Pattern: Structural Integrity
 

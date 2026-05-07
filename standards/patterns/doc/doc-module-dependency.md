@@ -3,7 +3,9 @@ id: doc-module-dependency
 type: pattern
 tags: [architecture, mapping]
 category: geometry
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Module Dependency
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Module Dependency
 
 ## Structure
 - **Requirement:** T3 Modules must explicitly list their upstream and downstream dependencies in their [Artifact Manifest].

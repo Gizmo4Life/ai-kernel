@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, operational, observability]
 category: ops
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Alert
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Alert
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: alert_rule`.

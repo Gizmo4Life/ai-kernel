@@ -17,11 +17,9 @@ glossary_refs: [agent.glossary, authority.glossary, context.glossary, frontmatte
 ## Context
 Verifies that every file contains the mandatory YAML frontmatter fields required by its type.
 
-
 # Audit Frontmatter Completeness
 
 This skill ensures that every node in the Knowledge Graph is fully indexed and correctly placed in the standard hierarchy.
-
 
 ## Architecture
 
@@ -39,7 +37,6 @@ graph TD
     - **Instruction**: `goal`, `skills`.
     - **Agent**: `role`, `authority`, `delegates`.
 3. **Report**: provide a list of missing or malformed fields.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

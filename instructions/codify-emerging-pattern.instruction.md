@@ -15,11 +15,9 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Context
 Orchestration for discovering, researching, and formalizing an emerging pattern into a hierarchical standard.
 
-
 # Codify Emerging Pattern
 
 This instruction provides the workflow for the **Standards Scout** to aggressively expand the repository's governance.
-
 
 ## Architecture
 

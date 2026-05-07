@@ -11,7 +11,6 @@ glossary_refs: [context.glossary, prompt.glossary, reachability.glossary, standa
 ## Context
 Automated context for Diamond Posture.
 
-
 # Remediation Triage Logic
 
 When presented with multiple violations, prioritize them in the following order:

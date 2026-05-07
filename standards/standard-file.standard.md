@@ -8,7 +8,9 @@ scope: "/standards/**/*.md"
 parent_standard: kernel.standard
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context"]
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, frontmatter.glossary, heuristics.glossary, instruction.glossary, padu-scale.glossary, skill.glossary, standard.glossary]
----# Standard File Standard
+---
+
+# Standard File Standard
 
 ## Context
 A Standard is a "Contract." It defines the verifiable requirements that constitute a "Pass" for a specific engineering or governance domain. Standards are abstract and rule-based; they do not define system topology.

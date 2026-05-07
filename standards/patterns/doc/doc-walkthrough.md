@@ -3,7 +3,9 @@ id: doc-walkthrough
 type: pattern
 tags: [governance, compliance, proof-of-work]
 category: ux
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Walkthrough
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Walkthrough
 
 ## Structure
 - **1. Objective:** What goal was achieved?

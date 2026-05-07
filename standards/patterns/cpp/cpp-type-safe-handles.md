@@ -4,7 +4,9 @@ type: pattern
 tags: [safety, types, refactoring]
 category: logic
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Type-Safe Handles
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Type-Safe Handles
 
 # Pattern: Type-Safe Handles
 

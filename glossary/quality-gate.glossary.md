@@ -12,11 +12,9 @@ related: [ standard.glossary, instruction.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Quality Gate
 
 A **Quality Gate** is a mandatory validation step within an **Instruction**. It ensures that no work proceeds to the next stage unless it meets the criteria defined in a specific **Standard**.
-
 
 ## Architecture
 

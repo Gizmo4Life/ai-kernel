@@ -4,7 +4,9 @@ type: pattern
 tags: [documentation, navigation, RAG]
 category: ux
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Breadcrumb Navigation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Breadcrumb Navigation
 
 # Pattern: Breadcrumb Navigation
 

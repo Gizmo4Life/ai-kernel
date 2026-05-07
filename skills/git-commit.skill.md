@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/git/git_commit.py '{{message}}'"
 summary: Performs a hardened git commit with automated staging of all changes.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary]
----# Git Hardened Commit
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
+---
+
+# Git Hardened Commit
 
 ## Context
 Automates the "Stabilization" of the repository. Every commit must be accompanied by a descriptive message that adheres to the **Diamond Logic** versioning standards.
@@ -31,11 +33,14 @@ Automates the "Stabilization" of the repository. Every commit must be accompanie
 graph TD
     skill-file.standard --> git-commit.skill
 ```
-\n## Verification Protocol\n1. Run {
+
+## Verification Protocol
+1. Run {
   "status": "success",
   "message": "test",
   "output": "[main 485384f] test"
-}.\n2. Verify git log contains the test commit.
+}.
+2. Verify git log contains the test commit.
 
 ## Verification Protocol
 1. Run `python3 drivers/git/git_commit.py 'test'`.

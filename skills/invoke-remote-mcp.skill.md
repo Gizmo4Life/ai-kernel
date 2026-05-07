@@ -12,7 +12,9 @@ implementation:
 summary: Invokes a tool on a remote MCP server, enabling distributed governance across multiple project environments.
 parent_standard: skill-file.standard
 glossary_refs: [context.glossary, orchestration.glossary, skill.glossary, standard.glossary]
----# Remote MCP Actuator
+---
+
+# Remote MCP Actuator
 
 ## Context
 High-scale ecosystems require governance that spans multiple repositories. This skill allows the AI Kernel to reach out to remote instances of itself (or other MCP servers) to execute cross-repo audits and healing waves.

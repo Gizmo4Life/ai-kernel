@@ -12,11 +12,9 @@ related: [skill.glossary, agent.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Prompt
 
 A **Prompt** in the AI Kernel is a standalone artifact designed to guide AI behavior for a specific, recurring task.
-
 
 ## Architecture
 

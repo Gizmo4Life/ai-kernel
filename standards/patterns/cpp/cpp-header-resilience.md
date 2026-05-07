@@ -4,7 +4,9 @@ type: pattern
 tags: [foundation, build, stability]
 category: logic
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Header Resilience
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Header Resilience
 
 # Pattern: Header Resilience
 

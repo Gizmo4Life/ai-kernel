@@ -4,7 +4,9 @@ title: Idempotency
 type: glossary
 tags: [logic, engineering, reliability]
 summary: The property of certain operations in mathematics and computer science whereby they can be applied multiple times without changing the result beyond the initial application.
----# Idempotency
+---
+
+# Idempotency
 
 ## Definition
 An idempotent operation is one that has no additional effect if it is called more than once with the same input parameters. In repository governance, this means a "Healing Wave" should be safe to run repeatedly without corrupting data.

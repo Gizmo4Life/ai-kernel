@@ -4,7 +4,9 @@ type: pattern
 tags: [anti-pattern, structure]
 category: anti-pattern
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Narrative Paragraphs
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Narrative Paragraphs
 
 # Anti-pattern: Narrative Paragraphs
 

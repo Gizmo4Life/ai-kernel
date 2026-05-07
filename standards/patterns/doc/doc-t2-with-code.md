@@ -4,7 +4,9 @@ type: pattern
 tags: [anti-pattern, architecture]
 category: geometry
 glossary_refs: [context.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > T2 with Code
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > T2 with Code
 
 # Anti-pattern: T2 with Code Snippets
 

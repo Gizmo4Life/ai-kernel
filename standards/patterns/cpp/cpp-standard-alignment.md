@@ -4,7 +4,9 @@ type: pattern
 tags: [cpp, build, standard]
 category: logic
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Standard Alignment
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Standard Alignment
 
 ## Problem
 Mismatches between the compiler standard (e.g., C++20) and linter settings/extensions can cause "structured binding" errors and "C++17 extension" warnings, even when the project intended to support them.

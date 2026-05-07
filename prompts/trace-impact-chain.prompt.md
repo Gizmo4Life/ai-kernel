@@ -11,7 +11,6 @@ glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, pr
 ## Context
 Automated context for Diamond Posture.
 
-
 # Trace Impact Chain
 
 Use the following "Recursive Upstream" heuristic to identify the source of an error:

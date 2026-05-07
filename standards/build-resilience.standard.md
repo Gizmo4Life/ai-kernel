@@ -11,7 +11,7 @@ padu:
   A: "Deterministic builds but with version-locked remote dependencies."
   D: "Globbing (file discovery) or non-deterministic build order."
   U: "Build fails intermittently or requires manual network access."
-glossary_refs: [standard.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---# Build Resilience Standard
 
 ## 1. CMake Registration
@@ -37,3 +37,10 @@ glossary_refs: [standard.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> build-resilience.standard
+```

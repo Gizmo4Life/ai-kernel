@@ -11,7 +11,7 @@ padu:
   A: "Isolated logic but with minor concrete dependencies."
   D: "Logic intertwined with IO or global state."
   U: "Spaghetti logic with no clear boundaries."
-glossary_refs: [standard.glossary, context.glossary, authority.glossary, heuristics.glossary]
+glossary_refs: [authority.glossary, context.glossary, heuristics.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Logic Encapsulation
 
 # Standard: Logic Encapsulation (PADU)
@@ -70,3 +70,10 @@ This standard governs where and how repetitive lookup and setup logic is defined
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> logic-encapsulation.standard
+```

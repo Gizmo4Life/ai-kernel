@@ -11,7 +11,7 @@ padu:
   A: "Standards are duplicated but kept in sync via automated healing waves."
   D: "Target repos have local standards that override the Sidecar without justification."
   U: "No linkage between target repo and Sidecar governance."
-glossary_refs: [agent.glossary, standard.glossary, orchestration.glossary, context.glossary, driver.glossary, skill.glossary, sidecar.glossary]
+glossary_refs: [agent.glossary, context.glossary, driver.glossary, orchestration.glossary, sidecar.glossary, skill.glossary, standard.glossary]
 ---# Cross-Repository Governance Standard
 
 ## Context
@@ -38,3 +38,10 @@ High-scale development requires consistent standards across multiple repositorie
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> cross-repo-governance.standard
+```

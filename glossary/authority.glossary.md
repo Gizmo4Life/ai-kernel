@@ -12,11 +12,9 @@ related: [ agent.glossary, agent-file.standard ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Authority
 
 **Authority** defines the boundaries of an agent's power within the repository.
-
 
 ## Architecture
 

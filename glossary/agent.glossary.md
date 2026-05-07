@@ -12,11 +12,9 @@ related: [ skill.glossary, instruction.glossary, standard.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Agent
 
 An **Agent** is a specialized persona that operates within the kernel. It is defined not just by what it can do (skills) but by how it behaves (standards) and what it aims to achieve (role).
-
 
 ## Architecture
 

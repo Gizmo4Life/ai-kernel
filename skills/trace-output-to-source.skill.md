@@ -17,11 +17,9 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Context
 Scans conversation logs to identify the chain of agents, instructions, and skills that contributed to a specific output.
 
-
 # Trace Output to Source
 
 This skill enables "Root Cause Analysis" for the AI Kernel by mapping an output back to its governing logic.
-
 
 ## Architecture
 
@@ -38,7 +36,6 @@ graph TD
     - Identify which **Agent** performed the action.
     - Identify the **Standard** linked in the active instruction's frontmatter.
 4. **Report**: provide a "Causal Chain" of components for the **Semantic Auditor** to review.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

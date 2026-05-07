@@ -6,7 +6,9 @@ tags: [workflow, git, github, review, audit, process, orchestration]
 summary: A workflow for synchronizing local state with a Pull Request and auditing the changes against repository standards and human reviewer feedback.
 parent_standard: instruction-file.standard
 glossary_refs: [context.glossary, instruction.glossary, skill.glossary, standard.glossary]
----# Review Pull Request
+---
+
+# Review Pull Request
 
 ## Context
 High-integrity development requires a bridge between "Automated Audits" and "Human Intent." This instruction codifies the process of ingesting PR metadata (diffs, comments) to ensure that the final merge preserves the Diamond Logic of the AI Kernel.

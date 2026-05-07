@@ -4,7 +4,9 @@ type: pattern
 tags: [cpp, build, cmake]
 category: logic
 glossary_refs: [determinism.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Component Registration
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Component Registration
 
 ## Problem
 In projects using explicit source file lists in `CMakeLists.txt`, adding a new `.cpp` file often results in linker errors ("symbol not found") because the new file was not registered with the executable target.

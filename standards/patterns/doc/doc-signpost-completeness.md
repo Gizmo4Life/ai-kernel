@@ -4,7 +4,9 @@ type: pattern
 pillar: developer
 category: geometry
 glossary_refs: [agent.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Signpost Completeness
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Signpost Completeness
 
 # Pattern: Signpost Completeness
 

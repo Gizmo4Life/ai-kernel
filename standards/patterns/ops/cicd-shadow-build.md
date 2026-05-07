@@ -4,7 +4,9 @@ type: pattern
 tags: [build, cicd, filesystem]
 category: cicd
 glossary_refs: [context.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Shadow Build
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Shadow Build
 
 # Pattern: Shadow Build
 

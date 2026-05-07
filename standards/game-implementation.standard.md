@@ -11,7 +11,7 @@ padu:
   A: "Compliant logic but using manual registry views for non-critical lookups."
   D: "Inlining registry views for player or flagship lookup."
   U: "Manual aggregation of InstalledModules instead of using centralized blueprinters."
-glossary_refs: [standard.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---# Game Implementation Standard
 
 ## 1. Blueprint Extraction
@@ -38,3 +38,10 @@ glossary_refs: [standard.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> game-implementation.standard
+```

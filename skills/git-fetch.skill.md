@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/git/git_fetch.py"
 summary: Synchronizes local remote-tracking branches with the origin repository.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary, standard.glossary]
----# Git Remote Auditor
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
+---
+
+# Git Remote Auditor
 
 ## Context
 Ensures the local repository is aware of the latest remote changes before any analysis, branching, or merging occurs.

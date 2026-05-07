@@ -7,18 +7,16 @@ tags: [telemetry, observability, naming, rules, governance, compliance]
 summary: Standards for naming spans, metrics, and logs to ensure cross-domain observability.
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines a deterministic hierarchy for all telemetry signals. It ensures that observability data from different services (e.g., a C++ backend and a React frontend) can be correlated seamlessly in a single dashboard.
-
 ## The Tri-Part Pattern
 All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.<module>.<action>`** pattern:
-
 - **Pillar**: The high-level functional domain (e.g., `auth`, `storage`, `ui`, `kernel`).
 - **Module**: The specific component or service (e.g., `session`, `cache`, `router`, `integrity`).
 - **Action**: The technical operation being performed (e.g., `validate`, `fetch`, `render`, `audit`).
-
 ## PADU Table
-
 | Practice | Rating | Rationale | Enforcement | Exception |
-|---|---|---|---|---|
+|
+glossary_refs: [skill.glossary, standard.glossary]
+---|---|---|---|---|
 | Use Tri-Part Naming | **P** | Enables deterministic filtering and grouping. | `tel-audit.skill` | None |
 | Lowercase Dot Notation | **P** | Standardizes across different telemetry providers. | `tel-audit.skill` | None |
 | Include `correlation_id` | **P** | Critical for tracing requests across boundaries. | evaluate-against-standard.skill | None |
@@ -29,3 +27,10 @@ All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.
 
 ## Enforcement
 The posture is **Hybrid-Automated**. We will implement a `tel-audit.skill` to regex-check keys in codebase strings.
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> tel-naming.standard
+```

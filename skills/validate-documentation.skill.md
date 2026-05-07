@@ -7,7 +7,9 @@ interface:
   input: { target_path: "string" }
   output: { status: "success" }
 summary: An atomic check to verify that documentation nodes are present and compliant.
----# Documentation Validation
+---
+
+# Documentation Validation
 
 ## Execution
 - **Command**: `python3 drivers/kernel/global_compliance_auditor.py <target_path>`

@@ -19,11 +19,9 @@ glossary_refs: [context.glossary, padu-scale.glossary, prompt.glossary, skill.gl
 ## Context
 Synthesizes patterns into a formal, atomic PADU table.
 
-
 # Generate PADU Table
 
 This skill converts pattern data into the kernel's formal quality format.
-
 
 ## Architecture
 
@@ -37,7 +35,6 @@ graph TD
 2. **Rank**: Use the **[Synthesize PADU Logic](../prompts/synthesize-padu-logic.prompt.md)** prompt to assign P, A, D, or U ratings.
 3. **Draft**: Create the markdown table. **Every practice must fit in a single row.**
 4. **Rationalize**: provide a clear reason for the rating and an **Enforcement** method.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

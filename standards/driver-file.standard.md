@@ -12,7 +12,7 @@ padu:
   A: "Driver is deterministic but missing frontmatter or verification protocol."
   D: "Driver relies on non-standard libraries or has side-effects not documented in the manifest."
   U: "Driver contains hardcoded secrets or is non-deterministic."
-glossary_refs: [agent.glossary, standard.glossary, context.glossary, frontmatter.glossary, driver.glossary, skill.glossary]
+glossary_refs: [agent.glossary, context.glossary, driver.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
 ---# Driver File Standard
 
 ## Context
@@ -39,3 +39,10 @@ Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> driver-file.standard
+```

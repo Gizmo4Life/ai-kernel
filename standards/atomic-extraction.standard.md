@@ -7,11 +7,11 @@ tags: [architecture, atomicity, de-conflation, rules, governance, compliance]
 summary: Standards for identifying out-of-scope content and extracting it to its correct SSOT domain.
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines the "De-conflation" protocol. To maintain the "Hardness" of the AI Kernel, every file must only contain content relevant to its tier. When a file is found to contain "Foreign Logic" (e.g., a Skill containing an Instruction), it must be extracted and replaced with a reference link.
-
 ## Extraction Rules
-
 | Source Content | Correct Target Domain | Action |
-|---|---|---|
+|
+glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
+---|---|---|
 | Term Definition | `glossary/*.md` | Extract to Glossary; Link via [term]. |
 | Multi-tool logic | `instructions/*.md` | Extract to Instruction; Link via ID. |
 | Reusable AI logic | `prompts/*.md` | Extract to Prompt; Link via frontmatter. |
@@ -31,3 +31,10 @@ This standard defines the "De-conflation" protocol. To maintain the "Hardness" o
 
 ## Enforcement
 The posture is **Hybrid-Automated**. The **Semantic Auditor** identifies bleeding, and the **Librarian** orchestrates the extraction.
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> atomic-extraction.standard
+```

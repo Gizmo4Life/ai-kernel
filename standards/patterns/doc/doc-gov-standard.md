@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, governance, logic]
 category: cicd
 glossary_refs: [context.glossary, frontmatter.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Gov Standard
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Gov Standard
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: standard`.

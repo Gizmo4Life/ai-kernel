@@ -12,11 +12,9 @@ related: [ skill.glossary, orchestration.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Atomicity
 
 **Atomicity** is the core design principle for **Skills** in the AI Kernel.
-
 
 ## Architecture
 

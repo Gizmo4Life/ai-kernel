@@ -2,7 +2,9 @@
 id: observability-compliance
 type: protocol
 pillar: governance
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Observability Compliance
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Observability Compliance
 
 ## 1. Objective
 Ensure every system modification emits the necessary telemetry to support active triage and long-term health monitoring.

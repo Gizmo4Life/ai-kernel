@@ -5,13 +5,16 @@ type: skill
 parent_standard: skill-file.standard
 tags: [quality, audit, compliance, governance, tool, action, execution]
 interface:
-  input: { standard_id: "standard_id", target_path: "path/to/file" }
+  input: { standard_
+id: "standard_id", target_path: "path/to/file" }
   output: { score: "percentage", details: { "requirement": "PASS/FAIL" } }
 implementation:
   engine: "python3 drivers/kernel/standard_auditor.py"
   command: "python3 drivers/kernel/standard_auditor.py {{standard_id}} {{target_path}}"
 summary: Deterministically evaluates a file against the requirements of a specific standard.
-interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."---
+interface:n  input: { query: "string" }n  output: { results: [] }nimplementation:n  engine: "bash"n  command: "grep {{query}} ."
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
+---
 
 # Standard Compliance Auditor
 
@@ -22,10 +25,7 @@ Fuzzy evaluation leads to quality drift. This skill uses the `standard_auditor.p
 
 ```mermaid
 graph TD
-    Input[Standard ID + Target File] --> Engine[standard_auditor.py]
-    Engine --> Parse[Parse: Standard Requirements]
-    Parse --> Check[Check: Target Compliance]
-    Check --> Result[JSON Compliance Report]
+    skill-file.standard --> evaluate-against-standard.skill
 ```
 
 ## Execution Steps

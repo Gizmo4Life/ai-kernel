@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, operational, restoration]
 category: ops
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Span Runbook
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Span Runbook
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: span_runbook` and `module: [T3-ID]`.

@@ -4,7 +4,9 @@ type: pattern
 pillar: developer
 category: geometry
 glossary_refs: [capability.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Sequential Section Numbering
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Sequential Section Numbering
 
 # Pattern: Sequential Section Numbering
 

@@ -4,7 +4,9 @@ type: pattern
 pillar: developer
 category: cicd
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Transitive Dependency Management
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Transitive Dependency Management
 
 # Pattern: Transitive Dependency Management
 

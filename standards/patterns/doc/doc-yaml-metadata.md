@@ -4,7 +4,9 @@ type: pattern
 tags: [documentation, RAG, metadata]
 category: ux
 glossary_refs: [frontmatter.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > YAML Metadata
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > YAML Metadata
 
 # Pattern: YAML Frontmatter & Index Maps
 

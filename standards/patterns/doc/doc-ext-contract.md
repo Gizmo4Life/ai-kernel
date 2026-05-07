@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, external, api]
 category: cicd
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ext Contract
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ext Contract
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: contract`.

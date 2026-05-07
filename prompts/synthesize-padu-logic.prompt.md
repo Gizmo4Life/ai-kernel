@@ -11,7 +11,6 @@ glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instructio
 ## Context
 Automated context for Diamond Posture.
 
-
 # Synthesize PADU Logic
 
 Use the following heuristic to assign quality ratings to a technical practice:
@@ -35,7 +34,6 @@ Use the following heuristic to assign quality ratings to a technical practice:
 
 ## Output Format
 Always provide a concise **Rationale** and a specific **Enforcement** method for every rating.
-
 
 ## Architecture
 

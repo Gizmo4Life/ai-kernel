@@ -43,7 +43,6 @@ graph TD
     - **Re-verify**: Re-run the verification to confirm the fix.
 7. **Reporting**: Update the incident status and close the alert.
 
-
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.
 2. All related Knowledge Graph nodes are updated and linked.

@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/telemetry/otel_emit.py '{{name}}' '{{attributes}}'"
 summary: Emits structured audit spans to an OpenTelemetry collector for centralized observability.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary]
----# Telemetry Audit Emitter
+glossary_refs: [context.glossary, skill.glossary, standard.glossary]
+---
+
+# Telemetry Audit Emitter
 
 ## Context
 Standardizes the process of reporting "Governance Events" to external observability platforms. Every major healing wave or architectural change should emit a trace to ensure full accountability.

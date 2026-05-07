@@ -5,8 +5,10 @@ type: instruction
 tags: [onboarding, sidecar, multi-repo, setup, workflow, integration]
 summary: A deterministic protocol for integrating the AI Kernel as a governance sidecar in a multi-repository workspace.
 parent_standard: instruction-file.standard
-glossary_refs: [agent.glossary, context.glossary, interlock.glossary, sidecar.glossary, skill.glossary, standard.glossary]
----# Sidecar Initialization Protocol
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, interlock.glossary, sidecar.glossary, skill.glossary, standard.glossary]
+---
+
+# Sidecar Initialization Protocol
 
 ## Context
 The AI Kernel is designed to operate as a "Governance Sidecar." It does not live inside your source code; it lives *beside* it in the same workspace, providing standards, skills, and glossary definitions that are shared across all your projects.

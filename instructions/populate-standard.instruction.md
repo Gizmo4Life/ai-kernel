@@ -15,11 +15,9 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Context
 Orchestrates the research and synthesis phase of standard creation.
 
-
 # Populate Standard
 
 This instruction guides the **[Standards Scout](../agents/standards-scout.agent.md)** through the data-gathering phase of codification.
-
 
 ## Architecture
 
@@ -39,7 +37,6 @@ graph TD
 1. **Industry Research**: Run `research-domain-patterns.skill` to identify global best practices for the target domain.
 2. **Codebase Scan**: Run `scan-codebase-patterns.skill` to identify how the domain is currently handled in the repository.
 3. **Synthesis**: Run `generate-padu-table.skill` to combine research and reality into a draft PADU table.
-
 
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.

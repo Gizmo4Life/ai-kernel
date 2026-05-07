@@ -12,11 +12,9 @@ related: [ frontmatter.glossary, verify-repository-integrity.instruction ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Knowledge Graph
 
 The **Knowledge Graph** is the conceptual map of the AI Kernel. It is formed by the machine-readable links (IDs and references) defined in the YAML frontmatter of each file.
-
 
 ## Architecture
 

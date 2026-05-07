@@ -44,7 +44,6 @@ graph TD
     - Run **[Audit Technical Documentation](../skills/doc-audit.skill.md)** on the healed file.
     - Update the status in the Audit Report.
 
-
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.
 2. All related Knowledge Graph nodes are updated and linked.

@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, architecture, orchestration]
 category: geometry
 glossary_refs: [capability.glossary, context.glossary, frontmatter.glossary, orchestration.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc T2 Capability
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc T2 Capability
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: capability`.

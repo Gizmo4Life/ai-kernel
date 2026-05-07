@@ -3,7 +3,9 @@ id: capability-elicitation-protocol
 type: protocol
 pillar: governance
 glossary_refs: [capability.glossary, context.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Capability Elicitation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Capability Elicitation
 
 ## 1. Objective
 Transform an initial premise or legacy code block into a detailed, bounded, and testable solution definition.
@@ -15,7 +17,6 @@ Transform an initial premise or legacy code block into a detailed, bounded, and 
 2.  **Refinement:** Execute [Elicitation Questioning](/docs/developer/pattern/doc-elicitation-questioning.md).
 3.  **Constraint Identification:** Define technical and business limits.
 4.  **Scope Refinement:** Execute [Elicitation Exclusivity](/docs/developer/pattern/doc-elicitation-exclusivity.md).
-
 
 ### Mode B: Brownfield (Code-First)
 1. **Code Audit:** Analyze the legacy logic for patterns and behaviors.

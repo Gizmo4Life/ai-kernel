@@ -12,11 +12,9 @@ related: [standard.glossary, quality-gate.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # PADU Scale
 
 The **PADU Scale** is the kernel's mechanism for objective quality governance. Every [Standard](../standards/README.md) contains a PADU table that classifies practices into one of four categories.
-
 
 ## Architecture
 

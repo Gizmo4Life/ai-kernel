@@ -4,7 +4,9 @@ type: pattern
 pillar: developer
 category: geometry
 glossary_refs: [context.glossary, frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Category Tag
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Category Tag
 
 # Pattern: Category Tag
 

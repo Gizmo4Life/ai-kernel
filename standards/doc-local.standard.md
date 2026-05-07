@@ -7,11 +7,11 @@ tags: [documentation, quality, atomicity, local, rules, governance, compliance]
 summary: Standards for component-level READMEs embedded within code directories.
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Local documentation provides "Truth at the Source." It is scoped strictly to the directory it resides in, ensuring that technical details are located exactly where they are most relevant to the developer or agent.
-
 ## PADU Table
-
 | Practice | Rating | Rationale | Enforcement | Exception |
-|---|---|---|---|---|
+|
+glossary_refs: [atomicity.glossary, context.glossary, skill.glossary, standard.glossary]
+---|---|---|---|---|
 | Directory-Scoped Context | **P** | The directory structure provides the primary context. | `doc-audit.skill` | None |
 | Link over Rehash | **P** | Prevents definition drift and maintains atomicity. | `doc-audit.skill` | Common language |
 | Technical Detail Depth | **P** | This is the ONLY place for implementation details. | evaluate-against-standard.skill | None |
@@ -22,3 +22,10 @@ By forcing local READMEs to stay atomic, we ensure that a developer can understa
 
 ## Enforcement
 The posture is **Automated**. The **Librarian** verifies that local READMEs do not exceed a "Semantic Scope" (e.g., they don't explain concepts outside their parent directory).
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> doc-local.standard
+```

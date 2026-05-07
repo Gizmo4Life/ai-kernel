@@ -16,11 +16,9 @@ glossary_refs: [context.glossary, heuristics.glossary, skill.glossary, standard.
 ## Context
 Extracts decisions, rationales, and key technical findings from a conversation into a structured context file.
 
-
 # Summarize to Context
 
 This skill implements the "Context Management" directive by distilling transient conversation history into persistent repository knowledge.
-
 
 ## Architecture
 

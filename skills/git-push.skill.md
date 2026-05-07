@@ -11,8 +11,10 @@ implementation:
   command: "python3 drivers/git/git_push.py"
 summary: Synchronizes the local repository state with the remote origin/main branch.
 parent_standard: skill-file.standard
-glossary_refs: [authority.glossary, context.glossary, skill.glossary]
----# Git Remote Synchronizer
+glossary_refs: [authority.glossary, context.glossary, skill.glossary, standard.glossary]
+---
+
+# Git Remote Synchronizer
 
 ## Context
 The final step of any hardening wave. This skill ensures that the local "Diamond State" is persisted to the remote authority.
@@ -31,10 +33,14 @@ The final step of any hardening wave. This skill ensures that the local "Diamond
 graph TD
     skill-file.standard --> git-push.skill
 ```
-\n## Verification Protocol\n1. Run {
+
+## Verification Protocol
+1. Run {
   "status": "fail",
-  "message": "fatal: unable to access 'https://github.com/Gizmo4Life/ai-kernel.git/': Could not resolve host: github.com\n"
-}.\n2. Verify remote reflects local changes.
+  "message": "fatal: unable to access 'https://github.com/Gizmo4Life/ai-kernel.git/': Could not resolve host: github.com
+"
+}.
+2. Verify remote reflects local changes.
 
 ## Verification Protocol
 1. Run `python3 drivers/git/git_push.py`.

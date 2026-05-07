@@ -3,7 +3,7 @@ parent_standard: kernel.standard
 id: cicd-pipeline
 type: standard
 pillar: governance
-glossary_refs: [standard.glossary, context.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > CI/CD Pipeline
 
 # Standard: CI/CD Pipeline
@@ -53,3 +53,10 @@ This standard defines the requirements and best practices for Continuous Integra
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> cicd-pipeline
+```

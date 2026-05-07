@@ -12,11 +12,9 @@ related: [save-conversation-context.skill]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Context
 
 **Context** refers to the persistent state and knowledge gathered during interactions. In the AI Kernel, context is explicitly managed to overcome the limitations of transient conversation windows.
-
 
 ## Architecture
 

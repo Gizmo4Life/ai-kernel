@@ -20,11 +20,9 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Context
 Identifies instruction-heavy sections in agents or instructions and moves them to the `prompts/` directory.
 
-
 # Extract Prompt
 
 This skill implements the "Modular Instruction" principle. It decouples the *What to do* (Prompt) from the *Who does it* (Agent) or *How to coordinate it* (Instruction).
-
 
 ## Architecture
 
@@ -43,7 +41,6 @@ graph TD
     - Add the new prompt ID to the `prompts: []` field in the source file's frontmatter.
     - Replace the original section content with a markdown link to the new prompt file.
 4. **Verification**: Invoke the **Semantic Auditor** to ensure the extraction didn't lose functional context.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

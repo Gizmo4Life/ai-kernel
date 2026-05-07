@@ -4,7 +4,9 @@ type: pattern
 tags: [docker, build, optimization]
 pillar: developer
 category: cicd
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Docker Multi-Stage Build
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Docker Multi-Stage Build
 
 ## Structure
 - **Requirement:** Separate the build environment (compiler, headers) from the execution environment (shared libraries, assets).

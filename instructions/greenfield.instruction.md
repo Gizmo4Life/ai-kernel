@@ -5,8 +5,10 @@ type: instruction
 tags: [setup, initialization, greenfield, workflow]
 summary: A protocol for initializing new modules or repositories with high-integrity structures from day zero.
 parent_standard: instruction-file.standard
-glossary_refs: [capability.glossary, context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Greenfield
+glossary_refs: [capability.glossary, context.glossary, instruction.glossary, standard.glossary]
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Greenfield
 
 ## 1. Objective
 Add new functionality by gathering domain context, deriving a testable solution definition, scaffolding the architecture, and executing the implementation.

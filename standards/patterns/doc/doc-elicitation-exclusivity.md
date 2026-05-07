@@ -3,7 +3,9 @@ id: doc-elicitation-exclusivity
 type: pattern
 tags: [elicitation, scope, exclusivity]
 category: elicitation
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Exclusivity
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Exclusivity
 
 ## Structure
 - **Requirement:** Explicitly define the "Out of Scope" boundary for the current work.

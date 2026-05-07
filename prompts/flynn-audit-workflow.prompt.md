@@ -11,7 +11,6 @@ glossary_refs: [agent.glossary, context.glossary, delegation.glossary, frontmatt
 ## Context
 Automated context for Diamond Posture.
 
-
 # Flynn's Audit Workflow
 
 This prompt defines the "Chain of Command" for performing a comprehensive AI Kernel audit.
@@ -28,7 +27,6 @@ This prompt defines the "Chain of Command" for performing a comprehensive AI Ker
     - Ensure new additions are linked to the glossary.
     - Deduplicate any inline definitions.
 4. **The Evolutionary Loop**: If recurring patterns are identified, task the **[Standards Scout](../agents/standards-scout.agent.md)** to codify them into new atomic standards.
-
 
 ## Architecture
 

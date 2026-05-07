@@ -3,7 +3,9 @@ id: doc-directory-nesting
 type: pattern
 tags: [anti-pattern, structure]
 category: anti-pattern
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Directory Nesting
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Directory Nesting
 
 # Anti-pattern: Sub-directory Nesting
 

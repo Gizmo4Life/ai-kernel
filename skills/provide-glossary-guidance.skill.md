@@ -16,11 +16,9 @@ glossary_refs: [context.glossary, glossary-entry.glossary, heuristics.glossary, 
 ## Context
 Analyzes a concept and recommends whether it should be a glossary entry or inlined.
 
-
 # Provide Glossary Guidance
 
 This skill enables Flynn to evaluate the "weight" of a concept and its long-term utility to the repository.
-
 
 ## Architecture
 

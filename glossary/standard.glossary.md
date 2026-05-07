@@ -12,11 +12,9 @@ related: [ padu-scale.glossary, glossary-entry.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Standard
 
 A **Standard** is a formal document that defines the quality bars and constraints for a specific domain (e.g., C++ coding, documentation structure, API design).
-
 
 ## Architecture
 

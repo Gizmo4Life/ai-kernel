@@ -5,8 +5,10 @@ type: registry
 tags: [registry, mcp, tools, export, manifest, api, definition]
 summary: The master registry of hardened skills exported by the AI Kernel via the MCP Server.
 parent_standard: manifest.standard
-glossary_refs: [capability.glossary, driver.glossary, frontmatter.glossary, skill.glossary]
----# Kernel Tool Manifest
+glossary_refs: [capability.glossary, driver.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
+---
+
+# Kernel Tool Manifest
 
 ## Exported Tools
 

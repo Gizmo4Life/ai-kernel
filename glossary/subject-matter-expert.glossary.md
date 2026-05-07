@@ -12,11 +12,9 @@ related: [domain-owner.glossary, delegation.glossary, agent.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Subject Matter Expert (SME)
 
 A **Subject Matter Expert** is a specialized agent designed to handle a single dimension of the repository's logic.
-
 
 ## Architecture
 

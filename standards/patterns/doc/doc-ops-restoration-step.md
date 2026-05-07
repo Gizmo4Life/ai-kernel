@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, operational, restoration, task]
 category: ops
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Restoration Step
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Restoration Step
 
 # Pattern: Restoration Step
 

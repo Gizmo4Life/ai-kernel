@@ -3,7 +3,9 @@ id: cpp-component-aggregation
 type: pattern
 tags: [cpp, ecs, logic]
 category: logic
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Component Aggregation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Component Aggregation
 
 ## Intent
 Prevent logic duplication and data inconsistency by centralizing the derivation of complex state from multiple ECS components.

@@ -3,7 +3,7 @@ parent_standard: kernel.standard
 id: context-elicitation-standard
 type: standard
 pillar: governance
-glossary_refs: [agent.glossary, standard.glossary, context.glossary]
+glossary_refs: [agent.glossary, context.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Context Elicitation
 
 ## Context: Semantic Discovery & Scope Control
@@ -41,3 +41,10 @@ glossary_refs: [agent.glossary, standard.glossary, context.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> context-elicitation-standard
+```

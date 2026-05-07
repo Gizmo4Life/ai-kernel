@@ -12,11 +12,9 @@ related: [ skill.glossary, standard.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Instruction
 
 An **Instruction** is a high-level procedure that guides an agent through a sequence of steps to achieve a goal. It abstracts the complexity of individual tool calls into a repeatable process.
-
 
 ## Architecture
 

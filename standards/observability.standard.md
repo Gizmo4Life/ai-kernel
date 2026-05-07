@@ -11,7 +11,7 @@ padu:
   A: "Basic tracing present but missing granular attributes or dashboard panels."
   D: "Logging-only or non-standard naming conventions."
   U: "Zero observability; 'Black Box' execution."
-glossary_refs: [standard.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---# Observability & Telemetry Standard
 
 ## 1. Nomenclature & Naming
@@ -48,3 +48,10 @@ glossary_refs: [standard.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> observability.standard
+```

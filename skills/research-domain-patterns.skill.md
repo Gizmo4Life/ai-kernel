@@ -15,11 +15,9 @@ glossary_refs: [antipattern.glossary, authority.glossary, context.glossary, skil
 ## Context
 Analyzes industry best practices for a specific technical domain.
 
-
 # Research Domain Patterns
 
 This skill researches industry standards for a specified `domain`.
-
 
 ## Architecture
 

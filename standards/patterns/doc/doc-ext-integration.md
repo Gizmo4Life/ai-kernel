@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, external, vendor]
 category: cicd
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ext Integration
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ext Integration
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: integration`.

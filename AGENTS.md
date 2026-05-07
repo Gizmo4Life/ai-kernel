@@ -5,6 +5,7 @@ type: documentation
 tags: [architecture, agents, hierarchy]
 glossary_refs: [agent.glossary, context.glossary, driver.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, padu-scale.glossary, progressive-disclosure.glossary, prompt.glossary, sidecar.glossary, skill.glossary, standard.glossary]
 ---
+
 # AI Kernel
 
 ## Context

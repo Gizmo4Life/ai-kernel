@@ -3,7 +3,9 @@ id: doc-structured-readme
 type: pattern
 tags: [documentation, organization, manifest]
 category: ux
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Structured README
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Structured README
 
 ## Structure
 - **Requirement:** Manifests (READMEs) containing 10 or more items must use domain-specific categorization.

@@ -12,11 +12,9 @@ related: [ flynn.agent, provide-glossary-guidance.skill ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Heuristics
 
 **Heuristics** are practical methods for problem-solving or discovery that are not guaranteed to be optimal or perfect, but are sufficient for the immediate goals.
-
 
 ## Architecture
 

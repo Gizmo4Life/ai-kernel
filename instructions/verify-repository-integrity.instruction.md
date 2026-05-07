@@ -15,11 +15,9 @@ glossary_refs: [context.glossary, delegation.glossary, frontmatter.glossary, ins
 ## Context
 Orchestrates the indexing and reference discovery skills to ensure knowledge graph integrity and delegation safety.
 
-
 # Verify Repository Integrity
 
 This instruction ensures the repository's [Knowledge Graph](../glossary/knowledge-graph.glossary.md) is unbroken and safe.
-
 
 ## Architecture
 

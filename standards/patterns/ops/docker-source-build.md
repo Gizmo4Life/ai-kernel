@@ -4,7 +4,9 @@ type: pattern
 tags: [docker, dependency, versioning]
 pillar: developer
 category: cicd
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Docker Source Build
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Docker Source Build
 
 # Pattern: Docker Source Build
 

@@ -4,7 +4,9 @@ type: pattern
 pillar: developer
 category: logic
 glossary_refs: [context.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Encapsulated State Mutation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Pattern: Encapsulated State Mutation
 
 # Pattern: Encapsulated State Mutation
 

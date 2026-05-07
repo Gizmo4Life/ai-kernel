@@ -4,7 +4,9 @@ type: pattern
 tags: [cpp, build, stability]
 category: logic
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Header Hygiene
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Header Hygiene
 
 ## Intent
 Minimize "invisible" dependencies and build breaks by ensuring every source file explicitly includes the definitions it requires.

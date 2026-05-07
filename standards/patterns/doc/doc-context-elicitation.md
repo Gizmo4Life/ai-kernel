@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, discovery, elicitation]
 category: elicitation
 glossary_refs: [context.glossary, frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Context Elicitation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Context Elicitation
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: elicitation_manifest`.

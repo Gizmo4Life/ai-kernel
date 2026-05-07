@@ -4,7 +4,9 @@ type: pattern
 tags: [meta, architecture, implementation]
 category: geometry
 glossary_refs: [capability.glossary, frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc T3 Module
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc T3 Module
 
 ## Structure
 - **YAML Frontmatter:** Must include `type: module`.

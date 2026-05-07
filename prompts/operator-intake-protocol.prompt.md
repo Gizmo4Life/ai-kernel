@@ -11,7 +11,6 @@ glossary_refs: [agent.glossary, context.glossary, delegation.glossary, instructi
 ## Context
 Automated context for Diamond Posture.
 
-
 # Operator Intake Protocol
 
 Follow these steps for every new user message:

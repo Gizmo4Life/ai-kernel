@@ -12,11 +12,9 @@ related: [ padu-scale.glossary, standard.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Antipattern
 
 An **Antipattern** is a pattern that may appear to be a beneficial solution to a problem but actually results in negative consequences.
-
 
 ## Architecture
 

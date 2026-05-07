@@ -3,7 +3,7 @@ parent_standard: kernel.standard
 id: arch-documentation
 type: standard
 pillar: governance
-glossary_refs: [standard.glossary, context.glossary, capability.glossary]
+glossary_refs: [capability.glossary, context.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Architecture Documentation
 
 ## Context: System Design & Mapping
@@ -24,3 +24,10 @@ glossary_refs: [standard.glossary, context.glossary, capability.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> arch-documentation
+```

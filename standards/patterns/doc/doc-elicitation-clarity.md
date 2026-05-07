@@ -4,7 +4,9 @@ type: pattern
 tags: [elicitation, requirements, clarity]
 category: elicitation
 glossary_refs: [capability.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Clarity
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Clarity
 
 ## Structure
 - **Requirement:** Every capability or module must have at least one measurable success criterion.

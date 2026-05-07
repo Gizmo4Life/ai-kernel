@@ -15,11 +15,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, glossary-entry.glossary,
 ## Context
 A workflow for adding a new concept to the glossary while ensuring quality and preventing duplication.
 
-
 # Create Glossary Entry
 
 Follow these steps to add a new concept to the AI Kernel.
-
 
 ## Architecture
 

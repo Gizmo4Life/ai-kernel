@@ -12,11 +12,9 @@ related: [bootstrap-new-standard.instruction]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Bootstrap
 
 **Bootstrap** refers to the self-starting process that builds up a complex system.
-
 
 ## Architecture
 

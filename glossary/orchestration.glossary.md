@@ -12,11 +12,9 @@ related: [ instruction.glossary, skill.glossary, atomicity.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Orchestration
 
 **Orchestration** is the process of sequencing **Skills** and **Quality Gates** to fulfill an **Instruction**.
-
 
 ## Architecture
 

@@ -18,11 +18,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, skill.glossary, standard
 ## Context
 Saves curated information from the current conversation to the `context/` folder.
 
-
 # Save Conversation Context
 
 This skill ensures that important decisions and data survive across AI sessions.
-
 
 ## Architecture
 
@@ -36,7 +34,6 @@ graph TD
 2. **Path Selection**: Use the `context/` directory.
 3. **Write**: Save the file using the `.context.md` extension.
 4. **Link**: provide a link to the new context file.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

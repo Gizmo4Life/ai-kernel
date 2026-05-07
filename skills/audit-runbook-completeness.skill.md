@@ -9,7 +9,10 @@ id: "string" }
   output: { status: "success", runbook_present: "boolean" }
 summary: An atomic check to verify that a physical module (T3) has its corresponding operational runbook.
 parent_standard: skill-file.standard
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Runbook Completeness
+glossary_refs: [skill.glossary, standard.glossary]
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Runbook Completeness
 
 ## 1. Objective
 Ensure every system component is documented for recovery and triage to minimize Downtime (MTTR).

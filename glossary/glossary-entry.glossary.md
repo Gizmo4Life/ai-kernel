@@ -12,11 +12,9 @@ related: [ standard.glossary, skill.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Glossary Entry
 
 A **Glossary Entry** is the fundamental unit of knowledge in the AI Kernel. It provides a single, canonical definition for a term to prevent ambiguity and duplication across the codebase and documentation.
-
 
 ## Architecture
 

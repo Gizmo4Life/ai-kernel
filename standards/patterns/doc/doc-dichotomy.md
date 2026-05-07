@@ -4,7 +4,9 @@ type: pattern
 tags: [documentation, meta]
 category: geometry
 glossary_refs: [standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Dichotomy
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Dichotomy
 
 # Pattern: Pattern/Standard Dichotomy
 

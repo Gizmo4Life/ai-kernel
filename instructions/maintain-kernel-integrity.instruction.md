@@ -54,7 +54,6 @@ Execute the **[Restoration Wave]**:
 ### 4. Verification Pass (Validation)
 Re-run the **Audit Phase**. Loop until the `global-gap-report.md` shows **Zero Fails**.
 
-
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.
 2. All related Knowledge Graph nodes are updated and linked.

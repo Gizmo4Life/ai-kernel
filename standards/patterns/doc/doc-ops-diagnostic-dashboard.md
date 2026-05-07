@@ -4,7 +4,9 @@ type: pattern
 tags: [operational, observability, dashboard]
 category: ops
 glossary_refs: [capability.glossary, context.glossary, frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Diagnostic Dashboard
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Ops Diagnostic Dashboard
 
 ## 1. Objective
 To provide a structured, machine-readable definition of operational dashboards in SigNoz, enabling rapid troubleshooting of T2 Capabilities.

@@ -12,11 +12,9 @@ related: [agent.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Delegation
 
 **Delegation** is the mechanism by which agents in the AI Kernel collaborate. It allows a generalist agent to invoke a specialized agent (e.g., Flynn or the Standards Auditor) to handle a specific domain.
-
 
 ## Architecture
 

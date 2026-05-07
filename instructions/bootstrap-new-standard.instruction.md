@@ -17,11 +17,9 @@ glossary_refs: [agent.glossary, bootstrap.glossary, context.glossary, frontmatte
 ## Context
 Orchestrates the full process of researching, drafting, auditing, and committing a new technical standard.
 
-
 # Bootstrap New Standard
 
 This is the primary workflow for expanding the AI Kernel's reach into new domains.
-
 
 ## Architecture
 
@@ -41,7 +39,6 @@ graph TD
 3. **Refine**: Address any meta-standard violations identified during the draft.
 4. **Final Audit**: Task the **[Standards Auditor](../agents/standards-auditor.agent.md)** to perform a final compliance pass.
 5. **Commit**: Save the new standard and all supporting glossary entries.
-
 
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.

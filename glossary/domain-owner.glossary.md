@@ -12,11 +12,9 @@ related: [subject-matter-expert.glossary, authority.glossary, agent.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Domain Owner
 
 A **Domain Owner** is a high-authority agent responsible for the integrity, organization, and evolution of a specific project scope. For example, `flynn` owns all changes to `skills/`, `instructions/`, `prompts/`, `glossary/`, `agents/`, and `standards/`.
-
 
 ## Architecture
 

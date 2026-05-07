@@ -4,7 +4,9 @@ type: pattern
 tags: [cpp, build, stability]
 category: logic
 glossary_refs: [context.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Explicit Namespace Resolution
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Explicit Namespace Resolution
 
 ## Intent
 Prevent name collisions and ambiguity when multiple libraries or local modules use similar naming conventions, specifically within the EnTT and SFML ecosystems.

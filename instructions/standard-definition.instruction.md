@@ -3,7 +3,9 @@ id: standard-definition
 type: protocol
 pillar: governance
 glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Standard Definition
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Standard Definition
 
 ## 1. Objective
 Assign a [Pattern] to a [Standard] and define its contextual fitness using the PADU matrix.

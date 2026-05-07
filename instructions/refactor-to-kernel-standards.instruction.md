@@ -17,11 +17,9 @@ glossary_refs: [bootstrap.glossary, context.glossary, frontmatter.glossary, glos
 ## Context
 A maximalist workflow for aligning repository content with the core architectural principles of the AI Kernel.
 
-
 # Refactor to Kernel Standards
 
 This instruction codifies the "maximalist extraction" process used to maintain the framework's integrity.
-
 
 ## Architecture
 
@@ -49,7 +47,6 @@ graph TD
 4. **Standard Extraction**:
     - If a skill or instruction contains "hardcoded" quality rules, move them to a relevant **Standard** (PADU table).
 5. **Commit**: Save and propose changes.
-
 
 ## Postconditions
 1. The system state matches the goal defined in the frontmatter.

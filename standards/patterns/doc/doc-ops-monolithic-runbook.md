@@ -3,7 +3,9 @@ id: doc-ops-monolithic-runbook
 type: pattern
 tags: [anti-pattern, operational]
 category: anti-pattern
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Monolithic Runbook
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Monolithic Runbook
 
 # Anti-pattern: Monolithic Runbook
 

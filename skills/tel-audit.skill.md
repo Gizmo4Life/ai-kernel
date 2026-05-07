@@ -17,11 +17,9 @@ glossary_refs: [context.glossary, knowledge-graph.glossary, skill.glossary, stan
 ## Context
 Scans codebase strings and configurations for violations of the Telemetry Naming Standard.
 
-
 # Audit Telemetry Naming
 
 This skill provides automated enforcement for global observability standards. It ensures that every metric and span follows the `<pillar>.<module>.<action>` pattern.
-
 
 ## Architecture
 
@@ -37,7 +35,6 @@ graph TD
     - Ensure the key contains only lowercase alphanumeric characters and dots.
     - Validate against the 3-part requirement: `^[a-z0-9]+\.[a-z0-9]+\.[a-z0-9]+$`.
 3. **Report**: List all keys that fail the regex check and their file/line numbers.
-
 
 ## Verification Protocol
 1. Perform a manual dry-run of the execution steps.

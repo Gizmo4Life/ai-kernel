@@ -11,7 +11,7 @@ padu:
   A: "Skill has an interface and verification but missing a formal undo path."
   D: "Skill is non-deterministic or missing verification protocols."
   U: "Skill has side-effects with no way to verify or revert."
-glossary_refs: [agent.glossary, standard.glossary, context.glossary, skill.glossary]
+glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
 ---# Skill File Standard
 
 ## Context
@@ -39,3 +39,10 @@ Agents MUST follow the **Verify-or-Revert** cycle:
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> skill-file.standard
+```

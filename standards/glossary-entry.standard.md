@@ -34,5 +34,14 @@ By defining what a term **cannot** be, we create a "Hard" semantic boundary. Thi
 
 ## Enforcement
 The posture is **Agent-Audited**. The **Semantic Auditor** verifies that all new glossary entries include at least two functional constraints.
-\n## Usage Constraints\n- This standard must only apply to files with the .md suffix.\n- It is forbidden to use this standard for Agents or Skills.\n
 
+## Usage Constraints
+- This standard must only apply to files with the .md suffix.
+- It is forbidden to use this standard for Agents or Skills.
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> glossary-entry.standard
+```

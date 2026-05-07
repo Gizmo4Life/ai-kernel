@@ -15,11 +15,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, sk
 ## Context
 Workflow for merging similar glossary entries or clarifying ambiguous terms.
 
-
 # Resolve Glossary Conflict
 
 Flynn's workflow for maintaining the "Single Source of Truth" in the glossary.
-
 
 ## Architecture
 

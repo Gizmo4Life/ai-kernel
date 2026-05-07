@@ -12,11 +12,9 @@ related: [ librarian.agent, manifest]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Knowledge Map
 
 A **Knowledge Map** is a subset of the **Knowledge Graph**. While the graph contains everything, a map highlights only the standards, skills, and glossary entries relevant to a specific problem.
-
 
 ## Architecture
 

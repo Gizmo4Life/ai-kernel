@@ -14,11 +14,9 @@ glossary_refs: [context.glossary, frontmatter.glossary, instruction.glossary, qu
 ## Context
 Orchestrates a repository-wide check for frontmatter completeness and validity.
 
-
 # Perform Frontmatter Audit
 
 This instruction ensures every file in the AI Kernel is a valid node in the Knowledge Graph.
-
 
 ## Architecture
 

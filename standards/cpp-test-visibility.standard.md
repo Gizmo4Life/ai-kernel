@@ -11,7 +11,7 @@ padu:
   A: "Tests focus only on public interface but logic is complex."
   D: "Exposing private data as public just for testing."
   U: "Critical logic is untestable due to encapsulation constraints."
-glossary_refs: [standard.glossary, context.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Standard: C++ Test Visibility
 
 # Standard: C++ Test Visibility
@@ -44,3 +44,10 @@ Only promote members that are critical to the "Success Criteria" defined in the 
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> cpp-test-visibility.standard
+```

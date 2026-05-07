@@ -12,11 +12,9 @@ related: [frontmatter.glossary]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Progressive Disclosure
 
 **Progressive Disclosure** is an optimization strategy for AI agents. It involves providing just enough information for the agent to decide if a file is relevant before loading the entire content.
-
 
 ## Architecture
 

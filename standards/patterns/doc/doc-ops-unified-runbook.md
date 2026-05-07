@@ -5,7 +5,9 @@ type: universal_runbook
 tags: [meta, operational, triage]
 category: ops
 glossary_refs: [frontmatter.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Universal System Runbook
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Universal System Runbook
 
 # Pattern: Universal System Runbook
 

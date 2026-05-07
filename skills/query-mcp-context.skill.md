@@ -12,7 +12,9 @@ implementation:
 summary: Queries an external Model Context Protocol server to retrieve tools or resources.
 parent_standard: skill-file.standard
 glossary_refs: [context.glossary, skill.glossary, standard.glossary]
----# MCP Context Bridge
+---
+
+# MCP Context Bridge
 
 ## Context
 Provides a standardized way for the AI Kernel to reach out to external data sources. This skill abstracts away the complexities of service-specific APIs by leveraging the MCP standard.

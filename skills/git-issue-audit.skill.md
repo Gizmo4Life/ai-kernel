@@ -12,8 +12,10 @@ implementation:
   command: "python3 drivers/git/github_issue_audit.py {{owner}} {{repo}} {{issue_number}} {{token}}"
 summary: Fetches and analyzes GitHub issue metadata to ingest external feedback or bug reports.
 parent_standard: skill-file.standard
-glossary_refs: [context.glossary, instruction.glossary, skill.glossary, system-first-remediation.glossary]
----# GitHub Issue Auditor
+glossary_refs: [context.glossary, instruction.glossary, skill.glossary, standard.glossary, system-first-remediation.glossary]
+---
+
+# GitHub Issue Auditor
 
 ## Context
 Bridges the gap between the internal Kernel state and external feedback. This skill allows agents to ingest bug reports and translate them into systemic healing waves.

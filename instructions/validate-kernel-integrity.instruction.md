@@ -16,11 +16,9 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Context
 A supreme maintenance workflow for auditing and remediating the entire repository against all architectural and file-type standards.
 
-
 # Validate Kernel Integrity
 
 This is the ultimate quality assurance workflow for the AI Kernel.
-
 
 ## Architecture
 

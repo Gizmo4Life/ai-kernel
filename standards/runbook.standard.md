@@ -7,7 +7,9 @@ status: stable
 version: 1.1.0
 parent_standard: kernel.standard
 glossary_refs: [context.glossary, instruction.glossary, standard.glossary]
----# Universal Runbook Standard
+---
+
+# Universal Runbook Standard
 
 ## Context
 A Universal Runbook is the definitive entry point for operational response. It provides the severity matrix and escalation paths required to stabilize a system under duress. This standard ensures that all runbooks are actionable, consistent, and interlocked with the system's telemetry.

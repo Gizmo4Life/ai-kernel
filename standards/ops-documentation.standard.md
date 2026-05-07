@@ -3,7 +3,7 @@ parent_standard: kernel.standard
 id: ops-documentation
 type: standard
 pillar: governance
-glossary_refs: [standard.glossary, context.glossary]
+glossary_refs: [context.glossary, standard.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Operational Documentation
 
 ## Context: Incident Response & System State
@@ -28,3 +28,10 @@ glossary_refs: [standard.glossary, context.glossary]
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> ops-documentation
+```

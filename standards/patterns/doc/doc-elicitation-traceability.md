@@ -3,7 +3,9 @@ id: doc-elicitation-traceability
 type: pattern
 tags: [elicitation, testing, traceability]
 category: elicitation
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Traceability
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Doc Elicitation Traceability
 
 ## Structure
 - **Requirement:** Every success criterion must map 1:1 to a specific test case in the [Test Plan](/docs/governance/protocol/test-planning.md).

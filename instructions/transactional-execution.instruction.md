@@ -5,8 +5,10 @@ type: instruction
 tags: [workflow, git, transactional, integrity, rollback]
 summary: A mandatory protocol for executing skills with deterministic verification and automated rollback.
 parent_standard: instruction-file.standard
-glossary_refs: [agent.glossary, context.glossary, skill.glossary]
----# Transactional Execution Protocol
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, skill.glossary, standard.glossary]
+---
+
+# Transactional Execution Protocol
 
 ## Context
 In a high-integrity repository, every action must be atomic. This protocol ensures that any failed skill execution is immediately "Undone," maintaining a stable and compliant codebase at all times.

@@ -5,7 +5,7 @@ title: Agent File Standard
 type: standard
 tags: [governance, agent, rules, compliance]
 summary: Standards for defining autonomous agents, emphasizing the 2-tier delegation model and protocol-delegation.
-glossary_refs: [delegation.glossary, agent.glossary, standard.glossary, context.glossary, instruction.glossary, skill.glossary]
+glossary_refs: [agent.glossary, context.glossary, delegation.glossary, instruction.glossary, skill.glossary, standard.glossary]
 ---# Agent File Standard
 
 ## Context
@@ -25,3 +25,9 @@ This standard defines the requirements for autonomous agents within the AI Kerne
 ## Enforcement
 The posture for agents is **Hybrid-Automated**. Structural elements are enforced via `verify-repository-integrity.instruction`. Protocol delegation and logic density still require semantic audit by the **evaluate-against-standard.skill**.
 
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> agent-file.standard
+```

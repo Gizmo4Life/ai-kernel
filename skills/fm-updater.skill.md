@@ -8,7 +8,9 @@ interface:
   output: { status: "success" }
 summary: Deterministically updates a single frontmatter field in a file.
 glossary_refs: [frontmatter.glossary]
----# Frontmatter Updater
+---
+
+# Frontmatter Updater
 
 ## Execution
 - **Command**: `python3 drivers/kernel/fm_updater.py <fpath> <key> <value>`

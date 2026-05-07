@@ -11,7 +11,6 @@ glossary_refs: [atomicity.glossary, context.glossary, instruction.glossary, orch
 ## Context
 Automated context for Diamond Posture.
 
-
 # Audit Action Atomicity
 
 Analyze the target action (Skill or Instruction) for the following "Bloat Triggers":
@@ -24,7 +23,6 @@ Analyze the target action (Skill or Instruction) for the following "Bloat Trigge
 - **Atomic (P)**: One tool, one verb, one clear output.
 - **Complex (D)**: Functional but needs splitting.
 - **Bloated (U)**: Fatal error; requires immediate refactor.
-
 
 ## Architecture
 

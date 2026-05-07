@@ -4,7 +4,9 @@ title: Single Source of Calculation (SSC)
 type: glossary
 tags: [architecture, logic, reliability]
 summary: A design pattern where a specific calculation or logic gate is centralized in exactly one module to prevent "Ghost Logic" or desynchronization.
----# Single Source of Calculation (SSC)
+---
+
+# Single Source of Calculation (SSC)
 
 ## Definition
 SSC ensures that complex derivations (e.g., ship mass, trade prices, or compliance scores) are performed by a single authority. All other modules must request the result from this authority rather than re-implementing the logic.

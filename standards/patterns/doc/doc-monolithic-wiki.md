@@ -4,7 +4,9 @@ type: pattern
 tags: [anti-pattern, structure]
 category: anti-pattern
 glossary_refs: [agent.glossary, orchestration.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Monolithic Wiki
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > Monolithic Wiki
 
 # Anti-pattern: Monolithic Wiki Page
 

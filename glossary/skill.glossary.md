@@ -12,11 +12,9 @@ related: [ instruction.glossary, agent.glossary ]
 ## Context
 Canonical definition of a core AI Kernel concept.
 
-
 # Skill
 
 A **Skill** is a discrete capability that leverages specific tools (e.g., git, grep, editor) to perform a task. Skills are the building blocks of automated workflows.
-
 
 ## Architecture
 

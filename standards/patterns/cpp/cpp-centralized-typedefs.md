@@ -3,7 +3,9 @@ id: cpp-centralized-typedefs
 type: pattern
 tags: [cpp, types, architecture]
 category: logic
----[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Centralized Typedefs
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Developer](/docs/developer/readme.md) > [Pattern](readme.md) > C++ Centralized Typedefs
 
 ## Problem
 Defining shared types, typedefs, or hashes (e.g., `ShipOutfitHash`) in multiple component headers or `.cpp` files leads to redefinition errors, include cycles, and "identifier not found" errors when include orders change.

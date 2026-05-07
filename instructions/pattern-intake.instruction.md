@@ -5,8 +5,10 @@ type: instruction
 tags: [pattern, discovery, standardization, workflow]
 summary: A protocol for identifying, documenting, and codifying recurring code or documentation patterns into the project's governance.
 parent_standard: instruction-file.standard
-glossary_refs: [frontmatter.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Pattern Intake
+glossary_refs: [frontmatter.glossary, instruction.glossary, standard.glossary]
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Pattern Intake
 
 ## 1. Objective
 Extract a novel code or document structure, define it as a contextless geometry [Pattern], and assign its contextual fitness in a [Standard].

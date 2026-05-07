@@ -1,3 +1,13 @@
+"""
+---
+id: visual_glossary_healer.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for visual glossary healer.
+---
+"""
+
 import os
 import re
 

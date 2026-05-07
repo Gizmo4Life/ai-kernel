@@ -1,3 +1,13 @@
+"""
+---
+id: nit_pick_auditor.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for nit pick auditor.
+---
+"""
+
 import os
 import re
 import json

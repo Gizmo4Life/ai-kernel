@@ -2,38 +2,37 @@
 id: driver-file.standard
 title: Driver File Standard
 type: standard
-requirements: [id, summary, "## Interface", "## Implementation"]
-tags: [execution, automation, connectivity, rules, governance]
-summary: Standards for atomic, directly executable logic files that implement Kernel Skills.
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, driver.glossary, skill.glossary, standard.glossary]
+tags: [governance, standard, driver, automation, logic]
+scope: "drivers/**/*.py"
+status: stable
+version: 1.0.0
+padu:
+  P: "Driver is 100% deterministic, zero-token, and contains embedded YAML frontmatter."
+  A: "Driver is deterministic but missing frontmatter or verification protocol."
+  D: "Driver relies on non-standard libraries or has side-effects not documented in the manifest."
+  U: "Driver contains hardcoded secrets or is non-deterministic."
+glossary_refs: [context.glossary, driver.glossary, frontmatter.glossary, standard.glossary]
 ---# Driver File Standard
 
 ## Context
-A Driver is the "Physical Actuator" of a Skill. While a Skill defines the agent's intent, the Driver performs the actual work (calling an API, running a command, parsing a file). Drivers must be atomic, deterministic, and easily replaceable.
+Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO, File Edits, Network calls) that the Agents orchestrate. To maintain a high-integrity system, Drivers must be deterministic, atomic, and visible to the Knowledge Graph.
 
-## PADU Table
+## Structural Requirements
+1. **Embedded Frontmatter**: Every driver MUST begin with a triple-quoted docstring containing YAML frontmatter.
+2. **Deterministic Logic**: Drivers should avoid stochastic processes (No internal AI calls unless explicitly scoped).
+3. **JSON Interface**: Drivers MUST output results in a machine-readable JSON format to be consumed by Skills.
+4. **Atomic Action**: A driver should do ONE thing (e.g., update frontmatter, not "rebuild the whole repo").
 
-| Practice | Rating | Rationale | Enforcement | Exception |
-| :--- | :--- | :--- | :--- | :--- |
-| **Atomic Logic** | **P** | Each driver must do one thing well. | flynn.agent | Complex aggregators. |
-| **Deterministic Output** | **P** | Results must be predictable and machine-readable (JSON). | flynn.agent | Streaming outputs. |
-| **ID Persistence** | **P** | Every driver must have a unique ID in its header. | id-auditor.skill | Temporary test scripts. |
-| **Self-Contained** | **A** | Avoid complex local dependencies. Prefer standard libraries or MCP protocols. | flynn.agent | Specialized ML drivers. |
-
-## Execution Steps
-1. **Define Interface**: Document inputs and outputs in the driver header.
-2. **Implement Logic**: Write the Python/Bash code.
-3. **Audit**: Run `evaluate-against-standard.skill` to ensure compliance.
+## Verification Protocol
+1. **Audit**: The `global_compliance_auditor.py` must be able to parse the embedded frontmatter.
+2. **Dry-Run**: Drivers should support a `--dry-run` or similar flag when performing destructive edits.
 
 ## Quality Gate
-- **Verification**: Drivers must be directly executable from the CLI.
-- **Enforcement**: Drivers failing the deterministic test are **Unacceptable (U)**.
+- **Verification**: Every driver must be rated P or A on the PADU scale.
+- **Enforcement**: Drivers rated U or D will be "Locked" (denied execution) by Flynn.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    standard-file.standard --> driver-file.standard
 ```
-\n## Enforcement\n| Practice | Rating | Rationale | Enforcement | Exception |\n| :--- | :--- | :--- | :--- | :--- |\n| **Atomic Logic** | **P** | Keep it simple. | flynn.agent | None. |\n

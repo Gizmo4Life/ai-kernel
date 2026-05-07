@@ -1,3 +1,13 @@
+"""
+---
+id: git_commit.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for git commit.
+---
+"""
+
 import subprocess
 import json
 import sys

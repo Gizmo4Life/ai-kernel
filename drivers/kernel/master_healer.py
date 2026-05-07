@@ -1,3 +1,12 @@
+"""
+---
+id: master_healer.driver
+type: driver
+tags: [kernel, orchestration, heal]
+parent_standard: driver-file.standard
+summary: The master orchestration script for repository healing waves.
+---
+"""
 import os
 import subprocess
 import json

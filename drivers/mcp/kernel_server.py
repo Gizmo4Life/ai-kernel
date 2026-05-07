@@ -1,3 +1,13 @@
+"""
+---
+id: kernel_server.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for kernel server.
+---
+"""
+
 import http.server
 import json
 import subprocess

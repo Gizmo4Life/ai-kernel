@@ -1,3 +1,13 @@
+"""
+---
+id: git_push.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for git push.
+---
+"""
+
 import subprocess
 import json
 import sys

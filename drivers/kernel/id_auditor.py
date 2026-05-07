@@ -1,3 +1,13 @@
+"""
+---
+id: id_auditor.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for id auditor.
+---
+"""
+
 import os
 import re
 import json

@@ -1,3 +1,13 @@
+"""
+---
+id: universal_standard_healer.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for universal standard healer.
+---
+"""
+
 import os
 import re
 

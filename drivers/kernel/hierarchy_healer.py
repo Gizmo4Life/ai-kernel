@@ -1,3 +1,13 @@
+"""
+---
+id: hierarchy_healer.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for hierarchy healer.
+---
+"""
+
 import os
 import re
 

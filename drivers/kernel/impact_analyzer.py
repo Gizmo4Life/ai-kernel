@@ -1,3 +1,13 @@
+"""
+---
+id: impact_analyzer.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for impact analyzer.
+---
+"""
+
 import os
 import re
 import json

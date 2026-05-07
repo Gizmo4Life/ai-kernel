@@ -1,3 +1,13 @@
+"""
+---
+id: git_fetch.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for git fetch.
+---
+"""
+
 import subprocess
 import json
 import sys

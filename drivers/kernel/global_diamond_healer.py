@@ -1,3 +1,13 @@
+"""
+---
+id: global_diamond_healer.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for global diamond healer.
+---
+"""
+
 import os
 import yaml
 import re

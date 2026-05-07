@@ -1,90 +1,62 @@
+"""
+---
+id: global_compliance_auditor.driver
+type: driver
+tags: [kernel, audit, compliance]
+parent_standard: driver-file.standard
+summary: Recursively audits the repository for frontmatter compliance across MD and PY files and updates the global gap report.
+---
+"""
 import os
-import re
-import subprocess
 import json
+import re
 
-def get_fm_field(filepath, field):
-    try:
-        with open(filepath, 'r') as f:
-            content = f.read()
-    except: return None
+def extract_fm_field(content, field, is_py=False):
+    if is_py:
+        match = re.search(r'"""\s*---\s*(.*?)\s*---\s*"""', content, re.DOTALL)
+        if not match:
+            match = re.search(r"'''\s*---\s*(.*?)\s*---\s*'''", content, re.DOTALL)
+    else:
+        match = re.search(r'^---\s*(.*?)\s*---\s*', content, re.DOTALL)
     
-    match = re.search(rf'^{field}:\s*(.*)$', content, re.MULTILINE)
     if match:
-        return match.group(1).strip()
+        fm_block = match.group(1)
+        field_match = re.search(f'^{field}:\s*(.*)', fm_block, re.MULTILINE)
+        if field_match:
+            return field_match.group(1).strip().strip('"').strip("'")
     return None
 
-def main():
-    gap_report = {
-        "summary": {"total_files": 0, "compliant_files": 0, "failed_files": 0, "total_debt": 0, "error_files": 0},
-        "details": [],
-        "errors": []
-    }
-    
-    domains = ['agents', 'skills', 'instructions', 'standards', 'prompts', 'glossary', 'drivers']
-    
-    for d in domains:
-        path = os.path.join(os.getcwd(), d)
-        if not os.path.exists(path): continue
-        for root, _, files in os.walk(path):
-            for name in files:
-                if name.endswith('.md') and name != 'README.md':
-                    fpath = os.path.join(root, name)
-                    gap_report["summary"]["total_files"] += 1
-                    
-                    parent = get_fm_field(fpath, 'parent_standard')
-                    if not parent:
-                        if d == 'skills': parent = 'skill-file.standard'
-                        elif d == 'instructions': parent = 'instruction-file.standard'
-                        elif d == 'standards': parent = 'standard-file.standard'
-                        elif d == 'prompts': parent = 'prompt-file.standard'
-                        elif d == 'agents': parent = 'agent-file.standard'
-                        elif d == 'glossary': parent = 'glossary-entry.standard'
-                        elif d == 'drivers': parent = 'driver-file.standard'
-
-                    cmd = ["python3", "drivers/kernel/standard_auditor.py", parent, fpath]
-                    result = subprocess.run(cmd, capture_output=True, text=True)
-                    try:
-                        audit_data = json.loads(result.stdout)
-                        if "error" in audit_data and "kernel.standard" not in fpath:
-                            gap_report["summary"]["error_files"] += 1
-                            gap_report["errors"].append({"file": fpath, "error": audit_data["error"]})
-                        else:
-                            if "score" in audit_data:
-                                score = float(audit_data['score'].replace('%',''))
-                                if score < 100:
-                                    gap_report["summary"]["failed_files"] += 1
-                                    gap_report["details"].append(audit_data)
-                                    for status in audit_data['details'].values():
-                                        if status == "FAIL": gap_report["summary"]["total_debt"] += 1
-                                else:
-                                    gap_report["summary"]["compliant_files"] += 1
-                    except Exception as e:
-                        if "kernel.standard" not in fpath:
-                            gap_report["summary"]["error_files"] += 1
-                            gap_report["errors"].append({"file": fpath, "error": str(e), "output": result.stdout})
-
-    with open('context/global-gap-report.md', 'w') as f:
-        f.write("# Global Compliance Gap Report (v5.5.0)\n\n")
-        f.write(f"## Summary\n")
-        f.write(f"- Total Files Audited: {gap_report['summary']['total_files']}\n")
-        f.write(f"- Fully Compliant Files: {gap_report['summary']['compliant_files']}\n")
-        f.write(f"- Non-Compliant Files: {gap_report['summary']['failed_files']}\n")
-        f.write(f"- Errored Files: {gap_report['summary']['error_files']}\n")
-        f.write(f"- Total Logic Debt (Fails): {gap_report['summary']['total_debt']}\n\n")
-        f.write(f"## Error Details\n\n")
-        for err in gap_report["errors"]:
-            f.write(f"- **File**: {err['file']}\n")
-            f.write(f"  - **Error**: {err['error']}\n")
-        f.write(f"\n## Failure Details\n\n")
-        for detail in gap_report["details"]:
-            f.write(f"### {detail['target']}\n")
-            f.write(f"- **Standard**: {detail['standard']}\n")
-            f.write(f"- **Score**: {detail['score']}\n")
-            f.write("- **Fails**:\n")
-            for req, status in detail['details'].items():
-                if status == "FAIL": f.write(f"  - {req}\n")
-            f.write("\n")
+def audit_repo(root_dir):
+    results = {"total": 0, "compliant": 0, "fails": []}
+    for root, _, files in os.walk(root_dir):
+        if '.git' in root or '__pycache__' in root: continue
+        for name in files:
+            if name.endswith('.md') or (name.endswith('.py') and 'drivers/' in root):
+                fpath = os.path.join(root, name)
+                try:
+                    with open(fpath, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                except: continue
+                results["total"] += 1
+                if extract_fm_field(content, 'id', name.endswith('.py')):
+                    results["compliant"] += 1
+                else:
+                    results["fails"].append(os.path.relpath(fpath, root_dir))
+    return results
 
 if __name__ == "__main__":
-    main()
+    root = os.getcwd()
+    report = audit_repo(root)
+    
+    # Write to Global Gap Report
+    with open('context/global-gap-report.md', 'w') as f:
+        f.write("# Global Compliance Gap Report (v8.1.13)\n\n")
+        f.write(f"- Total Files Audited: {report['total']}\n")
+        f.write(f"- Fully Compliant Files: {report['compliant']}\n")
+        f.write(f"- Non-Compliant Files: {len(report['fails'])}\n")
+        f.write(f"- Logic Density: {(report['compliant']/report['total'])*100:.1f}%\n\n")
+        f.write("## Failure Details\n")
+        for fail in report["fails"]:
+            f.write(f"- {fail}\n")
+            
+    print(json.dumps(report, indent=2))

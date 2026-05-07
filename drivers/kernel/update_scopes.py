@@ -1,3 +1,13 @@
+"""
+---
+id: update_scopes.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for update scopes.
+---
+"""
+
 import os
 import re
 

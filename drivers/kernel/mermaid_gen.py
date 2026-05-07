@@ -1,3 +1,13 @@
+"""
+---
+id: mermaid_gen.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for mermaid gen.
+---
+"""
+
 import os
 import re
 import sys

@@ -1,3 +1,13 @@
+"""
+---
+id: otel_emit.driver
+type: driver
+tags: [kernel, automation, actuator]
+parent_standard: driver-file.standard
+summary: Atomic actuator for otel emit.
+---
+"""
+
 import urllib.request
 import json
 import sys

@@ -1,7 +1,7 @@
 # Global Compliance Gap Report (v9.1.13)
 
-- Total Files Audited: 211
-- Fully Compliant Files: 200
+- Total Files Audited: 213
+- Fully Compliant Files: 202
 - Non-Compliant Files: 11
 - Logic Density: 94.8%
 

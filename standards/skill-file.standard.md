@@ -2,44 +2,37 @@
 id: skill-file.standard
 title: Skill File Standard
 type: standard
-requirements: [interface, implementation, "## Verification Protocol"],
-tags: [automation, quality, atomicity, rules, governance, compliance]
-summary: Standards for defining code-backed atomic skills, emphasizing deterministic interfaces and automated verification.
-scope: "/skills/*.md"
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, determinism.glossary, instruction.glossary, orchestration.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
----
-
-# Skill File Standard
+tags: [governance, standard, skill, interface, transactional]
+status: stable
+version: 1.1.0
+padu:
+  P: "Skill defines a formal interface, verification command, and a deterministic reversion path."
+  A: "Skill has an interface and verification but missing a formal undo path."
+  D: "Skill is non-deterministic or missing verification protocols."
+  U: "Skill has side-effects with no way to verify or revert."
+glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
+---# Skill File Standard
 
 ## Context
-A Skill is a "Deterministic Function" within the AI Kernel. To maximize token efficiency and accuracy, every skill must be backed by a **Code Implementation** (Python/Bash). The agent's role is to provide the correct inputs to the skill's **Interface** and process the resulting **Structured Output**.
+Skills are the "Atomic Acts" of the AI Kernel. To ensure system stability, every skill must be **Transactional**. This means an agent can provably verify the outcome and safely "Undo" the action if the verification fails.
+
+## Structural Requirements
+1. **Interface**: Explicit `input` and `output` JSON schemas.
+2. **Verification**: A deterministic command or logic block to verify the success of the act.
+3. **Reversion**: A deterministic command or logic block to restore the system state upon failure.
+
+## Transactional Protocol
+Agents MUST follow the **Verify-or-Revert** cycle:
+- **Execute**: Run the `implementation` command.
+- **Verify**: Run the `verification` command.
+- **Rollback**: If `verification` fails, run `reversion` immediately.
+
+## Quality Gate
+- **Verification**: Every skill must be rated P on the PADU scale.
+- **Enforcement**: Flynn will reject any skill that performs destructive edits without a formal `reversion` path.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    standard-file.standard --> skill-file.standard
 ```
-
-## Mandatory Sections
-1. **Context**: The specific problem this skill solves.
-2. **Interface**: Definition of inputs and outputs (JSON Schema format).
-3. **Implementation**: Path to the code-backend and execution logic.
-4. **Verification Protocol**: A machine-executable test command.
-
-## PADU Table
-
-| Practice | Rating | Rationale | Enforcement | Exception |
-|---|---|---|---|---|
-| Code-Backed Implementation | **P** | Ensures 100% deterministic accuracy. | `doc-audit.skill` | None |
-| Strict JSON Interface | **P** | Prevents "Input Drift" and improves token efficiency. | `semantic-auditor.agent` | Simple prompts |
-| Self-Contained Logic | **P** | The skill's code should not rely on global state. | `integrity-guardian.agent` | Kernel Globals |
-| Natural Language "Tools" | **D** | Relying on the agent to "manually" parse files. | `standards-auditor.agent` | Semantic analysis |
-| Multi-Step Orchestration | **U** | Belongs in an Instruction; violates skill atomicity. | `audit-for-architectural-violations.skill` | None |
-
-## Rationale
-By separating the **Execution (Code)** from the **Orchestration (Agent)**, we allow the AI Kernel to scale. Agents focus on high-level architecture while the skills provide the high-leverage data needed for decisions.
-
-## Enforcement
-The posture is **Automated**. The **evaluate-against-standard.skill** verifies the presence of the `interface` and `implementation` fields and validates the `Verification Protocol` command.

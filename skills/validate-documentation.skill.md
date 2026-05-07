@@ -2,50 +2,24 @@
 id: validate-documentation.skill
 title: Documentation Validation Audit
 type: skill
-tags: [audit, documentation, quality, verification]
+tags: [audit, documentation, verification, transactional]
 interface:
   input: { target_path: "string" }
-  output: { status: "success", issues: [] }
-summary: An atomic check to verify that documentation nodes (T2, T3) are present and compliant with the project's topology.
-parent_standard: skill-file.standard
-glossary_refs: [capability.glossary, frontmatter.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Protocol](readme.md) > Documentation Validation
+  output: { status: "success" }
+summary: An atomic check to verify that documentation nodes are present and compliant.
+---# Documentation Validation
 
-## 1. Objective
-Identify structural errors, missing artifacts, and technical drift between the repository's code and its Documentation-as-Code (DaC) state.
+## Execution
+- **Command**: `python3 drivers/kernel/global_compliance_auditor.py <target_path>`
 
-## 2. Structural Audit
-- **Action:** Verify [doc-breadcrumb-navigation](/docs/developer/pattern/doc-breadcrumb-navigation.md) is present on line 6 of all `.md` files in `docs/`.
-- **Action:** Verify every file has a valid YAML frontmatter with `id` and `type`.
-- **Action:** Verify all pattern files in `docs/developer/pattern/` include a `category` field from the canonical vocabulary (see [doc-category-tag](/docs/developer/pattern/doc-category-tag.md)).
-- **Action:** Verify all `##` headings within each document follow [doc-sequential-numbering](/docs/developer/pattern/doc-sequential-numbering.md) — no duplicates, no gaps.
-- **Action:** Verify every subdirectory under `docs/` has a `readme.md` signpost and is listed in its parent readme (see [doc-signpost-completeness](/docs/developer/pattern/doc-signpost-completeness.md)).
-- **Action:** Verify all internal links (e.g., `file:///...`) are functional and point to existing files.
-- **Action:** Verify **Atomic Docs** compliance: If a document exceeds 100 lines of prose, evaluate if core concepts can be extracted into a [Pattern](/docs/developer/pattern/readme.md) or [Standard](/docs/governance/standard/readme.md).
+## Verification
+- **Check**: Verify the audit output contains zero "D" or "U" rated findings for the target.
 
-## 3. Drift & Omission Analysis
-- **Action:** Scan for directories in `src/` or `tools/` that lack a corresponding [T3 Module] in `docs/architecture/module/`.
-- **Action:** Scan for [T3 Modules] that lack a [Signpost Readme] in their physical code directory.
-- **Action:** Verify every [T3 Module] explicitly links to at least one [Standard] and its [Preferred] patterns.
-- **Action:** For each [T3 Module], spot-check that every **named class or system** in the module's physical scope (`.h`/`.cpp` files) is described under a **Key Systems** or dedicated sub-section. A system mentioned only in a file path or passing reference is **not** considered documented. Flag any undescribed class as a **content gap**.
-
-## 4. Operational & Logic Audit
-- **Action:** Scan for critical telemetry spans in code that lack a corresponding [doc-ops-span-runbook](/docs/developer/pattern/doc-ops-span-runbook.md).
-- **Action:** Identify "Ghost Logic"—defined as code blocks that implement patterns marked as **Unacceptable (U)** or **Discouraged (D)** in the standards.
-- **Action:** Verify **End User Documentation**: Any change that modifies a [T2 Capability](/docs/architecture/capability/readme.md) must have a corresponding update in `docs/external/` (e.g., `use-cases.md`, `integration/`, or `contract/`).
-- **Action:** Verify **Major Section Sync**: Ensure that a change to a T3 module is reflected in its parent T2 capability and the T1 landscape if the system's external interface or purpose has changed.
-
-## 5. Verification
-- **Verify:** No dead links remain in the Knowledge Graph.
-- **Verify:** The `docs/readme.md` root manifest correctly maps all child pillars.
-- **Verify:** `find docs -name '*.md' -exec sh -c 'head -1 "$1" | grep -qv "^---$" && echo "$1"' _ {} \;` returns zero results (frontmatter).
-- **Verify:** `grep -rL '\[Home\]' docs/ --include='*.md'` returns zero results (breadcrumbs).
-- **Verify:** No file in `docs/developer/pattern/` (excluding readme.md) is missing `category:` in frontmatter.
-- **Verify:** No two `##` headings in a single file share the same number.
+## Reversion
+- **Undo**: Not applicable for read-only audits. For repair waves, use `git checkout`.
 
 ## Architecture
 
 ```mermaid
 graph TD
-    skill-file.standard --> validate-documentation.skill
 ```

@@ -1,9 +1,9 @@
 # Global Compliance Gap Report (v9.1.13)
 
-- Total Files Audited: 213
-- Fully Compliant Files: 202
+- Total Files Audited: 296
+- Fully Compliant Files: 285
 - Non-Compliant Files: 11
-- Logic Density: 94.8%
+- Logic Density: 96.3%
 
 ## Failure Details
 - CLAUDE.md

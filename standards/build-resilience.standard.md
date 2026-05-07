@@ -1,39 +1,29 @@
 ---
 id: build-resilience.standard
-title: Build Resilience Standard
+title: Build Resilience Standard (CMake/CI)
 type: standard
-tags: [ops, build, cicd, resilience]
+tags: [ops, build, cicd, resilience, cmake]
 status: stable
 version: 1.0.0
 padu:
-  P: "Deterministic, hermetic builds with zero external network dependencies during build."
-  A: "Deterministic builds but with some external version-locked dependencies."
-  D: "Non-deterministic builds or floating dependencies."
-  U: "Build fails intermittently or requires manual intervention."
-glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Standard: Build Resilience Hub
+  P: "Explicit source registration (no globbing); hermetic, deterministic builds."
+  A: "Deterministic builds but with version-locked remote dependencies."
+  D: "Globbing (file discovery) or non-deterministic build order."
+  U: "Build fails intermittently or requires manual network access."
+glossary_refs: [standard.glossary]
+---# Build Resilience Standard
 
-# Standard: Build Resilience Hub
+## 1. CMake Registration
+- **Mandatory**: Every source file MUST be registered explicitly in the build configuration (e.g., `CMakeLists.txt`).
+- **Forbidden**: Globbing (`file(GLOB ...)`) is D-rated. It leads to non-deterministic builds and unintended inclusions.
 
-This hub indexes context-specific standards designed to maintain build health and resolve recurrent failures identified during the [Unified Change Protocol](../protocol/unified-change.md).
+## 2. Dependency Management
+- **Hybrid Acquisition**: Use local dependencies when available; remote fallback MUST be version-locked and optional.
+- **Object Sharing**: Share compiled objects between production and test targets to ensure parity and speed.
 
-## 1. Objective
-Build resilience is not a "silver bullet." It requires applying the correct code style or environmental strategy based on the specific failure context.
-
-## 2. Contextual Standards Index
-
-### Environment & Platform
-- **[Build Environment (Mac/Network)](build-env-mac-restriction.md)**: Handling filesystem permission blockers and network-isolated dependency acquisition.
-
-### Code Style & Testability
-- **[C++ Test Visibility](cpp-test-visibility.md)**: Standards for promoting internal members to public for verification.
-- **[C++ Incomplete Type Resolution](cpp-incomplete-type-resolution.md)**: Strategies for SDK integration and pointer safety.
-
-### Integrity & Dependencies
-- **[CMake Registration Consistency](cmake-registration-consistency.md)**: Rules for deterministic source registration and dependency acquisition.
-
-## 3. Self-Correction Loop
-Every build or test failure encountered must be analyzed via the **[Pattern Intake Protocol](../protocol/pattern-intake.md)** to determine which specific sub-standard needs expansion or if a new contextual standard is required.
+## 3. Quality Gate
+- **Verification**: Run build from a clean state without network access.
+- **Enforcement**: Any PR introducing globbing or unversioned remote fetches will be **Rejected**.
 
 ## Architecture
 

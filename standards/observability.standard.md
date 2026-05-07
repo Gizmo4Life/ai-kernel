@@ -2,48 +2,39 @@
 id: observability.standard
 title: Observability & Telemetry Standard
 type: standard
-tags: [ops, telemetry, observability, tracing]
+tags: [ops, telemetry, observability, tracing, otel]
 status: stable
 version: 1.0.0
 padu:
-  P: "100% trace coverage for all business logic; structured semantic attributes."
-  A: "Basic tracing present but missing granular spans or attributes."
-  D: "Logging-only or missing critical traces."
+  P: "100% trace coverage for all business logic; <pillar>.<module>.<action> dot-notation."
+  A: "Basic tracing present but missing granular attributes or dashboard panels."
+  D: "Logging-only or non-standard naming conventions."
   U: "Zero observability; 'Black Box' execution."
-glossary_refs: [capability.glossary, context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Observability
+glossary_refs: [standard.glossary]
+---# Observability & Telemetry Standard
 
-# Standard: Observability
+## 1. Nomenclature & Naming
+- **Standard**: All spans MUST follow the hierarchical dot-notation: `<pillar>.<module>.<action>`.
+- **Rationale**: Ensures global searchability and consistent dashboarding in SigNoz/Grafana.
 
-## 1. Span Naming Convention
-*Nuance: To ensure global searchability and consistent dashboarding, all telemetry spans must follow the hierarchical dot-notation.*
-
-- **Preferred Pattern:** [otel-span-naming](/docs/developer/pattern/otel-span-naming.md)
-
-## 2. Documentation Requirements
-Every **Implementation** [T3 Module](/docs/developer/pattern/doc-t3-module.md) (those mapping to physical `/src`) must include a "Telemetry & Observability" section listing:
-- **Probes/Spans**: The physical strings used in the code.
-- **Status**: Whether the instrumentation is physical (`[x]`) or strictly theoretical (`[ ]`).
-- **Nomenclature**: Spans must adhere to the `<pillar>.<module>.<action>` convention.
-
-## 4. Dashboard Requirements
-Every **P-rated** [T2 Capability](/docs/architecture/capability/readme.md) must have at least one **Diagnostic Dashboard** defined in the [SigNoz Console](http://localhost:3301).
+## 2. Dashboard Requirements (SigNoz)
 - **Mandatory Panels**:
-  - **Latency (P99)** by span action.
-  - **Error Rate** by module.
-  - **Throughput** (Ops/sec) for critical loops (Physics, Economy).
-- **Enforcement**: New features impacting a P-rated capability must update the corresponding [Diagnostic Dashboard] manifest.
-- **Organization**: At current project scale, a unified "Single Pane of Glass" dashboard is preferred over multiple domain-specific dashboards to reduce operational overhead.
+  - Latency (P99) by span action.
+  - Error Rate by module.
+  - Throughput (Ops/sec) for critical loops.
+- **Enforcement**: New features impacting P-rated capabilities MUST update the corresponding Diagnostic Dashboard.
 
-## 5. Span Runbook Requirements
-Every critical system span (those linked to P-rated capabilities or complex state machines) **MUST** have a corresponding [Span Runbook](/docs/operational/span/readme.md).
-- **Format**: Must follow the [doc-ops-span-runbook](/docs/developer/pattern/doc-ops-span-runbook.md) pattern.
-- **Content**: Must include Diagnostic Mapping (Metrics -> Logic) and step-by-step Mitigation.
-- **Linkage**: Runbooks must be linked from the corresponding [Diagnostic Dashboard] manifest.
+## 3. Span Runbooks
+- **Requirement**: Every critical system span MUST have a corresponding Span Runbook.
+- **Content**: Must include Diagnostic Mapping (Metrics -> Logic) and Mitigation steps.
 
-## 3. Critical Failure Metrics (T2)
-Every [T2 Capability](/docs/developer/pattern/doc-t2-capability.md) must define at least one "Critical Failure Metric" in its Operational Context section.
-- **Example:** "Transaction failure rate exceeds 2% over a 5-minute window."
+## 4. PADU Table
+| Practice | Rating | Rationale |
+| :--- | :--- | :--- |
+| **Dot-Notation Spans** | **P** | Enables hierarchical aggregation. |
+| **Critical Failure Metrics** | **P** | Defines the "Red Line" for T2 Capabilities. |
+| **Manual Span Mapping** | **A** | Traceable but higher maintenance than auto-instrumentation. |
+| **Black Box Logic** | **U** | Logic with zero telemetry visibility. |
 
 ## Architecture
 

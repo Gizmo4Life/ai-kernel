@@ -3,12 +3,12 @@ id: agents-master
 title: AI Kernel Agentic Hierarchy
 type: documentation
 tags: [architecture, agents, hierarchy]
-glossary_refs: [agent.glossary, context.glossary, driver.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, padu-scale.glossary, progressive-disclosure.glossary, prompt.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, context.glossary, driver.glossary, frontmatter.glossary, glossary-entry.glossary, instruction.glossary, padu-scale.glossary, progressive-disclosure.glossary, prompt.glossary, sidecar.glossary, skill.glossary, standard.glossary]
 ---
 # AI Kernel
 
 ## Context
-This file serves as the master entry point for understanding the agentic hierarchy of the AI Kernel. It defines how Tier 0, Tier 1, and Tier 2 agents collaborate to maintain the system.
+This file serves as the master entry point for understanding the agentic hierarchy of the AI Kernel and its role as a Universal Sidecar. It defines how Tier 0, Tier 1, and Tier 2 agents collaborate to maintain the system.
 
 ## Architecture
 

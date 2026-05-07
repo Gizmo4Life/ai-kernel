@@ -10,7 +10,7 @@ padu:
   A: "Standards are duplicated but kept in sync via automated healing waves."
   D: "Target repos have local standards that override the Sidecar without justification."
   U: "No linkage between target repo and Sidecar governance."
-glossary_refs: [context.glossary, orchestration.glossary, sidecar.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, standard.glossary, orchestration.glossary, context.glossary, driver.glossary, skill.glossary, sidecar.glossary]
 ---# Cross-Repository Governance Standard
 
 ## Context

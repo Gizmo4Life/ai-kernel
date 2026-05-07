@@ -10,7 +10,7 @@ padu:
   A: "Multi-stage images but using root or oversized base images."
   D: "Single-stage, bloated images."
   U: "No containerization for distributed components."
-glossary_refs: [orchestration.glossary, standard.glossary]
+glossary_refs: [standard.glossary, orchestration.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Docker Orchestration
 
 # Standard: Docker Orchestration

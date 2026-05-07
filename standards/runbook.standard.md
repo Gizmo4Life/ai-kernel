@@ -11,7 +11,9 @@ padu:
   D: "Runbook is missing diagnostic dashboard links or triage logic."
   U: "Runbook lacks any actionable restoration steps for on-call personnel."
 glossary_refs: [instruction.glossary, standard.glossary]
----# Universal Runbook Standard
+---
+
+# Universal Runbook Standard
 
 ## 1. Severity Matrix
 | Severity | Threshold | Response Time |

@@ -10,7 +10,7 @@ padu:
   A: "Compliant headers but missing pImpl for complex implementation hiding."
   D: "Circular header includes or unnecessary inclusion of heavy headers."
   U: "Incomplete type errors during parallel compilation."
-glossary_refs: [context.glossary, standard.glossary]
+glossary_refs: [standard.glossary, context.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Standard: C++ Incomplete Type Resolution
 
 # Standard: C++ Incomplete Type Resolution

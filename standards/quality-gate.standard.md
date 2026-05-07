@@ -7,7 +7,7 @@ summary: Standards for defining and implementing Quality Gate sections in skills
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: /
 parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, kernel.standard, quality-gate.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
 ---
 
 # Quality Gate Standard

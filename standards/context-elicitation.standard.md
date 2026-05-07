@@ -2,7 +2,7 @@
 id: context-elicitation-standard
 type: standard
 pillar: governance
-glossary_refs: [agent.glossary, context.glossary, standard.glossary]
+glossary_refs: [agent.glossary, standard.glossary, context.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Context Elicitation
 
 ## Context: Semantic Discovery & Scope Control

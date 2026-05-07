@@ -10,7 +10,7 @@ padu:
   A: "Isolated logic but with minor concrete dependencies."
   D: "Logic intertwined with IO or global state."
   U: "Spaghetti logic with no clear boundaries."
-glossary_refs: [authority.glossary, context.glossary, heuristics.glossary, standard.glossary]
+glossary_refs: [standard.glossary, context.glossary, authority.glossary, heuristics.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Logic Encapsulation
 
 # Standard: Logic Encapsulation (PADU)

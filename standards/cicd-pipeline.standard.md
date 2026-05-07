@@ -2,7 +2,7 @@
 id: cicd-pipeline
 type: standard
 pillar: governance
-glossary_refs: [context.glossary, standard.glossary]
+glossary_refs: [standard.glossary, context.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > CI/CD Pipeline
 
 # Standard: CI/CD Pipeline

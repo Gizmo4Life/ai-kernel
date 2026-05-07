@@ -7,7 +7,7 @@ summary: Standards for aggregate detection systems, prioritizing unhealthiness d
 requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
 scope: "/**/*"
 parent_standard: operability.standard
-glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary, tel-naming.standard]
+glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Monitoring & Alerting Standard

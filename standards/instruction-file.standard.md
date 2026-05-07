@@ -7,7 +7,7 @@ tags: [orchestration, workflow, quality, rules, governance, compliance]
 summary: Standards for multi-step instructions, emphasizing state-based pre/postconditions.
 scope: "/instructions/*.md"
 parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, orchestration.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
 ---
 
 # Instruction File Standard

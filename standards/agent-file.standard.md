@@ -4,7 +4,7 @@ title: Agent File Standard
 type: standard
 tags: [governance, agent, rules, compliance]
 summary: Standards for defining autonomous agents, emphasizing the 2-tier delegation model and protocol-delegation.
-glossary_refs: [agent.glossary, context.glossary, delegation.glossary, instruction.glossary, skill.glossary, standard.glossary]
+glossary_refs: [delegation.glossary, agent.glossary, standard.glossary, context.glossary, instruction.glossary, skill.glossary]
 ---# Agent File Standard
 
 ## Context

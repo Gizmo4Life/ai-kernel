@@ -10,7 +10,7 @@ padu:
   A: "Skill has an interface and verification but missing a formal undo path."
   D: "Skill is non-deterministic or missing verification protocols."
   U: "Skill has side-effects with no way to verify or revert."
-glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
+glossary_refs: [agent.glossary, standard.glossary, context.glossary, skill.glossary]
 ---# Skill File Standard
 
 ## Context

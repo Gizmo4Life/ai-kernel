@@ -2,7 +2,7 @@
 id: arch-documentation
 type: standard
 pillar: governance
-glossary_refs: [capability.glossary, context.glossary, standard.glossary]
+glossary_refs: [standard.glossary, context.glossary, capability.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Architecture Documentation
 
 ## Context: System Design & Mapping

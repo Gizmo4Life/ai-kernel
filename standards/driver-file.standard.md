@@ -11,7 +11,7 @@ padu:
   A: "Driver is deterministic but missing frontmatter or verification protocol."
   D: "Driver relies on non-standard libraries or has side-effects not documented in the manifest."
   U: "Driver contains hardcoded secrets or is non-deterministic."
-glossary_refs: [context.glossary, driver.glossary, frontmatter.glossary, standard.glossary]
+glossary_refs: [agent.glossary, standard.glossary, context.glossary, frontmatter.glossary, driver.glossary, skill.glossary]
 ---# Driver File Standard
 
 ## Context

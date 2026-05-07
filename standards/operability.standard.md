@@ -8,7 +8,7 @@ requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context",
 scope: "/**/* [tag:operability]"
 parent_standard: kernel.standard
 instructions: [ handle-incident.instruction ]
-glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary, tel-naming.standard]
+glossary_refs: [agent.glossary, context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
 ---
 
 # Operability Standard

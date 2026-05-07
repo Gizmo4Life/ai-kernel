@@ -10,7 +10,7 @@ padu:
   A: "High coverage but with minor non-deterministic components."
   D: "Low coverage or tests that rely on external state."
   U: "No automated tests for critical business logic."
-glossary_refs: [context.glossary, standard.glossary]
+glossary_refs: [standard.glossary, context.glossary]
 ---[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Logic and Test Integrity
 
 # Standard: Logic and Test Integrity (PADU)

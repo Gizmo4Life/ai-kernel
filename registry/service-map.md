@@ -16,6 +16,13 @@ glossary_refs: [context.glossary, driver.glossary, standard.glossary]
 | **GitHub API** | Context Provider | REST | `api.github.com` | `GITHUB_TOKEN` |
 | **Kernel MCP** | Tool Orchestrator | MCP/HTTP | `localhost:8080` | None (Local) |
 
+## Governance Scope
+
+| Repository Name | Path | Governance Status |
+| :--- | :--- | :--- |
+| **ai-kernel** | `./` | SSoT (Source of Truth) |
+| **space-game** | `../space-game/` | Managed Sidecar |
+
 ## Configuration Matrix
 
 ### Telemetry (OTel)

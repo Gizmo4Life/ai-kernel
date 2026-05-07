@@ -4,12 +4,13 @@ id: global_compliance_auditor.driver
 type: driver
 tags: [kernel, audit, compliance]
 parent_standard: driver-file.standard
-summary: Recursively audits the repository for frontmatter compliance across MD and PY files and updates the global gap report.
+summary: Recursively audits the repository for frontmatter compliance. Ignores build/ and dependency noise.
 ---
 """
 import os
 import json
 import re
+import sys
 
 def extract_fm_field(content, field, is_py=False):
     if is_py:
@@ -28,8 +29,13 @@ def extract_fm_field(content, field, is_py=False):
 
 def audit_repo(root_dir):
     results = {"total": 0, "compliant": 0, "fails": []}
-    for root, _, files in os.walk(root_dir):
-        if '.git' in root or '__pycache__' in root: continue
+    # Directories to ignore
+    ignore_dirs = ['.git', '__pycache__', 'build', 'node_modules', 'venv', '.agents']
+    
+    for root, dirs, files in os.walk(root_dir):
+        # Surgical directory pruning
+        dirs[:] = [d for d in dirs if d not in ignore_dirs]
+        
         for name in files:
             if name.endswith('.md') or (name.endswith('.py') and 'drivers/' in root):
                 fpath = os.path.join(root, name)
@@ -45,18 +51,16 @@ def audit_repo(root_dir):
     return results
 
 if __name__ == "__main__":
-    root = os.getcwd()
-    report = audit_repo(root)
-    
-    # Write to Global Gap Report
-    with open('context/global-gap-report.md', 'w') as f:
-        f.write("# Global Compliance Gap Report (v8.1.13)\n\n")
-        f.write(f"- Total Files Audited: {report['total']}\n")
-        f.write(f"- Fully Compliant Files: {report['compliant']}\n")
-        f.write(f"- Non-Compliant Files: {len(report['fails'])}\n")
-        f.write(f"- Logic Density: {(report['compliant']/report['total'])*100:.1f}%\n\n")
-        f.write("## Failure Details\n")
-        for fail in report["fails"]:
-            f.write(f"- {fail}\n")
-            
+    target_root = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
+    report = audit_repo(target_root)
+    if target_root == os.getcwd():
+        with open('context/global-gap-report.md', 'w') as f:
+            f.write("# Global Compliance Gap Report (v9.1.13)\n\n")
+            f.write(f"- Total Files Audited: {report['total']}\n")
+            f.write(f"- Fully Compliant Files: {report['compliant']}\n")
+            f.write(f"- Non-Compliant Files: {len(report['fails'])}\n")
+            f.write(f"- Logic Density: {(report['compliant']/report['total'])*100:.1f}%\n\n")
+            f.write("## Failure Details\n")
+            for fail in report["fails"]:
+                f.write(f"- {fail}\n")
     print(json.dumps(report, indent=2))

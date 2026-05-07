@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: naming.standard
 title: Naming Standard
 type: standard

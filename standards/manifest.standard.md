@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: manifest.standard
 title: Manifest Standard
 type: standard

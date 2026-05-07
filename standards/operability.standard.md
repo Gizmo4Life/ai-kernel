@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: operability.standard
 title: Operability Standard
 type: standard

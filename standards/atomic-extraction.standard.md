@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: atomic-extraction.standard
 title: Atomic Extraction Standard
 type: standard

@@ -18,7 +18,7 @@ glossary_refs: [standard.glossary, context.glossary, authority.glossary, heurist
 
 This standard governs where and how repetitive lookup and setup logic is defined and reused across the codebase, preventing [Ghost Logic](/docs/developer/pattern/ghost-logic.md) — the code smell where the same operation is independently implemented in multiple locations, causing them to silently diverge.
 
-## 1. Context: Intra-Class Housekeeping
+## Context: Intra-Class Housekeeping
 
 *Nuance: UI panels and systems frequently perform the same multi-step setup operations (clearing a list, finding an entity, re-syncing a handle) at multiple points within the same class. Inlining these operations at each callsite creates maintenance hazards: if the logic changes, every inline copy must be updated identically.*
 
@@ -28,7 +28,7 @@ This standard governs where and how repetitive lookup and setup logic is defined
 | [inline-repeated-setup](#) | **D** | Deprecated. The same loop or lookup block appearing more than once in the same class. | N/A |
 | [hardcoded-entity-id](#) | **U** | Unacceptable. Using a literal entity ID or bypassing standard registry views. | N/A |
 
-## 2. Context: Cross-Class Entity Identification
+## Context: Cross-Class Entity Identification
 
 *Nuance: When multiple unrelated classes (panels, systems, managers) must identify the same canonical entity (e.g., the player flagship), each implementing its own lookup creates divergent logic — different components checked, different tie-breaking rules — leading to a "split-brain" state.*
 
@@ -41,7 +41,7 @@ This standard governs where and how repetitive lookup and setup logic is defined
 | [cached-entity-handle](#) | **U** | Unacceptable. Storing an entity handle as a raw member variable across frames without validity checks. | N/A |
 | [stale-ui-reference](#) | **U** | Unacceptable. Accessing components on a context-provided entity handle (e.g., `ctx.player`) without `registry.valid()` check, especially after a transaction. | N/A |
 
-## 3. Context: Fleet-Wide Resource Management
+## Context: Fleet-Wide Resource Management
 
 *Nuance: Operations that impact provisioning, reequipping, or logistical state must account for the entire active fleet (all `isPlayerFleet` NPCs), not just the flagship. Failing to aggregate creates a "fleet-starvation" state where escorts run out of fuel or food while the player remains provisioned.*
 
@@ -51,7 +51,7 @@ This standard governs where and how repetitive lookup and setup logic is defined
 | [flagship-only-provisioning](#) | **D** | Discouraged. Hardcoding logistics to only affect the player's flagship. | N/A |
 | [manual-fleet-distribution](#) | **U** | Unacceptable. Requiring the player to manually trade resources between their own ships for basic survival (food/fuel). | N/A |
 
-## 4. Enforcement
+## Enforcement
 
 - **Review**: PRs containing a `registry.view<PlayerComponent>()` loop outside of `UIUtils.cpp` or `ShipOutfitter.cpp` will be rejected in favor of using the centralized helpers.
 - **Validation**: Any class that duplicates a lookup block used elsewhere must be refactored to call the shared utility before merge.

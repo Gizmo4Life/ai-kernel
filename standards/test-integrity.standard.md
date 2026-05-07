@@ -18,7 +18,7 @@ glossary_refs: [standard.glossary, context.glossary]
 
 This standard defines the maturity and fitness ratings for core game logic and its corresponding unit tests. It ensures that system behaviors are predictable, verifiable, and resilient to change.
 
-## 1. Context: Business Logic & Verification
+## Context: Business Logic & Verification
 *Nuance: Game logic often involves complex state transitions and resource management. Silent failures (e.g., default-initialized objects that bypass logic checks) and direct state manipulation are common sources of regression.*
 
 | Pattern | Rating | Contextual Nuance | Acceptable Context |
@@ -37,7 +37,7 @@ This standard defines the maturity and fitness ratings for core game logic and i
 | [summary-field-clobbering](/docs/developer/pattern/component-driven-initialization.md) | **U** | Unacceptable. Directly setting summary fields that are subject to overwrite by synchronization logic. | N/A |
 | [direct-member-state-access](/docs/developer/pattern/encapsulated-state-mutation.md) | **D** | Discouraged. Directly modifying member Map/Vector without triggering side-effect logic (e.g., weight recalculation). | N/A |
 
-## 2. Enforcement
+## Enforcement
 - **Validation**: Any new module or resource-managing component MUST provide an explicit identity and use encapsulated mutation methods.
 - **Review**: PRs that introduce "magic units" (seconds vs days mismatch) or direct member access that bypasses system stats will be flagged.
 - **Verification**: Unit tests must fully initialize mandatory dependencies (e.g., Fuel for Kinematics) to avoid early escapes in system logic.

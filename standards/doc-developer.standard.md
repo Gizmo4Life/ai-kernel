@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: doc-developer.standard
 title: Developer Documentation Standard
 type: standard

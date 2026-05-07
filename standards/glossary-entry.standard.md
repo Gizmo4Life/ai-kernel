@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: glossary-entry.standard
 title: Glossary Entry Standard
 type: standard
@@ -35,9 +36,3 @@ By defining what a term **cannot** be, we create a "Hard" semantic boundary. Thi
 The posture is **Agent-Audited**. The **Semantic Auditor** verifies that all new glossary entries include at least two functional constraints.
 \n## Usage Constraints\n- This standard must only apply to files with the .md suffix.\n- It is forbidden to use this standard for Agents or Skills.\n
 
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> glossary-entry.standard
-```

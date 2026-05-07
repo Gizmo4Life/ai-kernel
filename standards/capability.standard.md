@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: capability.standard
 title: Capability Standard
 type: standard

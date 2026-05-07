@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: prompt-file.standard
 title: Prompt File Standard
 type: standard

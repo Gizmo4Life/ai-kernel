@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: promotion.standard
 title: Promotion Standard
 type: standard

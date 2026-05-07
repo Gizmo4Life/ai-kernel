@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: versioning.standard
 title: Versioning Standard
 type: standard

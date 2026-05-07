@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: instruction-file.standard
 title: Instruction File Standard
 type: standard
@@ -35,9 +36,3 @@ By mandating **Postconditions**, we move from "Instruction Following" to "Goal F
 ## Enforcement
 The posture is **Agent-Audited**. The **Flynn** agent verifies that all new instructions have verifiable end-states.
 
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> instruction-file.standard
-```

@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: quality-gate.standard
 title: Quality Gate Standard
 type: standard

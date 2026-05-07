@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: doc-external.standard
 title: External Documentation Standard
 type: standard

@@ -18,7 +18,7 @@ glossary_refs: [standard.glossary, context.glossary]
 
 This standard defines the strategy for resolving "incomplete type" compilation errors, particularly when integrating complex SDKs like OpenTelemetry.
 
-## 1. Context
+## Context
 - **Symptom**: `invalid use of incomplete type` or `deletion of pointer to incomplete type` (triggering `-Wdelete-incomplete`).
 - **Cause**: Using `std::unique_ptr` or `std::shared_ptr` on a type that is forward-declared but whose full definition is missing from the translation unit where it is destroyed.
 

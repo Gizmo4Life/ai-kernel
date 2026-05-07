@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: inc-response.standard
 title: Incident Response Standard
 type: standard

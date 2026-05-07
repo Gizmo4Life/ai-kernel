@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: doc-local.standard
 title: Local Documentation Standard
 type: standard

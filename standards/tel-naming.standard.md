@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: tel-naming.standard
 title: Telemetry Naming Standard
 type: standard

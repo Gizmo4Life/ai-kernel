@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: synonym.standard
 title: Discovery Tag Standard
 type: standard

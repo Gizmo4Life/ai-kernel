@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: context-lifecycle.standard
 title: Context Lifecycle Standard
 type: standard

@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: mon-alerting.standard
 title: Monitoring & Alerting Standard
 type: standard

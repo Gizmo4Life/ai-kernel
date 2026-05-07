@@ -18,7 +18,7 @@ glossary_refs: [standard.glossary, context.glossary]
 
 This standard defines the rules for exposing class internals to unit tests to ensure high testability without compromising encapsulation for production logic.
 
-## 1. Context
+## Context
 - **Symptom**: Compilation errors in test suites attempting to access `private` or `protected` members required for state verification.
 - **Goal**: Enable direct verification of critical internal logic (e.g., `refreshStats`).
 

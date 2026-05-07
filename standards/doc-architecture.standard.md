@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: doc-architecture.standard
 title: Architecture Documentation Standard
 type: standard

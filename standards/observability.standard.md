@@ -29,7 +29,7 @@ glossary_refs: [standard.glossary]
 - **Requirement**: Every critical system span MUST have a corresponding Span Runbook.
 - **Content**: Must include Diagnostic Mapping (Metrics -> Logic) and Mitigation steps.
 
-## 4. PADU Table
+## PADU Table
 | Practice | Rating | Rationale |
 | :--- | :--- | :--- |
 | **Dot-Notation Spans** | **P** | Enables hierarchical aggregation. |

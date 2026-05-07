@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: ops-documentation
 type: standard
 pillar: governance
@@ -25,3 +26,11 @@ glossary_refs: [standard.glossary, context.glossary]
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

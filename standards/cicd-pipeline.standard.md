@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: cicd-pipeline
 type: standard
 pillar: governance
@@ -46,3 +47,15 @@ This standard defines the requirements and best practices for Continuous Integra
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

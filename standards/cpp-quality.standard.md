@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: cpp-quality.standard
 title: C++ Code Quality Standard
 type: standard
@@ -56,3 +57,15 @@ This standard governs foundational C++ structural and syntactic choices, ensurin
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

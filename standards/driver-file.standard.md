@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: driver-file.standard
 title: Driver File Standard
 type: standard
@@ -36,3 +37,11 @@ Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

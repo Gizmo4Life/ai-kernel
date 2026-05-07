@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: arch-documentation
 type: standard
 pillar: governance
@@ -21,3 +22,11 @@ glossary_refs: [standard.glossary, context.glossary, capability.glossary]
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

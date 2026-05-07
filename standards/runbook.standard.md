@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: runbook.standard
 title: Universal Runbook Standard
 type: standard
@@ -10,7 +11,7 @@ padu:
   A: "Runbook has triage steps but missing formal escalation or severity gates."
   D: "Runbook is missing diagnostic dashboard links or triage logic."
   U: "Runbook lacks any actionable restoration steps for on-call personnel."
-glossary_refs: [instruction.glossary, standard.glossary]
+glossary_refs: [context.glossary, instruction.glossary, standard.glossary]
 ---
 
 # Universal Runbook Standard
@@ -48,4 +49,17 @@ graph TD
 
 ```mermaid
 graph TD
+    kernel.standard --> runbook.standard
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

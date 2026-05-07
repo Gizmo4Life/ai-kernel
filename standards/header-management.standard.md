@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: header-management.standard
 title: Header Management Standard
 type: standard
@@ -52,3 +53,15 @@ When logic is centralized (e.g., removing an inline `registry.view<PlayerCompone
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

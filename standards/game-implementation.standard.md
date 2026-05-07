@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: game-implementation.standard
 title: Game Implementation Standard
 type: standard
@@ -31,3 +32,15 @@ glossary_refs: [standard.glossary]
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

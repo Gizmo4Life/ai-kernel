@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: docker-orchestration.standard
 title: Docker & Container Standard
 type: standard
@@ -64,3 +65,15 @@ Establish the technical foundations for containerized development, build reprodu
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

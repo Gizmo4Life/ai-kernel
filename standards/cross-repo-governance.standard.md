@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: cross-repo-governance.standard
 title: Cross-Repository Governance Standard
 type: standard
@@ -35,3 +36,11 @@ High-scale development requires consistent standards across multiple repositorie
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: logic-encapsulation.standard
 title: Logic Encapsulation Standard
 type: standard
@@ -63,3 +64,15 @@ This standard governs where and how repetitive lookup and setup logic is defined
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

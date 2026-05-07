@@ -1,9 +1,9 @@
 # Global Compliance Gap Report (v9.1.13)
 
-- Total Files Audited: 296
+- Total Files Audited: 297
 - Fully Compliant Files: 285
-- Non-Compliant Files: 11
-- Logic Density: 96.3%
+- Non-Compliant Files: 12
+- Logic Density: 96.0%
 
 ## Failure Details
 - CLAUDE.md
@@ -11,6 +11,7 @@
 - drivers/kernel/fm_repair.py
 - drivers/kernel/heal_v2.py
 - drivers/kernel/standard_auditor.py
+- drivers/kernel/standard_compliance_healer.py
 - context/global-gap-report.md
 - .github/copilot-instructions.md
 - registry/README.md

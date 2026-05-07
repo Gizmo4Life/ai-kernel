@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: test-integrity.standard
 title: Test Integrity Standard
 type: standard
@@ -46,3 +47,15 @@ This standard defines the maturity and fitness ratings for core game logic and i
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

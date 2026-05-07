@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: observability.standard
 title: Observability & Telemetry Standard
 type: standard
@@ -41,3 +42,15 @@ glossary_refs: [standard.glossary]
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

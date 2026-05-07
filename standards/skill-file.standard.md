@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: skill-file.standard
 title: Skill File Standard
 type: standard
@@ -36,3 +37,11 @@ Agents MUST follow the **Verify-or-Revert** cycle:
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

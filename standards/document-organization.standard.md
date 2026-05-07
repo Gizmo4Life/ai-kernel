@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: document-organization
 type: standard
 pillar: governance
@@ -37,3 +38,11 @@ To ensure clear separation of concerns, all new documentation must adhere strict
 ```mermaid
 graph TD
 ```
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

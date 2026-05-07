@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: agent-file.standard
 title: Agent File Standard
 type: standard

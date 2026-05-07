@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: cpp-test-visibility.standard
 title: C++ Test Visibility Standard
 type: standard
@@ -37,3 +38,15 @@ Only promote members that are critical to the "Success Criteria" defined in the 
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

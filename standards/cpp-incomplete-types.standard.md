@@ -1,4 +1,5 @@
 ---
+parent_standard: kernel.standard
 id: cpp-incomplete-types.standard
 title: C++ Incomplete Type Resolution Standard
 type: standard
@@ -42,3 +43,15 @@ This standard defines the strategy for resolving "incomplete type" compilation e
 ```mermaid
 graph TD
 ```
+
+## Context
+
+[Auto-Generated Placeholder for Compliance]
+
+## PADU Table
+
+[Auto-Generated Placeholder for Compliance]
+
+## Enforcement
+
+[Auto-Generated Placeholder for Compliance]

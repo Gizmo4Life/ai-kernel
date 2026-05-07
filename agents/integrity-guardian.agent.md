@@ -12,7 +12,7 @@ capabilities: [check-id-uniqueness.skill, collect-repo-ids.skill, audit-frontmat
 context: [ naming.standard, agent-file.standard, kernel.standard ]
 prompts: [ remediation-triage-logic.prompt ]
 glossary_refs: [agent.glossary, context.glossary, delegation.glossary, domain-owner.glossary, frontmatter.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
-skills: [ audit-content-quality.skill,  audit-for-architectural-violations.skill, detect-circular-delegation.skill, evaluate-against-standard.skill, check-id-uniqueness.skill,  find-similar-terms.skill, detect-circular-delegation.skill, audit-frontmatter-completeness.skill ]
+skills: [ validate-documentation.skill, audit-runbook-completeness.skill,  audit-content-quality.skill,  audit-for-architectural-violations.skill, detect-circular-delegation.skill, evaluate-against-standard.skill, check-id-uniqueness.skill,  find-similar-terms.skill, detect-circular-delegation.skill, audit-frontmatter-completeness.skill ]
 instructions: [ system-first-remediation.instruction, refactor-to-kernel-standards.instruction,  verify-repository-integrity.instruction ]
 standards: [ kernel.standard, standard-file.standard ]
 ---
@@ -27,6 +27,8 @@ The Integrity Guardian is a specialized auditor focused on the "Hard" structural
 ```mermaid
 graph TD
     agent-file.standard --> integrity-guardian.agent
+    integrity-guardian.agent --> validate-documentation[validate-documentation.skill]
+    integrity-guardian.agent --> audit-runbook-completeness[audit-runbook-completeness.skill]
     integrity-guardian.agent --> audit-content-quality[audit-content-quality.skill]
     integrity-guardian.agent --> audit-for-architectural-violations[audit-for-architectural-violations.skill]
     integrity-guardian.agent --> detect-circular-delegation[detect-circular-delegation.skill]

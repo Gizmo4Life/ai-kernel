@@ -1,12 +1,17 @@
 ---
-id: universal-runbook
-type: universal_runbook
-pillar: operational
----[Home](/) > [Docs](/docs/readme.md) > [Operational](/docs/operational/readme.md) > [Runbook](readme.md) > Universal System Runbook
-
-# Universal System Runbook
-
-This is the primary entry point for all on-call developers responding to an alert.
+id: runbook.standard
+title: Universal Runbook Standard
+type: standard
+tags: [ops, runbook, triage, on-call]
+status: stable
+version: 1.0.0
+padu:
+  P: "Runbook contains a severity matrix, impact scope, and clear escalation paths."
+  A: "Runbook has triage steps but missing formal escalation or severity gates."
+  D: "Runbook is missing diagnostic dashboard links or triage logic."
+  U: "Runbook lacks any actionable restoration steps for on-call personnel."
+glossary_refs: [instruction.glossary, standard.glossary]
+---# Universal Runbook Standard
 
 ## 1. Severity Matrix
 | Severity | Threshold | Response Time |
@@ -19,21 +24,23 @@ This is the primary entry point for all on-call developers responding to an aler
 - **SEV-1**: Universal service failure; all users blocked.
 - **SEV-2**: Significant degradation; subset of users or core features affected.
 
-## 3. System Orientation
-- **Global Health Dashboard:** [Link to Main Dashboard]
-- **Latency Overview:** [Link to Latency Dashboard]
-- **Error Rates Overview:** [Link to Error Dashboard]
+## 3. Triage Protocol
+- **Strategy**: Adhere to the [Operational Triage Instruction](../instructions/operational-triage.instruction.md).
+- **Action**: Identify the failing span from the SigNoz dashboard and proceed to the corresponding module runbook.
 
-## 2. Triage Matrix
-- **Strategy:** Adhere to the [OPS Triage Path](/docs/developer/pattern/ops-triage-path.md).
-- **Action:** Identify the failing span from the dashboard and proceed to the corresponding Span Runbook.
+## 4. Escalation Path
+- **Action**: If triage fails within the response time window:
+  - **Level 1**: Primary On-Call Engineer.
+  - **Level 2**: Engineering Leadership.
 
-
-## 3. Global Escalation
-- **Strategy:** Adhere to the [OPS Escalation Path](/docs/developer/pattern/ops-escalation-path.md).
-- **Action:** If triage fails:
-  - **Primary On-Call:** [Name/Contact]
-  - **Engineering Leadership:** [Name/Contact]
+## 5. Architecture
+```mermaid
+graph TD
+    Alert[Alert Trigger] --> Triage[Operational Triage]
+    Triage --> Module[Module Runbook]
+    Module --> Restore[Service Restored]
+    Triage -- Fail --> Escalation[Global Escalation]
+```
 
 ## Architecture
 

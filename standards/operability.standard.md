@@ -23,7 +23,9 @@ Operability is the "Nervous System" of a production application. This standard e
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Aggregate Alerting | **P** | One monitor for many scenarios reduces alert fatigue. | `mon-audit.skill` | None |
 | High-Fidelity Telemetry | **P** | Ensures enough data for RCA without noise. | `tel-audit.skill` | None |
 | Mandatory 3-Piece IR Docs | **P** | Dashboard, Runbook, and Actions are non-negotiable. | `inc-audit.skill` | None |
@@ -35,9 +37,3 @@ glossary_refs: [skill.glossary, standard.glossary]
 ## Enforcement
 The posture is **Automated**. We will implement specialized auditors for each pillar to ensure that every new component includes its corresponding dashboard and runbook.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> operability.standard
-```

@@ -12,7 +12,9 @@ padu:
   D: "Using raw pointers or concrete coupling where interfaces are required."
   U: "Undefined behavior, memory leaks, or non-deterministic logic."
 glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > C++ Code Quality
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > C++ Code Quality
 
 # Standard: C++ Code Quality (PADU)
 
@@ -64,9 +66,3 @@ This standard governs foundational C++ structural and syntactic choices, ensurin
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> cpp-quality.standard
-```

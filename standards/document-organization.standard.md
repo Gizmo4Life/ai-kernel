@@ -4,7 +4,9 @@ id: document-organization
 type: standard
 pillar: governance
 glossary_refs: [capability.glossary, context.glossary, frontmatter.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Document Organization
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Document Organization
 
 ## 1. Documentation Trichotomy
 To ensure clear separation of concerns, all new documentation must adhere strictly to one of the following layers:
@@ -41,9 +43,3 @@ To ensure clear separation of concerns, all new documentation must adhere strict
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> document-organization
-```

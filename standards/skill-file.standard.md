@@ -12,7 +12,9 @@ padu:
   D: "Skill is non-deterministic or missing verification protocols."
   U: "Skill has side-effects with no way to verify or revert."
 glossary_refs: [agent.glossary, context.glossary, skill.glossary, standard.glossary]
----# Skill File Standard
+---
+
+# Skill File Standard
 
 ## Context
 Skills are the "Atomic Acts" of the AI Kernel. To ensure system stability, every skill must be **Transactional**. This means an agent can provably verify the outcome and safely "Undo" the action if the verification fails.
@@ -40,9 +42,3 @@ Agents MUST follow the **Verify-or-Revert** cycle:
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> skill-file.standard
-```

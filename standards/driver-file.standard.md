@@ -13,7 +13,9 @@ padu:
   D: "Driver relies on non-standard libraries or has side-effects not documented in the manifest."
   U: "Driver contains hardcoded secrets or is non-deterministic."
 glossary_refs: [agent.glossary, context.glossary, driver.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
----# Driver File Standard
+---
+
+# Driver File Standard
 
 ## Context
 Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO, File Edits, Network calls) that the Agents orchestrate. To maintain a high-integrity system, Drivers must be deterministic, atomic, and visible to the Knowledge Graph.
@@ -40,9 +42,3 @@ Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> driver-file.standard
-```

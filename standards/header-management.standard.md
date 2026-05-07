@@ -12,7 +12,9 @@ padu:
   D: "Missing ID or non-standard header hierarchy."
   U: "No header metadata present."
 glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Header Management (IWYU)
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Header Management (IWYU)
 
 # Standard: Header Management (Include-What-You-Use)
 
@@ -60,9 +62,3 @@ When logic is centralized (e.g., removing an inline `registry.view<PlayerCompone
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> header-management.standard
-```

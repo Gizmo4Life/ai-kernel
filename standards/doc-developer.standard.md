@@ -15,7 +15,9 @@ Developer documentation is the onboarding engine of a project. Its goal is to mi
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [instruction.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | One-Step Setup Script | **P** | Minimizes onboarding friction and manual errors. | `doc-audit.skill` | Complex infra |
 | Document Build Internals | **P** | Helps developers debug pipeline failures. | evaluate-against-standard.skill | None |
 | Hardcoded Credentials | **U** | Fatal security risk; use environment templates. | `doc-audit.skill` | None |
@@ -23,9 +25,3 @@ glossary_refs: [instruction.glossary, skill.glossary, standard.glossary]
 
 Internal documentation should be optimized for **Speed** and **Clarity**. It assumes the reader has access to the source code and focuses on how to modify it safely.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> doc-developer.standard
-```

@@ -11,7 +11,9 @@ This standard defines the "De-conflation" protocol. To maintain the "Hardness" o
 | Source Content | Correct Target Domain | Action |
 |
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
----|---|---|
+---
+
+|---|---|
 | Term Definition | `glossary/*.md` | Extract to Glossary; Link via [term]. |
 | Multi-tool logic | `instructions/*.md` | Extract to Instruction; Link via ID. |
 | Reusable AI logic | `prompts/*.md` | Extract to Prompt; Link via frontmatter. |
@@ -32,9 +34,3 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Enforcement
 The posture is **Hybrid-Automated**. The **Semantic Auditor** identifies bleeding, and the **Librarian** orchestrates the extraction.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> atomic-extraction.standard
-```

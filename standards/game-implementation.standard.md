@@ -12,7 +12,9 @@ padu:
   D: "Inlining registry views for player or flagship lookup."
   U: "Manual aggregation of InstalledModules instead of using centralized blueprinters."
 glossary_refs: [context.glossary, standard.glossary]
----# Game Implementation Standard
+---
+
+# Game Implementation Standard
 
 ## 1. Blueprint Extraction
 - **Standard**: Always use `ShipOutfitter::blueprintFromEntity` to extract state from an ECS entity.
@@ -39,9 +41,3 @@ glossary_refs: [context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> game-implementation.standard
-```

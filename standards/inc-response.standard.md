@@ -21,7 +21,9 @@ Incident Response is the process of diagnosing and correcting live production is
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use `Verify -> Apply -> Re-verify` | **P** | Ensures the corrective action actually fixed the issue. | `inc-audit.skill` | None |
 | Automated Runbook Linkage | **P** | Every failing span in a dashboard must link to its runbook. | `linkage-specialist.agent` | None |
 | Manifest-style Dashboards | **P** | Provides a high-level map of system health. | `librarian.agent` | None |
@@ -33,9 +35,3 @@ Restoration time is a function of "Path Clarity." By mandating the 3-piece kit, 
 ## Enforcement
 The posture is **Automated**. The **Linkage Specialist** verifies that every span defined in a Telemetry standard has a corresponding dashboard entry and runbook.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> inc-response.standard
-```

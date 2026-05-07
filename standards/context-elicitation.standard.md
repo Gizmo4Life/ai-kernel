@@ -4,7 +4,9 @@ id: context-elicitation-standard
 type: standard
 pillar: governance
 glossary_refs: [agent.glossary, context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Context Elicitation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Context Elicitation
 
 ## Context: Semantic Discovery & Scope Control
 *Nuance: Discovery must prevent "scope creep" by transforming vague intent into testable constraints. A failure to define boundaries is a failure of discovery.*
@@ -42,9 +44,3 @@ glossary_refs: [agent.glossary, context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> context-elicitation-standard
-```

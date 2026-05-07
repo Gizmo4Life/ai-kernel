@@ -15,7 +15,9 @@ Context is the "Long-Term Memory" of the AI Kernel. To prevent "Context Poisonin
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Distill Raw Logs | **P** | Saves token space and reduces noise. | `summarize-to-context.skill` | Forensics |
 | Mark Versioned Context | **P** | Ensures we don't follow v1.0 logic in a v2.0 world. | `doc-audit.skill` | None |
 | Prune Obsolete Context | **P** | Prevents "Semantic Pollution." | `maintain-kernel-integrity.instruction` | None |
@@ -27,9 +29,3 @@ Context should be a "Refined Resource." By mandating distillation and pruning, w
 ## Enforcement
 The posture is **Agent-Audited**. The **Librarian** manages the Distillation and Archival of context.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> context-lifecycle.standard
-```

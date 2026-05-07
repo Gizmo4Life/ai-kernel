@@ -16,7 +16,9 @@ The AI Kernel uses **Content Hashing** to track state. The **[Integrity Guardian
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, frontmatter.glossary, instruction.glossary, skill.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use Content Hashing | **P** | Provides an objective, automated check for changes. | `integrity-guardian.agent` | None |
 | Keep Versioning in Frontmatter | **U** | Administrative bloat; reduces data footprint for discovery. | `check-id-uniqueness.skill` | None |
 | Major version on ID change | **P** | Signals a breaking link in the graph. | `linkage-specialist.agent` | None |
@@ -32,9 +34,3 @@ The posture is **Automated**. The **Integrity Guardian** manages the hash-based 
 **Risk**: A functional change in a skill might not change its `id`, but could break an instruction.
 **Be Wary Of**: Large content changes that preserve the ID but alter the execution semantic.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> versioning.standard
-```

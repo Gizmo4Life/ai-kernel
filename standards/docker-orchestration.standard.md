@@ -12,7 +12,9 @@ padu:
   D: "Single-stage, bloated images."
   U: "No containerization for distributed components."
 glossary_refs: [context.glossary, orchestration.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Docker Orchestration
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Docker Orchestration
 
 # Standard: Docker Orchestration
 
@@ -72,9 +74,3 @@ Establish the technical foundations for containerized development, build reprodu
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> docker-orchestration.standard
-```

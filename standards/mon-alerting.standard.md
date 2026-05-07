@@ -20,7 +20,9 @@ Monitoring is the system's "Pain Receptor." Its goal is to detect that the syste
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | One Monitor : Many Scenarios | **P** | Maximizes detection coverage with minimal alert noise. | evaluate-against-standard.skill | Trivial components |
 | Alert links to Dashboard | **P** | Provides the first step for deterministic restoration. | `linkage-specialist.agent` | None |
 | Diagnostic Alerts | **D** | Leads to "Alert Storms" where one root cause triggers 50 alerts. | evaluate-against-standard.skill | Critical safety loops |
@@ -32,9 +34,3 @@ In a high-fidelity telemetry environment, we don't need the monitor to tell us w
 ## Enforcement
 The posture is **Automated**. The **Linkage Specialist** verifies that every defined Monitor has a corresponding `correlation_id` to its target Dashboard.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> mon-alerting.standard
-```

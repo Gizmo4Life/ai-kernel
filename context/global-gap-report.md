@@ -1,13 +1,14 @@
 # Global Compliance Gap Report (v9.1.13)
 
 - Total Files Audited: 298
-- Fully Compliant Files: 285
-- Non-Compliant Files: 13
-- Logic Density: 95.6%
+- Fully Compliant Files: 284
+- Non-Compliant Files: 14
+- Logic Density: 95.3%
 
 ## Failure Details
 - CLAUDE.md
 - instructions/README.md
+- drivers/kernel/mermaid_gen.py
 - drivers/kernel/fm_repair.py
 - drivers/kernel/heal_v2.py
 - drivers/kernel/standard_auditor.py

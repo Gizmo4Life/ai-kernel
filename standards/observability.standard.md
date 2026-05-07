@@ -12,7 +12,9 @@ padu:
   D: "Logging-only or non-standard naming conventions."
   U: "Zero observability; 'Black Box' execution."
 glossary_refs: [context.glossary, standard.glossary]
----# Observability & Telemetry Standard
+---
+
+# Observability & Telemetry Standard
 
 ## 1. Nomenclature & Naming
 - **Standard**: All spans MUST follow the hierarchical dot-notation: `<pillar>.<module>.<action>`.
@@ -49,9 +51,3 @@ glossary_refs: [context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> observability.standard
-```

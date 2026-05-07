@@ -12,7 +12,9 @@ padu:
   D: "Globbing (file discovery) or non-deterministic build order."
   U: "Build fails intermittently or requires manual network access."
 glossary_refs: [context.glossary, standard.glossary]
----# Build Resilience Standard
+---
+
+# Build Resilience Standard
 
 ## 1. CMake Registration
 - **Mandatory**: Every source file MUST be registered explicitly in the build configuration (e.g., `CMakeLists.txt`).
@@ -38,9 +40,3 @@ glossary_refs: [context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> build-resilience.standard
-```

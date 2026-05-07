@@ -10,7 +10,9 @@ scope: "/glossary/*.md"
 parent_standard: standard-file.standard
 instructions: [ resolve-glossary-conflict.instruction ]
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
----# Glossary Entry Standard
+---
+
+# Glossary Entry Standard
 
 ## Context
 The Glossary is the "Semantic Anchor" of the AI Kernel. This standard ensures that terms are defined with enough rigor to be enforceable. It mandates that every entry include **Usage Constraints**—explicit rules about what the term is *not* allowed to be or do.
@@ -39,9 +41,3 @@ The posture is **Agent-Audited**. The **Semantic Auditor** verifies that all new
 - This standard must only apply to files with the .md suffix.
 - It is forbidden to use this standard for Agents or Skills.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> glossary-entry.standard
-```

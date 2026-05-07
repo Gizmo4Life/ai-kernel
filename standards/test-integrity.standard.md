@@ -12,7 +12,9 @@ padu:
   D: "Low coverage or tests that rely on external state."
   U: "No automated tests for critical business logic."
 glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Logic and Test Integrity
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](/docs/governance/standard/readme.md) > Logic and Test Integrity
 
 # Standard: Logic and Test Integrity (PADU)
 
@@ -54,9 +56,3 @@ This standard defines the maturity and fitness ratings for core game logic and i
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> test-integrity.standard
-```

@@ -16,7 +16,9 @@ All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use Tri-Part Naming | **P** | Enables deterministic filtering and grouping. | `tel-audit.skill` | None |
 | Lowercase Dot Notation | **P** | Standardizes across different telemetry providers. | `tel-audit.skill` | None |
 | Include `correlation_id` | **P** | Critical for tracing requests across boundaries. | evaluate-against-standard.skill | None |
@@ -28,9 +30,3 @@ glossary_refs: [skill.glossary, standard.glossary]
 ## Enforcement
 The posture is **Hybrid-Automated**. We will implement a `tel-audit.skill` to regex-check keys in codebase strings.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> tel-naming.standard
-```

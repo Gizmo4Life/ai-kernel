@@ -15,7 +15,9 @@ This standard defines the "Path to Core" for all new knowledge. it prevents the 
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, context.glossary, instruction.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | 3-Strike Codification | **P** | Codify once a pattern appears 3 times. | `standards-scout.agent` | Experimental code |
 | Promote to Atomic Child | **P** | Keep standards small and linked. | `generate-padu-table.skill` | None |
 | Link context to Standard | **P** | Shows the "Origin Story" of the rule. | `linkage-specialist.agent` | None |
@@ -32,9 +34,3 @@ The posture is **Agent-Audited**. The **Standards Scout** is tasked with "Search
 **Risk**: A pattern might exist 10 times but using slightly different terms, hiding its density from the Scout.
 **Be Wary Of**: Similar logic across different `context/` files that should be unified.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> promotion.standard
-```

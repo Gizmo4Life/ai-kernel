@@ -11,7 +11,9 @@ This standard governs the structure and quality of standalone prompts. It ensure
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, context.glossary, determinism.glossary, frontmatter.glossary, prompt.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Define `variables` | **P** | Lists expected inputs. | `audit-frontmatter-completeness.skill` | None |
 | Include `model_recommendation` | **A** | Context for tuning. | doc-audit.skill | Model-agnostic |
 | Use Clear Versioning | **P** | Tracks model evolution. | `audit-frontmatter-completeness.skill` | None |
@@ -32,9 +34,3 @@ The posture for prompts is **Agent-Audited**. Structural elements (variables, ve
 **Risk**: A prompt version update may work better for one model but break behavior for another.
 **Be Wary Of**: Changing core prompt logic without updating the `version` field.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> prompt-file.standard
-```

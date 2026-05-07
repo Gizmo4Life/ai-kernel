@@ -12,7 +12,9 @@ padu:
   D: "Target repos have local standards that override the Sidecar without justification."
   U: "No linkage between target repo and Sidecar governance."
 glossary_refs: [agent.glossary, context.glossary, driver.glossary, orchestration.glossary, sidecar.glossary, skill.glossary, standard.glossary]
----# Cross-Repository Governance Standard
+---
+
+# Cross-Repository Governance Standard
 
 ## Context
 High-scale development requires consistent standards across multiple repositories. The "Sidecar Pattern" ensures that every project in a workspace benefits from the same hardened logic, while preventing "Standard Fragmentation."
@@ -39,9 +41,3 @@ High-scale development requires consistent standards across multiple repositorie
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> cross-repo-governance.standard
-```

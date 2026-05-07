@@ -11,7 +11,9 @@ This standard governs the structure and content of `## Quality Gate` sections. I
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, instruction.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use `Verification` sub-point | **P** | Defines how to check the output. | `semantic-auditor.agent` | None |
 | Use `Enforcement` sub-point | **P** | Defines what happens if the check fails. | `semantic-auditor.agent` | None |
 | Link to governing standard | **P** | Gates must have a basis in code. | `integrity-guardian.agent` | None |
@@ -28,9 +30,3 @@ The posture is **Agent-Audited**. The **Semantic Auditor** verifies the presence
 **Risk**: A gate might describe a verification process that is not actually supported by any current skill.
 **Be Wary Of**: Gates that promise "Automated Enforcement" but link to standards that are still "Agent-Audited".
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> quality-gate.standard
-```

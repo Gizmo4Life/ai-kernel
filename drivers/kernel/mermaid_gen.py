@@ -1,16 +1,13 @@
-"""
----
-id: mermaid_gen.driver
-type: driver
-tags: [kernel, automation, actuator]
-parent_standard: driver-file.standard
-summary: Atomic actuator for mermaid gen.
----
-"""
-
 import os
 import re
 import sys
+
+"""
+Diamond Mermaid Generator (v1.1.0)
+---
+Purpose: Generates architectural diagrams for non-standard nodes.
+Rules: SKIPS standards/, ensures correct frontmatter fencing.
+"""
 
 def get_frontmatter(filepath):
     try:
@@ -55,6 +52,10 @@ def generate_mermaid(data):
     return mermaid
 
 def update_file(filepath):
+    # SKIP standards directory
+    if 'standards/' in filepath:
+        return
+
     data, body, fm_raw = get_frontmatter(filepath)
     if not data: return
     
@@ -65,7 +66,8 @@ def update_file(filepath):
     else:
         new_body = body.strip() + "\n\n" + new_mermaid
         
-    new_content = f"---\n{fm_raw.strip()}\n---{new_body}"
+    # FIX: Ensure newline after --- fence
+    new_content = f"---\n{fm_raw.strip()}\n---\n\n{new_body.strip()}\n"
     
     with open(filepath, 'w') as f:
         f.write(new_content)

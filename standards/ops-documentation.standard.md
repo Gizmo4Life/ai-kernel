@@ -4,7 +4,9 @@ id: ops-documentation
 type: standard
 pillar: governance
 glossary_refs: [context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Operational Documentation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Operational Documentation
 
 ## Context: Incident Response & System State
 *Nuance: Operational documentation must optimize for speed of mitigation during an active incident. High-density, query-ready files are strictly prioritized over narrative.*
@@ -29,9 +31,3 @@ glossary_refs: [context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> ops-documentation
-```

@@ -15,7 +15,9 @@ This standard defines the "Unambiguous Naming" policy for the AI Kernel. It ensu
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, frontmatter.glossary, skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Domain-Prefixed naming | **P** | Prevents conflation in a flat filesystem. | `find-similar-terms.skill` | Root concepts |
 | Namespace Qualification | **P** | `[domain]-[concept]` is the ideal format. | `audit-frontmatter-completeness.skill` | None |
 | Using synonyms for clarity | **A** | Helps distinguish between similar actions. | evaluate-against-standard.skill (Flynn) | None |
@@ -32,9 +34,3 @@ The posture is **Hybrid-Automated**. `find-similar-terms.skill` now checks for l
 **Risk**: One agent might use `js-` and another `javascript-`, creating fragmented domains.
 **Be Wary Of**: Using varied synonyms for the same domain prefix.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> naming.standard
-```

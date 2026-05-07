@@ -17,7 +17,9 @@ tags: []` list.
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [agent.glossary, skill.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use Common Keywords | **P** | Includes terms like "fix", "wrong", "change" to match user intent. | `librarian.agent` | None |
 | Include Legacy Terms | **P** | Keeps old names (e.g., "kernel-first") as tags for backward compatibility. | `standards-auditor.agent` | None |
 | Tag Overloading | **D** | Adding >10 unrelated tags just to "game" the search. | Flynn Review | None |
@@ -26,9 +28,3 @@ glossary_refs: [agent.glossary, skill.glossary]
 ## Enforcement
 The posture is **Automated**. The `librarian.agent` will periodically audit tags for semantic coverage and suggest "Vibrant" additions based on recent conversation history.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> synonym.standard
-```

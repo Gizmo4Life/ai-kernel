@@ -46,4 +46,3 @@ graph TD
 The output of this skill is governed by the **[Skill File Standard](../standards/skill-file.standard.md)**.
 - **Verification**: Ensure every violation reported contains a clear [Rationale](../glossary/padu-scale.glossary.md) and a link to the violated standard.
 - **Enforcement**: If a file fails the [Orchestration](../glossary/orchestration.glossary.md) check, it must be marked as **Unacceptable (U)** and remediated before the next commit.
-

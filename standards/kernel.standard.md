@@ -12,7 +12,9 @@ To ensure that agents and audits target the correct file types, the following na
 | File Type | Pattern (Glob) | Purpose |
 |
 glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, orchestration.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
----|---|---|
+---
+
+|---|---|
 | **Standard** | `*.md` | Governance and Quality Bars |
 | **Skill** | `*.md` | Atomic Logic and Tool Usage |
 | **Instruction** | `*.md` | Orchestration and Workflows |
@@ -45,9 +47,3 @@ glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruct
 ## Enforcement
 The Kernel posture is **Automated**. Structural integrity (naming, ID uniqueness, reachability) is enforced by the **Integrity Guardian** and **Linkage Specialist**.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> kernel.standard
-```

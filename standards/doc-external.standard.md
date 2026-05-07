@@ -15,7 +15,9 @@ External documentation is the "Product Face" of the codebase. It is designed for
 | Practice | Rating | Rationale | Enforcement | Exception |
 |
 glossary_refs: [skill.glossary, standard.glossary]
----|---|---|---|---|
+---
+
+|---|---|---|---|
 | Use OpenAPI/Swagger | **P** | Provides interactive, machine-readable API documentation. | `doc-audit.skill` | None |
 | Task-Oriented Manuals | **P** | Focuses on what the user wants to achieve, not just button descriptions. | evaluate-against-standard.skill | None |
 | Include Examples | **P** | Reduces integration time for API consumers. | evaluate-against-standard.skill | None |
@@ -24,9 +26,3 @@ glossary_refs: [skill.glossary, standard.glossary]
 
 External documentation must prioritize **Simplicity** and **Interface Stability**. It should hide the "Sausage-Making" details of the implementation to focus on user success.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> doc-external.standard
-```

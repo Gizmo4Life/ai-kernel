@@ -45,9 +45,3 @@ A Universal Runbook is the definitive entry point for operational response. It p
 ## Enforcement
 The posture is **Automated**. The AI Kernel's Integrity Guardian verifies that every on-call alert is mapped to a compliant runbook entry.
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> runbook.standard
-```

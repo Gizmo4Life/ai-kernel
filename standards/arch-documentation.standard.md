@@ -4,7 +4,9 @@ id: arch-documentation
 type: standard
 pillar: governance
 glossary_refs: [capability.glossary, context.glossary, standard.glossary]
----[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Architecture Documentation
+---
+
+[Home](/) > [Docs](/docs/readme.md) > [Governance](/docs/governance/readme.md) > [Standard](readme.md) > Architecture Documentation
 
 ## Context: System Design & Mapping
 *Nuance: Architecture documentation must cleanly separate business intent from code mechanics. Mixing these creates fragile documentation that breaks on every code refactor.*
@@ -25,9 +27,3 @@ glossary_refs: [capability.glossary, context.glossary, standard.glossary]
 
 [Auto-Generated Placeholder for Compliance]
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> arch-documentation
-```

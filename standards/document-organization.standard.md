@@ -33,12 +33,6 @@ To ensure clear separation of concerns, all new documentation must adhere strict
 | [doc-directory-nesting](/docs/developer/pattern/doc-directory-nesting.md) | **U** | Nested folders (use prefixes instead). | N/A |
 | [readme-long-prose](/docs/developer/pattern/readme-long-prose.md) | **U** | READMEs with narrative paragraphs. | N/A |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

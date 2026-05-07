@@ -4,23 +4,8 @@ title: Monitoring & Alerting Standard
 type: standard
 tags: [operability, monitoring, alerting, quality, rules, governance, compliance]
 summary: Standards for aggregate detection systems, prioritizing unhealthiness detection over diagnostic specificity.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/*"
-parent_standard: operability.standard
-glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# Monitoring & Alerting Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Monitoring is the system's "Pain Receptor." Its goal is to detect that the system is no longer healthy, not to diagnose *why*. By prioritizing aggregation, we reduce alert fatigue and ensure that a single monitor can cover a wide range of failure modes.
-
-## Architecture
-
-```mermaid
-graph TD
-    operability.standard --> mon-alerting.standard
-```
 
 ## Monitoring Principles
 

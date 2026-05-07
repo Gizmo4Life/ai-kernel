@@ -32,12 +32,6 @@ Drivers are the "Actuators" of the AI Kernel. They perform the physical work (IO
 - **Verification**: Every driver must be rated P or A on the PADU scale.
 - **Enforcement**: Drivers rated U or D will be "Locked" (denied execution) by Flynn.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

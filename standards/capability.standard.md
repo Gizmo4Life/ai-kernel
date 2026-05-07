@@ -4,23 +4,8 @@ title: Capability Standard
 type: standard
 tags: [governance, authority, token, rules, compliance]
 summary: Standards for granting and verifying agent capabilities (licenses to act).
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/agents/*.md"
-parent_standard: agent-file.standard
-glossary_refs: [agent.glossary, atomicity.glossary, authority.glossary, capability.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, skill.glossary, standard.glossary]
----
-
-# Capability Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard governs the granting of "Licenses to Act" within the AI Kernel. It ensures that agents are only equipped with the tools necessary for their custodial domain, preventing accidental side effects and structural drift.
-
-## Architecture
-
-```mermaid
-graph TD
-    agent-file.standard --> capability.standard
-```
 
 ## Mandatory Sections
 1. **Context**: Rationale for the agent's capability profile.

@@ -60,12 +60,6 @@ Establish the technical foundations for containerized development, build reprodu
 - `docker compose ps` shows all services as `Up` or `Healthy`.
 - Telemetry is visible in SigNoz/Jaeger upon game startup.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

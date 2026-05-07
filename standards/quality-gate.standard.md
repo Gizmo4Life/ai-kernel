@@ -4,24 +4,9 @@ title: Quality Gate Standard
 type: standard
 tags: [governance, quality, verification, rules, compliance]
 summary: Standards for defining and implementing Quality Gate sections in skills and instructions.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: /
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, quality-gate.glossary, skill.glossary, standard.glossary]
----
-
-# Quality Gate Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard governs the structure and content of `## Quality Gate` sections. It ensures that every atomic action or orchestrated instruction in the kernel has a deterministic verification process and a clear enforcement trigger.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> quality-gate.standard
-```
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |

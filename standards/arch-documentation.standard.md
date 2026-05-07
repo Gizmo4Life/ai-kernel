@@ -17,12 +17,6 @@ glossary_refs: [standard.glossary, context.glossary, capability.glossary]
 | [doc-t2-with-code](/docs/developer/pattern/doc-t2-with-code.md) | **U** | Mixing code snippets in strategy files. | N/A |
 | [doc-t3-with-biz-logic](/docs/developer/pattern/doc-t3-with-biz-logic.md) | **U** | Mixing intent in implementation maps. | N/A |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

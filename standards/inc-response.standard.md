@@ -4,24 +4,9 @@ title: Incident Response Standard
 type: standard
 tags: [incident-response, quality, reliability, rules, governance, compliance]
 summary: Standards for the 3-piece documentation set required for every production component.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/*"
-parent_standard: operability.standard
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# Incident Response Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Incident Response is the process of diagnosing and correcting live production issues. This standard mandates that every functional component must have a "Restoration Kit" consisting of a Dashboard, a Runbook, and an Action set.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    operability.standard --> inc-response.standard
-```
 ## The 3-Piece Restoration Kit
 
 ### 1. Span Diagnostic Dashboard (`*.dashboard.md`)

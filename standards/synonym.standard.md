@@ -4,23 +4,8 @@ title: Discovery Tag Standard
 type: standard
 tags: [governance, discovery, semantics, tagging, rules, compliance]
 summary: Standards for using vibrant tags to ensure Knowledge Graph discoverability and prevent logic duplication.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/*"
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, reachability.glossary, skill.glossary, standard.glossary]
----
-
-# Discovery Tag Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Tags are the primary "Discovery Anchors" for the AI Kernel. Because agents and search engines rely on the `tags: []` field for semantic indexing, we must use this field to include all synonyms and alternative terms. This ensures that a search for "Feedback" correctly surfaces "System-First Remediation."
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> synonym.standard
-```
 
 ## Mandatory Requirements
 1. **Frontmatter**: Every file must include a `tags: []` list.

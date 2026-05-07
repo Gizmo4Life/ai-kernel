@@ -4,24 +4,9 @@ title: Telemetry Naming Standard
 type: standard
 tags: [telemetry, observability, naming, rules, governance, compliance]
 summary: Standards for naming spans, metrics, and logs to ensure cross-domain observability.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/* [tag:telemetry]"
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, context.glossary, orchestration.glossary, skill.glossary, standard.glossary]
----
-
-# Telemetry Naming Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines a deterministic hierarchy for all telemetry signals. It ensures that observability data from different services (e.g., a C++ backend and a React frontend) can be correlated seamlessly in a single dashboard.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> tel-naming.standard
-```
 ## The Tri-Part Pattern
 All telemetry keys (Spans, Metrics, Log Attributes) must follow the **`<pillar>.<module>.<action>`** pattern:
 

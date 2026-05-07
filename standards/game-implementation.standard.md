@@ -27,12 +27,6 @@ glossary_refs: [standard.glossary]
 - **Standard**: All resource transactions MUST use `EconomyManager::executeTrade`.
 - **Validation**: Ensures `CargoComponent` capacity and weight are correctly tracked across the lifecycle.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

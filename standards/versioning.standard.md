@@ -4,24 +4,9 @@ title: Versioning Standard
 type: standard
 tags: [governance, maintenance, versioning, rules, compliance]
 summary: Rules for internal versioning and change tracking of Knowledge Graph nodes.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: /
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
----
-
-# Versioning Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines how the AI Kernel tracks the evolution of its nodes. To reduce "Frontmatter Bloat," versioning is handled as an internal bookkeeping logic rather than a manual field in the file body.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> versioning.standard
-```
 ## Internal Versioning Logic
 The AI Kernel uses **Content Hashing** to track state. The **[Integrity Guardian](../agents/integrity-guardian.agent.md)** maintains an internal `manifest.json` (or similar context file) that maps file IDs to their current SHA-256 hash.
 

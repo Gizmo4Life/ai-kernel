@@ -12,9 +12,7 @@ padu:
   D: "Runbook is missing diagnostic dashboard links or triage logic."
   U: "Runbook lacks any actionable restoration steps for on-call personnel."
 glossary_refs: [context.glossary, instruction.glossary, standard.glossary]
----
-
-# Universal Runbook Standard
+---# Universal Runbook Standard
 
 ## 1. Severity Matrix
 | Severity | Threshold | Response Time |
@@ -45,13 +43,6 @@ graph TD
     Triage -- Fail --> Escalation[Global Escalation]
 ```
 
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> runbook.standard
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]
@@ -63,3 +54,10 @@ graph TD
 ## Enforcement
 
 [Auto-Generated Placeholder for Compliance]
+
+## Architecture
+
+```mermaid
+graph TD
+    kernel.standard --> runbook.standard
+```

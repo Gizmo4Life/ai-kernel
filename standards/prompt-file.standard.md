@@ -4,24 +4,9 @@ title: Prompt File Standard
 type: standard
 tags: [governance, prompt-engineering, rules, compliance]
 summary: Standards for defining reusable AI prompts in the `prompts/` directory.
-requirements: ["## Context", "## Architecture"]
-scope: "/prompts/*.md"
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, context.glossary, determinism.glossary, frontmatter.glossary, instruction.glossary, prompt.glossary, skill.glossary, standard.glossary]
----
-
-# Prompt File Standard
-
-## Context
+requirements: ["## Context", "## Context
 This standard governs the structure and quality of standalone prompts. It ensures that prompts are modular, versioned, and documented with their intended variables.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> prompt-file.standard
-```
 ## PADU Table
 
 | Practice | Rating | Rationale | Enforcement | Exception |

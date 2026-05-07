@@ -4,23 +4,8 @@ title: Atomic Extraction Standard
 type: standard
 tags: [architecture, atomicity, de-conflation, rules, governance, compliance]
 summary: Standards for identifying out-of-scope content and extracting it to its correct SSOT domain.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/*"
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, progressive-disclosure.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
----
-
-# Atomic Extraction Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines the "De-conflation" protocol. To maintain the "Hardness" of the AI Kernel, every file must only contain content relevant to its tier. When a file is found to contain "Foreign Logic" (e.g., a Skill containing an Instruction), it must be extracted and replaced with a reference link.
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> atomic-extraction.standard
-```
 
 ## Extraction Rules
 

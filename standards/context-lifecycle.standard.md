@@ -4,23 +4,8 @@ title: Context Lifecycle Standard
 type: standard
 tags: [memory, quality, context, rules, governance, compliance]
 summary: Standards for the creation, preservation, and pruning of architectural context.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/context/*.md"
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# Context Lifecycle Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Context is the "Long-Term Memory" of the AI Kernel. To prevent "Context Poisoning" (relying on outdated or conflicting data), this standard defines the lifecycle of files in the `/context/` directory.
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> context-lifecycle.standard
-```
 
 ## Mandatory Lifecycle States
 1. **Active**: Context related to the current task or latest audit.

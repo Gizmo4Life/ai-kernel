@@ -33,12 +33,6 @@ This standard defines the rules for exposing class internals to unit tests to en
 ## 3. Best Practice
 Only promote members that are critical to the "Success Criteria" defined in the feature's elicitation documentation.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

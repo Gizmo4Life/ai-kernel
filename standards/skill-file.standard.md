@@ -32,12 +32,6 @@ Agents MUST follow the **Verify-or-Revert** cycle:
 - **Verification**: Every skill must be rated P on the PADU scale.
 - **Enforcement**: Flynn will reject any skill that performs destructive edits without a formal `reversion` path.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

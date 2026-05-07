@@ -31,12 +31,6 @@ High-scale development requires consistent standards across multiple repositorie
 - **Verification**: Run `python3 drivers/kernel/connectivity_auditor.py` across the multi-root workspace.
 - **Enforcement**: All target repos MUST pass a Sidecar-driven `compliance_audit` before merging into `main`.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

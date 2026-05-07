@@ -59,12 +59,6 @@ This standard governs where and how repetitive lookup and setup logic is defined
 - **Blueprint Symmetry**: Any function that both applies and extracts blueprints (`applyBlueprint` / `blueprintFromEntity`) must have a round-trip test covering the hull class, module composition, and metadata fields.
 - **Header Hygiene**: Every PR that centralizes logic must include a header hygiene pass removing now-unused includes from all modified files. See [header-management](/docs/governance/standard/header-management.md).
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

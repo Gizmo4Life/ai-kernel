@@ -4,24 +4,8 @@ title: Kernel Standard
 type: standard
 tags: [governance, root, architecture, rules, compliance]
 summary: The foundational standard defining the core structural rules of the AI Kernel.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/*"
-parent_standard: None
-instructions: [ heal-structural-debt.instruction ]
-glossary_refs: [agent.glossary, context.glossary, domain-owner.glossary, frontmatter.glossary, instruction.glossary, knowledge-graph.glossary, orchestration.glossary, prompt.glossary, reachability.glossary, skill.glossary, standard.glossary]
----
-
-# Kernel Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 The **Kernel Standard** is the absolute source of truth for the AI Kernel's architecture. It establishes the "Hardness" of the system by mandating global uniqueness, reachability, and deterministic discovery. Without this root standard, the Knowledge Graph would collapse into a collection of isolated, ambiguous files.
-
-## Architecture
-
-```mermaid
-graph TD
-    None --> kernel.standard
-```
 
 ## Deterministic File Selectors
 To ensure that agents and audits target the correct file types, the following naming conventions are mandatory:

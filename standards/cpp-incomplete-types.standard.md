@@ -38,12 +38,6 @@ This standard defines the strategy for resolving "incomplete type" compilation e
 #include <opentelemetry/sdk/trace/processor.h> // SDK (Provides complete type)
 ```
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

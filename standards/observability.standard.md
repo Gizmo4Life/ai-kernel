@@ -37,12 +37,6 @@ glossary_refs: [standard.glossary]
 | **Manual Span Mapping** | **A** | Traceable but higher maintenance than auto-instrumentation. |
 | **Black Box Logic** | **U** | Logic with zero telemetry visibility. |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

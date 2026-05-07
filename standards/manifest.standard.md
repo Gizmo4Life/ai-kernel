@@ -4,23 +4,8 @@ title: Manifest Standard
 type: standard
 tags: [discovery, documentation, automation, rules, governance, compliance]
 summary: Standards for machine-readable README.md manifests at the folder level.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/README.md"
-parent_standard: doc-local.standard
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, knowledge-map.glossary, reachability.glossary, skill.glossary, standard.glossary]
----
-
-# Manifest Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Manifests (`README.md` files) are the "Discovery Maps" of the AI Kernel. To ensure they are machine-navigable, this standard mandates a structured table format for file listings.
-
-## Architecture
-
-```mermaid
-graph TD
-    doc-local.standard --> manifest.standard
-```
 
 ## Mandatory Content
 1. **Title**: The folder name or domain title.

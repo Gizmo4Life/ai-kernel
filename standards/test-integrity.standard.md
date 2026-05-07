@@ -42,12 +42,6 @@ This standard defines the maturity and fitness ratings for core game logic and i
 - **Review**: PRs that introduce "magic units" (seconds vs days mismatch) or direct member access that bypasses system stats will be flagged.
 - **Verification**: Unit tests must fully initialize mandatory dependencies (e.g., Fuel for Kinematics) to avoid early escapes in system logic.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

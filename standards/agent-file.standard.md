@@ -25,8 +25,3 @@ This standard defines the requirements for autonomous agents within the AI Kerne
 ## Enforcement
 The posture for agents is **Hybrid-Automated**. Structural elements are enforced via `verify-repository-integrity.instruction`. Protocol delegation and logic density still require semantic audit by the **evaluate-against-standard.skill**.
 
-## Architecture
-
-```mermaid
-graph TD
-```

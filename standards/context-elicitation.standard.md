@@ -34,12 +34,6 @@ glossary_refs: [agent.glossary, standard.glossary, context.glossary]
 | [ext-greenfield-context](/docs/developer/pattern/ext-greenfield-context.md) | **P** | Establishing new boundaries. |
 | **Implicit Contracts** | **U** | Assuming user intent without validation. |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

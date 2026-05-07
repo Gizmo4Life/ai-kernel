@@ -48,12 +48,6 @@ When logic is centralized (e.g., removing an inline `registry.view<PlayerCompone
 
 **Protocol**: Every PR that centralizes logic MUST include a header hygiene pass on all modified files as part of the [Definition of Done](/docs/developer/pattern/definition-of-done.md).
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

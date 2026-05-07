@@ -4,23 +4,8 @@ title: Local Documentation Standard
 type: standard
 tags: [documentation, quality, atomicity, local, rules, governance, compliance]
 summary: Standards for component-level READMEs embedded within code directories.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/README.md"
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# Local Documentation Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Local documentation provides "Truth at the Source." It is scoped strictly to the directory it resides in, ensuring that technical details are located exactly where they are most relevant to the developer or agent.
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> doc-local.standard
-```
 
 ## PADU Table
 

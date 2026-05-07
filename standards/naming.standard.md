@@ -4,24 +4,9 @@ title: Naming Standard
 type: standard
 tags: [governance, organization, naming, rules, compliance]
 summary: Rules for unambiguous file naming and ID assignment in the AI Kernel.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: /
-parent_standard: kernel.standard
-glossary_refs: [agent.glossary, context.glossary, frontmatter.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
----
-
-# Naming Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines the "Unambiguous Naming" policy for the AI Kernel. It ensures that in a flat filesystem, files remain distinct and their purpose is immediately obvious through their filename. It prevents the "canonical term pollution" where a specific concept usurps a general term.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> naming.standard
-```
 ## The Specificity Hierarchy
 - **Level 1 (Root)**: Abstract, kernel-level concepts. Use simple, canonical terms (e.g., `test.md`, `standard.md`).
 - **Level 2 (Domain)**: Concepts specific to a technical domain or folder. MUST use a domain prefix (e.g., `js-test.md`, `agent-standard.md`).

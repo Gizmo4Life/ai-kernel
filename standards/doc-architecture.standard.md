@@ -4,23 +4,8 @@ title: Architecture Documentation Standard
 type: standard
 tags: [documentation, architecture, orientation, rules, governance, compliance]
 summary: Standards for the global orientation layer located in `docs/architecture/`.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/docs/architecture/**/*.md"
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
----
-
-# Architecture Documentation Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 The Architecture layer provides "Orientation over Detail." It serves as the high-level map of the system, helping users and agents conceptually locate the right component-level documentation.
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> doc-architecture.standard
-```
 
 ## PADU Table
 

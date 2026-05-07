@@ -26,12 +26,6 @@ glossary_refs: [standard.glossary]
 - **Verification**: Run build from a clean state without network access.
 - **Enforcement**: Any PR introducing globbing or unversioned remote fetches will be **Rejected**.
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

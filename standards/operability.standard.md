@@ -4,24 +4,8 @@ title: Operability Standard
 type: standard
 tags: [operability, monitoring, incident-response, architecture, rules, governance, compliance]
 summary: The master philosophy and quality bar for the 3 pillars of operability: Telemetry, Monitoring, and Incident Response.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/* [tag:operability]"
-parent_standard: kernel.standard
-instructions: [ handle-incident.instruction ]
-glossary_refs: [agent.glossary, context.glossary, instruction.glossary, knowledge-graph.glossary, skill.glossary, standard.glossary]
----
-
-# Operability Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 Operability is the "Nervous System" of a production application. This standard establishes a holistic framework where observability signals (Telemetry) feed into detection mechanisms (Monitoring), which trigger structured remediation paths (Incident Response).
-
-## Architecture
-
-```mermaid
-graph TD
-    kernel.standard --> operability.standard
-```
 
 ## The 3 Pillars
 

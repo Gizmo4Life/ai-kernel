@@ -52,12 +52,6 @@ This standard governs foundational C++ structural and syntactic choices, ensurin
 | [cpp-singleton-manager](/docs/developer/pattern/cpp-singleton-manager.md) | **A** | Acceptable for non-entity global state. | Acceptable exclusively for structural hardware abstractions (e.g. Telemetry/Logger, FactionManager) that operate entirely outside the ECS graph. |
 | **Deep Inheritance** | **U** | Prefer composition via ECS. |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

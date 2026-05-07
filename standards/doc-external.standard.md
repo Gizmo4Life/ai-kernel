@@ -4,23 +4,8 @@ title: External Documentation Standard
 type: standard
 tags: [documentation, customer, manual, api, rules, governance, compliance]
 summary: Standards for customer-facing documentation, including user manuals and API specifications.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: "/**/* [tag:external]"
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# External Documentation Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 External documentation is the "Product Face" of the codebase. It is designed for consumers who interact with the system via its public interfaces (UI or API) and requires a high level of polish and professional clarity.
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> doc-external.standard
-```
 
 ## Mandatory Sections
 1. **User Manual**: Task-oriented guides for end-users (the "What" and "How").

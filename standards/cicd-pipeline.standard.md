@@ -42,12 +42,6 @@ This standard defines the requirements and best practices for Continuous Integra
 | [cicd-vulnerability-scan](/docs/developer/pattern/cicd-vulnerability-scan.md) | **P** | Automated container/dep scanning. | N/A |
 | **Hardcoded credentials** | **U** | Immediate termination offense. |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## Context
 
 [Auto-Generated Placeholder for Compliance]

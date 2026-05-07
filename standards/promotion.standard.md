@@ -4,24 +4,9 @@ title: Promotion Standard
 type: standard
 tags: [governance, evolution, patterns, rules, compliance]
 summary: Rules for promoting knowledge from raw context to formal core files.
-requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Architecture"]
-scope: /
-parent_standard: standard-file.standard
-glossary_refs: [agent.glossary, context.glossary, glossary-entry.glossary, instruction.glossary, skill.glossary, standard.glossary]
----
-
-# Promotion Standard
-
-## Context
+requirements: [parent_standard, "## PADU Table", "## Enforcement", "## Context", "## Context
 This standard defines the "Path to Core" for all new knowledge. it prevents the `context/` directory from becoming a dumping ground by mandating that emerging patterns be codified once they reach a specific "Density" threshold.
 
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> promotion.standard
-```
 ## Promotion Thresholds
 - **Tier 2 (SME) Draft**: 1-2 occurrences of a pattern in `context/`. No formal standard required yet.
 - **Discouraged (D)**: 3 occurrences without a standard. Flagged by the **Standards Scout**.

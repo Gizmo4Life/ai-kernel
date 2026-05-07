@@ -21,12 +21,6 @@ glossary_refs: [standard.glossary, context.glossary]
 | [doc-ops-monolithic-runbook](/docs/developer/pattern/doc-ops-monolithic-runbook.md) | **D** | Use only for legacy discovery phases. | N/A |
 | [doc-ops-unverified-mitigation](/docs/developer/pattern/doc-ops-unverified-mitigation.md) | **U** | Mitigation without a verification query. | N/A |
 
-## Architecture
-
-```mermaid
-graph TD
-```
-
 ## PADU Table
 
 [Auto-Generated Placeholder for Compliance]

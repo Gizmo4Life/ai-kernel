@@ -8,19 +8,10 @@ summary: Standards for multi-step instructions, emphasizing state-based pre/post
 scope: "/instructions/*.md"
 parent_standard: standard-file.standard
 glossary_refs: [agent.glossary, atomicity.glossary, context.glossary, instruction.glossary, orchestration.glossary, progressive-disclosure.glossary, skill.glossary, standard.glossary]
----
-
-# Instruction File Standard
+---# Instruction File Standard
 
 ## Context
 Instructions are the "Workflows" of the AI Kernel. They coordinate multiple skills to achieve a goal. To prevent "Logic Drift," this standard mandates that every instruction define both **Preconditions** (Start State) and **Postconditions** (End State).
-
-## Architecture
-
-```mermaid
-graph TD
-    standard-file.standard --> instruction-file.standard
-```
 
 ## Mandatory Sections
 1. **Context**: The high-level goal of the workflow.
@@ -43,3 +34,10 @@ By mandating **Postconditions**, we move from "Instruction Following" to "Goal F
 
 ## Enforcement
 The posture is **Agent-Audited**. The **Flynn** agent verifies that all new instructions have verifiable end-states.
+
+## Architecture
+
+```mermaid
+graph TD
+    standard-file.standard --> instruction-file.standard
+```
